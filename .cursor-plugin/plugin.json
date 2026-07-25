@@ -1,7 +1,7 @@
 {
   "name": "uizze",
   "displayName": "UIZZE",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "If your UI screams AI, your app is dead. Give Cursor 800,000+ real screens to work from before it touches your frontend.",
   "author": {
     "name": "UIZZE",
@@ -20,7 +20,14 @@
     "anti-slop",
     "agent-skill"
   ],
-  "category": "productivity",
+  "category": "developer-tools",
+  "tags": [
+    "frontend",
+    "design",
+    "ui",
+    "code-quality",
+    "mcp"
+  ],
   "logo": "plugins/openai-directory/uizze/assets/uizze-logo.png",
   "skills": "./skills/"
 }
