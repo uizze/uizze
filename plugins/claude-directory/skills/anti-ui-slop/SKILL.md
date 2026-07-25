@@ -1,6 +1,7 @@
 ---
 name: anti-ui-slop
 description: Stop coding agents from shipping generic UI. Use UIZZE's 800,000+ real web and iOS screens to build product-specific interfaces, define a design contract, cover required states, and run a hard finish gate. Use for web or iOS UI design, implementation, redesign, critique, and pre-ship review in Codex, Claude Code, Cursor, Copilot, and other coding agents.
+license: MIT
 ---
 
 > ***If your UI screams AI, your app is dead.***
