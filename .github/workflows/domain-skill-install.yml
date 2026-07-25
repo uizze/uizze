@@ -23,6 +23,9 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
+      - name: Check out the canonical UIZZE source
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
+
       - name: Set up Node.js
         uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
         with:
@@ -45,9 +48,16 @@ jobs:
           skill=".agents/skills/anti-ui-slop/SKILL.md"
           test -s "$skill"
           grep -qx 'name: anti-ui-slop' "$skill"
-          grep -qx '# STOP UI SLOP.' "$skill"
+          grep -qx '# Stop Making UI Slop' "$skill"
+          grep -Fqx '> ***If your UI screams AI, your app is dead.***' "$skill"
+          grep -Fq 'anti-ui-slop-skill-banner.png' "$skill"
           grep -Fq 'https://uizze.com' "$skill"
           if grep -Fq 'github.com' "$skill"; then
             echo "The domain-backed skill must keep uizze.com as its public destination."
             exit 1
           fi
+          cmp "$skill" "$GITHUB_WORKSPACE/skills/anti-ui-slop/SKILL.md"
+          cmp "$GITHUB_WORKSPACE/skills/anti-ui-slop/SKILL.md" \
+            "$GITHUB_WORKSPACE/plugins/claude-directory/skills/anti-ui-slop/SKILL.md"
+          cmp "$GITHUB_WORKSPACE/skills/anti-ui-slop/SKILL.md" \
+            "$GITHUB_WORKSPACE/plugins/openai-directory/uizze/skills/anti-ui-slop/SKILL.md"
