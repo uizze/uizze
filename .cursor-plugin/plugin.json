@@ -1,8 +1,8 @@
 {
   "name": "uizze",
   "displayName": "UIZZE",
-  "version": "1.1.0",
-  "description": "STOP UI SLOP. Ground Cursor in 800,000+ real web and iOS screens, then block generic UI at the finish gate.",
+  "version": "1.2.0",
+  "description": "Stop coding agents from shipping generic UI with UIZZE's 800,000+ real web and iOS screens and a hard finish gate.",
   "author": {
     "name": "UIZZE",
     "email": "business@uizze.com"

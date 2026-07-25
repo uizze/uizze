@@ -5,15 +5,15 @@
     "email": "business@uizze.com"
   },
   "metadata": {
-    "description": "STOP UI SLOP. Make coding agents build product-specific interfaces instead of disposable card-grid defaults.",
-    "version": "1.0.1"
+    "description": "Stop coding agents from shipping generic UI with UIZZE's 800,000+ real web and iOS screens and a hard finish gate.",
+    "version": "1.2.0"
   },
   "plugins": [
     {
       "name": "uizze",
       "source": "./",
-      "description": "STOP UI SLOP. Ground coding agents in 800,000+ real web and iOS screens before generic UI ships.",
-      "version": "1.0.1",
+      "description": "Stop coding agents from shipping generic UI with UIZZE's 800,000+ real web and iOS screens and a hard finish gate.",
+      "version": "1.2.0",
       "author": {
         "name": "UIZZE",
         "email": "business@uizze.com"

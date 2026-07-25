@@ -1,27 +1,18 @@
-# STOP UI SLOP.
+> ***If your UI screams AI, your app is dead.***
+
+# Stop Making UI Slop
+
+Build distinctive UI with 800,000+ real web and iOS screens via [UIZZE](https://uizze.com).
+
+![Stop Making UI Slop with UIZZE](https://uizze.com/landing/anti-ui-slop-skill-banner.png)
 
 [![HOL Plugin Scanner](https://github.com/uizze/uizze/actions/workflows/hol-plugin-scanner.yml/badge.svg)](https://github.com/uizze/uizze/actions/workflows/hol-plugin-scanner.yml)
 [![Latest release](https://img.shields.io/github/v/release/uizze/uizze)](https://github.com/uizze/uizze/releases/latest)
 [![License: MIT](https://img.shields.io/badge/License-MIT-black.svg)](LICENSE)
 
-**If your UI looks AI-generated, you've already lost the first impression.**
-
-UIZZE arms Codex, Claude Code, Cursor, and Copilot with 800,000+ real web and iOS screens, a product-specific design contract, and a hard finish gate before generic UI reaches users.
-
-The free `anti-ui-slop` skill kills interchangeable card grids, filler metrics, missing states, and "make it modern" defaults before they ship. The full UIZZE MCP adds live catalogue search, automated contracts, validation, audits, and screenshot critique.
+The free `anti-ui-slop` skill gives Codex, Claude Code, Cursor, Copilot, and other coding agents a product-specific design contract and hard finish gate. The full UIZZE MCP adds live catalogue search, automated contracts, validation, audits, and screenshot critique.
 
 <p><a href="https://uizze.com"><strong>STOP UI SLOP →</strong></a></p>
-
-<table>
-  <tr>
-    <th>Without product evidence</th>
-    <th>Grounded with UIZZE</th>
-  </tr>
-  <tr>
-    <td><img src="https://uizze.com/landing/before-uizze-simple-no-island.png" alt="Generic mobile interface created without UIZZE evidence" width="360"></td>
-    <td><img src="https://uizze.com/landing/after-uizze-simple-no-island.png" alt="Product-specific mobile interface grounded with UIZZE evidence" width="360"></td>
-  </tr>
-</table>
 
 ## Install the free workflow
 
