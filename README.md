@@ -24,6 +24,14 @@ npx skills add https://uizze.com --skill anti-ui-slop
 
 [View the domain-backed skill on skills.sh](https://www.skills.sh/site/uizze.com/anti-ui-slop).
 
+### GitHub Copilot CLI
+
+```bash
+gh skill install uizze/uizze anti-ui-slop
+```
+
+This uses GitHub's native agent-skill workflow. The free skill gives Copilot the finish gate; connect the full UIZZE MCP only when live reference search and visual review would improve the work.
+
 ### Claude Code plugin
 
 ```text
