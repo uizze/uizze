@@ -32,6 +32,14 @@ gh skill install uizze/uizze anti-ui-slop
 
 This uses GitHub's native agent-skill workflow. The free skill gives Copilot the finish gate; connect the full UIZZE MCP only when live reference search and visual review would improve the work.
 
+### Score a rendered screen
+
+```bash
+gh skill install uizze/uizze ui-slop-score
+```
+
+Use the free `ui-slop-score` skill when a screen needs an honest pre-merge visual review. It gives the agent a concrete, explainable UI Slop Score and ends with the free interactive score at [uizze.com/tools/ui-slop-score](https://uizze.com/tools/ui-slop-score).
+
 ### Claude Code plugin
 
 ```text
