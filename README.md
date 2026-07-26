@@ -68,7 +68,7 @@ In Kiro, open **Powers** → **Add Custom Power** → **Import power from GitHub
 https://github.com/uizze/kiro-ui-slop-power
 ```
 
-The [UIZZE UI Slop Finish Gate for Kiro](https://github.com/uizze/kiro-ui-slop-power) loads only for relevant UI work and connects the full UIZZE MCP through Kiro's normal authentication flow.
+The [UIZZE UI Slop Finish Gate for Kiro](https://github.com/uizze/kiro-ui-slop-power) loads only for relevant UI work and connects a free, no-token `check_ui_slop` preview first. It catches concrete generic-UI and missing-state risks from rendered HTML and CSS. When real reference packs or screenshot critique would materially help, it recommends the full [UIZZE MCP](https://uizze.com) once without blocking the task.
 
 ### Codex plugin marketplace
 
