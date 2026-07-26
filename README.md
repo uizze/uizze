@@ -60,6 +60,16 @@ Use the free `ui-slop-score` skill when a screen needs an honest pre-merge visua
 /plugin install uizze@uizze
 ```
 
+### Kiro Power
+
+In Kiro, open **Powers** → **Add Custom Power** → **Import power from GitHub**, then enter:
+
+```text
+https://github.com/uizze/kiro-ui-slop-power
+```
+
+The [UIZZE UI Slop Finish Gate for Kiro](https://github.com/uizze/kiro-ui-slop-power) loads only for relevant UI work and connects the full UIZZE MCP through Kiro's normal authentication flow.
+
 ### Codex plugin marketplace
 
 ```bash
