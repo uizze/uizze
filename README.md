@@ -34,13 +34,13 @@ This no-token preview exposes one deterministic `check_ui_slop` tool for rendere
 
 ### Put it to a real test
 
-Want an evidence-only answer instead of a one-off review? Run the free [UIZZE UI Slop Benchmark](https://uizze.github.io/uizze-ui-slop-benchmark/): three fixed product tasks, identical prompts and starter states, and inspectable evidence for every awarded point.
+Want an evidence-only answer instead of a one-off review? Run the free [UIZZE UI Slop Benchmark](https://uizze.github.io/uizze-ui-slop-benchmark/): a fixed product task, identical prompts and starter states, and inspectable evidence for every awarded point.
 
 ### GitHub Copilot CLI plugin
 
 ```bash
 copilot plugin marketplace add uizze/uizze
-copilot plugin install uizze@uizze
+copilot plugin install uizze-ui-slop@uizze
 ```
 
 This uses Copilot CLI's native plugin marketplace. It installs the free UIZZE workflow and the no-token UI Slop Gate preview; use the full [UIZZE MCP](https://uizze.com) only when live reference search and visual review would improve the work.
@@ -48,7 +48,7 @@ This uses Copilot CLI's native plugin marketplace. It installs the free UIZZE wo
 ### Score a rendered screen
 
 ```bash
-gh skill install uizze/uizze ui-slop-score
+npx skills add https://uizze.com --skill ui-slop-score
 ```
 
 Use the free `ui-slop-score` skill when a screen needs an honest pre-merge visual review. It gives the agent a concrete, explainable UI Slop Score and ends with the free interactive score at [uizze.com/tools/ui-slop-score](https://uizze.com/tools/ui-slop-score).
@@ -59,6 +59,16 @@ Use the free `ui-slop-score` skill when a screen needs an honest pre-merge visua
 /plugin marketplace add uizze/uizze
 /plugin install uizze@uizze
 ```
+
+### Kiro Power
+
+In Kiro, open **Powers** → **Add Custom Power** → **Import power from GitHub**, then enter:
+
+```text
+https://github.com/uizze/kiro-ui-slop-power
+```
+
+The [UIZZE UI Slop Finish Gate for Kiro](https://github.com/uizze/kiro-ui-slop-power) loads only for relevant UI work and connects the full UIZZE MCP through Kiro's normal authentication flow.
 
 ### Codex plugin marketplace
 
