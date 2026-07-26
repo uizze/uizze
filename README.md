@@ -32,6 +32,10 @@ codex mcp add uizze-preview --url https://uizze.com/mcp/preview
 
 This no-token preview exposes one deterministic `check_ui_slop` tool for rendered HTML and CSS. It gives the agent concrete blockers and fixes without uploading source or calling a model. [Use the full MCP setup](https://github.com/uizze/uizze-mcp#try-the-mcp-server-free) when you want the equivalent Claude Code or Cursor command.
 
+### Put it to a real test
+
+Want an evidence-only answer instead of a one-off review? Run the free [UIZZE UI Slop Benchmark](https://uizze.github.io/uizze-ui-slop-benchmark/): three fixed product tasks, identical prompts and starter states, and inspectable evidence for every awarded point.
+
 ### GitHub Copilot CLI
 
 ```bash
