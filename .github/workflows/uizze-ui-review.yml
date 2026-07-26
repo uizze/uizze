@@ -24,6 +24,6 @@ jobs:
           persist-credentials: false
 
       - name: Stop UI slop
-        uses: uizze/uizze-ui-slop-gate@d4797bac46fd5f96b60cc4d0c3d92fbca508e9ba # v1.0.2
+        uses: uizze/uizze-ui-slop-gate@170d6c03bc493dc0f22d777207d216072c84915b # v1.0.9
         with:
           fail-on: error
