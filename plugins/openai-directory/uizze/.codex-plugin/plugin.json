@@ -1,6 +1,6 @@
 {
   "name": "uizze",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "STOP UI SLOP. Ground coding agents in 800,000+ real web and iOS screens before generic UI ships.",
   "author": {
     "name": "UIZZE",
@@ -18,6 +18,12 @@
     "agent-skill"
   ],
   "skills": "./skills/",
+  "mcpServers": {
+    "uizze-preview": {
+      "type": "http",
+      "url": "https://uizze.com/mcp/preview"
+    }
+  },
   "interface": {
     "displayName": "UIZZE",
     "shortDescription": "Kill generic UI before it ships",
