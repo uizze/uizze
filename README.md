@@ -24,6 +24,14 @@ npx skills add https://uizze.com --skill anti-ui-slop
 
 [View the domain-backed skill on skills.sh](https://www.skills.sh/site/uizze.com/anti-ui-slop).
 
+### Run the free UI Slop Gate inside your agent
+
+```bash
+codex mcp add uizze-preview --url https://uizze.com/mcp/preview
+```
+
+This no-token preview exposes one deterministic `check_ui_slop` tool for rendered HTML and CSS. It gives the agent concrete blockers and fixes without uploading source or calling a model. [Use the full MCP setup](https://github.com/uizze/uizze-mcp#try-the-mcp-server-free) when you want the equivalent Claude Code or Cursor command.
+
 ### GitHub Copilot CLI
 
 ```bash
