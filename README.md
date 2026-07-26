@@ -40,7 +40,7 @@ Want an evidence-only answer instead of a one-off review? Run the free [UIZZE UI
 
 ```bash
 copilot plugin marketplace add uizze/uizze
-copilot plugin install uizze@uizze
+copilot plugin install uizze-ui-slop@uizze
 ```
 
 This uses Copilot CLI's native plugin marketplace. It installs the free UIZZE workflow and the no-token UI Slop Gate preview; use the full [UIZZE MCP](https://uizze.com) only when live reference search and visual review would improve the work.
