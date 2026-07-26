@@ -36,13 +36,14 @@ This no-token preview exposes one deterministic `check_ui_slop` tool for rendere
 
 Want an evidence-only answer instead of a one-off review? Run the free [UIZZE UI Slop Benchmark](https://uizze.github.io/uizze-ui-slop-benchmark/): three fixed product tasks, identical prompts and starter states, and inspectable evidence for every awarded point.
 
-### GitHub Copilot CLI
+### GitHub Copilot CLI plugin
 
 ```bash
-gh skill install uizze/uizze anti-ui-slop
+copilot plugin marketplace add uizze/uizze
+copilot plugin install uizze@uizze
 ```
 
-This uses GitHub's native agent-skill workflow. The free skill gives Copilot the finish gate; connect the full UIZZE MCP only when live reference search and visual review would improve the work.
+This uses Copilot CLI's native plugin marketplace. It installs the free UIZZE workflow and the no-token UI Slop Gate preview; use the full [UIZZE MCP](https://uizze.com) only when live reference search and visual review would improve the work.
 
 ### Score a rendered screen
 
