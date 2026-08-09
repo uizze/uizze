@@ -1,0 +1,12 @@
+{
+  "slug": "developer-dashboard",
+  "benchmarkVersion": "1.0.0",
+  "title": "Failing deployment diagnosis",
+  "prompt": "prompt.md",
+  "artifacts": [
+    "prompt.md",
+    "starter/index.html",
+    "starter/styles.css",
+    "starter/app.js"
+  ]
+}

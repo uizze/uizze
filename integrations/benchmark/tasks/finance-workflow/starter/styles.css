@@ -1,0 +1,24 @@
+:root { color: #20201d; background: #f5f5f1; font: 15px/1.5 system-ui, sans-serif; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+header { display: flex; justify-content: space-between; padding: 18px 28px; border-bottom: 1px solid #d8d8d2; }
+header a { color: inherit; margin-right: 20px; }
+main { max-width: 1120px; margin: 40px auto; padding: 0 24px; }
+.title-row, .summary, .actions { display: flex; justify-content: space-between; gap: 16px; }
+.title-row h1 { margin: 0; }
+.status { align-self: start; padding: 6px 10px; border: 1px solid #999; }
+.summary { margin: 28px 0; padding: 20px; background: white; border: 1px solid #d8d8d2; }
+.summary div { display: grid; }
+.summary span { color: #62625c; }
+section, aside, form { margin-top: 28px; }
+table { width: 100%; border-collapse: collapse; background: white; }
+th, td { padding: 14px; border-bottom: 1px solid #ddd; text-align: left; }
+textarea { width: 100%; font: inherit; }
+button { min-height: 44px; padding: 8px 14px; }
+@media (max-width: 640px) {
+  header nav { display: none; }
+  main { margin: 24px auto; padding: 0 16px; }
+  .title-row, .summary { display: grid; }
+  table { display: block; overflow-x: auto; }
+  .actions { display: grid; }
+}

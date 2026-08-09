@@ -1,0 +1,17 @@
+---
+description: Apply the UIZZE design contract and finish gate to frontend work
+globs: "**/*.{tsx,ts,jsx,js,css,scss,html}"
+alwaysApply: true
+---
+
+Before editing UI, read `.uizze/design-contract.md` and the free skill at
+`.agents/skills/anti-ui-slop/SKILL.md`.
+
+- Preserve one primary user job and one primary action.
+- Use product-specific copy, semantic tokens, and the existing visual language.
+- Implement loading, empty, error, success, validation, responsive, and keyboard states.
+- Reject interchangeable card grids, filler metrics, gradients, inert controls,
+  vague copy, missing focus, and unverified responsive behavior.
+- Run `npm run validate` before declaring the interface finished.
+
+Do not treat the optional UIZZE MCP as connected unless its tools are available.

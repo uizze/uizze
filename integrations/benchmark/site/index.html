@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="A free, reproducible UI finish gate for coding agents. Catch generic UI before it ships." />
+    <meta property="og:title" content="If your UI screams AI, your app is dead." />
+    <meta property="og:description" content="A free, reproducible UI finish gate for coding agents. Catch generic UI before it ships." />
+    <meta property="og:type" content="website" />
+    <link rel="canonical" href="https://benchmark.uizze.com/" />
+    <meta property="og:url" content="https://benchmark.uizze.com/" />
+    <meta property="og:image" content="https://uizze.com/landing/anti-ui-slop-skill-banner.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="If your UI screams AI, your app is dead." />
+    <meta name="twitter:description" content="A free, reproducible UI finish gate for coding agents. Catch generic UI before it ships." />
+    <meta name="twitter:image" content="https://uizze.com/landing/anti-ui-slop-skill-banner.png" />
+    <title>STOP UI SLOP — free UIZZE finish gate</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script defer src="https://umami.objective.company/script.js" data-website-id="ec766cb7-a06c-4e08-8ed7-ba66a96fc692" data-host-url="https://umami.objective.company" data-domains="benchmark.uizze.com,uizze.github.io" data-exclude-hash="true"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', function () {
+        document.querySelectorAll('[data-umami-event]').forEach(function (element) {
+          element.addEventListener('click', function () {
+            if (window.umami && typeof window.umami.track === 'function') {
+              window.umami.track(element.dataset.umamiEvent, { surface: 'benchmark' });
+            }
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="wordmark" href="https://uizze.com" data-umami-event="benchmark_uizze_clicked">UIZZE</a>
+      <a class="text-link" href="https://github.com/uizze/uizze/tree/main/integrations/benchmark" data-umami-event="benchmark_source_clicked">View source</a>
+    </header>
+
+    <main>
+      <section class="hero">
+        <p class="eyebrow">A free, reproducible finish gate for coding agents</p>
+        <h1>STOP<br />UI <span>SLOP.</span></h1>
+        <p class="lede">Stop letting capable coding agents ship the same generic interface. Give them a real finish gate before users see it.</p>
+        <div class="actions">
+          <a class="primary" href="#quick-start" data-umami-event="benchmark_free_gate_clicked">Run the free gate</a>
+          <a class="secondary" href="https://github.com/uizze/uizze/tree/main/integrations/benchmark#run-it-for-free" data-umami-event="benchmark_repository_clicked">Run the benchmark</a>
+        </div>
+      </section>
+
+      <section id="quick-start" aria-labelledby="quick-start-heading" class="section quick-start">
+        <div class="section-heading">
+          <p>01</p>
+          <h2 id="quick-start-heading">Make the agent prove it.</h2>
+        </div>
+        <p class="section-intro">The useful free loop: give your coding agent a finish gate, then make it fix what it finds. No UIZZE account, token, or source upload is required.</p>
+        <div class="quick-start-grid">
+          <article class="quick-start-step">
+            <p class="step-index">01</p>
+            <h3>Install the free finish gate</h3>
+            <pre><code>npx skills add https://uizze.com --skill anti-ui-slop</code></pre>
+            <p>Works with Codex, Claude Code, Cursor, Copilot, and compatible coding agents.</p>
+          </article>
+          <article class="quick-start-step">
+            <p class="step-index">02</p>
+            <h3>Use this on the next screen</h3>
+            <pre><code>use anti-ui-slop on the screen I just built.
+find generic choices, missing states, and inert controls.
+fix them before calling it done.</code></pre>
+            <p>For a direct rendered HTML/CSS check, add the free no-token preview: <code>codex mcp add uizze-preview --url https://uizze.com/mcp/preview</code>.</p>
+          </article>
+        </div>
+      </section>
+
+      <section aria-labelledby="tasks-heading" class="section">
+        <div class="section-heading">
+          <p>02</p>
+          <h2 id="tasks-heading">The fixed tasks</h2>
+        </div>
+        <div class="task-row">
+          <h3>Onboarding</h3>
+          <p>Set up a new team workspace.</p>
+          <p>Hierarchy · progressive disclosure · completion states</p>
+          <a href="https://github.com/uizze/uizze/tree/main/integrations/benchmark/tasks/onboarding">Open task</a>
+        </div>
+        <div class="task-row">
+          <h3>Finance workflow</h3>
+          <p>Review and approve an invoice.</p>
+          <p>Dense data · risk communication · decision clarity</p>
+          <a href="https://github.com/uizze/uizze/tree/main/integrations/benchmark/tasks/finance-workflow">Open task</a>
+        </div>
+        <div class="task-row">
+          <h3>Developer dashboard</h3>
+          <p>Diagnose a failing deployment.</p>
+          <p>Observability · prioritization · responsive information design</p>
+          <a href="https://github.com/uizze/uizze/tree/main/integrations/benchmark/tasks/developer-dashboard">Open task</a>
+        </div>
+      </section>
+
+      <section aria-labelledby="contract-heading" class="section contract">
+        <div class="section-heading">
+          <p>03</p>
+          <h2 id="contract-heading">The reproducibility contract</h2>
+        </div>
+        <ol>
+          <li>Use the checked-in prompt and starter state unchanged.</li>
+          <li>Give every candidate the same tools, network access, and implementation window.</li>
+          <li>Record candidate version, commit, elapsed time, evaluator, and viewport checks.</li>
+          <li>Award only binary scores with evidence another person can inspect.</li>
+          <li>Treat any prompt, starter, or rubric change as a new benchmark version.</li>
+        </ol>
+      </section>
+
+      <section aria-labelledby="run-heading" class="section run">
+        <div class="section-heading">
+          <p>04</p>
+          <h2 id="run-heading">Run it free</h2>
+        </div>
+        <pre><code>git clone https://github.com/uizze/uizze.git
+cd uizze/integrations/benchmark
+npm test
+npm run verify</code></pre>
+        <p>No UIZZE account or token is required. There are no published winners or made-up scores.</p>
+      </section>
+
+      <section aria-labelledby="results-heading" class="section continuation">
+        <div class="section-heading">
+          <p>05</p>
+          <h2 id="results-heading">Make the result inspectable.</h2>
+        </div>
+        <p class="section-intro">A public result needs the completed JSON, exact task fingerprint, and evidence at desktop and mobile widths. No self-reported leaderboard, no invented winner.</p>
+        <div class="actions">
+          <a class="secondary" href="https://github.com/uizze/uizze/issues/new" data-umami-event="benchmark_result_submission_clicked">Open result intake</a>
+        </div>
+      </section>
+
+      <section aria-labelledby="recorded-case-heading" class="section continuation">
+        <div class="section-heading">
+          <p>06</p>
+          <h2 id="recorded-case-heading">One recorded case. No leaderboard.</h2>
+        </div>
+        <p class="section-intro">Same seed, same prompt, concurrent runs, and a narrow 96/100 to 98/100 result. It is not a benchmark task or an outcome promise—just an inspectable record.</p>
+        <div class="actions">
+          <a class="secondary" href="./recordings/billing-settings-v1/" data-umami-event="benchmark_recorded_case_clicked">Inspect the recorded case</a>
+        </div>
+      </section>
+
+      <section aria-labelledby="continuation-heading" class="section continuation">
+        <div class="section-heading">
+          <p>07</p>
+          <h2 id="continuation-heading">When a screen needs a reference, not another opinion.</h2>
+        </div>
+        <p class="section-intro">The free gate catches what makes a screen generic. When a real build needs visual evidence, UIZZE puts 800,000+ real web and iOS screens in the agent's workflow.</p>
+        <div class="actions">
+          <a class="primary" href="https://uizze.com" data-umami-event="benchmark_uizze_continuation_clicked">CONNECT</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Built by <a href="https://uizze.com">UIZZE</a> to make generic interfaces harder to ship.</p>
+      <a href="https://github.com/uizze/uizze/blob/main/integrations/benchmark/LICENSE">MIT licensed</a>
+    </footer>
+  </body>
+</html>

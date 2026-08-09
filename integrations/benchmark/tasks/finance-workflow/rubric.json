@@ -1,0 +1,15 @@
+{
+  "task": "finance-workflow",
+  "criteria": [
+    { "id": "decision-hierarchy", "requirement": "Invoice identity, total, due date, vendor, and approval state are immediately scannable in a coherent hierarchy.", "weight": 10 },
+    { "id": "overage-prominence", "requirement": "The $2,480 purchase-order overage is visible before approval and cannot be mistaken for a passing check.", "weight": 10 },
+    { "id": "overage-explanation", "requirement": "The interface explains how invoice total, PO remainder, and overage relate without inventing financial facts.", "weight": 10 },
+    { "id": "line-item-legibility", "requirement": "Descriptions, periods, quantities, and amounts remain associated and readable at both required viewports.", "weight": 10 },
+    { "id": "document-status", "requirement": "Supporting-document and vendor-check states are distinguishable from the failed PO match.", "weight": 10 },
+    { "id": "decision-guardrails", "requirement": "Approving the overage requires an intentional confirmation that restates the financial exception.", "weight": 10 },
+    { "id": "reject-change-paths", "requirement": "Reject and request-changes actions are distinct and collect an audit-friendly reason before completion.", "weight": 10 },
+    { "id": "action-feedback", "requirement": "Selection, validation, cancellation, and completion states provide specific non-destructive feedback.", "weight": 10 },
+    { "id": "responsive-finish", "requirement": "The decision workflow needs no horizontal page scrolling and preserves priority at both required viewports.", "weight": 10 },
+    { "id": "accessible-operation", "requirement": "Table structure, labels, focus indicators, keyboard order, status messaging, and touch targets are usable and inspectable.", "weight": 10 }
+  ]
+}

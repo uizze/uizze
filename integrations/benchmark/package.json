@@ -1,0 +1,16 @@
+{
+  "name": "uizze-ui-slop-benchmark",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A reproducible three-task benchmark for UI finish quality.",
+  "type": "module",
+  "scripts": {
+    "test": "node --test",
+    "verify": "node scripts/verify.mjs",
+    "score": "node scripts/verify.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT"
+}

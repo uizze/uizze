@@ -1,0 +1,58 @@
+name: Publish a benchmark result
+description: Submit a real, reproducible UIZZE UI Slop Benchmark result for review.
+title: "Benchmark result: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This intake is for a real benchmark run, not a product review or leaderboard claim. A published result must use the checked-in task, prompt, starter state, rubric, and task fingerprint, with evidence another person can inspect.
+  - type: input
+    id: candidate
+    attributes:
+      label: Candidate and version
+      description: Name the coding agent/model/tool and exact version used.
+      placeholder: "Example Agent 1.2.3"
+    validations:
+      required: true
+  - type: dropdown
+    id: task
+    attributes:
+      label: Benchmark task
+      options:
+        - onboarding
+        - finance-workflow
+        - developer-dashboard
+    validations:
+      required: true
+  - type: textarea
+    id: run-evidence
+    attributes:
+      label: Controlled-run evidence
+      description: Include the task fingerprint from `npm run verify`, implementation commit or public source, elapsed time, network-access setting, and desktop/mobile viewport evidence.
+      placeholder: |
+        task fingerprint:
+        implementation commit or source:
+        elapsed minutes:
+        network access:
+        desktop and mobile evidence:
+    validations:
+      required: true
+  - type: textarea
+    id: submission-json
+    attributes:
+      label: Completed submission JSON
+      description: Paste the completed JSON from `submission-template.json` after running `npm run score -- path/to/submission.json`.
+      render: json
+    validations:
+      required: true
+  - type: checkboxes
+    id: attestations
+    attributes:
+      label: Attestations
+      options:
+        - label: I used the checked-in task, prompt, starter state, rubric, and the exact task fingerprint.
+          required: true
+        - label: I can share the submitted evidence publicly and it contains no credentials, private user data, or proprietary screenshots without permission.
+          required: true
+        - label: I understand that a result is not a ranking or a UIZZE endorsement until a maintainer verifies and publishes it.
+          required: true

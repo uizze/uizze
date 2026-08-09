@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ledgerly invoice review</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header>
+      <a href="#">Ledgerly</a>
+      <nav aria-label="Primary"><a href="#">Inbox</a><a href="#">Vendors</a><a href="#">Reports</a></nav>
+    </header>
+    <main>
+      <div class="title-row">
+        <div><p>Invoice</p><h1>INV-2048</h1><p>Northstar Cloud Services · Due Aug 5, 2026</p></div>
+        <p class="status">Needs your approval</p>
+      </div>
+
+      <section class="summary" aria-label="Invoice summary">
+        <div><span>Total</span><strong>$12,480.00</strong></div>
+        <div><span>PO</span><strong>PO-7712</strong></div>
+        <div><span>PO remaining</span><strong>$10,000.00</strong></div>
+        <div><span>Payment terms</span><strong>Net 30</strong></div>
+      </section>
+
+      <section>
+        <h2>Line items</h2>
+        <table>
+          <thead><tr><th>Description</th><th>Period</th><th>Quantity</th><th>Amount</th></tr></thead>
+          <tbody>
+            <tr><td>Cloud infrastructure</td><td>Jul 2026</td><td>1</td><td>$10,000.00</td></tr>
+            <tr><td>Priority support</td><td>Jul 2026</td><td>1</td><td>$2,480.00</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <aside>
+        <h2>Checks</h2>
+        <ul>
+          <li>Invoice PDF attached</li>
+          <li>Vendor tax form on file</li>
+          <li>PO match requires review</li>
+        </ul>
+      </aside>
+
+      <form id="decision-form">
+        <label for="note">Decision note</label>
+        <textarea id="note" rows="3"></textarea>
+        <div class="actions">
+          <button type="button" data-decision="reject">Reject</button>
+          <button type="button" data-decision="changes">Request changes</button>
+          <button type="button" data-decision="approve">Approve invoice</button>
+        </div>
+        <p id="decision-status" role="status"></p>
+      </form>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>

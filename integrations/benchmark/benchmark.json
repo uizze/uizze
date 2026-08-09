@@ -1,0 +1,14 @@
+{
+  "name": "UIZZE UI Slop Benchmark",
+  "version": "1.0.0",
+  "scoring": "binary-weighted",
+  "requiredViewports": [
+    { "name": "desktop", "width": 1440, "height": 900 },
+    { "name": "mobile", "width": 390, "height": 844 }
+  ],
+  "tasks": [
+    "onboarding",
+    "finance-workflow",
+    "developer-dashboard"
+  ]
+}

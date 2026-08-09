@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "proofId": "billing-settings-v1",
+  "status": "completed_pending_publication_review",
+  "createdAt": "2026-07-14T19:47:43+02:00",
+  "purpose": "One controlled same-prompt demonstration, not a benchmark or outcome guarantee.",
+  "intentionalVariable": {
+    "baseline": "No UIZZE material or tools.",
+    "treatment": "Approved UIZZE Agent Connector skill and authenticated hosted MCP workflow only."
+  },
+  "controls": {
+    "seed": "seed/",
+    "seedCommit": "766c09f973e6b8b1a32745f60ab942507a52e959",
+    "taskPrompt": "prompts/task.md",
+    "client": "/Applications/ChatGPT.app/Contents/Resources/codex",
+    "clientVersion": "codex-cli 0.146.0-alpha.3.1",
+    "model": "gpt-5.6-terra",
+    "reasoningEffort": "low",
+    "approvalPolicy": "never",
+    "filesystemScope": "one isolated seed worktree per condition",
+    "agentTurns": 1,
+    "runScheduling": "baseline and treatment start concurrently after one shared preflight",
+    "wallClockMinutes": 20,
+    "viewport": {
+      "width": 1440,
+      "height": 1000,
+      "deviceScaleFactor": 1,
+      "colorScheme": "light",
+      "reducedMotion": "reduce"
+    },
+    "states": ["default", "loading", "empty", "failed", "success"],
+    "repositoryNetworkTools": {
+      "baseline": "none",
+      "treatment": "UIZZE hosted MCP only"
+    },
+    "dependencies": "none; seed uses browser HTML/CSS/JavaScript and Node standard library verification"
+  },
+  "completionRule": "Stop at the first agent completion response or 20 elapsed minutes, whichever occurs first. Preserve partial or failed output as the result.",
+  "rerunPolicy": "No reruns. If infrastructure fails before the model receives the prompt, invalidate both sides and restart both from the locked seed. If failure occurs after prompt receipt, retain it as outcome evidence.",
+  "manualEditPolicy": "No manual UI or code edits after either prompt. Redaction may cover secrets only and must be logged.",
+  "creativePolicy": {
+    "sourceOnly": "All comparison visuals must be direct captures of the real seed/product flow. No generated illustration, reconstruction, or one-sided polish.",
+    "sameCapturePath": "Both conditions use scripts/capture.mjs with the same viewport, state order, dwell time, reduced-motion setting, and video encoding path.",
+    "channelUse": "Channels may crop raw captures without redesigning them. Any surrounding UIZZE identity must reuse the existing landing-page implementation and tokens unchanged.",
+    "derivedAssetsInPack": "none before human evidence review"
+  },
+  "evaluation": {
+    "rubric": "evaluation.md",
+    "declaredBeforeRuns": true,
+    "blindScoring": true,
+    "singlePass": true
+  },
+  "privacy": {
+    "forbidden": [
+      "tokens",
+      "credentials",
+      "customer data",
+      "account identifiers",
+      "paid-user content",
+      "local secret values"
+    ]
+  },
+  "blockers": [],
+  "runs": {
+    "baseline": {
+      "status": "completed",
+      "finalCommit": "c190c65be19a1f3e4a1c300a2cfd5fa80c6ec043",
+      "elapsedMilliseconds": 150778,
+      "blindedOutput": "A",
+      "score": 96
+    },
+    "treatment": {
+      "status": "completed",
+      "finalCommit": "57fbacba608af6fbed1f1bdd15441926044442ee",
+      "elapsedMilliseconds": 140297,
+      "blindedOutput": "B",
+      "score": 98,
+      "mcpToolCallEventCount": 4
+    }
+  }
+}

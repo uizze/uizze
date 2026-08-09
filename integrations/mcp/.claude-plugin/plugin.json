@@ -1,0 +1,17 @@
+{
+  "name": "uizze",
+  "version": "1.1.20",
+  "description": "Stop generic UI with a free UI Slop Gate and a reference-backed finish workflow for Claude Code.",
+  "author": {
+    "name": "UIZZE",
+    "url": "https://uizze.com"
+  },
+  "homepage": "https://uizze.com/docs",
+  "keywords": [
+    "ui",
+    "design",
+    "frontend",
+    "code-review",
+    "mcp"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "name": "UIZZE UI Slop Benchmark",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:1-20-bookworm",
+  "postCreateCommand": "npm ci --ignore-scripts && npm test && npm run verify",
+  "customizations": {
+    "vscode": {
+      "extensions": ["dbaeumer.vscode-eslint"]
+    }
+  },
+  "remoteUser": "node"
+}

@@ -1,0 +1,29 @@
+:root {
+  color: #1b1b1b;
+  background: #f6f6f3;
+  font: 16px/1.5 system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; }
+button, input { font: inherit; }
+button, input { min-height: 44px; }
+.topbar { display: flex; justify-content: space-between; padding: 20px 32px; border-bottom: 1px solid #d9d9d4; }
+.brand { color: inherit; font-weight: 800; text-decoration: none; }
+main { display: grid; grid-template-columns: 260px minmax(0, 640px); gap: 64px; max-width: 1100px; margin: 56px auto; padding: 0 24px; }
+aside { border-right: 1px solid #d9d9d4; }
+aside li { margin: 14px 0; }
+section > p { color: #5f5f5a; }
+form { display: grid; gap: 14px; margin-top: 32px; }
+input { width: 100%; padding: 10px 12px; border: 1px solid #aaa; border-radius: 6px; background: white; }
+fieldset { display: grid; gap: 8px; border: 1px solid #d9d9d4; }
+fieldset input { width: auto; min-height: auto; }
+#invite-email + button { margin-left: 8px; }
+.actions { display: flex; justify-content: space-between; margin-top: 18px; }
+button { padding: 8px 16px; }
+@media (max-width: 700px) {
+  .topbar { padding: 16px; }
+  main { display: block; margin: 24px auto; padding: 0 16px; }
+  aside { border: 0; border-bottom: 1px solid #d9d9d4; margin-bottom: 28px; }
+  aside ol { display: flex; gap: 24px; overflow: auto; padding-bottom: 16px; }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "uizze-ui-slop-gate-action",
+  "version": "1.0.9",
+  "private": true,
+  "description": "Catch UI slop in every pull request before it ships.",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "node scripts/build.js",
+    "check:dist": "node scripts/check-dist.js",
+    "test": "node --test",
+    "verify": "npm run build && npm test && npm run check:dist"
+  }
+}

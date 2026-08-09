@@ -1,0 +1,10 @@
+{
+  "name": "codex-ui-finish-gate",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "node serve.mjs",
+    "verify": "node verify.mjs",
+    "test": "node --test verify.test.mjs"
+  }
+}

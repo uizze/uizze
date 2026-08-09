@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "uizze": {
+      "type": "http",
+      "url": "${UIZZE_MCP_URL}",
+      "headers": {
+        "Authorization": "Bearer ${UIZZE_MCP_TOKEN}"
+      }
+    }
+  }
+}

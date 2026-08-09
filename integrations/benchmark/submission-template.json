@@ -1,0 +1,22 @@
+{
+  "benchmarkVersion": "1.0.0",
+  "task": "replace-with-task-slug",
+  "taskFingerprint": "replace-with-npm-run-verify-output",
+  "candidate": {
+    "name": "replace-me",
+    "version": "replace-me"
+  },
+  "run": {
+    "date": "YYYY-MM-DD",
+    "elapsedMinutes": 0,
+    "implementationCommit": "replace-me",
+    "networkAccess": false,
+    "notes": ""
+  },
+  "evaluation": {
+    "evaluator": "replace-me",
+    "viewportsChecked": ["desktop", "mobile"],
+    "scores": {},
+    "claimedTotal": 0
+  }
+}

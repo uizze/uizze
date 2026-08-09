@@ -1,0 +1,272 @@
+:root {
+  color: #18181b;
+  background: #f4f4f5;
+  font-family:
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button,
+a {
+  font: inherit;
+}
+
+.release-shell {
+  min-height: 100vh;
+  background: #f4f4f5;
+}
+
+.release-header {
+  display: flex;
+  min-height: 64px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 28px;
+  border-bottom: 1px solid #e4e4e7;
+  background: #ffffff;
+}
+
+.release-wordmark {
+  color: #18181b;
+  font-size: 14px;
+  font-weight: 850;
+  letter-spacing: -0.03em;
+}
+
+.release-environment,
+.release-risk {
+  padding: 7px 10px;
+  border: 1px solid #d4d4d8;
+  border-radius: 999px;
+  background: #fafafa;
+  color: #52525b;
+  font-size: 12px;
+  font-weight: 720;
+}
+
+.release-panel {
+  width: min(880px, calc(100% - 32px));
+  margin: 48px auto;
+  overflow: hidden;
+  border: 1px solid #dedee3;
+  border-radius: 20px;
+  background: #ffffff;
+}
+
+.release-title-row,
+.release-state,
+.release-change,
+.release-actions,
+.release-decision {
+  padding: 28px 32px;
+}
+
+.release-title-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  border-bottom: 1px solid #eeeeef;
+}
+
+.release-kicker {
+  margin: 0 0 8px;
+  color: #71717a;
+  font-size: 12px;
+  font-weight: 760;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.release-kicker--danger {
+  color: #b42318;
+}
+
+.release-title-row h1,
+.release-state h1 {
+  max-width: 690px;
+  margin: 0;
+  color: #18181b;
+  font-size: clamp(28px, 5vw, 44px);
+  letter-spacing: -0.045em;
+  line-height: 1.04;
+}
+
+.release-title-row p:last-child,
+.release-state p:last-of-type,
+.release-change p:last-child {
+  margin: 12px 0 0;
+  color: #71717a;
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.release-facts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 0;
+  border-bottom: 1px solid #eeeeef;
+}
+
+.release-facts div {
+  padding: 22px 32px;
+  border-right: 1px solid #eeeeef;
+}
+
+.release-facts div:last-child {
+  border-right: 0;
+}
+
+.release-facts dt {
+  margin-bottom: 7px;
+  color: #71717a;
+  font-size: 12px;
+}
+
+.release-facts dd {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 720;
+}
+
+.release-change {
+  border-bottom: 1px solid #eeeeef;
+}
+
+.release-change h2 {
+  max-width: 680px;
+  margin: 0;
+  font-size: 22px;
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+}
+
+.release-decision {
+  margin: 0;
+  border-bottom: 1px solid #eeeeef;
+  background: #f0fdf4;
+  color: #166534;
+  font-size: 14px;
+  font-weight: 680;
+}
+
+.release-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.release-button {
+  min-height: 42px;
+  padding: 0 17px;
+  border-radius: 11px;
+  font-size: 14px;
+  font-weight: 760;
+  cursor: pointer;
+}
+
+.release-button:focus-visible {
+  outline: 3px solid #a1a1aa;
+  outline-offset: 3px;
+}
+
+.release-button--primary {
+  border: 1px solid #18181b;
+  background: #18181b;
+  color: #ffffff;
+}
+
+.release-button--secondary {
+  border: 1px solid #d4d4d8;
+  background: #ffffff;
+  color: #27272a;
+}
+
+.release-state {
+  min-height: 430px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.release-state .release-button {
+  margin-top: 24px;
+}
+
+.release-spinner {
+  width: 28px;
+  height: 28px;
+  margin-bottom: 24px;
+  border: 3px solid #e4e4e7;
+  border-top-color: #18181b;
+  border-radius: 50%;
+  animation: release-spin 0.8s linear infinite;
+}
+
+@keyframes release-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .release-spinner {
+    animation: none;
+  }
+}
+
+@media (max-width: 680px) {
+  .release-header {
+    padding: 0 18px;
+  }
+
+  .release-panel {
+    width: min(100% - 20px, 880px);
+    margin: 18px auto;
+    border-radius: 16px;
+  }
+
+  .release-title-row {
+    flex-direction: column;
+  }
+
+  .release-title-row,
+  .release-state,
+  .release-change,
+  .release-actions,
+  .release-decision {
+    padding: 24px 20px;
+  }
+
+  .release-facts {
+    grid-template-columns: 1fr;
+  }
+
+  .release-facts div {
+    padding: 18px 20px;
+    border-right: 0;
+    border-bottom: 1px solid #eeeeef;
+  }
+
+  .release-facts div:last-child {
+    border-bottom: 0;
+  }
+
+  .release-actions {
+    flex-direction: column-reverse;
+  }
+
+  .release-button {
+    width: 100%;
+  }
+}

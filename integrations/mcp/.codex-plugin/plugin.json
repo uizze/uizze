@@ -1,0 +1,49 @@
+{
+  "name": "uizze",
+  "version": "1.1.14",
+  "description": "Stop coding agents from shipping generic UI with UIZZE's 800,000+ real web and iOS screens and a hard finish gate.",
+  "author": {
+    "name": "UIZZE",
+    "email": "business@uizze.com",
+    "url": "https://uizze.com"
+  },
+  "homepage": "https://uizze.com/docs",
+  "repository": "https://github.com/uizze/uizze",
+  "license": "MIT",
+  "keywords": [
+    "ui",
+    "design",
+    "anti-slop",
+    "codex",
+    "mcp"
+  ],
+  "skills": "./skills/",
+  "mcpServers": {
+    "uizze": {
+      "type": "http",
+      "url": "https://uizze.com/mcp"
+    }
+  },
+  "interface": {
+    "displayName": "UIZZE",
+    "shortDescription": "Stop UI slop before it ships",
+    "longDescription": "If your UI screams AI, your app is dead. Build distinctive UI with 800,000+ real web and iOS screens, a product-specific design contract, and a hard finish gate.",
+    "developerName": "UIZZE",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Interactive",
+      "Read"
+    ],
+    "websiteURL": "https://uizze.com",
+    "privacyPolicyURL": "https://uizze.com/privacy",
+    "termsOfServiceURL": "https://uizze.com/terms",
+    "defaultPrompt": [
+      "Check this interface for UI slop before I ship it.",
+      "Ground this screen in real product UI references.",
+      "Make this UI feel specific to the product."
+    ],
+    "brandColor": "#111111",
+    "composerIcon": "./assets/uizze-logo-400x400.png",
+    "logo": "./assets/uizze-logo-400x400.png"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "task": "onboarding",
+  "criteria": [
+    { "id": "progress-orientation", "requirement": "The current step, completed step, and remaining steps are distinguishable without relying on color alone.", "weight": 10 },
+    { "id": "primary-hierarchy", "requirement": "Workspace setup is the clear primary task and secondary navigation does not compete with it.", "weight": 10 },
+    { "id": "url-feedback", "requirement": "Editing the workspace name produces an immediate, legible, sanitized workspace URL preview.", "weight": 10 },
+    { "id": "channel-choice", "requirement": "Channel options explain their consequence and expose an unambiguous selected state.", "weight": 10 },
+    { "id": "invite-management", "requirement": "A valid invite can be added, displayed, and removed with understandable feedback.", "weight": 10 },
+    { "id": "validation", "requirement": "Required and invalid values block continuation and produce specific inline error messages.", "weight": 10 },
+    { "id": "skip-save-model", "requirement": "The distinction between skipping invites, saving progress, going back, and continuing is clear.", "weight": 10 },
+    { "id": "next-step-expectation", "requirement": "The interface tells the user what continuing will do without adding a disruptive confirmation step.", "weight": 10 },
+    { "id": "responsive-finish", "requirement": "All content and controls remain readable, ordered, and usable at both required viewports.", "weight": 10 },
+    { "id": "accessible-operation", "requirement": "Labels, focus indicators, keyboard order, status messaging, and touch targets are usable and inspectable.", "weight": 10 }
+  ]
+}

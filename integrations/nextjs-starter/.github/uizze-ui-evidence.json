@@ -1,0 +1,23 @@
+{
+  "files": [
+    "components/ReleaseDesk.tsx",
+    "app/loading.tsx",
+    "app/error.tsx",
+    "app/not-found.tsx",
+    "app/globals.css"
+  ],
+  "evidence": {
+    "components/ReleaseDesk.tsx": {
+      "states": ["loading", "empty", "error", "success"]
+    },
+    "app/loading.tsx": {
+      "states": ["loading"]
+    },
+    "app/error.tsx": {
+      "states": ["error"]
+    },
+    "app/not-found.tsx": {
+      "states": ["empty"]
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "recordingId": "billing-settings-v1",
+  "classification": "recorded controlled case; not a UIZZE UI Slop Benchmark task or leaderboard entry",
+  "promptAndSeed": {
+    "seedCommit": "766c09f973e6b8b1a32745f60ab942507a52e959",
+    "taskPromptSha256": "d1e972f937eb7e624a95b69714c314ce464752230a1e470c5674aa6348e9adfd"
+  },
+  "controls": {
+    "client": "codex-cli 0.146.0-alpha.3.1",
+    "model": "gpt-5.6-terra",
+    "reasoningEffort": "low",
+    "runScheduling": "concurrent",
+    "wallClockMinutes": 20,
+    "viewport": "1440x1000 light reduced-motion"
+  },
+  "result": {
+    "baseline": {
+      "score": 96,
+      "elapsedMilliseconds": 150778,
+      "finalCommit": "c190c65be19a1f3e4a1c300a2cfd5fa80c6ec043"
+    },
+    "uizzeTreatment": {
+      "score": 98,
+      "elapsedMilliseconds": 140297,
+      "finalCommit": "57fbacba608af6fbed1f1bdd15441926044442ee",
+      "authenticatedMcpToolCallEventCount": 4
+    }
+  },
+  "limitations": [
+    "One recorded pair is not a general outcome estimate.",
+    "The score difference does not establish causation or a speed claim.",
+    "The scorer was blinded to condition before scores were fixed."
+  ],
+  "publicEvidence": [
+    "seed/",
+    "outputs/blind-evaluation.json",
+    "outputs/scope-reconciliation.json",
+    "outputs/baseline/",
+    "outputs/treatment/",
+    "assets/baseline/",
+    "assets/treatment/"
+  ]
+}

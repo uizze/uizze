@@ -1,0 +1,167 @@
+diff --git a/app.js b/app.js
+index 780262b..7f2b5a9 100644
+--- a/app.js
++++ b/app.js
+@@ -1,7 +1,75 @@
+ const app = document.querySelector('#app');
+-const state = new URLSearchParams(window.location.search).get('state') || 'default';
++const states = new Set(['default', 'loading', 'empty', 'failed', 'success']);
++const requestedState = new URLSearchParams(location.search).get('state');
++const state = states.has(requestedState) ? requestedState : 'default';
+ 
+-app.innerHTML = `
+-  <h1>Billing</h1>
+-  <p>This route is intentionally incomplete. Implement the requested billing workflow for the <strong>${state}</strong> state.</p>
+-`;
++const invoice = {
++  number: 'INV-2026-0718',
++  date: 'Jul 18, 2026',
++  amount: '$24.00',
++  status: 'Paid',
++};
++
++const changeState = (next) => location.assign(`?state=${next}`);
++
++const invoiceRow = () => `
++  <article class="invoice" aria-label="Invoice ${invoice.number}">
++    <div><strong>${invoice.number}</strong><span>${invoice.date}</span></div>
++    <div class="invoice-actions"><span class="status status-success">${invoice.status}</span><strong>${invoice.amount}</strong><details class="invoice-details"><summary>View invoice</summary><p>Pro plan · Jul 18–Aug 18, 2026</p></details><button class="text-button" type="button" data-receipt>Download receipt</button></div>
++  </article>`;
++
++const statesView = {
++  loading: `
++    <header class="page-heading"><p class="eyebrow">Settings</p><h1>Billing</h1><p>Manage your subscription, payment method, and billing history.</p></header>
++    <section class="card" aria-busy="true" aria-label="Loading billing information"><div class="skeleton title-skeleton"></div><div class="skeleton"></div><div class="skeleton short"></div></section>
++    <section class="card"><div class="skeleton title-skeleton"></div><div class="skeleton"></div></section>`,
++  empty: `
++    <header class="page-heading"><p class="eyebrow">Settings</p><h1>Billing</h1><p>Manage your subscription, payment method, and billing history.</p></header>
++    ${billingCards()}
++    <section class="section"><div class="section-heading"><div><h2>Invoices</h2><p>Your billing history will appear here.</p></div></div><div class="empty-state"><span aria-hidden="true">▧</span><h3>No invoices yet</h3><p>Invoices will be available after your first completed payment.</p></div></section>`,
++  failed: `
++    <header class="page-heading"><p class="eyebrow">Settings</p><h1>Billing</h1><p>Manage your subscription, payment method, and billing history.</p></header>
++    <section class="notice notice-danger" role="alert"><div><strong>Payment failed</strong><p>We couldn’t collect $24.00 for your Pro plan on Jul 25. Update your payment method or try the payment again.</p></div><button class="button button-danger" type="button" data-retry>Retry payment</button></section>
++    ${billingCards()}
++    ${invoicesSection()}`,
++  success: `
++    <header class="page-heading"><p class="eyebrow">Settings</p><h1>Billing</h1><p>Manage your subscription, payment method, and billing history.</p></header>
++    <section class="notice notice-success" role="status"><div><strong>Payment method updated</strong><p>Your new Visa ending in 4242 is now saved for future payments.</p></div></section>
++    ${billingCards('Visa ending in 4242')}
++    ${invoicesSection()}`,
++  default: `
++    <header class="page-heading"><p class="eyebrow">Settings</p><h1>Billing</h1><p>Manage your subscription, payment method, and billing history.</p></header>
++    ${billingCards()}
++    ${invoicesSection()}`,
++};
++
++function billingCards(paymentMethod = 'Visa ending in 0189') {
++  return `
++    <section class="cards" aria-label="Subscription and payment details">
++      <article class="card"><div class="card-heading"><div><h2>Current plan</h2><p>Pro plan</p></div><span class="status">Active</span></div><p class="price">$24 <span>per month</span></p><p>Renews on Aug 18, 2026. Includes up to 10 team members.</p></article>
++      <article class="card"><div class="card-heading"><div><h2>Payment method</h2><p>${paymentMethod}</p></div><span class="card-icon" aria-hidden="true">▣</span></div><p>Expires 08/28</p><button class="button button-secondary" type="button" data-change-payment>Replace payment method</button></article>
++    </section>`;
++}
++
++function invoicesSection() {
++  return `<section class="section"><div class="section-heading"><div><h2>Invoices</h2><p>Download a receipt for any completed payment.</p></div></div><div class="invoice-list">${invoiceRow()}</div></section>`;
++}
++
++app.innerHTML = statesView[state];
++
++app.addEventListener('click', (event) => {
++  if (event.target.closest('[data-change-payment]')) document.querySelector('#payment-dialog').showModal();
++  if (event.target.closest('[data-retry]')) changeState('loading');
++  if (event.target.closest('[data-receipt]')) downloadReceipt();
++});
++
++document.querySelector('#payment-dialog').addEventListener('close', (event) => {
++  if (event.target.returnValue === 'saved') changeState('success');
++});
++
++function downloadReceipt() {
++  const receipt = `Ledgerly receipt\nInvoice: ${invoice.number}\nDate: ${invoice.date}\nAmount: ${invoice.amount}\nStatus: ${invoice.status}\n`;
++  const link = Object.assign(document.createElement('a'), { href: URL.createObjectURL(new Blob([receipt], { type: 'text/plain' })), download: `${invoice.number}-receipt.txt` });
++  link.click();
++  URL.revokeObjectURL(link.href);
++}
+diff --git a/index.html b/index.html
+index 5116c8b..d7a62e8 100644
+--- a/index.html
++++ b/index.html
+@@ -12,14 +12,17 @@
+       <nav aria-label="Account"><a href="#profile">Profile</a><a aria-current="page" href="./index.html?state=default">Billing</a></nav>
+     </header>
+     <div class="settings-shell">
+-      <aside aria-label="Settings sections">
+-        <p class="settings-title">Settings</p>
+-        <a href="#workspace">Workspace</a>
+-        <a href="#members">Members</a>
+-        <a aria-current="page" href="./index.html?state=default">Billing</a>
+-      </aside>
++      <aside aria-label="Settings sections"><p class="settings-title">Settings</p><a href="#workspace">Workspace</a><a href="#members">Members</a><a aria-current="page" href="./index.html?state=default">Billing</a></aside>
+       <main id="app" tabindex="-1"></main>
+     </div>
++    <dialog id="payment-dialog" aria-labelledby="payment-title">
++      <form method="dialog" class="dialog-content">
++        <div class="dialog-heading"><div><h2 id="payment-title">Replace payment method</h2><p>Your new card will be used for future renewals.</p></div><button class="icon-button" value="cancel" aria-label="Close">×</button></div>
++        <label>Card number<input required inputmode="numeric" autocomplete="cc-number" placeholder="4242 4242 4242 4242" /></label>
++        <div class="form-row"><label>Expiry<input required autocomplete="cc-exp" placeholder="MM / YY" /></label><label>CVC<input required inputmode="numeric" autocomplete="cc-csc" placeholder="CVC" /></label></div>
++        <div class="dialog-actions"><button class="button button-secondary" value="cancel">Cancel</button><button class="button" value="saved">Save payment method</button></div>
++      </form>
++    </dialog>
+     <script src="./app.js"></script>
+   </body>
+ </html>
+diff --git a/styles.css b/styles.css
+index e83df2b..474c128 100644
+--- a/styles.css
++++ b/styles.css
+@@ -1,43 +1,6 @@
+-:root {
+-  --background: #f7f6f2;
+-  --surface: #ffffff;
+-  --foreground: #20211f;
+-  --muted-foreground: #686b65;
+-  --border: #d9dbd5;
+-  --accent: #235c4b;
+-  --accent-foreground: #ffffff;
+-  --danger: #a23a32;
+-  --success: #27684f;
+-  --focus: #2563eb;
+-  --font-sans: ui-sans-serif, system-ui, sans-serif;
+-  --radius: 10px;
+-  --space-1: 4px;
+-  --space-2: 8px;
+-  --space-3: 12px;
+-  --space-4: 16px;
+-  --space-6: 24px;
+-  --space-8: 32px;
+-}
+-
+-* { box-sizing: border-box; }
+-body { margin: 0; background: var(--background); color: var(--foreground); font: 15px/1.5 var(--font-sans); }
+-a { color: inherit; }
+-a:focus-visible, button:focus-visible, input:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+-.topbar { height: 64px; display: flex; align-items: center; justify-content: space-between; padding: 0 40px; border-bottom: 1px solid var(--border); background: var(--surface); }
+-.brand { font-size: 20px; font-weight: 750; text-decoration: none; }
+-.topbar nav { display: flex; gap: var(--space-6); }
+-.topbar nav a, aside a { color: var(--muted-foreground); text-decoration: none; }
+-[aria-current="page"] { color: var(--foreground) !important; font-weight: 650; }
+-.settings-shell { width: min(1160px, calc(100% - 64px)); margin: 48px auto; display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 56px; }
+-aside { display: flex; flex-direction: column; gap: var(--space-3); }
+-.settings-title { margin: 0 0 var(--space-2); font-weight: 700; }
+-main { min-width: 0; }
+-main h1 { margin: 0; font-size: 32px; letter-spacing: -0.025em; }
+-main p { color: var(--muted-foreground); }
+-
+-@media (max-width: 760px) {
+-  .topbar { padding: 0 20px; }
+-  .settings-shell { width: min(100% - 32px, 680px); margin: 28px auto; grid-template-columns: 1fr; gap: 28px; }
+-  aside { flex-direction: row; overflow-x: auto; }
+-  .settings-title { display: none; }
+-}
++:root { --background:#f7f6f2; --surface:#fff; --foreground:#20211f; --muted-foreground:#686b65; --border:#d9dbd5; --accent:#235c4b; --accent-foreground:#fff; --danger:#a23a32; --success:#27684f; --focus:#2563eb; --font-sans:ui-sans-serif,system-ui,sans-serif; --radius:10px; --space-1:4px; --space-2:8px; --space-3:12px; --space-4:16px; --space-6:24px; --space-8:32px; }
++* { box-sizing:border-box; } body { margin:0; background:var(--background); color:var(--foreground); font:15px/1.5 var(--font-sans); } button,input { font:inherit; } button { cursor:pointer; } a { color:inherit; } a:focus-visible,button:focus-visible,input:focus-visible { outline:3px solid var(--focus); outline-offset:2px; }
++.topbar { height:64px; display:flex; align-items:center; justify-content:space-between; padding:0 40px; border-bottom:1px solid var(--border); background:var(--surface); }.brand { font-size:20px;font-weight:750;text-decoration:none; }.topbar nav { display:flex;gap:var(--space-6); }.topbar nav a,aside a { color:var(--muted-foreground);text-decoration:none; }[aria-current="page"] { color:var(--foreground)!important;font-weight:650; }.settings-shell { width:min(1160px,calc(100% - 64px));margin:48px auto;display:grid;grid-template-columns:220px minmax(0,1fr);gap:56px; } aside { display:flex;flex-direction:column;gap:var(--space-3); }.settings-title { margin:0 0 var(--space-2);font-weight:700; }main { min-width:0; }
++.page-heading { margin-bottom:var(--space-8); }.eyebrow { color:var(--accent);font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin:0 0 var(--space-1); }.page-heading h1,h2,h3 { margin:0;letter-spacing:-.02em; }.page-heading h1 { font-size:32px; }.page-heading p,.card p,.section p,.notice p,.dialog-heading p { color:var(--muted-foreground);margin:var(--space-1) 0 0; }.cards { display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--space-4); }.card,.notice,.invoice-list,.empty-state { background:var(--surface);border:1px solid var(--border);border-radius:var(--radius); }.card { padding:var(--space-6); }.card-heading,.section-heading,.notice,.dialog-heading,.invoice { display:flex;justify-content:space-between;gap:var(--space-4); }.card h2,.section h2 { font-size:17px; }.card-icon { color:var(--muted-foreground);font-size:24px; }.price { margin:var(--space-6) 0 var(--space-1)!important;color:var(--foreground)!important;font-size:27px;font-weight:700; }.price span { font-size:14px;font-weight:400;color:var(--muted-foreground); }.button { border:1px solid var(--accent);border-radius:7px;background:var(--accent);color:var(--accent-foreground);font-weight:650;padding:9px 13px;margin-top:var(--space-4); }.button-secondary { background:var(--surface);color:var(--foreground);border-color:var(--border); }.button-danger { background:var(--danger);border-color:var(--danger);margin:0;white-space:nowrap; }.status { color:var(--accent);background:var(--background);border-radius:99px;font-size:13px;font-weight:650;padding:3px 8px;height:max-content; }.status-success { color:var(--success); }.section { margin-top:var(--space-8); }.section-heading { margin-bottom:var(--space-4); }.invoice-list { overflow:hidden; }.invoice { align-items:center;padding:var(--space-4);border:0;border-radius:0;border-bottom:1px solid var(--border); }.invoice:last-child { border:0; }.invoice div:first-child { display:grid; }.invoice span { color:var(--muted-foreground);font-size:13px; }.invoice-actions { display:flex;align-items:center;gap:var(--space-4); }.invoice-details { color:var(--accent);font-weight:650; }.invoice-details summary { cursor:pointer; }.invoice-details p { position:absolute;width:220px;margin:var(--space-2) 0 0;padding:var(--space-2);background:var(--surface);border:1px solid var(--border);border-radius:6px;color:var(--muted-foreground);font-size:13px;font-weight:400; }.text-button { background:none;border:0;color:var(--accent);font-weight:650;padding:0;text-decoration:underline; }.notice { align-items:flex-start;padding:var(--space-4);margin-bottom:var(--space-6); }.notice-danger { border-color:var(--danger); }.notice-danger strong { color:var(--danger); }.notice-success { border-color:var(--success); }.notice-success strong { color:var(--success); }.empty-state { text-align:center;padding:48px var(--space-6); }.empty-state span { color:var(--muted-foreground);font-size:28px; }.empty-state h3 { margin-top:var(--space-2); }.skeleton { height:15px;background:var(--border);border-radius:4px;margin-top:var(--space-3);animation:pulse 1.2s ease-in-out infinite alternate; }.title-skeleton { width:35%;height:22px;margin-top:0; }.short { width:55%; }@keyframes pulse { to { opacity:.45; } }
++dialog { width:min(460px,calc(100% - 32px));border:1px solid var(--border);border-radius:var(--radius);padding:0;color:var(--foreground);box-shadow:0 12px 36px #20211f33; }dialog::backdrop { background:#20211f66; }.dialog-content { padding:var(--space-6); }.dialog-heading { margin-bottom:var(--space-6); }.dialog-heading h2 { font-size:20px; }.icon-button { background:none;border:0;font-size:26px;line-height:1;color:var(--muted-foreground); }label { display:grid;gap:var(--space-2);font-weight:650;margin-top:var(--space-4); }input { width:100%;border:1px solid var(--border);border-radius:6px;padding:9px;background:var(--surface);color:var(--foreground); }.form-row { display:grid;grid-template-columns:1fr 1fr;gap:var(--space-3); }.dialog-actions { display:flex;justify-content:flex-end;gap:var(--space-3);margin-top:var(--space-6); }.dialog-actions .button { margin:0; }
++@media (max-width:760px) { .topbar { padding:0 20px; }.settings-shell { width:min(100% - 32px,680px);margin:28px auto;grid-template-columns:1fr;gap:28px; }aside { flex-direction:row;overflow-x:auto; }.settings-title { display:none; }.cards { grid-template-columns:1fr; }.invoice,.notice { align-items:flex-start;flex-direction:column; }.invoice-actions { width:100%;justify-content:space-between;flex-wrap:wrap; }.button-danger { width:100%; }.form-row { grid-template-columns:1fr;gap:0; } }

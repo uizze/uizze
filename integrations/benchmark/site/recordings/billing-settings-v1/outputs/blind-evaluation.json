@@ -1,0 +1,67 @@
+{
+  "proofId": "billing-settings-v1",
+  "scoredAt": "2026-07-26T05:42:00.000Z",
+  "protocol": "Outputs were copied to opaque labels A and B before visual/source scoring. The mapping is not recorded here and was not consulted until these scores were fixed.",
+  "scores": {
+    "A": {
+      "currentPlan": 5,
+      "replacePaymentMethod": 5,
+      "failedPaymentRetry": 5,
+      "invoiceInspection": 4,
+      "receiptDownload": 5,
+      "reachability": 5,
+      "loadingState": 4,
+      "emptyInvoiceState": 4,
+      "failedPaymentState": 4,
+      "successState": 4,
+      "recoveryClarity": 4,
+      "informationArchitecture": 7,
+      "visualHierarchyAndDensity": 6,
+      "seedDesignSystemFidelity": 6,
+      "accessibility": 5,
+      "responsiveIntegrity": 3,
+      "productSpecificity": 6,
+      "interactionSpecificity": 4,
+      "verification": 4,
+      "scopeIntegrity": 3,
+      "implementationQuality": 3,
+      "total": 96,
+      "notes": [
+        "All five declared states were captured and visually legible.",
+        "The invoice details path is present but less scan-forward than a full tabular inspection path.",
+        "The loading state preserves structure and uses aria-busy, but does not expose a visible status label."
+      ]
+    },
+    "B": {
+      "currentPlan": 5,
+      "replacePaymentMethod": 5,
+      "failedPaymentRetry": 5,
+      "invoiceInspection": 5,
+      "receiptDownload": 5,
+      "reachability": 5,
+      "loadingState": 4,
+      "emptyInvoiceState": 4,
+      "failedPaymentState": 4,
+      "successState": 4,
+      "recoveryClarity": 4,
+      "informationArchitecture": 7,
+      "visualHierarchyAndDensity": 7,
+      "seedDesignSystemFidelity": 6,
+      "accessibility": 6,
+      "responsiveIntegrity": 3,
+      "productSpecificity": 6,
+      "interactionSpecificity": 4,
+      "verification": 4,
+      "scopeIntegrity": 3,
+      "implementationQuality": 3,
+      "total": 98,
+      "notes": [
+        "All five declared states were captured and visually legible.",
+        "The tabular invoice history makes the requested fields immediately scannable.",
+        "The loading state includes a visible role=status announcement; the page avoids added card decoration."
+      ]
+    }
+  },
+  "hardEvidenceFlags": [],
+  "scopeEvidence": "raw/metadata-reconciliation.json derives the allowed-file result from each committed diff; the original metadata parser defect remains preserved in the raw metadata files."
+}

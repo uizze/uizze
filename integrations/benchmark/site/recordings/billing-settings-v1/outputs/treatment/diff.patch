@@ -1,0 +1,180 @@
+diff --git a/app.js b/app.js
+index 780262b..c9020f1 100644
+--- a/app.js
++++ b/app.js
+@@ -1,7 +1,102 @@
+ const app = document.querySelector('#app');
+-const state = new URLSearchParams(window.location.search).get('state') || 'default';
++const validStates = new Set(['default', 'loading', 'empty', 'failed', 'success']);
++const requestedState = new URLSearchParams(window.location.search).get('state') || 'default';
++const state = validStates.has(requestedState) ? requestedState : 'default';
+ 
+-app.innerHTML = `
+-  <h1>Billing</h1>
+-  <p>This route is intentionally incomplete. Implement the requested billing workflow for the <strong>${state}</strong> state.</p>
+-`;
++const invoiceRows = `
++  <div class="invoice-table" role="region" aria-label="Invoice history" tabindex="0">
++    <table>
++      <caption class="sr-only">Invoice history</caption>
++      <thead><tr><th scope="col">Invoice</th><th scope="col">Date</th><th scope="col">Amount</th><th scope="col">Status</th><th scope="col"><span class="sr-only">Receipt</span></th></tr></thead>
++      <tbody>
++        <tr><td>INV-2026-07</td><td>Jul 12, 2026</td><td>$49.00</td><td>Paid</td><td><button class="link-button" type="button" data-download="INV-2026-07">Download receipt</button></td></tr>
++        <tr><td>INV-2026-06</td><td>Jun 12, 2026</td><td>$49.00</td><td>Paid</td><td><button class="link-button" type="button" data-download="INV-2026-06">Download receipt</button></td></tr>
++        <tr><td>INV-2026-05</td><td>May 12, 2026</td><td>$49.00</td><td>Paid</td><td><button class="link-button" type="button" data-download="INV-2026-05">Download receipt</button></td></tr>
++      </tbody>
++    </table>
++  </div>`;
++
++const paymentMethod = `
++  <section class="section" aria-labelledby="payment-method-heading">
++    <div class="section-heading"><div><h2 id="payment-method-heading">Payment method</h2><p>Visa ending in 4242 · Expires 08/28</p></div><button class="secondary-button" type="button" data-action="replace">Replace card</button></div>
++    <form class="replace-form" hidden aria-label="Replace saved payment method">
++      <div class="form-grid">
++        <label>Card number<input name="card-number" inputmode="numeric" autocomplete="cc-number" aria-describedby="card-number-help" required /><span class="field-help" id="card-number-help">Enter the full number from your card.</span></label>
++        <label>Expiry<input name="expiry" inputmode="numeric" autocomplete="cc-exp" aria-describedby="expiry-help" required /><span class="field-help" id="expiry-help">Month and year.</span></label>
++        <label>Security code<input name="cvc" inputmode="numeric" autocomplete="cc-csc" aria-describedby="cvc-help" required /><span class="field-help" id="cvc-help">The 3-digit code.</span></label>
++      </div>
++      <div class="form-actions"><button class="primary-button" type="submit">Save payment method</button><button class="quiet-button" type="button" data-action="cancel-replace">Cancel</button></div>
++    </form>
++  </section>`;
++
++function layout({ notice = '', invoices = invoiceRows, method = paymentMethod }) {
++  return `
++    <header class="page-header"><h1>Billing</h1><p>Manage your workspace plan, payment method, and invoices.</p></header>
++    ${notice}
++    <section class="section" aria-labelledby="plan-heading">
++      <div class="section-heading"><div><h2 id="plan-heading">Current plan</h2><p>Team plan · $49 per month</p></div><a class="text-link" href="mailto:billing@ledgerly.example?subject=Plan%20change">Change plan</a></div>
++      <p class="detail">Renews on August 12, 2026. Includes up to 10 members.</p>
++    </section>
++    ${method}
++    <section class="section" aria-labelledby="invoices-heading">
++      <div class="section-heading"><div><h2 id="invoices-heading">Invoices</h2><p>Receipts are available for paid invoices.</p></div></div>
++      ${invoices}
++    </section>`;
++}
++
++const loadingContent = `
++  <header class="page-header"><h1>Billing</h1><p>Retrieving your billing details.</p></header>
++  <div class="loading-block" role="status"><span class="spinner" aria-hidden="true"></span><span>Loading billing details…</span></div>
++  <div class="skeleton-lines" aria-hidden="true"><i></i><i></i><i></i><i></i></div>`;
++
++const emptyInvoices = `<div class="empty-message"><h3>No invoices yet</h3><p>Your invoice history will appear here after your first paid billing cycle.</p></div>`;
++const failedNotice = `<section class="notice notice-danger" role="alert" aria-labelledby="payment-failed-heading"><div><h2 id="payment-failed-heading">Your July 12 payment did not go through</h2><p>Your card ending in 4242 was declined for $49.00. Update the card or retry the payment to keep your Team plan active.</p></div><button class="primary-button" type="button" data-action="retry">Retry payment</button></section>`;
++const successNotice = `<section class="notice notice-success" role="status" aria-labelledby="payment-updated-heading"><div><h2 id="payment-updated-heading">Payment method replaced</h2><p>Your new Visa ending in 6789 will be used for future invoices.</p></div></section>`;
++
++if (state === 'loading') app.innerHTML = loadingContent;
++else if (state === 'empty') app.innerHTML = layout({ invoices: emptyInvoices });
++else if (state === 'failed') app.innerHTML = layout({ notice: failedNotice });
++else if (state === 'success') app.innerHTML = layout({ notice: successNotice });
++else app.innerHTML = layout({});
++
++function goTo(nextState) {
++  const url = new URL(window.location.href);
++  url.searchParams.set('state', nextState);
++  window.location.assign(url);
++}
++
++app.addEventListener('click', (event) => {
++  const button = event.target.closest('button');
++  if (!button) return;
++  if (button.dataset.action === 'replace') {
++    const form = app.querySelector('.replace-form');
++    form.hidden = false;
++    button.hidden = true;
++    form.querySelector('input').focus();
++  }
++  if (button.dataset.action === 'cancel-replace') {
++    const form = app.querySelector('.replace-form');
++    form.reset();
++    form.hidden = true;
++    app.querySelector('[data-action="replace"]').hidden = false;
++    app.querySelector('[data-action="replace"]').focus();
++  }
++  if (button.dataset.action === 'retry') goTo('loading');
++  if (button.dataset.download) {
++    const invoice = button.dataset.download;
++    const receipt = `Ledgerly receipt\nInvoice: ${invoice}\nPlan: Team\nAmount: $49.00\nStatus: Paid\n`;
++    const link = document.createElement('a');
++    link.href = URL.createObjectURL(new Blob([receipt], { type: 'text/plain' }));
++    link.download = `${invoice}-receipt.txt`;
++    link.click();
++    URL.revokeObjectURL(link.href);
++  }
++});
++
++app.addEventListener('submit', (event) => {
++  if (!event.target.matches('.replace-form')) return;
++  event.preventDefault();
++  goTo('success');
++});
++
++if (state === 'loading') window.setTimeout(() => goTo('default'), 900);
+diff --git a/styles.css b/styles.css
+index e83df2b..2127ccd 100644
+--- a/styles.css
++++ b/styles.css
+@@ -23,6 +23,8 @@
+ body { margin: 0; background: var(--background); color: var(--foreground); font: 15px/1.5 var(--font-sans); }
+ a { color: inherit; }
+ a:focus-visible, button:focus-visible, input:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
++button, input { font: inherit; }
++button { cursor: pointer; }
+ .topbar { height: 64px; display: flex; align-items: center; justify-content: space-between; padding: 0 40px; border-bottom: 1px solid var(--border); background: var(--surface); }
+ .brand { font-size: 20px; font-weight: 750; text-decoration: none; }
+ .topbar nav { display: flex; gap: var(--space-6); }
+@@ -31,13 +33,48 @@ a:focus-visible, button:focus-visible, input:focus-visible { outline: 3px solid
+ .settings-shell { width: min(1160px, calc(100% - 64px)); margin: 48px auto; display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 56px; }
+ aside { display: flex; flex-direction: column; gap: var(--space-3); }
+ .settings-title { margin: 0 0 var(--space-2); font-weight: 700; }
+-main { min-width: 0; }
++main { min-width: 0; max-width: 760px; }
+ main h1 { margin: 0; font-size: 32px; letter-spacing: -0.025em; }
+ main p { color: var(--muted-foreground); }
+-
++.page-header { margin-bottom: var(--space-8); }
++.page-header p { margin: var(--space-2) 0 0; }
++.section { border-top: 1px solid var(--border); padding: var(--space-6) 0; }
++.section-heading, .notice { display: flex; align-items: flex-start; justify-content: space-between; gap: var(--space-6); }
++h2, h3 { margin: 0; font-size: 17px; letter-spacing: -0.01em; }
++.section-heading p, .notice p { margin: var(--space-1) 0 0; }
++.detail { margin: var(--space-4) 0 0; }
++.primary-button, .secondary-button, .quiet-button, .link-button { border-radius: var(--radius); min-height: 40px; padding: 8px 12px; font-weight: 650; }
++.primary-button { border: 1px solid var(--accent); background: var(--accent); color: var(--accent-foreground); white-space: nowrap; }
++.secondary-button { border: 1px solid var(--border); background: var(--surface); color: var(--foreground); white-space: nowrap; }
++.quiet-button, .link-button { border: 0; background: transparent; color: var(--accent); padding-left: 0; padding-right: 0; text-decoration: underline; text-underline-offset: 2px; }
++.text-link { color: var(--accent); font-weight: 650; white-space: nowrap; }
++.replace-form { margin-top: var(--space-6); padding-top: var(--space-6); border-top: 1px solid var(--border); }
++.form-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: var(--space-3); }
++label { display: grid; gap: var(--space-2); font-weight: 650; }
++.field-help { color: var(--muted-foreground); font-size: 13px; font-weight: 400; }
++input { width: 100%; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); color: var(--foreground); padding: 9px 10px; }
++.form-actions { display: flex; align-items: center; gap: var(--space-4); margin-top: var(--space-4); }
++.notice { margin: 0 0 var(--space-8); padding: var(--space-4); border-left: 4px solid var(--danger); background: var(--surface); }
++.notice-success { border-left-color: var(--success); }
++.notice h2 { color: var(--danger); }
++.notice-success h2 { color: var(--success); }
++.invoice-table { overflow-x: auto; margin-top: var(--space-4); }
++table { width: 100%; border-collapse: collapse; text-align: left; }
++th { color: var(--muted-foreground); font-weight: 650; }
++th, td { padding: var(--space-3) var(--space-2); border-bottom: 1px solid var(--border); white-space: nowrap; }
++th:first-child, td:first-child { padding-left: 0; font-weight: 650; }
++th:last-child, td:last-child { padding-right: 0; text-align: right; }
++.empty-message { padding: var(--space-6) 0 var(--space-2); }
++.empty-message p { margin: var(--space-1) 0 0; max-width: 480px; }
++.loading-block { display: flex; align-items: center; gap: var(--space-3); padding: var(--space-6) 0; font-weight: 650; }
++.spinner { width: 18px; height: 18px; border: 2px solid var(--border); border-top-color: var(--accent); border-radius: 50%; animation: spin .8s linear infinite; }
++.skeleton-lines { display: grid; gap: var(--space-3); padding-top: var(--space-6); border-top: 1px solid var(--border); }
++.skeleton-lines i { display: block; height: 16px; width: 100%; background: var(--border); opacity: .65; border-radius: var(--radius); }
++.skeleton-lines i:nth-child(2) { width: 82%; }.skeleton-lines i:nth-child(3) { width: 90%; }.skeleton-lines i:nth-child(4) { width: 68%; }
++.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
++@keyframes spin { to { transform: rotate(360deg); } }
++@media (prefers-reduced-motion: reduce) { .spinner { animation: none; } }
+ @media (max-width: 760px) {
+-  .topbar { padding: 0 20px; }
+-  .settings-shell { width: min(100% - 32px, 680px); margin: 28px auto; grid-template-columns: 1fr; gap: 28px; }
+-  aside { flex-direction: row; overflow-x: auto; }
+-  .settings-title { display: none; }
++  .topbar { padding: 0 20px; }.settings-shell { width: min(100% - 32px, 680px); margin: 28px auto; grid-template-columns: 1fr; gap: 28px; } aside { flex-direction: row; overflow-x: auto; }.settings-title { display: none; }
++  .section-heading, .notice { flex-direction: column; gap: var(--space-3); }.form-grid { grid-template-columns: 1fr; }
+ }

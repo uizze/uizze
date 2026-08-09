@@ -1,0 +1,15 @@
+{
+  "task": "developer-dashboard",
+  "criteria": [
+    { "id": "failure-hierarchy", "requirement": "Failing service, production environment, deployment identity, commit, author, and duration are quickly scannable.", "weight": 10 },
+    { "id": "stage-model", "requirement": "Succeeded, failed, and not-started stages are distinguishable without relying on color alone.", "weight": 10 },
+    { "id": "first-error", "requirement": "The migration failure and its first useful error appear before the full log and retain exact supplied facts.", "weight": 10 },
+    { "id": "log-inspection", "requirement": "Full log content is available on demand, readable, and does not overwhelm the primary diagnosis.", "weight": 10 },
+    { "id": "copy-controls", "requirement": "The exact error and commit SHA can each be copied with specific success or failure feedback.", "weight": 10 },
+    { "id": "retry-guardrail", "requirement": "Retry communicates what will rerun and requires an intentional confirmation before execution.", "weight": 10 },
+    { "id": "rollback-guardrail", "requirement": "Rollback is distinct from retry and communicates the production consequence before execution.", "weight": 10 },
+    { "id": "action-state", "requirement": "Busy, cancellation, completion, and error states prevent ambiguous or duplicate deployment actions.", "weight": 10 },
+    { "id": "responsive-finish", "requirement": "Diagnosis order, logs, and action controls remain usable without page overflow at both required viewports.", "weight": 10 },
+    { "id": "accessible-operation", "requirement": "Landmarks, headings, focus indicators, keyboard order, status messaging, and touch targets are usable and inspectable.", "weight": 10 }
+  ]
+}

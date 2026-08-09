@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Launchpad deployment</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header>
+      <a href="#">Launchpad</a>
+      <nav aria-label="Primary"><a href="#">Projects</a><a href="#">Activity</a><a href="#">Settings</a></nav>
+    </header>
+    <main>
+      <div class="breadcrumb"><a href="#">Checkout API</a><span>/</span><span>Production</span></div>
+      <section class="deployment-head">
+        <div><p>Deployment dep_8f2a</p><h1>Release failed</h1><p>main · a81fc9e · Sam B. · 4m 12s</p></div>
+        <div class="actions"><button type="button" id="rollback">Roll back</button><button type="button" id="retry">Retry deployment</button></div>
+      </section>
+
+      <ol class="timeline" aria-label="Deployment stages">
+        <li><strong>Build</strong><span>Succeeded · 2m 48s</span></li>
+        <li><strong>Release</strong><span>Failed · database migration</span></li>
+        <li><strong>Health check</strong><span>Not started</span></li>
+      </ol>
+
+      <section class="error-panel">
+        <div><p>First error · 10:42:18 UTC</p><h2>Migration 20260722_add_invoice_status failed</h2></div>
+        <button type="button" id="copy-error">Copy error</button>
+        <pre><code>ERROR: column "status" of relation "invoices" already exists
+at migrations/20260722_add_invoice_status.sql:4
+release command exited with status 1</code></pre>
+      </section>
+
+      <details>
+        <summary>Full release log</summary>
+        <pre><code>10:42:16 Starting release command
+10:42:17 Applying pending migrations
+10:42:18 ERROR: column "status" of relation "invoices" already exists
+10:42:18 Release command failed</code></pre>
+      </details>
+      <p id="action-status" role="status"></p>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>

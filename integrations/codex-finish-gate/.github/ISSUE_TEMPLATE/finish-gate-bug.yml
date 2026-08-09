@@ -1,0 +1,35 @@
+name: Finish-gate bug
+description: Report a reproducible verifier, state-coverage, accessibility, or evidence problem.
+title: "[bug] "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: Describe the observable problem and why it weakens the finish gate.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Minimal reproduction
+      description: Include commands, state URL, and a minimal repository diff. Remove sensitive data.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Add authentic output or screenshots only. Do not include credentials, customer data, account identifiers, or unrelated desktop content.
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety and disclosure
+      options:
+        - label: I removed sensitive data and unrelated desktop content.
+          required: true
+        - label: I disclosed any relationship to a product mentioned here.
+          required: true
+        - label: This is not a promotional link submission or generated marketing asset.
+          required: true

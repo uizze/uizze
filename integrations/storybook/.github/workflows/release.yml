@@ -1,0 +1,126 @@
+name: Publish release
+
+on:
+  release:
+    types: [published]
+
+permissions:
+  contents: read
+
+jobs:
+  github-package:
+    name: Publish GitHub package
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+    outputs:
+      package-file: ${{ steps.package.outputs.file }}
+    steps:
+      - name: Checkout release
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - name: Install pnpm
+        uses: pnpm/action-setup@b906affcce14559ad1aafd4ab0e942779e9f58b1 # v4
+      - name: Use Node.js
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: 20.19.0
+          cache: pnpm
+          registry-url: https://registry.npmjs.org
+      - name: Install exact dependencies
+        run: pnpm install --frozen-lockfile
+      - name: Validate release source
+        run: pnpm validate
+      - name: Build and inspect release package
+        id: package
+        run: |
+          test "$GITHUB_REF_NAME" = "v$(node -p "require('./package.json').version")"
+          node -e "const p = require('./package.json'); const hooks = ['preinstall', 'install', 'postinstall']; if (p.dependencies || hooks.some((name) => p.scripts?.[name])) process.exit(1)"
+          mkdir -p .release
+          pnpm pack --pack-destination .release
+          package_file=$(basename .release/storybook-addon-uizze-*.tgz)
+          echo "file=$package_file" >> "$GITHUB_OUTPUT"
+          tar -tf ".release/$package_file" > .release/package-files.txt
+          grep -q 'package/dist/manager.js' .release/package-files.txt
+          grep -q 'package/dist/index.js' .release/package-files.txt
+          grep -q 'package/dist/preset.js' .release/package-files.txt
+          grep -q 'package/README.md' .release/package-files.txt
+          grep -q 'package/LICENSE' .release/package-files.txt
+          grep -q 'package/SECURITY.md' .release/package-files.txt
+          if grep -Eq 'package/(src|tests|\.github)/' .release/package-files.txt; then
+            echo 'Source-only files escaped into the release package.' >&2
+            exit 1
+          fi
+          (cd .release && sha256sum "$package_file" > "$package_file.sha256")
+      - name: Upload package and checksum to the release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: >-
+          gh release upload "$GITHUB_REF_NAME"
+          .release/storybook-addon-uizze-*.tgz
+          .release/storybook-addon-uizze-*.tgz.sha256
+          --clobber
+
+  release-smoke:
+    name: Install release / Storybook ${{ matrix.storybook }}
+    needs: github-package
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        storybook: [9.1.20, 10.5.3]
+    steps:
+      - name: Use Node.js
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: 20.19.0
+      - name: Install the public release and build Storybook
+        env:
+          PACKAGE_URL: https://github.com/${{ github.repository }}/releases/download/${{ github.event.release.tag_name }}/${{ needs.github-package.outputs.package-file }}
+          STORYBOOK_VERSION: ${{ matrix.storybook }}
+        run: |
+          mkdir release-smoke
+          cd release-smoke
+          npm init --yes
+          npm install --save-dev \
+            "$PACKAGE_URL" \
+            "storybook@$STORYBOOK_VERSION" \
+            "@storybook/react-vite@$STORYBOOK_VERSION" \
+            react@18.3.1 \
+            react-dom@18.3.1 \
+            vite@7.3.6
+          mkdir -p .storybook src
+          node -e "require('fs').writeFileSync('.storybook/main.js', \"export default { stories: ['../src/**/*.stories.jsx'], addons: ['storybook-addon-uizze'], framework: '@storybook/react-vite' };\\n\")"
+          node -e "require('fs').writeFileSync('src/Smoke.stories.jsx', \"export default { title: 'Release smoke' }; export const Ready = { render: () => 'Ready', parameters: { uizze: { screenJob: 'Verify the public release.', primaryAction: 'Ship', references: [{ label: 'UIZZE', url: 'https://uizze.com' }], requiredStates: ['ready', 'loading', 'empty', 'error'], forbiddenPatterns: ['Inert controls'], acceptanceCriteria: ['The release builds.'] } } };\\n\")"
+          npx storybook build --quiet
+
+  publish-npm:
+    name: Publish npm package
+    if: vars.NPM_PUBLISH_ENABLED == 'true'
+    needs: release-smoke
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    environment: npm
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - name: Checkout release
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - name: Install pnpm
+        uses: pnpm/action-setup@b906affcce14559ad1aafd4ab0e942779e9f58b1 # v4
+      - name: Use Node.js
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: 22.20.0
+          cache: pnpm
+          registry-url: https://registry.npmjs.org
+      - name: Install exact dependencies
+        run: pnpm install --frozen-lockfile
+      - name: Use npm with trusted publishing support
+        run: npm install --global npm@12.0.1
+      - name: Build package
+        run: pnpm build
+      - name: Publish with npm provenance
+        run: npm publish --access public

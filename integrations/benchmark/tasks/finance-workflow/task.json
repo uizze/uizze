@@ -1,0 +1,12 @@
+{
+  "slug": "finance-workflow",
+  "benchmarkVersion": "1.0.0",
+  "title": "Invoice review and approval",
+  "prompt": "prompt.md",
+  "artifacts": [
+    "prompt.md",
+    "starter/index.html",
+    "starter/styles.css",
+    "starter/app.js"
+  ]
+}

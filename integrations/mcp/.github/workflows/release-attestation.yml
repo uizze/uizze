@@ -1,0 +1,193 @@
+name: Publish attested release
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Existing semantic tag to reproduce without publishing
+        required: true
+        default: v1.1.12
+        type: string
+      publish_existing:
+        description: Register provenance only when the reproduced artifact matches the published release asset
+        required: true
+        default: false
+        type: boolean
+
+permissions:
+  contents: read
+
+concurrency:
+  group: release-provenance-${{ github.event.release.tag_name || inputs.tag }}
+  cancel-in-progress: false
+
+jobs:
+  release:
+    name: Reproduce ${{ github.event.release.tag_name || inputs.tag }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+      id-token: write
+      attestations: write
+    env:
+      TAG: ${{ github.event.release.tag_name || inputs.tag }}
+    steps:
+      - name: Check out all release history
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Reproduce the release artifact
+        id: artifact
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          if [[ ! "$TAG" =~ ^v[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+            echo "Tag must use the exact vMAJOR.MINOR.PATCH form." >&2
+            exit 1
+          fi
+
+          git rev-parse --verify "refs/tags/${TAG}^{commit}" >/dev/null
+
+          version=$(git show "${TAG}:server.json" | jq -er '.version')
+          if [[ "v${version}" != "$TAG" ]]; then
+            echo "server.json version ${version} does not match ${TAG}." >&2
+            exit 1
+          fi
+
+          artifact="uizze-mcp-${TAG}.tar.gz"
+          git archive --format=tar --prefix="uizze-mcp-${TAG}/" "$TAG" | gzip -n > "$artifact"
+
+          digest=$(sha256sum "$artifact" | cut -d ' ' -f 1)
+          commit=$(git rev-parse "${TAG}^{commit}")
+          tree=$(git rev-parse "${TAG}^{tree}")
+
+          printf '%s  %s\n' "$digest" "$artifact" > SHA256SUMS
+          jq -n \
+            --arg repository "https://github.com/${GITHUB_REPOSITORY}" \
+            --arg tag "$TAG" \
+            --arg commit "$commit" \
+            --arg tree "$tree" \
+            --arg artifact "$artifact" \
+            --arg sha256 "$digest" \
+            '{
+              schema: "https://uizze.com/schemas/release-provenance/v1",
+              repository: $repository,
+              tag: $tag,
+              commit: $commit,
+              tree: $tree,
+              artifact: {name: $artifact, sha256: $sha256},
+              generator: "GitHub Actions: git archive --format=tar | gzip -n"
+            }' > PROVENANCE.json
+
+          {
+            echo "artifact=$artifact"
+            echo "digest=$digest"
+            echo "commit=$commit"
+            echo "tree=$tree"
+          } >> "$GITHUB_OUTPUT"
+
+          {
+            echo "### Reproducible release built"
+            echo
+            echo "- Tag: \`${TAG}\`"
+            echo "- Commit: \`${commit}\`"
+            echo "- Tree: \`${tree}\`"
+            echo "- Artifact: \`${artifact}\`"
+            echo "- SHA-256: \`${digest}\`"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload missing release assets
+        if: github.event_name == 'release'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ARTIFACT: ${{ steps.artifact.outputs.artifact }}
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          release=$(gh api "repos/${GITHUB_REPOSITORY}/releases/tags/${TAG}")
+          upload=()
+
+          for file in "$ARTIFACT" SHA256SUMS PROVENANCE.json; do
+            local_digest=$(sha256sum "$file" | cut -d ' ' -f 1)
+            remote_digest=$(jq -r --arg name "$file" '.assets[] | select(.name == $name) | .digest' <<< "$release")
+
+            if [[ -z "$remote_digest" ]]; then
+              upload+=("$file")
+            elif [[ "$remote_digest" != "sha256:${local_digest}" ]]; then
+              echo "Published ${file} has ${remote_digest}; refusing to overwrite it with sha256:${local_digest}." >&2
+              exit 1
+            fi
+          done
+
+          if (( ${#upload[@]} > 0 )); then
+            gh release upload "$TAG" "${upload[@]}"
+          fi
+
+      - name: Verify the existing release artifact before backfill
+        if: github.event_name == 'workflow_dispatch' && inputs.publish_existing
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ARTIFACT: ${{ steps.artifact.outputs.artifact }}
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          release=$(gh api "repos/${GITHUB_REPOSITORY}/releases/tags/${TAG}")
+          local_digest=$(sha256sum "$ARTIFACT" | cut -d ' ' -f 1)
+          remote_digest=$(jq -r --arg name "$ARTIFACT" '.assets[] | select(.name == $name) | .digest' <<< "$release")
+
+          if [[ -z "$remote_digest" ]]; then
+            echo "Published release ${TAG} has no ${ARTIFACT}; refusing to create provenance." >&2
+            exit 1
+          fi
+
+          if [[ "$remote_digest" != "sha256:${local_digest}" ]]; then
+            echo "Published ${ARTIFACT} has ${remote_digest}; reproduced artifact has sha256:${local_digest}." >&2
+            exit 1
+          fi
+
+          echo "Reproduced ${ARTIFACT} exactly matches ${remote_digest}." >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Register keyless build provenance
+        id: build-provenance
+        if: github.event_name == 'release' || inputs.publish_existing
+        uses: actions/attest-build-provenance@0f67c3f4856b2e3261c31976d6725780e5e4c373 # v4.1.1
+        with:
+          subject-path: ${{ steps.artifact.outputs.artifact }}
+
+      - name: Publish the verifiable provenance bundle
+        if: github.event_name == 'release' || inputs.publish_existing
+        env:
+          ARTIFACT: ${{ steps.artifact.outputs.artifact }}
+          BUNDLE_PATH: ${{ steps.build-provenance.outputs.bundle-path }}
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          published_bundle="${ARTIFACT%.tar.gz}.intoto.jsonl"
+          cp "$BUNDLE_PATH" "$published_bundle"
+
+          release=$(gh api "repos/${GITHUB_REPOSITORY}/releases/tags/${TAG}")
+          local_digest=$(sha256sum "$published_bundle" | cut -d ' ' -f 1)
+          remote_digest=$(jq -r --arg name "$published_bundle" '.assets[] | select(.name == $name) | .digest' <<< "$release")
+
+          if [[ -z "$remote_digest" ]]; then
+            gh release upload "$TAG" "$published_bundle"
+          elif [[ "$remote_digest" != "sha256:${local_digest}" ]]; then
+            echo "Published ${published_bundle} has ${remote_digest}; refusing to overwrite it with sha256:${local_digest}." >&2
+            exit 1
+          fi
+
+          {
+            echo
+            echo "- Provenance bundle: \`${published_bundle}\`"
+            echo "- Verify: \`gh attestation verify ${ARTIFACT} --repo ${GITHUB_REPOSITORY}\`"
+          } >> "$GITHUB_STEP_SUMMARY"

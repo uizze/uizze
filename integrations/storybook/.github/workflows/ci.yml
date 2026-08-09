@@ -1,0 +1,62 @@
+name: Validate addon
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Storybook ${{ matrix.storybook }} / Node ${{ matrix.node }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - node: 20.19.0
+            storybook: 9.1.20
+          - node: 20.19.0
+            storybook: 10.5.3
+          - node: 22.12.0
+            storybook: 10.5.3
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - name: Install pnpm
+        uses: pnpm/action-setup@b906affcce14559ad1aafd4ab0e942779e9f58b1 # v4
+      - name: Use Node.js
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: ${{ matrix.node }}
+          cache: pnpm
+      - name: Install exact baseline dependencies
+        run: pnpm install --frozen-lockfile
+      - name: Select Storybook 9 fixture
+        if: matrix.storybook == '9.1.20'
+        run: >-
+          pnpm add --save-dev --ignore-workspace-root-check
+          storybook@9.1.20
+          @storybook/react-vite@9.1.20
+          @storybook/addon-docs@9.1.20
+          eslint-plugin-storybook@9.1.20
+      - name: Validate source, contract, addon, and fixture
+        run: pnpm validate
+      - name: Inspect the published package boundary
+        run: |
+          pnpm pack:check
+          package_file=$(find .artifacts -maxdepth 1 -name 'storybook-addon-uizze-*.tgz' -print -quit)
+          test -n "$package_file"
+          tar -tf "$package_file" > .artifacts/package-files.txt
+          grep -q 'package/dist/manager.js' .artifacts/package-files.txt
+          grep -q 'package/dist/index.js' .artifacts/package-files.txt
+          grep -q 'package/SECURITY.md' .artifacts/package-files.txt
+          if grep -Eq 'package/(src|tests|\.github)/' .artifacts/package-files.txt; then
+            echo 'Source-only files escaped into the package.' >&2
+            exit 1
+          fi

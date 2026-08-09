@@ -1,0 +1,4 @@
+interface:
+  display_name: "UIZZE — Stop Making UI Slop"
+  short_description: "Stop UI slop before it ships"
+  default_prompt: "Use $uizze-ui-research to kill generic UI, ground this interface in real product evidence, and run a hard finish gate before shipping."

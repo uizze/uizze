@@ -1,0 +1,4 @@
+interface:
+  display_name: "UIZZE — UI SLOP REVIEW"
+  short_description: "Kill generic UI before it ships"
+  default_prompt: "Use $ui-slop-review to find every generic decision in this rendered interface and run a hard finish gate before it ships."

@@ -1,0 +1,41 @@
+name: UIZZE UI Slop Gate
+description: If your UI screams AI, your app is dead. Catch UI slop in every pull request before it ships.
+author: UIZZE
+
+branding:
+  icon: eye
+  color: blue
+
+inputs:
+  files:
+    description: Optional comma- or newline-separated paths. By default, the action inspects changed frontend files.
+    required: false
+    default: ""
+  manifest:
+    description: Optional path to a local JSON manifest containing files and reviewed-state evidence.
+    required: false
+    default: ""
+  fail-on:
+    description: Minimum severity that fails the step; one of error, warning, or never.
+    required: false
+    default: error
+  show-uizze-link:
+    description: Offer optional free visual and agent follow-ups after useful scan results in the job summary.
+    required: false
+    default: "true"
+  max-files:
+    description: Maximum number of frontend files to inspect.
+    required: false
+    default: "200"
+
+outputs:
+  finding-count:
+    description: Number of findings emitted.
+  scanned-files:
+    description: Number of frontend files inspected.
+  conclusion:
+    description: pass or fail according to fail-on.
+
+runs:
+  using: node24
+  main: dist/index.js

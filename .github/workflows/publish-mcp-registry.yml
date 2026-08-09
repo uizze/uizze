@@ -1,0 +1,62 @@
+name: Publish MCP Registry
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+  id-token: write
+
+concurrency:
+  group: mcp-registry-${{ github.event.release.tag_name || github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    name: Publish server.json
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check out the canonical source
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+        with:
+          persist-credentials: false
+
+      - name: Verify release and manifest versions
+        if: github.event_name == 'release'
+        env:
+          TAG: ${{ github.event.release.tag_name }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          version=$(jq -er '.version' server.json)
+          test "v${version}" = "$TAG"
+
+      - name: Install the pinned MCP publisher
+        env:
+          PUBLISHER_VERSION: v1.7.9
+          PUBLISHER_SHA256: ab128162b0616090b47cf245afe0a23f3ef08936fdce19074f5ba0a4469281ac
+        shell: bash
+        run: |
+          set -euo pipefail
+          archive="$RUNNER_TEMP/mcp-publisher.tar.gz"
+          curl --fail --location --silent --show-error \
+            "https://github.com/modelcontextprotocol/registry/releases/download/${PUBLISHER_VERSION}/mcp-publisher_linux_amd64.tar.gz" \
+            --output "$archive"
+          printf '%s  %s\n' "$PUBLISHER_SHA256" "$archive" | sha256sum --check --strict
+          tar --extract --gzip --file "$archive" --directory "$RUNNER_TEMP" mcp-publisher
+          "$RUNNER_TEMP/mcp-publisher" --version
+
+      - name: Validate Registry metadata
+        run: |
+          "$RUNNER_TEMP/mcp-publisher" validate server.json
+
+      - name: Authenticate as UIZZE
+        run: |
+          "$RUNNER_TEMP/mcp-publisher" login github-oidc
+
+      - name: Publish the UIZZE listing
+        run: |
+          "$RUNNER_TEMP/mcp-publisher" publish server.json

@@ -1,0 +1,114 @@
+{
+  "name": "storybook-addon-uizze",
+  "version": "0.1.1",
+  "description": "STOP UI SLOP in Storybook with a local, accountless design-contract finish gate.",
+  "keywords": [
+    "storybook-addons",
+    "storybook-addon",
+    "storybook",
+    "ui-design",
+    "design-review",
+    "accessibility",
+    "developer-tools"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/uizze/uizze",
+    "directory": "integrations/storybook"
+  },
+  "license": "MIT",
+  "author": "UIZZE <business@uizze.com> (https://uizze.com)",
+  "homepage": "https://uizze.com",
+  "bugs": {
+    "url": "https://github.com/uizze/uizze/issues"
+  },
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./preset": "./dist/preset.js",
+    "./manager": "./dist/manager.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist/**/*",
+    "README.md",
+    "*.js",
+    "*.d.ts",
+    "LICENSE",
+    "SECURITY.md"
+  ],
+  "scripts": {
+    "prebuild": "node -e \"fs.rmSync('./dist', { recursive: true, force: true })\"",
+    "build": "tsup",
+    "build-storybook": "storybook build --quiet",
+    "build:watch": "npm run build -- --watch",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "eslint --cache .",
+    "lint:fix": "pnpm lint --fix",
+    "start": "run-p build:watch \"storybook --quiet\"",
+    "storybook": "storybook dev -p 6006",
+    "test": "pnpm build && node --test tests/*.test.mjs",
+    "typecheck": "tsc --noEmit",
+    "validate": "pnpm format:check && pnpm lint && pnpm typecheck && pnpm test && pnpm build-storybook",
+    "pack:check": "pnpm pack --pack-destination .artifacts"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.5",
+    "@storybook/addon-docs": "10.5.3",
+    "@storybook/react-vite": "10.5.3",
+    "@types/node": "^20.19.43",
+    "@types/react": "^18.3.31",
+    "@types/react-dom": "^18.3.7",
+    "@vitejs/plugin-react": "^4.7.0",
+    "eslint": "^9.39.5",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.6",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-storybook": "10.5.3",
+    "npm-run-all2": "^8.0.4",
+    "prettier": "^3.9.6",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "storybook": "10.5.3",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.65.0",
+    "vite": "^7.3.6"
+  },
+  "peerDependencies": {
+    "storybook": "^9.0.0 || ^10.0.0"
+  },
+  "engines": {
+    "node": ">=20.19.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "bundler": {
+    "exportEntries": [
+      "src/index.ts"
+    ],
+    "managerEntries": [
+      "src/manager.tsx"
+    ],
+    "nodeEntries": [
+      "src/preset.ts"
+    ]
+  },
+  "storybook": {
+    "displayName": "UIZZE Finish Gate",
+    "supportedFrameworks": [
+      "react"
+    ],
+    "unsupportedFrameworks": [
+      "react-native"
+    ],
+    "icon": "https://uizze.com/brand/icons/uizze-web-app-icon-512x512.png"
+  },
+  "packageManager": "pnpm@10.22.0+sha512.bf049efe995b28f527fd2b41ae0474ce29186f7edcb3bf545087bd61fbbebb2bf75362d1307fda09c2d288e1e499787ac12d4fcb617a974718a6051f2eee741c"
+}

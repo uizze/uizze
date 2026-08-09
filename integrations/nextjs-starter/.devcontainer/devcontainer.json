@@ -1,0 +1,13 @@
+{
+  "name": "UIZZE Agent UI Starter",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:1-20-bookworm",
+  "postCreateCommand": "npm ci --ignore-scripts && npm run validate",
+  "forwardPorts": [3000],
+  "portsAttributes": {
+    "3000": {
+      "label": "UIZZE starter",
+      "onAutoForward": "openPreview"
+    }
+  },
+  "remoteUser": "node"
+}

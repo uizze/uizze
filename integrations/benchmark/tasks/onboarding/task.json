@@ -1,0 +1,12 @@
+{
+  "slug": "onboarding",
+  "benchmarkVersion": "1.0.0",
+  "title": "Team workspace onboarding",
+  "prompt": "prompt.md",
+  "artifacts": [
+    "prompt.md",
+    "starter/index.html",
+    "starter/styles.css",
+    "starter/app.js"
+  ]
+}

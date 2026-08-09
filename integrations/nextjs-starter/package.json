@@ -1,0 +1,37 @@
+{
+  "name": "uizze-agent-ui-starter",
+  "version": "1.0.1",
+  "private": true,
+  "description": "A Next.js starter with an agent-ready UI finish gate.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "type-check": "tsc --noEmit",
+    "test": "node --test",
+    "verify:template": "node scripts/validate-template.mjs",
+    "validate": "npm run test && npm run type-check && npm run lint && npm run build && npm run verify:template"
+  },
+  "dependencies": {
+    "next": "16.2.11",
+    "react": "19.2.8",
+    "react-dom": "19.2.8"
+  },
+  "devDependencies": {
+    "@types/node": "24.13.3",
+    "@types/react": "19.2.17",
+    "@types/react-dom": "19.2.3",
+    "eslint": "9.39.5",
+    "eslint-config-next": "16.2.11",
+    "typescript": "5.9.3"
+  },
+  "engines": {
+    "node": ">=20.9.0"
+  },
+  "overrides": {
+    "postcss": "8.5.10",
+    "sharp": "0.35.0"
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,126 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="UIZZE/Start here" />
+
+<style>
+  {`
+    .uizze-intro {
+      max-width: 760px;
+      padding: 48px 20px 72px;
+      color: #18181b;
+      font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+    }
+
+    .uizze-intro__eyebrow {
+      margin: 0 0 18px;
+      color: #71717a;
+      font-size: 12px;
+      font-weight: 760;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .uizze-intro h1 {
+      max-width: 680px;
+      margin: 0;
+      font-size: clamp(38px, 7vw, 72px);
+      letter-spacing: -0.055em;
+      line-height: 0.96;
+    }
+
+    .uizze-intro__lede {
+      max-width: 640px;
+      margin: 26px 0 42px;
+      color: #52525b;
+      font-size: 19px;
+      line-height: 1.55;
+    }
+
+    .uizze-intro__steps {
+      display: grid;
+      gap: 1px;
+      overflow: hidden;
+      margin: 0 0 32px;
+      padding: 1px;
+      border-radius: 18px;
+      background: #e4e4e7;
+    }
+
+    .uizze-intro__step {
+      display: grid;
+      grid-template-columns: 34px 1fr;
+      gap: 14px;
+      align-items: start;
+      padding: 20px;
+      background: #ffffff;
+    }
+
+    .uizze-intro__number {
+      display: grid;
+      width: 28px;
+      height: 28px;
+      place-items: center;
+      border-radius: 50%;
+      background: #18181b;
+      color: #ffffff;
+      font-size: 12px;
+      font-weight: 760;
+    }
+
+    .uizze-intro__step strong {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 15px;
+    }
+
+    .uizze-intro__step span {
+      color: #71717a;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .uizze-intro__link {
+      color: #18181b;
+      font-size: 15px;
+      font-weight: 760;
+      text-underline-offset: 4px;
+    }
+  `}
+</style>
+
+<main className="uizze-intro">
+  <p className="uizze-intro__eyebrow">UIZZE finish gate</p>
+  <h1>Stop approving the one state that happens to look finished.</h1>
+  <p className="uizze-intro__lede">
+    A polished ready-state can hide a broken product. The UIZZE panel keeps the screen job, primary action,
+    reference evidence, required states, rejected patterns, and acceptance criteria beside every Storybook story.
+  </p>
+
+<section className="uizze-intro__steps" aria-label="Try the addon">
+  <div className="uizze-intro__step">
+    <span className="uizze-intro__number">1</span>
+    <span>
+      <strong>Open Release review → Ready.</strong>
+      The fixture has five real product states instead of one showcase screenshot.
+    </span>
+  </div>
+  <div className="uizze-intro__step">
+    <span className="uizze-intro__number">2</span>
+    <span>
+      <strong>Select the UIZZE Finish Gate panel.</strong>
+      Review the contract attached to the selected story and the exact gaps that still fail it.
+    </span>
+  </div>
+  <div className="uizze-intro__step">
+    <span className="uizze-intro__number">3</span>
+    <span>
+      <strong>Copy the contract into the pull request.</strong>
+      The addon runs locally and sends no story source, DOM, screenshots, args, or metadata anywhere.
+    </span>
+  </div>
+</section>
+
+  <a className="uizze-intro__link" href="https://uizze.com" target="_blank" rel="noopener noreferrer">
+    Need stronger reference evidence? Search 800,000+ real interfaces at UIZZE →
+  </a>
+</main>

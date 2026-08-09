@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Relay workspace setup</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#">Relay</a>
+      <button type="button">Save and exit</button>
+    </header>
+    <main>
+      <aside aria-label="Setup progress">
+        <p>Workspace setup</p>
+        <ol>
+          <li class="done">Account</li>
+          <li aria-current="step">Workspace</li>
+          <li>Team</li>
+          <li>First incident</li>
+        </ol>
+      </aside>
+      <section>
+        <p>Step 2 of 4</p>
+        <h1>Set up your workspace</h1>
+        <p>This is where your team will coordinate incidents.</p>
+
+        <form id="workspace-form" novalidate>
+          <label for="workspace-name">Workspace name</label>
+          <input id="workspace-name" name="workspaceName" autocomplete="organization" required value="Acme Operations">
+          <p id="url-preview">relay.app/acme-operations</p>
+
+          <fieldset>
+            <legend>Default incident channel</legend>
+            <label><input type="radio" name="channel" value="slack" checked> Slack</label>
+            <label><input type="radio" name="channel" value="teams"> Microsoft Teams</label>
+            <label><input type="radio" name="channel" value="later"> Connect later</label>
+          </fieldset>
+
+          <label for="invite-email">Invite a teammate</label>
+          <div>
+            <input id="invite-email" name="inviteEmail" type="email" autocomplete="email" placeholder="teammate@company.com">
+            <button type="button" id="invite-button">Add</button>
+          </div>
+          <ul id="invite-list"><li>maya@acme.test <button type="button">Remove</button></li></ul>
+
+          <div class="actions">
+            <button type="button">Back</button>
+            <button type="submit">Continue</button>
+          </div>
+        </form>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>

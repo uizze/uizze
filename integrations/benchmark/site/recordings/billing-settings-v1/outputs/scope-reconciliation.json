@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-07-26T05:40:28.338Z",
+  "purpose": "Deterministic reconciliation of a pre-metadata path-parser defect; raw metadata and patches remain unchanged.",
+  "method": "Parse persisted git diff headers, rather than porcelain working-tree status, to list files in each committed output.",
+  "conditions": {
+    "baseline": {
+      "sourceMetadataSha256": "05e84fa43770982687f086f305dcd93e39de61533212681610407438c3322963",
+      "diffPatchSha256": "bd8c638c1211262a725cf31e93bb1264c68fe92b538d6eb502adf39da665fd8a",
+      "changedFiles": [
+        "app.js",
+        "index.html",
+        "styles.css"
+      ],
+      "outOfScopeFiles": []
+    },
+    "treatment": {
+      "sourceMetadataSha256": "289222ef2d455b497bbf9ff2470a8507b705ffec84a118722aa987b17c79e16c",
+      "diffPatchSha256": "05a7ce0cffb4e8e8fd4c7af73bbf94e13f6d8ddc6543ea2af5f0ddd373c0f6a8",
+      "changedFiles": [
+        "app.js",
+        "styles.css"
+      ],
+      "outOfScopeFiles": []
+    }
+  }
+}
