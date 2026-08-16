@@ -50,7 +50,7 @@ Update existing entries first:
 - Glama connector: https://glama.ai/mcp/connectors/io.github.uizze/uizze (canonical hosted record now points to `https://uizze.com/mcp/preview` and reports 4.3/5 across one tool; the separate server record at https://glama.ai/mcp/servers/uizze/uizze-mcp still points to retired `uizze/uizze-mcp` and has no score)
 - PulseMCP: https://www.pulsemcp.com/servers/uizze
 - MCP Market: https://mcpmarket.com/server/uizze-1
-- MCPServers.org: https://mcpservers.org/servers/uizze-com
+- MCPServers.org: https://mcpservers.org/servers/uizze-com (live listing verified with the current 800,000+ positioning and uizze.com link)
 
 Submit the canonical repository next:
 
