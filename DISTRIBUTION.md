@@ -118,6 +118,7 @@ Keep these surfaces aligned with the canonical copy above:
 - jqueryscript Awesome Claude Code PR: https://github.com/jqueryscript/awesome-claude-code/pull/598
 - GetBindu Awesome Claude Skills PR: https://github.com/GetBindu/awesome-claude-code-and-skills/pull/156
 - BehiSecc Awesome Claude Skills PR: https://github.com/BehiSecc/awesome-claude-skills/pull/579
+- Awesome LLM Apps Agent Skills PR: https://github.com/Shubhamsaboo/awesome-llm-apps/pull/1104 (external Agent Skills entry; GitGuardian check passed)
 
 Marketplace status: `v1.2.9` is released with the Marketplace-ready title and copy, but GitHub Marketplace search still returns zero public results, so the Action listing is not yet discoverable there; publish from the current release form with the maintainer security contact.
 
