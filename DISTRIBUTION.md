@@ -61,7 +61,8 @@ Submit the canonical repository next:
 - YuzeHao2023 Awesome MCP Servers: https://github.com/YuzeHao2023/Awesome-MCP-Servers (issue #420 requests a canonical UIZZE entry in the active Community Servers list)
 - libukai Awesome Agent Skills: https://github.com/libukai/awesome-agent-skills (canonical UIZZE intake is tracked in https://github.com/libukai/awesome-agent-skills/pull/107 and issue #128 for the curated programming/design section)
 - futantan Agent Skills Explorer: https://github.com/futantan/agent-skills.md (issue #24 requests indexing the canonical anti-ui-slop Skill)
-- Awesome Claude Plugins: https://github.com/composio-community/awesome-claude-plugins
+- Awesome Claude Plugins: https://github.com/composio-community/awesome-claude-plugins (PR #422 adds UIZZE to Frontend & Design)
+- JackyST0 Awesome Agent Skills: https://github.com/JackyST0/awesome-agent-skills (PR #78 adds bilingual UIZZE entries to Design / 设计相关)
 - Awesome Claude Code Skills: https://github.com/helloianneo/awesome-claude-code-skills (PR #72 adds UIZZE to the design/UI skills section)
 - jqueryscript Awesome Claude Code: https://github.com/jqueryscript/awesome-claude-code (PR #598 adds UIZZE to the Agent Skills section)
 - GetBindu Awesome Claude Skills: https://github.com/GetBindu/awesome-claude-code-and-skills (PR #156 adds UIZZE to Core Development Skills)
