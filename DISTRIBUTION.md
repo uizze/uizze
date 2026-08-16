@@ -46,7 +46,7 @@ Use “800,000+ real web and iOS screens” in public copy. Keep the free anti-u
 
 Update existing entries first:
 
-- Glama: https://glama.ai/mcp/servers/uizze/uizze-mcp
+- Glama: https://glama.ai/mcp/servers/uizze/uizze-mcp (legacy record points to retired `uizze/uizze-mcp`; root `glama.json` is now present in the canonical repository for a fresh claim/index pass)
 - PulseMCP: https://www.pulsemcp.com/servers/uizze
 - MCP Market: https://mcpmarket.com/server/uizze-1
 - MCPServers.org: https://mcpservers.org/servers/uizze-com
@@ -55,7 +55,7 @@ Submit the canonical repository next:
 
 - Smithery: https://smithery.ai/servers?q=uizze
 - MCP.so: https://mcp.so/submit?type=server
-- Awesome MCP Servers: https://github.com/punkpeye/awesome-mcp-servers (PR #10946 is open; maintainer requires a Glama server quality score, while UIZZE currently has a hosted connector listing)
+- Awesome MCP Servers: https://github.com/punkpeye/awesome-mcp-servers (PR #10946 is open; maintainer requires a Glama server quality score; the current Glama connector is separate from the legacy server record)
 - Awesome Claude Plugins: https://github.com/composio-community/awesome-claude-plugins
 - Official Cursor plugins: https://github.com/cursor/plugins
 - Awesome Cursor Rules: https://github.com/PatrickJS/awesome-cursorrules
