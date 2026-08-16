@@ -24,7 +24,7 @@ UIZZE gives coding agents a free anti-ui-slop workflow plus an optional hosted M
 - UI Slop Score: https://uizze.com/tools/ui-slop-score
 - Public design contract: https://github.com/uizze/uizze/blob/main/DESIGN.md
 - GitHub Action: https://github.com/uizze/uizze/tree/main/integrations/github-action
-- GitHub Action major tag: https://github.com/uizze/uizze/tree/v1/integrations/github-action
+- GitHub Action major tag: https://github.com/uizze/uizze/tree/v1/integrations/github-action (currently aligned with v1.2.10)
 - Official MCP Registry: https://github.com/mcp/uizze/uizze
 
 ## Install language
@@ -94,7 +94,7 @@ Keep these surfaces aligned with the canonical copy above:
 
 - Organization profile: https://github.com/uizze/.github/blob/main/profile/README.md
 - Launch discussion: https://github.com/uizze/uizze/discussions/44
-- Latest distribution update: https://github.com/uizze/uizze/discussions/44#discussioncomment-18044675
+- Latest distribution update: https://github.com/uizze/uizze/discussions/44#discussioncomment-18044710
 - Latest distribution release: https://github.com/uizze/uizze/releases/latest
 - GitHub Action directory PR: https://github.com/sdras/awesome-actions/pull/899
 - Claude Code plugins directory PR: https://github.com/ccplugins/awesome-claude-code-plugins/pull/350
