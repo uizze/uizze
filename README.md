@@ -6,6 +6,7 @@ Build distinctive UI with 800,000+ real web and iOS screens via [UIZZE](https://
 
 ![Stop Making UI Slop with UIZZE](https://uizze.com/landing/anti-ui-slop-skill-banner.png)
 
+[![CI](https://github.com/uizze/uizze/actions/workflows/ci.yml/badge.svg)](https://github.com/uizze/uizze/actions/workflows/ci.yml)
 [![HOL Plugin Scanner](https://github.com/uizze/uizze/actions/workflows/hol-plugin-scanner.yml/badge.svg)](https://github.com/uizze/uizze/actions/workflows/hol-plugin-scanner.yml)
 [![Latest release](https://img.shields.io/github/v/release/uizze/uizze)](https://github.com/uizze/uizze/releases/latest)
 [![License: MIT](https://img.shields.io/badge/License-MIT-black.svg)](LICENSE)
@@ -100,3 +101,7 @@ It does not copy another product's branding, proprietary text, imagery, or exact
 ## License
 
 [MIT](LICENSE)
+
+## Distribution
+
+Use [DISTRIBUTION.md](DISTRIBUTION.md) for canonical public copy, install language, and directory links.

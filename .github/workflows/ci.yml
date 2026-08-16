@@ -1,0 +1,50 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+
+      - name: Set up Node.js
+        uses: actions/setup-node@249970729cb0ef3589644e289664e5dc5ba9c38 # v6
+        with:
+          node-version: 22
+
+      - name: Validate public repository contracts
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git grep -nEi '500[, ]?000|500k|mobbin|refero|gummble' -- ':!*.lock'; then
+            echo "Found a stale 500,000+ claim or provider-specific copy."
+            exit 1
+          fi
+          while IFS= read -r file; do
+            [[ "$file" == */tsconfig.json ]] && continue
+            jq empty "$file"
+          done < <(git ls-files '*.json')
+          cmp skills/anti-ui-slop/SKILL.md plugins/claude-directory/skills/anti-ui-slop/SKILL.md
+          cmp skills/anti-ui-slop/SKILL.md plugins/openai-directory/uizze/skills/anti-ui-slop/SKILL.md
+
+      - name: Verify GitHub Action
+        run: npm run verify
+        working-directory: integrations/github-action
+
+      - name: Verify benchmark
+        run: npm test
+        working-directory: integrations/benchmark
+
+      - name: Verify finish-gate example
+        run: npm test
+        working-directory: integrations/codex-finish-gate

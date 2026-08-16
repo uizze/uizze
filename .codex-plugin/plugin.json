@@ -28,7 +28,8 @@
     "displayName": "UIZZE",
     "shortDescription": "Stop UI slop before it ships",
     "longDescription": "If your UI screams AI, your app is dead. Build distinctive UI with 800,000+ real web and iOS screens, a product-specific design contract, and a hard finish gate.",
-    "composerIcon": "./plugins/openai-directory/uizze/assets/uizze-logo.png",
+    "composerIcon": "./integrations/mcp/assets/uizze-logo-400x400.png",
+    "logo": "./integrations/mcp/assets/uizze-logo-400x400.png",
     "developerName": "UIZZE",
     "category": "Developer Tools",
     "capabilities": [
