@@ -69,6 +69,7 @@ Keep these surfaces aligned with the canonical copy above:
 - GitHub Action directory PR: https://github.com/sdras/awesome-actions/pull/899
 - Claude Code plugins directory PR: https://github.com/ccplugins/awesome-claude-code-plugins/pull/350
 - Agent Skills directory PR: https://github.com/VoltAgent/awesome-agent-skills/pull/911
+- Design tools directory PR: https://github.com/goabstract/Awesome-Design-Tools/pull/586
 
 Marketplace status: the Action release form is prepared and the Marketplace checkbox is available. Publication still requires the maintainer security contact in GitHub’s release form; do not invent or publish that contact.
 
