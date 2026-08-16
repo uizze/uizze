@@ -59,7 +59,7 @@ Submit the canonical repository next:
 - TensorBlock MCP Index: https://github.com/TensorBlock/awesome-mcp-servers (PR #1777 merged and deployed; live profile is https://tensorblock.co/mcp/servers/github-uizze-uizze-2a597cfa with canonical `uizze/uizze` metadata)
 - appcypher Awesome MCP Servers: https://github.com/appcypher/awesome-mcp-servers (archived/read-only upstream; a prepared fork cannot become a live directory PR)
 - YuzeHao2023 Awesome MCP Servers: https://github.com/YuzeHao2023/Awesome-MCP-Servers (issue #420 requests a canonical UIZZE entry in the active Community Servers list)
-- libukai Awesome Agent Skills: https://github.com/libukai/awesome-agent-skills (issue #128 recommends the portable anti-ui-slop Skill for the curated programming/design section)
+- libukai Awesome Agent Skills: https://github.com/libukai/awesome-agent-skills (canonical UIZZE intake is tracked in https://github.com/libukai/awesome-agent-skills/pull/107 and issue #128 for the curated programming/design section)
 - futantan Agent Skills Explorer: https://github.com/futantan/agent-skills.md (issue #24 requests indexing the canonical anti-ui-slop Skill)
 - Awesome Claude Plugins: https://github.com/composio-community/awesome-claude-plugins
 - Awesome Claude Code Skills: https://github.com/helloianneo/awesome-claude-code-skills (PR #72 adds UIZZE to the design/UI skills section)
@@ -119,6 +119,11 @@ Keep these surfaces aligned with the canonical copy above:
 - GetBindu Awesome Claude Skills PR: https://github.com/GetBindu/awesome-claude-code-and-skills/pull/156
 - BehiSecc Awesome Claude Skills PR: https://github.com/BehiSecc/awesome-claude-skills/pull/579
 - Awesome LLM Apps Agent Skills PR: https://github.com/Shubhamsaboo/awesome-llm-apps/pull/1104 (external Agent Skills entry; GitGuardian check passed)
+- Awesome LLM Skills PR: https://github.com/Prat011/awesome-llm-skills/pull/181 (canonical UIZZE UI research Skill entry)
+- Awesome AI DevTools PR: https://github.com/jamesmurdza/awesome-ai-devtools/pull/826 (canonical UIZZE UI context and verification tool entry)
+- LangGPT Awesome Claude Code PR: https://github.com/LangGPT/awesome-claude-code/pull/121
+- Chinese Awesome Claude Skills PR: https://github.com/shishirui/awesome-claude-skills-zh/pull/10
+- KaranB192 Awesome Claude Skills PR: https://github.com/karanb192/awesome-claude-skills/pull/162
 
 Marketplace status: `v1.2.9` is released with the Marketplace-ready title and copy, but GitHub Marketplace search still returns zero public results, so the Action listing is not yet discoverable there; publish from the current release form with the maintainer security contact.
 
