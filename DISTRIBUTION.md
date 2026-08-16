@@ -94,6 +94,7 @@ Keep these surfaces aligned with the canonical copy above:
 - Awesome MCP Servers PR: https://github.com/punkpeye/awesome-mcp-servers/pull/10946
 - Agentic Awesome Skills PR: https://github.com/sickn33/agentic-awesome-skills/pull/1166
 - Official Cursor plugins PR: https://github.com/cursor/plugins/pull/217
+- Cursor MDC rules PR: https://github.com/sanjeed5/awesome-cursor-rules-mdc/pull/58
 - Wshobson Agentic Plugin Marketplace issue: https://github.com/wshobson/agents/issues/657
 - Wshobson Agentic Plugin Marketplace PR: https://github.com/wshobson/agents/pull/658
 - Awesome Claude Code recommendation form: https://github.com/hesreallyhim/awesome-claude-code/issues/new?template=recommend-resource.yml
