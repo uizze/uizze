@@ -82,6 +82,7 @@ Keep these surfaces aligned with the canonical copy above:
 - Awesome Cursor Rules PR: https://github.com/PatrickJS/awesome-cursorrules/pull/353
 - Awesome Claude Skills PR: https://github.com/ComposioHQ/awesome-claude-skills/pull/1648
 - Agentic Awesome Skills PR: https://github.com/sickn33/agentic-awesome-skills/pull/1166
+- Official Cursor plugins PR: https://github.com/cursor/plugins/pull/217
 - Wshobson Agentic Plugin Marketplace issue: https://github.com/wshobson/agents/issues/657
 - Wshobson Agentic Plugin Marketplace PR: https://github.com/wshobson/agents/pull/658
 - Awesome Claude Code recommendation form: https://github.com/hesreallyhim/awesome-claude-code/issues/new?template=recommend-resource.yml
