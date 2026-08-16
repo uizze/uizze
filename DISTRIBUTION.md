@@ -128,6 +128,7 @@ Keep these surfaces aligned with the canonical copy above:
 - Awesome DevTools PR: https://github.com/devtoolsd/awesome-devtools/pull/364 (UIZZE UI quality gate entry in AI Coding Tools)
 - Awesome Cheatsheets PR: https://github.com/LeCoupa/awesome-cheatsheets/pull/467 (UIZZE entry in the developer tools directory)
 - Awesome Claude Plugins PR: https://github.com/composio-community/awesome-claude-plugins/pull/422 (UIZZE entry in Frontend & Design)
+- JackyST0 Awesome Agent Skills PR: https://github.com/JackyST0/awesome-agent-skills/pull/78 (bilingual UIZZE entry in Design / 设计相关)
 - Awesome AI Coding Tools PR: https://github.com/ai-for-developers/awesome-ai-coding-tools/pull/627 (UI quality gate entry in Code Review and Refactoring)
 - Awesome AI Tools PR: https://github.com/mahseema/awesome-ai-tools/pull/1982 (UIZZE developer-tool entry with the 800,000+ claim and free paths)
 - Awesome Generative AI PR: https://github.com/filipecalegario/awesome-generative-ai/pull/669 (UIZZE entry in Vibe Coding)
