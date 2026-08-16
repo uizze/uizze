@@ -57,7 +57,7 @@ Submit the canonical repository next:
 - MCP.so: https://mcp.so/submit?type=server (existing GitHub intake issue #3117 was reopened with the canonical `uizze/uizze` source and current anti-UI-slop copy)
 - Awesome MCP Servers: https://github.com/punkpeye/awesome-mcp-servers (PR #10946 is open; maintainer requires a Glama server quality score; the current Glama connector is separate from the legacy server record)
 - TensorBlock MCP Index: https://github.com/TensorBlock/awesome-mcp-servers (PR #1777 corrects the existing UIZZE profile from the retired repository URL to `uizze/uizze` while preserving its stable profile link)
-- appcypher Awesome MCP Servers: https://github.com/appcypher/awesome-mcp-servers (entry prepared on the personal fork, but this upstream currently denies pull-request creation and has issues disabled)
+- appcypher Awesome MCP Servers: https://github.com/appcypher/awesome-mcp-servers (archived/read-only upstream; a prepared fork cannot become a live directory PR)
 - YuzeHao2023 Awesome MCP Servers: https://github.com/YuzeHao2023/Awesome-MCP-Servers (issue #420 requests a canonical UIZZE entry in the active Community Servers list)
 - libukai Awesome Agent Skills: https://github.com/libukai/awesome-agent-skills (issue #128 recommends the portable anti-ui-slop Skill for the curated programming/design section)
 - futantan Agent Skills Explorer: https://github.com/futantan/agent-skills.md (issue #24 requests indexing the canonical anti-ui-slop Skill)
