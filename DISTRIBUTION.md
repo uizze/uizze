@@ -59,6 +59,19 @@ Submit the canonical repository next:
 - Official Cursor plugins: https://github.com/cursor/plugins
 - GitHub Marketplace: https://github.com/marketplace?type=actions&query=uizze
 
+## GitHub-native discovery
+
+Keep these surfaces aligned with the canonical copy above:
+
+- Organization profile: https://github.com/uizze/.github/blob/main/profile/README.md
+- Launch discussion: https://github.com/uizze/uizze/discussions/44
+- Latest distribution release: https://github.com/uizze/uizze/releases/latest
+- GitHub Action directory PR: https://github.com/sdras/awesome-actions/pull/899
+- Claude Code plugins directory PR: https://github.com/ccplugins/awesome-claude-code-plugins/pull/350
+- Agent Skills directory PR: https://github.com/VoltAgent/awesome-agent-skills/pull/911
+
+Marketplace status: the Action release form is prepared and the Marketplace checkbox is available. Publication still requires the maintainer security contact in GitHub’s release form; do not invent or publish that contact.
+
 Already listed:
 
 - GitHub MCP Registry: https://github.com/mcp/uizze/uizze
