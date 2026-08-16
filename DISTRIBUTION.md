@@ -132,7 +132,7 @@ Marketplace status: public release `v1.2.10` is live with the Marketplace-ready 
 
 Already listed:
 
-- GitHub MCP Registry: https://github.com/mcp/uizze/uizze (official registry is active at `io.github.uizze/uizze`, latest `v1.2.9`, with the canonical repository URL; older retired-repository records are deprecated)
+- GitHub MCP Registry: https://github.com/mcp/uizze/uizze (official registry is active at `io.github.uizze/uizze`, latest `v1.2.10`, with the canonical repository URL; older retired-repository records are deprecated)
 - GitHub Awesome Copilot skill: https://github.com/github/awesome-copilot/blob/main/skills/anti-ui-slop/SKILL.md
 - GitHub Awesome Copilot follow-up PR: https://github.com/github/awesome-copilot/pull/2685 (documents the separate anonymous `check_ui_slop` preview; all automated checks pass, maintainer review pending)
 - skills.sh: https://www.skills.sh/site/uizze.com/anti-ui-slop
