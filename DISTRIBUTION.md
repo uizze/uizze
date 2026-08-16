@@ -125,4 +125,4 @@ Already listed:
 - GitHub MCP Registry: https://github.com/mcp/uizze/uizze (official registry is active at `io.github.uizze/uizze`, latest `v1.2.9`, with the canonical repository URL; older retired-repository records are deprecated)
 - GitHub Awesome Copilot skill: https://github.com/github/awesome-copilot/blob/main/skills/anti-ui-slop/SKILL.md
 - skills.sh: https://www.skills.sh/site/uizze.com/anti-ui-slop
-- Chat2AnyLLM source hub: https://github.com/Chat2AnyLLM/awesome-repo-configs/pull/144 (skill source is already indexed; this PR adds the canonical plugin and MCP source entries for downstream fan-out)
+- Chat2AnyLLM source hub: https://github.com/Chat2AnyLLM/awesome-repo-configs/pull/144 (plugin source entry merged and live); MCP source follow-up: https://github.com/Chat2AnyLLM/awesome-repo-configs/pull/145
