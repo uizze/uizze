@@ -64,6 +64,7 @@ Submit the canonical repository next:
 - Awesome Claude Plugins: https://github.com/composio-community/awesome-claude-plugins
 - Awesome Claude Code Skills: https://github.com/helloianneo/awesome-claude-code-skills (PR #72 adds UIZZE to the design/UI skills section)
 - jqueryscript Awesome Claude Code: https://github.com/jqueryscript/awesome-claude-code (PR #598 adds UIZZE to the Agent Skills section)
+- GetBindu Awesome Claude Skills: https://github.com/GetBindu/awesome-claude-code-and-skills (PR #156 adds UIZZE to Core Development Skills)
 - Official Cursor plugins: https://github.com/cursor/plugins
 - Awesome Cursor Rules: https://github.com/PatrickJS/awesome-cursorrules
 - Awesome Claude Skills: https://github.com/ComposioHQ/awesome-claude-skills
@@ -113,6 +114,7 @@ Keep these surfaces aligned with the canonical copy above:
 - Awesome Claude Code recommendation: https://github.com/hesreallyhim/awesome-claude-code/issues/2548 (canonical Skills payload is public; maintainer validation labels are still pending)
 - Awesome Claude Code Skills PR: https://github.com/helloianneo/awesome-claude-code-skills/pull/72
 - jqueryscript Awesome Claude Code PR: https://github.com/jqueryscript/awesome-claude-code/pull/598
+- GetBindu Awesome Claude Skills PR: https://github.com/GetBindu/awesome-claude-code-and-skills/pull/156
 
 Marketplace status: `v1.2.9` is released with the Marketplace-ready title and copy, but GitHub Marketplace search still returns zero public results, so the Action listing is not yet discoverable there; publish from the current release form with the maintainer security contact.
 
