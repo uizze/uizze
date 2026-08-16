@@ -74,6 +74,8 @@ Keep these surfaces aligned with the canonical copy above:
 - Agent Skill Index PR: https://github.com/heilcheng/awesome-agent-skills/pull/420
 - Skillmatic Agent Skills PR: https://github.com/skillmatic-ai/awesome-agent-skills/pull/153
 - SkillCreator Agent Skills PR: https://github.com/skillcreatorai/Awesome-Agent-Skills/pull/10
+- Claude Code Toolkit PR: https://github.com/rohitg00/awesome-claude-code-toolkit/pull/730
+- Awesome Claude Code recommendation form: https://github.com/hesreallyhim/awesome-claude-code/issues/new?template=recommend-resource.yml
 
 Marketplace status: `v1.2.9` is released and the Action form is prepared. GitHub Marketplace search still returns zero public results, so the listing is not yet discoverable there; publish from the current release form with the maintainer security contact.
 
