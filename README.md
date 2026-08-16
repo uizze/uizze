@@ -76,6 +76,16 @@ steps:
 
 The action checks changed frontend files for inert controls, missing states, token drift, and generic UI cues on the GitHub runner. Configuration and examples live in [integrations/github-action](integrations/github-action).
 
+## How UIZZE works
+
+UIZZE has three complementary surfaces:
+
+1. **Local Skill:** the free `anti-ui-slop` workflow reads the product, existing design system, user job, and required states before an agent changes UI. It keeps references in an evidence role and finishes with a rendered review.
+2. **Deterministic preview:** the free `check_ui_slop` MCP tool checks rendered HTML and CSS for concrete finish risks. It runs without an account or token, does not upload source files, and does not call a model.
+3. **Full UIZZE:** the hosted MCP adds live search across 800,000+ real web and iOS screens, product-specific design contracts, implementation validation, audits, and rendered critique when those capabilities materially improve the work.
+
+Use the local Skill for every UI task, add the preview when a rendered check is useful, and connect the full product when visual evidence or review depth justifies it.
+
 ## What is here
 
 | Path | Purpose |
