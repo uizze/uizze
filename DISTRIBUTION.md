@@ -68,6 +68,7 @@ Submit the canonical repository next:
 - Awesome Harness Engineering: https://github.com/ai-boost/awesome-harness-engineering (PR #200 adds the UIZZE Action and MCP workflow to Verification & CI Integration)
 - Awesome LLM Resources: https://github.com/WangRongsheng/awesome-LLM-resources (PR #194 adds the canonical anti-ui-slop Skill to 技能 Skills)
 - VoltAgent Awesome DESIGN.md: https://github.com/VoltAgent/awesome-design-md (issue #459 now has the public UIZZE DESIGN.md artifact and canonical source for indexing)
+- E2B Awesome SDKs for AI Agents: https://github.com/e2b-dev/awesome-sdks-for-ai-agents (PR #335 adds UIZZE as a UI quality tool; maintainer CLA is pending)
 - Awesome Claude Code Skills: https://github.com/helloianneo/awesome-claude-code-skills (PR #72 adds UIZZE to the design/UI skills section)
 - jqueryscript Awesome Claude Code: https://github.com/jqueryscript/awesome-claude-code (PR #598 adds UIZZE to the Agent Skills section)
 - GetBindu Awesome Claude Skills: https://github.com/GetBindu/awesome-claude-code-and-skills (PR #156 adds UIZZE to Core Development Skills)
@@ -92,7 +93,7 @@ Keep these surfaces aligned with the canonical copy above:
 
 - Organization profile: https://github.com/uizze/.github/blob/main/profile/README.md
 - Launch discussion: https://github.com/uizze/uizze/discussions/44
-- Latest distribution update: https://github.com/uizze/uizze/discussions/44#discussioncomment-18044560
+- Latest distribution update: https://github.com/uizze/uizze/discussions/44#discussioncomment-18044582
 - Latest distribution release: https://github.com/uizze/uizze/releases/latest
 - GitHub Action directory PR: https://github.com/sdras/awesome-actions/pull/899
 - Claude Code plugins directory PR: https://github.com/ccplugins/awesome-claude-code-plugins/pull/350
@@ -138,6 +139,7 @@ Keep these surfaces aligned with the canonical copy above:
 - Awesome OpenClaw PR: https://github.com/Anil-matcha/awesome-openclaw/pull/201 (portable UIZZE Skill in Notable Skills)
 - Awesome Harness Engineering PR: https://github.com/ai-boost/awesome-harness-engineering/pull/200 (UIZZE Action and MCP workflow in Verification & CI Integration)
 - Awesome LLM Resources PR: https://github.com/WangRongsheng/awesome-LLM-resources/pull/194 (canonical anti-ui-slop Skill in 技能 Skills)
+- E2B Awesome SDKs for AI Agents PR: https://github.com/e2b-dev/awesome-sdks-for-ai-agents/pull/335 (UIZZE UI quality tool for agent workflows; CLA pending)
 - VoltAgent Awesome DESIGN.md request: https://github.com/VoltAgent/awesome-design-md/issues/459 (UIZZE DESIGN.md request for the AI Design + Build ecosystem)
 - Awesome AI Coding Tools PR: https://github.com/ai-for-developers/awesome-ai-coding-tools/pull/627 (UI quality gate entry in Code Review and Refactoring)
 - Awesome AI Tools PR: https://github.com/mahseema/awesome-ai-tools/pull/1982 (UIZZE developer-tool entry with the 800,000+ claim and free paths)
