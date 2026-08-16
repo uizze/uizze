@@ -60,6 +60,7 @@ Submit the canonical repository next:
 - Official Cursor plugins: https://github.com/cursor/plugins
 - Awesome Cursor Rules: https://github.com/PatrickJS/awesome-cursorrules
 - Awesome Claude Skills: https://github.com/ComposioHQ/awesome-claude-skills
+- Agentic Awesome Skills: https://github.com/sickn33/agentic-awesome-skills
 - GitHub Marketplace: https://github.com/marketplace?type=actions&query=uizze
 
 ## GitHub-native discovery
@@ -79,6 +80,7 @@ Keep these surfaces aligned with the canonical copy above:
 - Claude Code Toolkit PR: https://github.com/rohitg00/awesome-claude-code-toolkit/pull/730
 - Awesome Cursor Rules PR: https://github.com/PatrickJS/awesome-cursorrules/pull/353
 - Awesome Claude Skills PR: https://github.com/ComposioHQ/awesome-claude-skills/pull/1648
+- Agentic Awesome Skills PR: https://github.com/sickn33/agentic-awesome-skills/pull/1166
 - Awesome Claude Code recommendation form: https://github.com/hesreallyhim/awesome-claude-code/issues/new?template=recommend-resource.yml
 
 Marketplace status: `v1.2.9` is released and the Action form is prepared. GitHub Marketplace search still returns zero public results, so the listing is not yet discoverable there; publish from the current release form with the maintainer security contact.
