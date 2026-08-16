@@ -82,6 +82,7 @@ Submit the canonical repository next:
 - Awesome Codex Subagents: https://github.com/VoltAgent/awesome-codex-subagents
 - Addy Osmani Agent Skills: https://github.com/addyosmani/agent-skills
 - Awesome Frontend Skills: https://github.com/finfin/awesome-frontend-skills
+- Requestly Awesome Frontend Resources: https://github.com/requestly/awesome-frontend-resources (PR #33 adds the free-first UIZZE Skill and deterministic preview)
 - Web Development Resources: https://github.com/markodenic/web-development-resources
 - Trend Micro Awesome Frontend: https://github.com/trendmicro-frontend/awesome (issue #7 suggests UIZZE for the maintained AI/frontend resources list)
 - Agentic Awesome Skills: https://github.com/sickn33/agentic-awesome-skills
@@ -94,7 +95,7 @@ Keep these surfaces aligned with the canonical copy above:
 
 - Organization profile: https://github.com/uizze/.github/blob/main/profile/README.md
 - Launch discussion: https://github.com/uizze/uizze/discussions/44
-- Latest distribution update: https://github.com/uizze/uizze/discussions/44#discussioncomment-18044739
+- Latest distribution update: https://github.com/uizze/uizze/discussions/44#discussioncomment-18044764
 - Latest distribution release: https://github.com/uizze/uizze/releases/latest
 - GitHub Action directory PR: https://github.com/sdras/awesome-actions/pull/899
 - Claude Code plugins directory PR: https://github.com/ccplugins/awesome-claude-code-plugins/pull/350
@@ -116,6 +117,7 @@ Keep these surfaces aligned with the canonical copy above:
 - Awesome Codex Subagents PR: https://github.com/VoltAgent/awesome-codex-subagents/pull/46
 - Addy Osmani Agent Skills PR: https://github.com/addyosmani/agent-skills/pull/496
 - Awesome Frontend Skills PR: https://github.com/finfin/awesome-frontend-skills/pull/3
+- Requestly Awesome Frontend Resources PR: https://github.com/requestly/awesome-frontend-resources/pull/33 (free-first UIZZE entry in Some Awesome Projects)
 - Web Development Resources PR: https://github.com/markodenic/web-development-resources/pull/813
 - Awesome MCP Servers PR: https://github.com/punkpeye/awesome-mcp-servers/pull/10946
 - Agentic Awesome Skills PR: https://github.com/sickn33/agentic-awesome-skills/pull/1166
