@@ -46,7 +46,7 @@ Use “800,000+ real web and iOS screens” in public copy. Keep the free anti-u
 
 Update existing entries first:
 
-- Glama: https://glama.ai/mcp/servers/uizze/uizze-mcp (legacy record points to retired `uizze/uizze-mcp`; root `glama.json` is now present in the canonical repository for a fresh claim/index pass)
+- Glama connector: https://glama.ai/mcp/connectors/io.github.uizze/uizze (canonical hosted record now points to `https://uizze.com/mcp/preview` and reports 4.3/5 across one tool; the separate server record at https://glama.ai/mcp/servers/uizze/uizze-mcp still points to retired `uizze/uizze-mcp` and has no score)
 - PulseMCP: https://www.pulsemcp.com/servers/uizze
 - MCP Market: https://mcpmarket.com/server/uizze-1
 - MCPServers.org: https://mcpservers.org/servers/uizze-com
@@ -55,7 +55,7 @@ Submit the canonical repository next:
 
 - Smithery: https://smithery.ai/servers?q=uizze
 - MCP.so: https://mcp.so/submit?type=server (existing GitHub intake issue #3117 was reopened with the canonical `uizze/uizze` source and current anti-UI-slop copy)
-- Awesome MCP Servers: https://github.com/punkpeye/awesome-mcp-servers (PR #10946 is open; maintainer requires a Glama server quality score; the current Glama connector is separate from the legacy server record)
+- Awesome MCP Servers: https://github.com/punkpeye/awesome-mcp-servers (PR #10946 is open; live preview endpoint and canonical Glama connector evidence were posted, but the maintainer still requires a Glama source-server quality score)
 - TensorBlock MCP Index: https://github.com/TensorBlock/awesome-mcp-servers (PR #1777 merged and deployed; live profile is https://tensorblock.co/mcp/servers/github-uizze-uizze-2a597cfa with canonical `uizze/uizze` metadata)
 - appcypher Awesome MCP Servers: https://github.com/appcypher/awesome-mcp-servers (archived/read-only upstream; a prepared fork cannot become a live directory PR)
 - YuzeHao2023 Awesome MCP Servers: https://github.com/YuzeHao2023/Awesome-MCP-Servers (issue #420 requests a canonical UIZZE entry in the active Community Servers list)
