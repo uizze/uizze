@@ -69,6 +69,7 @@ Submit the canonical repository next:
 - Official Cursor plugins: https://github.com/cursor/plugins
 - Awesome Cursor Rules: https://github.com/PatrickJS/awesome-cursorrules
 - Awesome Claude Skills: https://github.com/ComposioHQ/awesome-claude-skills
+- TravisVN Awesome Claude Skills: https://github.com/travisvn/awesome-claude-skills (PR #1123 adds UIZZE to the community skills table)
 - Awesome Codex Skills: https://github.com/composio-community/awesome-codex-skills
 - Awesome Codex Subagents: https://github.com/VoltAgent/awesome-codex-subagents
 - Addy Osmani Agent Skills: https://github.com/addyosmani/agent-skills
@@ -114,6 +115,7 @@ Keep these surfaces aligned with the canonical copy above:
 - Wshobson Agentic Plugin Marketplace issue: https://github.com/wshobson/agents/issues/657
 - Wshobson Agentic Plugin Marketplace PR: https://github.com/wshobson/agents/pull/658
 - Awesome Claude Code recommendation: https://github.com/hesreallyhim/awesome-claude-code/issues/2548 (canonical Skills payload is public; maintainer validation labels are still pending)
+- TravisVN Awesome Claude Skills PR: https://github.com/travisvn/awesome-claude-skills/pull/1123
 - Awesome Claude Code Skills PR: https://github.com/helloianneo/awesome-claude-code-skills/pull/72
 - jqueryscript Awesome Claude Code PR: https://github.com/jqueryscript/awesome-claude-code/pull/598
 - GetBindu Awesome Claude Skills PR: https://github.com/GetBindu/awesome-claude-code-and-skills/pull/156
@@ -125,7 +127,7 @@ Keep these surfaces aligned with the canonical copy above:
 - Chinese Awesome Claude Skills PR: https://github.com/shishirui/awesome-claude-skills-zh/pull/10
 - KaranB192 Awesome Claude Skills PR: https://github.com/karanb192/awesome-claude-skills/pull/162
 
-Marketplace status: `v1.2.9` is released with the Marketplace-ready title and copy, but GitHub Marketplace search still returns zero public results, so the Action listing is not yet discoverable there; publish from the current release form with the maintainer security contact.
+Marketplace status: public release `v1.2.10` is live with the Marketplace-ready title and copy, but GitHub Marketplace search still returns zero public results; saving Marketplace categories on the real release currently returns a GitHub 500, so the Action is not yet publicly discoverable in the Marketplace index.
 
 Already listed:
 
