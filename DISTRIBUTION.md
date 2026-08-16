@@ -114,10 +114,10 @@ Keep these surfaces aligned with the canonical copy above:
 - Awesome Claude Code Skills PR: https://github.com/helloianneo/awesome-claude-code-skills/pull/72
 - jqueryscript Awesome Claude Code PR: https://github.com/jqueryscript/awesome-claude-code/pull/598
 
-Marketplace status: `v1.2.9` is released and the Action form is prepared. GitHub Marketplace search still returns zero public results, so the listing is not yet discoverable there; publish from the current release form with the maintainer security contact.
+Marketplace status: `v1.2.9` is released with the Marketplace-ready title and copy, but GitHub Marketplace search still returns zero public results, so the Action listing is not yet discoverable there; publish from the current release form with the maintainer security contact.
 
 Already listed:
 
-- GitHub MCP Registry: https://github.com/mcp/uizze/uizze
+- GitHub MCP Registry: https://github.com/mcp/uizze/uizze (official registry is active at `io.github.uizze/uizze`, latest `v1.2.9`, with the canonical repository URL; older retired-repository records are deprecated)
 - GitHub Awesome Copilot skill: https://github.com/github/awesome-copilot/blob/main/skills/anti-ui-slop/SKILL.md
 - skills.sh: https://www.skills.sh/site/uizze.com/anti-ui-slop
