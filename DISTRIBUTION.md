@@ -69,6 +69,7 @@ Submit the canonical repository next:
 - Addy Osmani Agent Skills: https://github.com/addyosmani/agent-skills
 - Awesome Frontend Skills: https://github.com/finfin/awesome-frontend-skills
 - Web Development Resources: https://github.com/markodenic/web-development-resources
+- Trend Micro Awesome Frontend: https://github.com/trendmicro-frontend/awesome (issue #7 suggests UIZZE for the maintained AI/frontend resources list)
 - Agentic Awesome Skills: https://github.com/sickn33/agentic-awesome-skills
 - Wshobson Agentic Plugin Marketplace: https://github.com/wshobson/agents
 - GitHub Marketplace: https://github.com/marketplace?type=actions&query=uizze
