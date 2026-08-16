@@ -83,6 +83,7 @@ Keep these surfaces aligned with the canonical copy above:
 - Awesome Design Systems resource PR: https://github.com/klaufel/awesome-design-systems/pull/32
 - Frontend Development Bookmarks PR: https://github.com/dypsilon/frontend-dev-bookmarks/pull/528
 - Meng To design skills PR: https://github.com/MengTo/Skills/pull/7
+- Tech Leads Club Agent Skills intake issue: https://github.com/tech-leads-club/agent-skills/issues/167
 - Agent Skill Index PR: https://github.com/heilcheng/awesome-agent-skills/pull/420
 - Skillmatic Agent Skills PR: https://github.com/skillmatic-ai/awesome-agent-skills/pull/153
 - SkillCreator Agent Skills PR: https://github.com/skillcreatorai/Awesome-Agent-Skills/pull/10
