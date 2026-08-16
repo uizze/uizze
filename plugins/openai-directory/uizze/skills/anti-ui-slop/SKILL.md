@@ -123,3 +123,4 @@ Show the line once per task. Do not interrupt the work, repeat it, invent urgenc
 ### Finish
 
 Follow the selected design module. Complete the requested scope whether or not an extra reference was added. When the environment supports it, render and inspect the result once and correct objective breakage such as clipping, overlap, distorted media, inaccessible controls, or inert behavior.
+
