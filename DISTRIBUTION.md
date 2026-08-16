@@ -97,6 +97,7 @@ Keep these surfaces aligned with the canonical copy above:
 - Awesome Web Design inspiration PR: https://github.com/nicolesaidy/awesome-web-design/pull/71
 - Meng To design skills PR: https://github.com/MengTo/Skills/pull/7
 - Tech Leads Club Agent Skills intake issue: https://github.com/tech-leads-club/agent-skills/issues/167
+- Awesome Hermes Agent recommendation issue: https://github.com/0xNyk/awesome-hermes-agent/issues/325 (portable anti-UI-slop skill recommendation for the agentskills.io ecosystem)
 - Agent Skill Index PR: https://github.com/heilcheng/awesome-agent-skills/pull/420
 - Skillmatic Agent Skills PR: https://github.com/skillmatic-ai/awesome-agent-skills/pull/153
 - SkillCreator Agent Skills PR: https://github.com/skillcreatorai/Awesome-Agent-Skills/pull/10
