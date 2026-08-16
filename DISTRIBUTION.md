@@ -22,6 +22,7 @@ UIZZE gives coding agents a free anti-ui-slop workflow plus an optional hosted M
 - Free preview MCP: https://uizze.com/mcp/preview
 - Full MCP: https://uizze.com/mcp
 - UI Slop Score: https://uizze.com/tools/ui-slop-score
+- Public design contract: https://github.com/uizze/uizze/blob/main/DESIGN.md
 - GitHub Action: https://github.com/uizze/uizze/tree/main/integrations/github-action
 - GitHub Action major tag: https://github.com/uizze/uizze/tree/v1/integrations/github-action
 - Official MCP Registry: https://github.com/mcp/uizze/uizze

@@ -88,6 +88,7 @@ The action checks changed frontend files for inert controls, missing states, tok
 | [`integrations/benchmark`](integrations/benchmark) | Reproducible UI benchmark |
 | [`integrations/nextjs-starter`](integrations/nextjs-starter) | Next.js starter |
 | [`integrations/codex-finish-gate`](integrations/codex-finish-gate) | Codex finish-gate example |
+| [`DESIGN.md`](DESIGN.md) | Public UIZZE design contract for agents |
 
 ## What the skill does
 
