@@ -110,7 +110,7 @@ Keep these surfaces aligned with the canonical copy above:
 - Cursor MDC rules PR: https://github.com/sanjeed5/awesome-cursor-rules-mdc/pull/58
 - Wshobson Agentic Plugin Marketplace issue: https://github.com/wshobson/agents/issues/657
 - Wshobson Agentic Plugin Marketplace PR: https://github.com/wshobson/agents/pull/658
-- Awesome Claude Code recommendation form: https://github.com/hesreallyhim/awesome-claude-code/issues/new?template=recommend-resource.yml (prepared under Skills with canonical UIZZE copy; final web-form submission pending action-time confirmation)
+- Awesome Claude Code recommendation: https://github.com/hesreallyhim/awesome-claude-code/issues/2548 (canonical Skills payload is public; maintainer validation labels are still pending)
 - Awesome Claude Code Skills PR: https://github.com/helloianneo/awesome-claude-code-skills/pull/72
 - jqueryscript Awesome Claude Code PR: https://github.com/jqueryscript/awesome-claude-code/pull/598
 
