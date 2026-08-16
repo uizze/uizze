@@ -122,7 +122,7 @@ Keep these surfaces aligned with the canonical copy above:
 - BehiSecc Awesome Claude Skills PR: https://github.com/BehiSecc/awesome-claude-skills/pull/579
 - Awesome LLM Apps Agent Skills PR: https://github.com/Shubhamsaboo/awesome-llm-apps/pull/1104 (external Agent Skills entry; GitGuardian check passed)
 - Awesome LLM Skills PR: https://github.com/Prat011/awesome-llm-skills/pull/181 (canonical UIZZE UI research Skill entry)
-- Awesome AI DevTools PR: https://github.com/jamesmurdza/awesome-ai-devtools/pull/826 (canonical UIZZE UI context and verification tool entry)
+- Awesome AI DevTools PR: https://github.com/jamesmurdza/awesome-ai-devtools/pull/985 (canonical UIZZE UI context and verification tool entry; required PR-template check passed)
 - LangGPT Awesome Claude Code PR: https://github.com/LangGPT/awesome-claude-code/pull/121
 - Chinese Awesome Claude Skills PR: https://github.com/shishirui/awesome-claude-skills-zh/pull/10
 - KaranB192 Awesome Claude Skills PR: https://github.com/karanb192/awesome-claude-skills/pull/162
