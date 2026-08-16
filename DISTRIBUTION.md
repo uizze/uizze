@@ -62,6 +62,7 @@ Submit the canonical repository next:
 - Awesome Claude Skills: https://github.com/ComposioHQ/awesome-claude-skills
 - Awesome Codex Skills: https://github.com/composio-community/awesome-codex-skills
 - Awesome Codex Subagents: https://github.com/VoltAgent/awesome-codex-subagents
+- Addy Osmani Agent Skills: https://github.com/addyosmani/agent-skills
 - Agentic Awesome Skills: https://github.com/sickn33/agentic-awesome-skills
 - Wshobson Agentic Plugin Marketplace: https://github.com/wshobson/agents
 - GitHub Marketplace: https://github.com/marketplace?type=actions&query=uizze
@@ -85,6 +86,7 @@ Keep these surfaces aligned with the canonical copy above:
 - Awesome Claude Skills PR: https://github.com/ComposioHQ/awesome-claude-skills/pull/1648
 - Awesome Codex Skills PR: https://github.com/composio-community/awesome-codex-skills/pull/236
 - Awesome Codex Subagents PR: https://github.com/VoltAgent/awesome-codex-subagents/pull/46
+- Addy Osmani Agent Skills PR: https://github.com/addyosmani/agent-skills/pull/496
 - Agentic Awesome Skills PR: https://github.com/sickn33/agentic-awesome-skills/pull/1166
 - Official Cursor plugins PR: https://github.com/cursor/plugins/pull/217
 - Wshobson Agentic Plugin Marketplace issue: https://github.com/wshobson/agents/issues/657
