@@ -23,6 +23,7 @@ UIZZE gives coding agents a free anti-ui-slop workflow plus an optional hosted M
 - Full MCP: https://uizze.com/mcp
 - UI Slop Score: https://uizze.com/tools/ui-slop-score
 - GitHub Action: https://github.com/uizze/uizze/tree/main/integrations/github-action
+- GitHub Action major tag: https://github.com/uizze/uizze/tree/v1/integrations/github-action
 - Official MCP Registry: https://github.com/mcp/uizze/uizze
 
 ## Install language
@@ -70,8 +71,11 @@ Keep these surfaces aligned with the canonical copy above:
 - Claude Code plugins directory PR: https://github.com/ccplugins/awesome-claude-code-plugins/pull/350
 - Agent Skills directory PR: https://github.com/VoltAgent/awesome-agent-skills/pull/911
 - Design tools directory PR: https://github.com/goabstract/Awesome-Design-Tools/pull/586
+- Agent Skill Index PR: https://github.com/heilcheng/awesome-agent-skills/pull/420
+- Skillmatic Agent Skills PR: https://github.com/skillmatic-ai/awesome-agent-skills/pull/153
+- SkillCreator Agent Skills PR: https://github.com/skillcreatorai/Awesome-Agent-Skills/pull/10
 
-Marketplace status: the Action release form is prepared and the Marketplace checkbox is available. Publication still requires the maintainer security contact in GitHub’s release form; do not invent or publish that contact.
+Marketplace status: `v1.2.9` is released and the Action form is prepared. GitHub Marketplace search still returns zero public results, so the listing is not yet discoverable there; publish from the current release form with the maintainer security contact.
 
 Already listed:
 
