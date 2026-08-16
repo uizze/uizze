@@ -129,6 +129,7 @@ Keep these surfaces aligned with the canonical copy above:
 - Awesome Vibe Coding PR: https://github.com/awesome-vibe-coding/awesome-vibe-coding/pull/128 (UIZZE entry in Extensions & Plugins)
 - Awesome Vibe Coding (filipecalegario) PR: https://github.com/filipecalegario/awesome-vibe-coding/pull/290 (UIZZE entry in Plugins and Extensions)
 - Awesome OpenCode PR: https://github.com/awesome-opencode/awesome-opencode/pull/609 (UIZZE project entry for OpenCode's MCP workflow)
+- Awesome MCP ZH PR: https://github.com/yzfly/Awesome-MCP-ZH/pull/463 (Chinese-language MCP directory entry for the free UI slop preview)
 - Claude Code Everything guide PR: https://github.com/wesammustafa/Claude-Code-Everything-You-Need-to-Know/pull/30 (adds UIZZE to the quality, review, and debugging skill table)
 - LangGPT Awesome Claude Code PR: https://github.com/LangGPT/awesome-claude-code/pull/121
 - Chinese Awesome Claude Skills PR: https://github.com/shishirui/awesome-claude-skills-zh/pull/10
