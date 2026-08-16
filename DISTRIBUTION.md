@@ -123,6 +123,7 @@ Keep these surfaces aligned with the canonical copy above:
 - Awesome LLM Apps Agent Skills PR: https://github.com/Shubhamsaboo/awesome-llm-apps/pull/1104 (external Agent Skills entry; GitGuardian check passed)
 - Awesome LLM Skills PR: https://github.com/Prat011/awesome-llm-skills/pull/181 (canonical UIZZE UI research Skill entry)
 - Awesome AI DevTools PR: https://github.com/jamesmurdza/awesome-ai-devtools/pull/985 (canonical UIZZE UI context and verification tool entry; required PR-template check passed)
+- Awesome AI Coding PR: https://github.com/wsxiaoys/awesome-ai-coding/pull/143 (UIZZE project entry)
 - Awesome AI Coding Tools PR: https://github.com/ai-for-developers/awesome-ai-coding-tools/pull/627 (UI quality gate entry in Code Review and Refactoring)
 - Awesome AI Tools PR: https://github.com/mahseema/awesome-ai-tools/pull/1982 (UIZZE developer-tool entry with the 800,000+ claim and free paths)
 - Awesome Generative AI PR: https://github.com/filipecalegario/awesome-generative-ai/pull/669 (UIZZE entry in Vibe Coding)
