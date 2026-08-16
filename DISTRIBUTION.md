@@ -55,7 +55,7 @@ Submit the canonical repository next:
 
 - Smithery: https://smithery.ai/servers?q=uizze
 - MCP.so: https://mcp.so/submit?type=server
-- Awesome MCP Servers: https://github.com/punkpeye/awesome-mcp-servers
+- Awesome MCP Servers: https://github.com/punkpeye/awesome-mcp-servers (PR #10946 is open; maintainer requires a Glama server quality score, while UIZZE currently has a hosted connector listing)
 - Awesome Claude Plugins: https://github.com/composio-community/awesome-claude-plugins
 - Official Cursor plugins: https://github.com/cursor/plugins
 - Awesome Cursor Rules: https://github.com/PatrickJS/awesome-cursorrules
@@ -91,8 +91,10 @@ Keep these surfaces aligned with the canonical copy above:
 - Addy Osmani Agent Skills PR: https://github.com/addyosmani/agent-skills/pull/496
 - Awesome Frontend Skills PR: https://github.com/finfin/awesome-frontend-skills/pull/3
 - Web Development Resources PR: https://github.com/markodenic/web-development-resources/pull/813
+- Awesome MCP Servers PR: https://github.com/punkpeye/awesome-mcp-servers/pull/10946
 - Agentic Awesome Skills PR: https://github.com/sickn33/agentic-awesome-skills/pull/1166
 - Official Cursor plugins PR: https://github.com/cursor/plugins/pull/217
+- Cursor MDC rules PR: https://github.com/sanjeed5/awesome-cursor-rules-mdc/pull/58
 - Wshobson Agentic Plugin Marketplace issue: https://github.com/wshobson/agents/issues/657
 - Wshobson Agentic Plugin Marketplace PR: https://github.com/wshobson/agents/pull/658
 - Awesome Claude Code recommendation form: https://github.com/hesreallyhim/awesome-claude-code/issues/new?template=recommend-resource.yml
