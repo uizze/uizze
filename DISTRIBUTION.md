@@ -57,10 +57,13 @@ Submit the canonical repository next:
 - MCP.so: https://mcp.so/submit?type=server (existing GitHub intake issue #3117 was reopened with the canonical `uizze/uizze` source and current anti-UI-slop copy)
 - Awesome MCP Servers: https://github.com/punkpeye/awesome-mcp-servers (PR #10946 is open; maintainer requires a Glama server quality score; the current Glama connector is separate from the legacy server record)
 - TensorBlock MCP Index: https://github.com/TensorBlock/awesome-mcp-servers (PR #1777 corrects the existing UIZZE profile from the retired repository URL to `uizze/uizze` while preserving its stable profile link)
+- appcypher Awesome MCP Servers: https://github.com/appcypher/awesome-mcp-servers (entry prepared on the personal fork, but this upstream currently denies pull-request creation and has issues disabled)
 - YuzeHao2023 Awesome MCP Servers: https://github.com/YuzeHao2023/Awesome-MCP-Servers (issue #420 requests a canonical UIZZE entry in the active Community Servers list)
 - libukai Awesome Agent Skills: https://github.com/libukai/awesome-agent-skills (issue #128 recommends the portable anti-ui-slop Skill for the curated programming/design section)
 - futantan Agent Skills Explorer: https://github.com/futantan/agent-skills.md (issue #24 requests indexing the canonical anti-ui-slop Skill)
 - Awesome Claude Plugins: https://github.com/composio-community/awesome-claude-plugins
+- Awesome Claude Code Skills: https://github.com/helloianneo/awesome-claude-code-skills (PR #72 adds UIZZE to the design/UI skills section)
+- jqueryscript Awesome Claude Code: https://github.com/jqueryscript/awesome-claude-code (PR #598 adds UIZZE to the Agent Skills section)
 - Official Cursor plugins: https://github.com/cursor/plugins
 - Awesome Cursor Rules: https://github.com/PatrickJS/awesome-cursorrules
 - Awesome Claude Skills: https://github.com/ComposioHQ/awesome-claude-skills
@@ -108,6 +111,8 @@ Keep these surfaces aligned with the canonical copy above:
 - Wshobson Agentic Plugin Marketplace issue: https://github.com/wshobson/agents/issues/657
 - Wshobson Agentic Plugin Marketplace PR: https://github.com/wshobson/agents/pull/658
 - Awesome Claude Code recommendation form: https://github.com/hesreallyhim/awesome-claude-code/issues/new?template=recommend-resource.yml (prepared under Skills with canonical UIZZE copy; final web-form submission pending action-time confirmation)
+- Awesome Claude Code Skills PR: https://github.com/helloianneo/awesome-claude-code-skills/pull/72
+- jqueryscript Awesome Claude Code PR: https://github.com/jqueryscript/awesome-claude-code/pull/598
 
 Marketplace status: `v1.2.9` is released and the Action form is prepared. GitHub Marketplace search still returns zero public results, so the listing is not yet discoverable there; publish from the current release form with the maintainer security contact.
 
