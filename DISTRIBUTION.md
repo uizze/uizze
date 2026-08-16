@@ -64,6 +64,7 @@ Submit the canonical repository next:
 - Awesome Codex Subagents: https://github.com/VoltAgent/awesome-codex-subagents
 - Addy Osmani Agent Skills: https://github.com/addyosmani/agent-skills
 - Awesome Frontend Skills: https://github.com/finfin/awesome-frontend-skills
+- Web Development Resources: https://github.com/markodenic/web-development-resources
 - Agentic Awesome Skills: https://github.com/sickn33/agentic-awesome-skills
 - Wshobson Agentic Plugin Marketplace: https://github.com/wshobson/agents
 - GitHub Marketplace: https://github.com/marketplace?type=actions&query=uizze
@@ -89,6 +90,7 @@ Keep these surfaces aligned with the canonical copy above:
 - Awesome Codex Subagents PR: https://github.com/VoltAgent/awesome-codex-subagents/pull/46
 - Addy Osmani Agent Skills PR: https://github.com/addyosmani/agent-skills/pull/496
 - Awesome Frontend Skills PR: https://github.com/finfin/awesome-frontend-skills/pull/3
+- Web Development Resources PR: https://github.com/markodenic/web-development-resources/pull/813
 - Agentic Awesome Skills PR: https://github.com/sickn33/agentic-awesome-skills/pull/1166
 - Official Cursor plugins PR: https://github.com/cursor/plugins/pull/217
 - Wshobson Agentic Plugin Marketplace issue: https://github.com/wshobson/agents/issues/657
