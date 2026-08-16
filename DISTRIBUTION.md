@@ -86,7 +86,7 @@ Keep these surfaces aligned with the canonical copy above:
 
 - Organization profile: https://github.com/uizze/.github/blob/main/profile/README.md
 - Launch discussion: https://github.com/uizze/uizze/discussions/44
-- Latest distribution update: https://github.com/uizze/uizze/discussions/44#discussioncomment-18044162
+- Latest distribution update: https://github.com/uizze/uizze/discussions/44#discussioncomment-18044246
 - Latest distribution release: https://github.com/uizze/uizze/releases/latest
 - GitHub Action directory PR: https://github.com/sdras/awesome-actions/pull/899
 - Claude Code plugins directory PR: https://github.com/ccplugins/awesome-claude-code-plugins/pull/350
