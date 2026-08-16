@@ -85,6 +85,7 @@ Keep these surfaces aligned with the canonical copy above:
 
 - Organization profile: https://github.com/uizze/.github/blob/main/profile/README.md
 - Launch discussion: https://github.com/uizze/uizze/discussions/44
+- Latest distribution update: https://github.com/uizze/uizze/discussions/44#discussioncomment-18043240
 - Latest distribution release: https://github.com/uizze/uizze/releases/latest
 - GitHub Action directory PR: https://github.com/sdras/awesome-actions/pull/899
 - Claude Code plugins directory PR: https://github.com/ccplugins/awesome-claude-code-plugins/pull/350
@@ -125,4 +126,4 @@ Already listed:
 - GitHub MCP Registry: https://github.com/mcp/uizze/uizze (official registry is active at `io.github.uizze/uizze`, latest `v1.2.9`, with the canonical repository URL; older retired-repository records are deprecated)
 - GitHub Awesome Copilot skill: https://github.com/github/awesome-copilot/blob/main/skills/anti-ui-slop/SKILL.md
 - skills.sh: https://www.skills.sh/site/uizze.com/anti-ui-slop
-- Chat2AnyLLM source hub: https://github.com/Chat2AnyLLM/awesome-repo-configs/pull/144 (plugin source entry merged and live); MCP source follow-up: https://github.com/Chat2AnyLLM/awesome-repo-configs/pull/145
+- Chat2AnyLLM source hub: https://github.com/Chat2AnyLLM/awesome-repo-configs/pull/144 (plugin source entry merged and live); its downstream README updater was unblocked by quarantining one malformed source in https://github.com/Chat2AnyLLM/awesome-repo-configs/pull/146 (related maintainer issue: https://github.com/Chat2AnyLLM/awesome-claude-plugins/issues/50); MCP source follow-up: https://github.com/Chat2AnyLLM/awesome-repo-configs/pull/145
