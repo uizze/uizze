@@ -92,7 +92,7 @@ Submit the canonical repository next:
 - Awesome OpenClaw: https://github.com/Anil-matcha/awesome-openclaw (PR #201 adds the portable UIZZE Skill to Notable Skills)
 - Awesome Harness Engineering: https://github.com/ai-boost/awesome-harness-engineering (PR #200 adds the UIZZE Action and MCP workflow to Verification & CI Integration)
 - Awesome LLM Resources: https://github.com/WangRongsheng/awesome-LLM-resources (PR #194 adds the canonical anti-ui-slop Skill to 技能 Skills)
-- Awesome LLM Apps: https://github.com/Shubhamsaboo/awesome-llm-apps (PR #1105 adds a self-contained runnable anti-ui-slop Skill; maintainer review is pending)
+- Awesome LLM Apps: https://github.com/Shubhamsaboo/awesome-llm-apps (PR #1105 adds a self-contained runnable anti-ui-slop Skill; commit `769a54f` now installs from the canonical `uizze/uizze` source instead of the forked directory copy; maintainer review is pending)
 - jakubkrehel Interface Skills: https://github.com/jakubkrehel/skills (PR #14 proposes a focused anti-ui-slop finish gate alongside its interface-quality skills; maintainer review is pending)
 - Vercel Agent Skills: https://github.com/vercel-labs/agent-skills (PR #321 proposes a focused anti-ui-slop review skill in the Design group, complementary to Vercel’s Web Interface Guidelines; current validation and the fork-preview authorization prerequisite are recorded at https://github.com/vercel-labs/agent-skills/pull/321#issuecomment-5313043110)
 - Anthony Fu Skills: https://github.com/antfu/skills (PR #36 adds the canonical UIZZE anti-ui-slop Skill as a maintained vendored source for the Vite, Nuxt, and Vue audience; maintainer review is pending)
@@ -166,7 +166,7 @@ Keep these surfaces aligned with the canonical copy above:
 - Build with Claude Skill PRs: https://github.com/davepoon/buildwithclaude/pull/251 (merged; existing `plugins/all-skills/skills/anti-ui-slop/SKILL.md` listing refreshed from the canonical UIZZE workflow)
 - Design tools directory PR: https://github.com/goabstract/Awesome-Design-Tools/pull/586
 - Awesome Design Systems resource PR: https://github.com/klaufel/awesome-design-systems/pull/32
-- Frontend Development Bookmarks PR: https://github.com/dypsilon/frontend-dev-bookmarks/pull/528
+- Frontend Development Bookmarks PR: https://github.com/dypsilon/frontend-dev-bookmarks/pull/528 (commit `51ab891` clarifies the free anti-ui-slop Skill/no-account preview versus the full UIZZE product and its 800,000+ real web and iOS screens)
 - Awesome Web Design inspiration PR: https://github.com/nicolesaidy/awesome-web-design/pull/71
 - Nanobot well-known Skills compatibility PR: https://github.com/HKUDS/nanobot/pull/5186 (allows `uizze.com` discovery sources in search, trends, and installation; review pending)
 - Meng To design skills PR: https://github.com/MengTo/Skills/pull/7
@@ -238,7 +238,7 @@ Keep these surfaces aligned with the canonical copy above:
 - jqueryscript Awesome Claude Code PR: https://github.com/jqueryscript/awesome-claude-code/pull/598
 - GetBindu Awesome Claude Skills PR: https://github.com/GetBindu/awesome-claude-code-and-skills/pull/156
 - BehiSecc Awesome Claude Skills PR: https://github.com/BehiSecc/awesome-claude-skills/pull/579
-- Awesome LLM Apps Agent Skills PR: https://github.com/Shubhamsaboo/awesome-llm-apps/pull/1105 (self-contained runnable anti-ui-slop Skill; GitGuardian check passed; maintainer review pending)
+- Awesome LLM Apps Agent Skills PR: https://github.com/Shubhamsaboo/awesome-llm-apps/pull/1105 (self-contained runnable anti-ui-slop Skill; canonical install repair in commit `769a54f`; GitGuardian check passed; maintainer review pending)
 - Awesome LLM Skills PR: https://github.com/Prat011/awesome-llm-skills/pull/181 (canonical UIZZE UI research Skill entry)
 - Awesome AI DevTools PR: https://github.com/jamesmurdza/awesome-ai-devtools/pull/985 (canonical UIZZE UI context and verification tool entry; required PR-template check passed)
 - Awesome AI Coding PR: https://github.com/wsxiaoys/awesome-ai-coding/pull/143 (UIZZE project entry)
