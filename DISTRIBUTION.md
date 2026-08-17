@@ -57,6 +57,7 @@ Update existing entries first:
 Submit the canonical repository next:
 
 - Anthropic Agent Skills: https://github.com/anthropics/skills (PR #1595 proposes a link-only UIZZE partner listing in the official Agent Skills repository, which has 170,000+ stars)
+- OpenAI Plugins: https://github.com/openai/plugins (official Codex plugin examples repository with 5,000+ stars; no public issue, pull-request, or contributor intake is available, so no unsolicited submission has been opened; revisit through the documented official plugin path)
 - Anthropic Claude plugin marketplaces: https://github.com/anthropics/claude-plugins-official (33,000+ stars, Anthropic-maintained plugins) and https://github.com/anthropics/claude-plugins-community (read-only community mirror; 351 stars). Third-party submissions use https://clau.de/plugin-directory-submission; direct pull requests to the community mirror close automatically. UIZZE is not listed yet.
 - Smithery: https://smithery.ai/servers?q=uizze
 - MCP.so: https://mcp.so/submit?type=server (GitHub intake issue #3117 now leads with the free `check_ui_slop` preview, canonical `uizze/uizze` source, and current anti-UI-slop copy)
