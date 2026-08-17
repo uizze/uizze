@@ -47,6 +47,7 @@ Use “800,000+ real web and iOS screens” in public copy. Keep the free anti-u
 
 Update existing entries first:
 
+- Tons of Skills: https://github.com/uizze/uizze/issues/38 (catalogue validator intake; the public anti-ui-slop Skill now has the required Overview, Prerequisites, Output, Error Handling, and Resources sections, and the live domain-backed copy is verified byte-for-byte against this repository)
 - Glama connector: https://glama.ai/mcp/connectors/io.github.uizze/uizze (canonical hosted record is now verified, has a healthy `glama.json`, points to `https://uizze.com/mcp/preview`, and reports 4.3/5 across one tool; the separate server record at https://glama.ai/mcp/servers/uizze/uizze-mcp still points to retired `uizze/uizze-mcp` and has no score)
 - Glama source-server submission: https://glama.ai/mcp/servers (use **Add Server** → **Server** and submit `https://github.com/uizze/uizze`; the current `/api/mcp/servers/submit` endpoint redirects unauthenticated visitors to sign-up, so the canonical source-server listing and score remain externally gated; do not restore the retired repository)
 - PulseMCP: https://www.pulsemcp.com/servers/uizze
