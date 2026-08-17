@@ -60,6 +60,7 @@ Update existing entries first:
 - Awesome QA Skills: https://github.com/naodeng/awesome-qa-skills/issues/3 (167-star bilingual QA Skill library; proposes the anti-ui-slop Skill as a directly relevant UX quality and pre-ship testing workflow, not a generic product listing)
 - Glama connector: https://glama.ai/mcp/connectors/io.github.uizze/uizze (canonical hosted record is now verified, has a healthy `glama.json`, points to `https://uizze.com/mcp/preview`, and reports 4.3/5 across one tool; the separate server record at https://glama.ai/mcp/servers/uizze/uizze-mcp still points to retired `uizze/uizze-mcp` and has no score)
 - Glama source-server submission: https://glama.ai/mcp/servers (use **Add Server** → **Server** and submit `https://github.com/uizze/uizze`; the current `/api/mcp/servers/submit` endpoint redirects unauthenticated visitors to sign-up, so the canonical source-server listing and score remain externally gated; do not restore the retired repository)
+- MCP Servers Live Index: https://github.com/linny006/mcp-servers-live/pull/5 (15-minute GitHub Search tracker; the current table already lists canonical `uizze/uizze`, while this PR fixes generated stale detail pages for retired repository names so they cannot compete in search)
 - PulseMCP: https://www.pulsemcp.com/servers/uizze
 - MCP Market: https://mcpmarket.com/server/uizze-1
 - MCPServers.org: https://mcpservers.org/servers/uizze-com (live listing verified with the current 800,000+ positioning and uizze.com link)
