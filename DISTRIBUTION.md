@@ -76,7 +76,7 @@ Submit the canonical repository next:
 - Awesome OpenClaw: https://github.com/Anil-matcha/awesome-openclaw (PR #201 adds the portable UIZZE Skill to Notable Skills)
 - Awesome Harness Engineering: https://github.com/ai-boost/awesome-harness-engineering (PR #200 adds the UIZZE Action and MCP workflow to Verification & CI Integration)
 - Awesome LLM Resources: https://github.com/WangRongsheng/awesome-LLM-resources (PR #194 adds the canonical anti-ui-slop Skill to 技能 Skills)
-- Awesome LLM Apps: https://github.com/Shubhamsaboo/awesome-llm-apps (PR #1105 adds a self-contained runnable anti-ui-slop Skill after the link-only route in #1104 was declined)
+- Awesome LLM Apps: https://github.com/Shubhamsaboo/awesome-llm-apps (PR #1105 adds a self-contained runnable anti-ui-slop Skill; maintainer review is pending)
 - Alirezarezvani Claude Skills: https://github.com/alirezarezvani/claude-skills (issue #962 proposes a focused anti-ui-slop quality-gate Skill distinct from its existing design-system toolkit)
 - VoltAgent Awesome DESIGN.md: https://github.com/VoltAgent/awesome-design-md (issue #459 now has the public UIZZE DESIGN.md artifact and canonical source for indexing)
 - Bergside Awesome Design Skills: https://github.com/bergside/awesome-design-skills (issue #16 proposes UIZZE for the separate Related QA tooling section, alongside design-skill quality gates)
