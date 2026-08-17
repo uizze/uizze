@@ -77,6 +77,7 @@ Submit the canonical repository next:
 - Awesome Harness Engineering: https://github.com/ai-boost/awesome-harness-engineering (PR #200 adds the UIZZE Action and MCP workflow to Verification & CI Integration)
 - Awesome LLM Resources: https://github.com/WangRongsheng/awesome-LLM-resources (PR #194 adds the canonical anti-ui-slop Skill to 技能 Skills)
 - Awesome LLM Apps: https://github.com/Shubhamsaboo/awesome-llm-apps (PR #1105 adds a self-contained runnable anti-ui-slop Skill; maintainer review is pending)
+- jakubkrehel Interface Skills: https://github.com/jakubkrehel/skills (PR #14 proposes a focused anti-ui-slop finish gate alongside its interface-quality skills; maintainer review is pending)
 - Alirezarezvani Claude Skills: https://github.com/alirezarezvani/claude-skills (issue #962 proposes a focused anti-ui-slop quality-gate Skill distinct from its existing design-system toolkit)
 - VoltAgent Awesome DESIGN.md: https://github.com/VoltAgent/awesome-design-md (issue #459 now has the public UIZZE DESIGN.md artifact and canonical source for indexing)
 - Bergside Awesome Design Skills: https://github.com/bergside/awesome-design-skills (issue #16 proposes UIZZE for the separate Related QA tooling section, alongside design-skill quality gates)
@@ -159,6 +160,7 @@ Keep these surfaces aligned with the canonical copy above:
 - YuzeHao2023 Awesome MCP Servers PR: https://github.com/YuzeHao2023/Awesome-MCP-Servers/pull/369
 - Agentic Awesome Skills PR: https://github.com/sickn33/agentic-awesome-skills/pull/1166 (merged; the live directory entry now uses the canonical `uizze/uizze` source)
 - Awesome LLM Apps PR: https://github.com/Shubhamsaboo/awesome-llm-apps/pull/1105 (self-contained runnable Skill; maintainer review pending)
+- jakubkrehel Interface Skills PR: https://github.com/jakubkrehel/skills/pull/14 (focused anti-ui-slop finish gate; plugin validator passed; maintainer review pending)
 - Alirezarezvani Claude Skills proposal: https://github.com/alirezarezvani/claude-skills/issues/962 (new anti-ui-slop quality-gate proposal; maintainer review pending)
 - Official Cursor plugins PR: https://github.com/cursor/plugins/pull/217 (manifest synchronized to v1.2.11 and current 800,000+ real web and iOS screens copy in commit `3175e48`; Cursor review is pending)
 - Docker MCP Registry PR: https://github.com/docker/mcp-registry/pull/4473 (canonical source and current public copy corrected in commit `ceaad7ba`; Docker review is pending)
