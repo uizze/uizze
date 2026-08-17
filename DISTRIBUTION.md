@@ -232,7 +232,7 @@ Keep these surfaces aligned with the canonical copy above:
 - Cursor MDC rules PR: https://github.com/sanjeed5/awesome-cursor-rules-mdc/pull/58
 - Wshobson Agentic Plugin Marketplace issue: https://github.com/wshobson/agents/issues/657
 - Wshobson Agentic Plugin Marketplace PR: https://github.com/wshobson/agents/pull/658
-- Awesome Claude Code recommendation: https://github.com/hesreallyhim/awesome-claude-code/issues/2548 (canonical Skills payload is public; maintainer validation labels are still pending)
+- Awesome Claude Code recommendation: https://github.com/hesreallyhim/awesome-claude-code/issues/2548 (52,000+ star Claude Code directory; intake body refreshed with the canonical v1.2.11 source, free install, anonymous preview, GitHub Action, and accurate free/full 800,000+ distinction; maintainer review pending)
 - TravisVN Awesome Claude Skills PR: https://github.com/travisvn/awesome-claude-skills/pull/1123
 - Awesome Claude Code Skills PR: https://github.com/helloianneo/awesome-claude-code-skills/pull/72
 - jqueryscript Awesome Claude Code PR: https://github.com/jqueryscript/awesome-claude-code/pull/598
