@@ -81,7 +81,7 @@ Submit the canonical repository next:
 - Wong2 Awesome MCP Servers: https://github.com/wong2/awesome-mcp-servers (4,265 stars; the repository does not accept PRs, so submissions use https://mcpservers.org/submit)
 - Awesome Remote MCP Servers: https://github.com/jaw9c/awesome-remote-mcp-servers (PR #627 refreshes the existing UIZZE row to the free, no-account `https://uizze.com/mcp/preview` endpoint; broken PR #502 was closed after GitHub renamed its fork)
 - Hosted & Managed MCP Servers: https://github.com/sylviangth/awesome-remote-mcp-servers (separate 65-star directory; PR #64 now uses the free preview and canonical UIZZE copy, with maintainer review pending)
-- Awesome MCP Servers: https://github.com/punkpeye/awesome-mcp-servers (PR #10946 is open; live preview endpoint and canonical Glama connector evidence were posted, but the maintainer still requires a Glama source-server quality score)
+- Awesome MCP Servers: https://github.com/punkpeye/awesome-mcp-servers (92,000+ stars; PR #10946 is the single maintained UIZZE submission, with the canonical repository, free preview, 800,000+ scope, and Glama connector quality evidence; no duplicate PR is being maintained)
 - mctrinh Awesome MCP Servers: https://github.com/mctrinh/awesome-mcp-servers (PR #82 repairs an open listing that still referenced retired `uizze/uizze-mcp`; the branch now uses `uizze/uizze` and the free preview, with maintainer review pending)
 - TensorBlock MCP Index: https://github.com/TensorBlock/awesome-mcp-servers ([PR #1777](https://github.com/TensorBlock/awesome-mcp-servers/pull/1777) merged and deployed; live profile is https://tensorblock.co/mcp/servers/github-uizze-uizze-2a597cfa with canonical `uizze/uizze` metadata)
 - appcypher Awesome MCP Servers: https://github.com/appcypher/awesome-mcp-servers (archived/read-only upstream; a prepared fork cannot become a live directory PR)
@@ -215,7 +215,7 @@ Keep these surfaces aligned with the canonical copy above:
 - 程序员鱼皮 AI Guide recommendation issue: https://github.com/liyupi/ai-guide/issues/71 (Chinese-language recommendation for the AI tools and Vibe Coding resource sections; official source, MIT Skill, free install path, and separate preview/full-product scope)
 - Chinese Front-End Learning Resources recommendation issue: https://github.com/helloqingfeng/Awsome-Front-End-learning-resource/issues/29 (Chinese-language front-end resource recommendation with the official Skill source, free install path, and 800,000+ evidence)
 - Web Development Resources PR: https://github.com/markodenic/web-development-resources/pull/813
-- Awesome MCP Servers PR: https://github.com/punkpeye/awesome-mcp-servers/pull/10946
+- Awesome MCP Servers PR: https://github.com/punkpeye/awesome-mcp-servers/pull/10946 (92,000+ star directory; single maintained UIZZE submission with canonical free-first copy and Glama quality evidence)
 - Awesome Remote MCP Servers PR: https://github.com/jaw9c/awesome-remote-mcp-servers/pull/627 (refreshes the existing UIZZE row to the free preview and canonical repository; supersedes broken PR #502)
 - Hosted & Managed MCP Servers PR: https://github.com/sylviangth/awesome-remote-mcp-servers/pull/64 (separate hosted-MCP directory submission with the free preview and canonical copy)
 - mctrinh Awesome MCP Servers PR: https://github.com/mctrinh/awesome-mcp-servers/pull/82 (canonical-link repair for an open listing; retired `uizze/uizze-mcp` reference removed)
