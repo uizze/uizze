@@ -84,7 +84,7 @@ Submit the canonical repository next:
 - jqueryscript Awesome Claude Code: https://github.com/jqueryscript/awesome-claude-code (PR #598 adds UIZZE to the Agent Skills section)
 - GetBindu Awesome Claude Skills: https://github.com/GetBindu/awesome-claude-code-and-skills (PR #156 adds UIZZE to Core Development Skills)
 - BehiSecc Awesome Claude Skills: https://github.com/BehiSecc/awesome-claude-skills (PR #579 adds UIZZE to Development & Code Tools)
-- Official Cursor plugins: https://github.com/cursor/plugins
+- Official Cursor plugins: https://github.com/cursor/plugins (PR #217 adds the UIZZE Cursor plugin; Cursor Bugbot passed and maintainer review is pending)
 - Docker MCP Registry: https://github.com/docker/mcp-registry (PR #4473 now points at the canonical `uizze/uizze` repository and uses the current 800,000+ real web and iOS screens copy; Docker maintainer review is pending)
 - Cline marketplace: https://github.com/cline/marketplace (PR #17 adds the free anti-ui-slop Skill and PR #18 adds the no-account preview MCP; both are open for maintainer review)
 - Cline plugins: https://github.com/cline/plugins (PR #224 adds the portable anti-ui-slop plugin; maintainer review is pending)
@@ -96,7 +96,7 @@ Submit the canonical repository next:
 - TravisVN Awesome Claude Skills: https://github.com/travisvn/awesome-claude-skills (PR #1123 adds UIZZE to the community skills table)
 - Awesome Codex Skills: https://github.com/composio-community/awesome-codex-skills
 - Awesome Codex Subagents: https://github.com/VoltAgent/awesome-codex-subagents
-- Addy Osmani Agent Skills: https://github.com/addyosmani/agent-skills
+- Addy Osmani Agent Skills: https://github.com/addyosmani/agent-skills (PR #496 adds reference-led UI finish checks; maintainer review is pending)
 - Awesome Frontend Skills: https://github.com/finfin/awesome-frontend-skills
 - Requestly Awesome Frontend Resources: https://github.com/requestly/awesome-frontend-resources (PR #33 adds the free-first UIZZE Skill and deterministic preview)
 - Web Development Resources: https://github.com/markodenic/web-development-resources
