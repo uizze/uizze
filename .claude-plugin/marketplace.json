@@ -6,14 +6,14 @@
   },
   "metadata": {
     "description": "If your UI screams AI, your app is dead. Stop UI slop with 800,000+ real web and iOS screens, a product-specific design contract, and a hard finish gate.",
-    "version": "1.2.9"
+    "version": "1.2.11"
   },
   "plugins": [
     {
       "name": "uizze",
       "source": "./",
       "description": "If your UI screams AI, your app is dead. Stop UI slop with 800,000+ real web and iOS screens, a product-specific design contract, and a hard finish gate.",
-      "version": "1.2.9",
+      "version": "1.2.11",
       "author": {
         "name": "UIZZE",
         "email": "business@uizze.com"
