@@ -57,6 +57,7 @@ Update existing entries first:
 Submit the canonical repository next:
 
 - Anthropic Agent Skills: https://github.com/anthropics/skills (PR #1595 proposes a link-only UIZZE partner listing in the official Agent Skills repository, which has 170,000+ stars)
+- Official Claude Plugins Directory: https://github.com/anthropics/claude-plugins-official (Anthropic's actively maintained 33,000+ star marketplace accepts third-party plugins through the official submission form at https://clau.de/plugin-directory-submission; UIZZE is not listed yet and this intake does not use GitHub pull requests)
 - Smithery: https://smithery.ai/servers?q=uizze
 - MCP.so: https://mcp.so/submit?type=server (existing GitHub intake issue #3117 was reopened with the canonical `uizze/uizze` source and current anti-UI-slop copy)
 - Awesome MCP Servers: https://github.com/punkpeye/awesome-mcp-servers (PR #10946 is open; live preview endpoint and canonical Glama connector evidence were posted, but the maintainer still requires a Glama source-server quality score)
