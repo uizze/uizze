@@ -24,7 +24,7 @@ UIZZE gives coding agents a free anti-ui-slop workflow plus an optional hosted M
 - UI Slop Score: https://uizze.com/tools/ui-slop-score
 - Public design contract: https://github.com/uizze/uizze/blob/main/DESIGN.md
 - GitHub Action: https://github.com/uizze/uizze/tree/main/integrations/github-action
-- GitHub Action major tag: https://github.com/uizze/uizze/tree/v1/integrations/github-action (currently aligned with v1.2.10)
+- GitHub Action major tag: https://github.com/uizze/uizze/tree/v1/integrations/github-action (currently aligned with v1.2.11)
 - Official MCP Registry: https://github.com/mcp/uizze/uizze
 
 ## Install language
@@ -160,11 +160,11 @@ Keep these surfaces aligned with the canonical copy above:
 - Chinese Awesome Claude Skills PR: https://github.com/shishirui/awesome-claude-skills-zh/pull/10
 - KaranB192 Awesome Claude Skills PR: https://github.com/karanb192/awesome-claude-skills/pull/162
 
-Marketplace status: public release `v1.2.10` is live with the Marketplace-ready title and copy, but GitHub Marketplace search still returns zero public results; saving Marketplace categories on the real release currently returns a GitHub 500, so the Action is not yet publicly discoverable in the Marketplace index.
+Marketplace status: public release `v1.2.10` remains the Marketplace-ready Action release and `v1.2.11` is the current metadata-sync release, but GitHub Marketplace search still returns zero public results; saving Marketplace categories on the real release currently returns a GitHub 500, so the Action is not yet publicly discoverable in the Marketplace index.
 
 Already listed:
 
-- GitHub MCP Registry: https://github.com/mcp/uizze/uizze (official registry is active at `io.github.uizze/uizze`, latest `v1.2.10`, with the canonical repository URL; older retired-repository records are deprecated)
+- GitHub MCP Registry: https://github.com/mcp/uizze/uizze (official registry is active at `io.github.uizze/uizze`, latest `v1.2.11`, with the canonical repository URL; older retired-repository records are deprecated)
 - GitHub Awesome Copilot skill: https://github.com/github/awesome-copilot/blob/main/skills/anti-ui-slop/SKILL.md
 - GitHub Awesome Copilot follow-up PR: https://github.com/github/awesome-copilot/pull/2685 (documents the separate anonymous `check_ui_slop` preview; all automated checks pass, maintainer review pending)
 - Awesome Copilot Agents PR: https://github.com/Code-and-Sorts/awesome-copilot-agents/pull/81 (links the maintained UIZZE anti-ui-slop skill in the Development Agent Skills list)
