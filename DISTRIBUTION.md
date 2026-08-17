@@ -107,7 +107,7 @@ Submit the canonical repository next:
 - BehiSecc Awesome Claude Skills: https://github.com/BehiSecc/awesome-claude-skills (PR #579 adds UIZZE to Development & Code Tools)
 - Official Cursor plugins: https://github.com/cursor/plugins (PR #217 adds the UIZZE Cursor plugin; its branch now includes Cursor `main` through conflict-resolution commit `8aef74e`, the marketplace JSON parses, and Cursor Bugbot passed; maintainer review remains pending)
 - Docker MCP Registry: https://github.com/docker/mcp-registry (PR #4473 now points at the canonical `uizze/uizze` repository and uses the current 800,000+ real web and iOS screens copy; Docker maintainer review is pending)
-- Cline marketplace: https://github.com/cline/marketplace (PR #17 adds the free anti-ui-slop Skill and PR #18 adds the no-account preview MCP; both are open for maintainer review)
+- Cline marketplace: https://github.com/cline/marketplace (PR #17 adds the free anti-ui-slop Skill; commit `8116320` now separates its free workflow from the optional full UIZZE MCP and repository validation passes with 203 entries; PR #18 adds the no-account preview MCP; both remain open for maintainer review)
 - Cline plugins: https://github.com/cline/plugins (PR #224 adds the portable anti-ui-slop plugin; maintainer review is pending)
 - UI Skills registry: https://github.com/ibelick/ui-skills (PR #36 adds the canonical domain-hosted anti-ui-slop Skill; current verification comment confirms the live v1.2.11 source and free install path: https://github.com/ibelick/ui-skills/pull/36#issuecomment-5313001709)
 - Brad Traversy Design Resources: https://github.com/bradtraversy/design-resources-for-developers (PR #1649 adds UIZZE to Design Inspiration; checks are clean)
@@ -223,7 +223,7 @@ Keep these surfaces aligned with the canonical copy above:
 - Alirezarezvani Claude Skills proposal: https://github.com/alirezarezvani/claude-skills/issues/962 (new anti-ui-slop quality-gate proposal; maintainer review pending)
 - Official Cursor plugins PR: https://github.com/cursor/plugins/pull/217 (manifest synchronized to v1.2.11 and current 800,000+ real web and iOS screens copy; conflict-resolution commit `8aef74e` preserves the upstream Juicebox update, marketplace JSON parses, and Cursor Bugbot passed; Cursor review is pending)
 - Docker MCP Registry PR: https://github.com/docker/mcp-registry/pull/4473 (canonical source and current public copy corrected in commit `ceaad7ba`; Docker review is pending)
-- Cline marketplace Skill PR: https://github.com/cline/marketplace/pull/17
+- Cline marketplace Skill PR: https://github.com/cline/marketplace/pull/17 (scope clarification commit `8116320`; free Skill and optional full MCP are now described separately; validation passes with 203 entries; review pending)
 - Cline marketplace MCP PR: https://github.com/cline/marketplace/pull/18
 - Cline plugins PR: https://github.com/cline/plugins/pull/224
 - UI Skills registry PR: https://github.com/ibelick/ui-skills/pull/36
