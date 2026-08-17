@@ -48,6 +48,7 @@ Use “800,000+ real web and iOS screens” in public copy. Keep the free anti-u
 Update existing entries first:
 
 - Glama connector: https://glama.ai/mcp/connectors/io.github.uizze/uizze (canonical hosted record is now verified, has a healthy `glama.json`, points to `https://uizze.com/mcp/preview`, and reports 4.3/5 across one tool; the separate server record at https://glama.ai/mcp/servers/uizze/uizze-mcp still points to retired `uizze/uizze-mcp` and has no score)
+- Glama source-server submission: https://glama.ai/mcp/servers (use **Add Server** → **Server** and submit `https://github.com/uizze/uizze`; the current `/api/mcp/servers/submit` endpoint redirects unauthenticated visitors to sign-up, so the canonical source-server listing and score remain externally gated; do not restore the retired repository)
 - PulseMCP: https://www.pulsemcp.com/servers/uizze
 - MCP Market: https://mcpmarket.com/server/uizze-1
 - MCPServers.org: https://mcpservers.org/servers/uizze-com (live listing verified with the current 800,000+ positioning and uizze.com link)
@@ -224,7 +225,7 @@ Keep these surfaces aligned with the canonical copy above:
 - Chinese Awesome Claude Skills PR: https://github.com/shishirui/awesome-claude-skills-zh/pull/10
 - KaranB192 Awesome Claude Skills PR: https://github.com/karanb192/awesome-claude-skills/pull/162
 
-Marketplace status: `v1.2.11` is the current release with valid root Action metadata and the aligned `v1` tag, but its GitHub Marketplace publish checkbox remains unsubmitted. Marketplace search still returns zero public results; an earlier category-save attempt returned a GitHub 500, and the authenticated release form still requires the final publish action.
+Marketplace status: `v1.2.11` is the current release with valid root Action metadata and the aligned `v1` tag, but its GitHub Marketplace publish checkbox remains unsubmitted. Marketplace search still returns zero public results; an earlier category-save attempt returned a GitHub 500, and the authenticated release form still requires the final publish action. GitHub’s public REST and GraphQL APIs expose no supported Marketplace publish mutation, so this remains a release-form action.
 
 Already listed:
 
