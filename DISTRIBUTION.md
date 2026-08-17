@@ -127,6 +127,7 @@ Submit the canonical repository next:
 - Awesome AI Tools for UI: https://github.com/maxbogo/awesome-ai-tools-for-ui/pull/34 (823-star UI-specific catalogue; PR adds the free anti-ui-slop Skill to its Skills section with the live source, install path, and 800,000+ distinction)
 - Developer Roadmap: https://github.com/kamranahmedse/developer-roadmap/pull/10238 (364,000+ star developer education repository; concise open-source UIZZE Skill resource added to the existing Claude Code Skills topic, within its eight-link limit)
 - GitHubDaily: https://github.com/GitHubDaily/GitHubDaily/issues/1030 (47,000+ star Chinese developer-discovery repository; Chinese-language recommendation for the free Skill, preview MCP, GitHub Action, and accurate 800,000+ distinction)
+- 程序员鱼皮 AI Guide: https://github.com/liyupi/ai-guide/issues/71 (18,650-star Chinese AI/Vibe Coding resource hub; recommendation for the free anti-ui-slop Skill, preview MCP, and full 800,000+ workflow distinction)
 - Web Development Resources: https://github.com/markodenic/web-development-resources
 - Trend Micro Awesome Frontend: https://github.com/trendmicro-frontend/awesome (issue #7 suggests UIZZE for the maintained AI/frontend resources list)
 - Wshobson Agentic Plugin Marketplace: https://github.com/wshobson/agents
@@ -178,6 +179,7 @@ Keep these surfaces aligned with the canonical copy above:
 - Awesome AI Tools for UI PR: https://github.com/maxbogo/awesome-ai-tools-for-ui/pull/34 (free anti-ui-slop Skill in the UI-specific Skills catalogue; live links verified HTTP 200)
 - Developer Roadmap content PR: https://github.com/kamranahmedse/developer-roadmap/pull/10238 (one verified live Skill resource in the Claude Code Skills topic; no new roadmap node)
 - GitHubDaily recommendation issue: https://github.com/GitHubDaily/GitHubDaily/issues/1030 (Chinese-language project recommendation with official source, MIT license, free install path, and separate preview/full-product scope)
+- 程序员鱼皮 AI Guide recommendation issue: https://github.com/liyupi/ai-guide/issues/71 (Chinese-language recommendation for the AI tools and Vibe Coding resource sections; official source, MIT Skill, free install path, and separate preview/full-product scope)
 - Web Development Resources PR: https://github.com/markodenic/web-development-resources/pull/813
 - Awesome MCP Servers PR: https://github.com/punkpeye/awesome-mcp-servers/pull/10946
 - Awesome Remote MCP Servers PR: https://github.com/jaw9c/awesome-remote-mcp-servers/pull/627 (refreshes the existing UIZZE row to the free preview and canonical repository; supersedes broken PR #502)
