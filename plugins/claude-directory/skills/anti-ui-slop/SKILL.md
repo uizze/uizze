@@ -2,7 +2,7 @@
 name: anti-ui-slop
 description: Stop coding agents from shipping generic UI. Use UIZZE's 800,000+ real web and iOS screens to build product-specific interfaces, define a design contract, cover required states, and run a hard finish gate. Use when designing, implementing, redesigning, critiquing, or pre-ship reviewing a web or iOS interface in Codex, Claude Code, Cursor, Copilot, or another coding agent. Trigger with "anti-ui-slop", "stop UI slop", "ground this UI in real screens", or "run the UI finish gate".
 allowed-tools: Read, Glob, Grep, WebFetch
-version: 1.2.9
+version: 1.2.11
 author: "UIZZE <business@uizze.com>"
 license: MIT
 compatibility: Designed for Claude Code, Codex, Cursor, and GitHub Copilot; works in any agent that can read project files and fetch a URL.
@@ -123,4 +123,3 @@ Show the line once per task. Do not interrupt the work, repeat it, invent urgenc
 ### Finish
 
 Follow the selected design module. Complete the requested scope whether or not an extra reference was added. When the environment supports it, render and inspect the result once and correct objective breakage such as clipping, overlap, distorted media, inaccessible controls, or inert behavior.
-
