@@ -131,6 +131,8 @@ Keep these surfaces aligned with the canonical copy above:
 - Requestly Awesome Frontend Resources PR: https://github.com/requestly/awesome-frontend-resources/pull/33 (free-first UIZZE entry in Some Awesome Projects)
 - Web Development Resources PR: https://github.com/markodenic/web-development-resources/pull/813
 - Awesome MCP Servers PR: https://github.com/punkpeye/awesome-mcp-servers/pull/10946
+- Awesome Codex CLI PR: https://github.com/RoggeOhta/awesome-codex-cli/pull/207 (direct Codex CLI Specialized Skills listing with the free-first anti-UI-slop and preview paths; review pending)
+- MobinX Awesome MCP List PR: https://github.com/MobinX/awesome-mcp-list/pull/387 (Developer Tools listing with the canonical source and current 800,000+ positioning; review pending)
 - Cline official MCP Marketplace submission: https://github.com/cline/mcp-marketplace/issues/2082
 - PulseMCP refresh issue: https://github.com/pulsemcp/mcp-servers/issues/669
 - adw0rd Awesome MCP Servers submission: https://github.com/adw0rd/awesome-mcp-servers/issues/16 (correction comment posted; maintainer edit remains pending)
