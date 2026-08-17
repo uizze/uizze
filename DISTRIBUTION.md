@@ -131,6 +131,7 @@ Submit the canonical repository next:
 - Awesome Design: https://github.com/gztchan/awesome-design/issues/228 (17,000+ star design-resource directory; Toolkit recommendation for the free anti-ui-slop Skill as an AI-assisted UI quality workflow, with an own-project disclosure)
 - Google Labs DESIGN.md: https://github.com/google-labs-code/design.md/pull/170 (27,000+ star design-contract format repo; format-native UIZZE example with local lint at 0 errors and 0 warnings; Google CLA check remains an external prerequisite)
 - Garden Skills: https://github.com/ConardLi/garden-skills/issues/30 (10,000+ star MIT Agent Skills collection; proposal places UIZZE beside its Design / Frontend skills as a complementary quality and finish-gate workflow)
+- Awesome Web Design: https://github.com/nicolesaidy/awesome-web-design/pull/73 (2,700+ star curated digital-design list; concise UIZZE Guidelines entry with canonical repo, free Skill, and accurate 800,000+ full-workflow scope)
 - Vibe Coding CN: https://github.com/2025Emma/vibe-coding-cn/pull/10 (22,000+ star Chinese Vibe Coding guide; PR adds the official Skill to its local Skills resource index and links the open new-tools intake)
 - Datawhale Vibe Vibe UI best practices: https://github.com/datawhalechina/vibe-vibe/issues/106#issuecomment-5312596681 (5,900+ star Chinese Vibe Coding course; focused open discussion about design tokens, AI constraints, design-code validation, and a practical UI SOP)
 - GitHubDaily: https://github.com/GitHubDaily/GitHubDaily/issues/1030 (47,000+ star Chinese developer-discovery repository; Chinese-language recommendation for the free Skill, preview MCP, GitHub Action, and accurate 800,000+ distinction)
@@ -148,7 +149,7 @@ Keep these surfaces aligned with the canonical copy above:
 - Organization profile: https://github.com/uizze/.github/blob/main/profile/README.md
 - Start-here discussion: https://github.com/uizze/uizze/discussions/15 (high-traffic entry point refreshed with canonical links, free preview, Action, DESIGN.md, and Registry paths)
 - Launch discussion: https://github.com/uizze/uizze/discussions/44
-- Latest distribution update: https://github.com/uizze/uizze/discussions/44#discussioncomment-18047987
+- Latest distribution update: https://github.com/uizze/uizze/discussions/44#discussioncomment-18048016
 - Latest distribution release: https://github.com/uizze/uizze/releases/latest
 - Anthropic Skills partner listing PR: https://github.com/anthropics/skills/pull/1595 (link-only UIZZE entry for the official Agent Skills repository; maintainer review pending)
 - Claude Code Frontend Design Toolkit PR: https://github.com/wilwaldon/Claude-Code-Frontend-Design-Toolkit/pull/5 (README source repaired to the canonical `uizze/uizze` repository; checks are clean)
@@ -191,6 +192,7 @@ Keep these surfaces aligned with the canonical copy above:
 - Awesome Design recommendation issue: https://github.com/gztchan/awesome-design/issues/228 (17,000+ star design-resource directory; Toolkit recommendation with the free Skill source, install path, and own-project disclosure)
 - Google Labs DESIGN.md example PR: https://github.com/google-labs-code/design.md/pull/170 (format-native UIZZE design-system example; `check-changes` passed, local linter returned 0 errors and 0 warnings, Google CLA remains pending)
 - Garden Skills proposal issue: https://github.com/ConardLi/garden-skills/issues/30 (Design / Frontend quality Skill proposal; official source, install path, compatibility, and free/full scope included)
+- Awesome Web Design Guidelines PR: https://github.com/nicolesaidy/awesome-web-design/pull/73 (one concise design-guideline entry; canonical repo and free Skill links verified HTTP 200)
 - Vibe Coding CN Skills PR: https://github.com/2025Emma/vibe-coding-cn/pull/10 (Chinese-language documentation route adding UIZZE to the local Skills resource index; linked from the open new-tools intake)
 - Datawhale Vibe Vibe UI discussion: https://github.com/datawhalechina/vibe-vibe/issues/106#issuecomment-5312596681 (Chinese-language UI best-practices discussion; UIZZE added as a concrete design-token, validation, and finish-gate case study)
 - GitHubDaily recommendation issue: https://github.com/GitHubDaily/GitHubDaily/issues/1030 (Chinese-language project recommendation with official source, MIT license, free install path, and separate preview/full-product scope)
