@@ -135,7 +135,7 @@ Keep these surfaces aligned with the canonical copy above:
 - adw0rd Awesome MCP Servers submission: https://github.com/adw0rd/awesome-mcp-servers/issues/16 (correction comment posted; maintainer edit remains pending)
 - YuzeHao2023 Awesome MCP Servers PR: https://github.com/YuzeHao2023/Awesome-MCP-Servers/pull/369
 - Agentic Awesome Skills PR: https://github.com/sickn33/agentic-awesome-skills/pull/1166 (PR branch now removes the retired `aislon/uizze-mcp` source and keeps the canonical `uizze/uizze` entry)
-- Official Cursor plugins PR: https://github.com/cursor/plugins/pull/217
+- Official Cursor plugins PR: https://github.com/cursor/plugins/pull/217 (manifest synchronized to v1.2.11 and current 800,000+ real web and iOS screens copy in commit `3175e48`; Cursor review is pending)
 - Docker MCP Registry PR: https://github.com/docker/mcp-registry/pull/4473 (canonical source and current public copy corrected in commit `ceaad7ba`; Docker review is pending)
 - Cline marketplace Skill PR: https://github.com/cline/marketplace/pull/17
 - Cline marketplace MCP PR: https://github.com/cline/marketplace/pull/18
