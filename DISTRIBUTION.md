@@ -175,7 +175,7 @@ Keep these surfaces aligned with the canonical copy above:
 - jqueryscript Awesome Claude Code PR: https://github.com/jqueryscript/awesome-claude-code/pull/598
 - GetBindu Awesome Claude Skills PR: https://github.com/GetBindu/awesome-claude-code-and-skills/pull/156
 - BehiSecc Awesome Claude Skills PR: https://github.com/BehiSecc/awesome-claude-skills/pull/579
-- Awesome LLM Apps Agent Skills PR: https://github.com/Shubhamsaboo/awesome-llm-apps/pull/1104 (external Agent Skills entry; GitGuardian check passed)
+- Awesome LLM Apps Agent Skills PR: https://github.com/Shubhamsaboo/awesome-llm-apps/pull/1105 (self-contained runnable anti-ui-slop Skill; GitGuardian check passed; maintainer review pending)
 - Awesome LLM Skills PR: https://github.com/Prat011/awesome-llm-skills/pull/181 (canonical UIZZE UI research Skill entry)
 - Awesome AI DevTools PR: https://github.com/jamesmurdza/awesome-ai-devtools/pull/985 (canonical UIZZE UI context and verification tool entry; required PR-template check passed)
 - Awesome AI Coding PR: https://github.com/wsxiaoys/awesome-ai-coding/pull/143 (UIZZE project entry)
