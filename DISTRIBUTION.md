@@ -127,6 +127,7 @@ Submit the canonical repository next:
 - Awesome Codex Subagents: https://github.com/VoltAgent/awesome-codex-subagents
 - Addy Osmani Agent Skills: https://github.com/addyosmani/agent-skills (PR #496 adds reference-led UI finish checks; maintainer review is pending)
 - Awesome Frontend Skills: https://github.com/finfin/awesome-frontend-skills
+- JingwenTian Awesome Frontend: https://github.com/JingwenTian/awesome-frontend/pull/26 (1,700+ star frontend resource index; adds the free anti-ui-slop Skill with the canonical install source and accurate full 800,000+ distinction)
 - Requestly Awesome Frontend Resources: https://github.com/requestly/awesome-frontend-resources (PR #33 adds the free-first UIZZE Skill and deterministic preview)
 - Awesome AI Tools for UI: https://github.com/maxbogo/awesome-ai-tools-for-ui/pull/34 (823-star UI-specific catalogue; PR adds the free anti-ui-slop Skill to its Skills section with the live source, install path, and 800,000+ distinction)
 - Developer Roadmap: https://github.com/kamranahmedse/developer-roadmap/pull/10238 (364,000+ star developer education repository; concise open-source UIZZE Skill resource added to the existing Claude Code Skills topic, within its eight-link limit)
@@ -188,6 +189,7 @@ Keep these surfaces aligned with the canonical copy above:
 - Awesome Codex Subagents PR: https://github.com/VoltAgent/awesome-codex-subagents/pull/46
 - Addy Osmani Agent Skills PR: https://github.com/addyosmani/agent-skills/pull/496
 - Awesome Frontend Skills PR: https://github.com/finfin/awesome-frontend-skills/pull/3
+- JingwenTian Awesome Frontend PR: https://github.com/JingwenTian/awesome-frontend/pull/26 (free-first UI quality workflow entry; maintainer review pending)
 - Requestly Awesome Frontend Resources PR: https://github.com/requestly/awesome-frontend-resources/pull/33 (free-first UIZZE entry in Some Awesome Projects)
 - Awesome AI Tools for UI PR: https://github.com/maxbogo/awesome-ai-tools-for-ui/pull/34 (free anti-ui-slop Skill in the UI-specific Skills catalogue; live links verified HTTP 200)
 - Developer Roadmap content PR: https://github.com/kamranahmedse/developer-roadmap/pull/10238 (one verified live Skill resource in the Claude Code Skills topic; no new roadmap node)
