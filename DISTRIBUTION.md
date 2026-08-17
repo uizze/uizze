@@ -51,6 +51,8 @@ Update existing entries first:
 - PulseMCP: https://www.pulsemcp.com/servers/uizze
 - MCP Market: https://mcpmarket.com/server/uizze-1
 - MCPServers.org: https://mcpservers.org/servers/uizze-com (live listing verified with the current 800,000+ positioning and uizze.com link)
+- Cline official MCP Marketplace: https://github.com/cline/mcp-marketplace/issues/2082 (submission body refreshed to the canonical repository and free preview)
+- PulseMCP refresh intake: https://github.com/pulsemcp/mcp-servers/issues/669 (updated to the official `io.github.uizze/uizze` v1.2.11 record)
 
 Submit the canonical repository next:
 
@@ -60,6 +62,7 @@ Submit the canonical repository next:
 - TensorBlock MCP Index: https://github.com/TensorBlock/awesome-mcp-servers (PR #1777 merged and deployed; live profile is https://tensorblock.co/mcp/servers/github-uizze-uizze-2a597cfa with canonical `uizze/uizze` metadata)
 - appcypher Awesome MCP Servers: https://github.com/appcypher/awesome-mcp-servers (archived/read-only upstream; a prepared fork cannot become a live directory PR)
 - YuzeHao2023 Awesome MCP Servers: https://github.com/YuzeHao2023/Awesome-MCP-Servers (issue #420 requests a canonical UIZZE entry in the active Community Servers list)
+- adw0rd Awesome MCP Servers: https://github.com/adw0rd/awesome-mcp-servers/issues/16 (canonical-source correction posted; original issue body still needs maintainer-side replacement)
 - libukai Awesome Agent Skills: https://github.com/libukai/awesome-agent-skills (canonical UIZZE intake is tracked in https://github.com/libukai/awesome-agent-skills/pull/107 and issue #128 for the curated programming/design section)
 - futantan Agent Skills Explorer: https://github.com/futantan/agent-skills.md (issue #24 requests indexing the canonical anti-ui-slop Skill)
 - Awesome Claude Plugins: https://github.com/composio-community/awesome-claude-plugins (PR #422 adds UIZZE to Frontend & Design)
@@ -127,6 +130,10 @@ Keep these surfaces aligned with the canonical copy above:
 - Requestly Awesome Frontend Resources PR: https://github.com/requestly/awesome-frontend-resources/pull/33 (free-first UIZZE entry in Some Awesome Projects)
 - Web Development Resources PR: https://github.com/markodenic/web-development-resources/pull/813
 - Awesome MCP Servers PR: https://github.com/punkpeye/awesome-mcp-servers/pull/10946
+- Cline official MCP Marketplace submission: https://github.com/cline/mcp-marketplace/issues/2082
+- PulseMCP refresh issue: https://github.com/pulsemcp/mcp-servers/issues/669
+- adw0rd Awesome MCP Servers submission: https://github.com/adw0rd/awesome-mcp-servers/issues/16 (correction comment posted; maintainer edit remains pending)
+- YuzeHao2023 Awesome MCP Servers PR: https://github.com/YuzeHao2023/Awesome-MCP-Servers/pull/369
 - Agentic Awesome Skills PR: https://github.com/sickn33/agentic-awesome-skills/pull/1166 (PR branch now removes the retired `aislon/uizze-mcp` source and keeps the canonical `uizze/uizze` entry)
 - Official Cursor plugins PR: https://github.com/cursor/plugins/pull/217
 - Docker MCP Registry PR: https://github.com/docker/mcp-registry/pull/4473 (canonical source and current public copy corrected in commit `ceaad7ba`; Docker review is pending)
