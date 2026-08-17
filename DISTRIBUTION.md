@@ -63,6 +63,7 @@ Submit the canonical repository next:
 - Awesome Remote MCP Servers: https://github.com/jaw9c/awesome-remote-mcp-servers (PR #627 refreshes the existing UIZZE row to the free, no-account `https://uizze.com/mcp/preview` endpoint; broken PR #502 was closed after GitHub renamed its fork)
 - Hosted & Managed MCP Servers: https://github.com/sylviangth/awesome-remote-mcp-servers (separate 65-star directory; PR #64 now uses the free preview and canonical UIZZE copy, with maintainer review pending)
 - Awesome MCP Servers: https://github.com/punkpeye/awesome-mcp-servers (PR #10946 is open; live preview endpoint and canonical Glama connector evidence were posted, but the maintainer still requires a Glama source-server quality score)
+- mctrinh Awesome MCP Servers: https://github.com/mctrinh/awesome-mcp-servers (PR #82 repairs an open listing that still referenced retired `uizze/uizze-mcp`; the branch now uses `uizze/uizze` and the free preview, with maintainer review pending)
 - TensorBlock MCP Index: https://github.com/TensorBlock/awesome-mcp-servers (PR #1777 merged and deployed; live profile is https://tensorblock.co/mcp/servers/github-uizze-uizze-2a597cfa with canonical `uizze/uizze` metadata)
 - appcypher Awesome MCP Servers: https://github.com/appcypher/awesome-mcp-servers (archived/read-only upstream; a prepared fork cannot become a live directory PR)
 - YuzeHao2023 Awesome MCP Servers: https://github.com/YuzeHao2023/Awesome-MCP-Servers (issue #420 requests a canonical UIZZE entry in the active Community Servers list)
@@ -136,6 +137,7 @@ Keep these surfaces aligned with the canonical copy above:
 - Awesome MCP Servers PR: https://github.com/punkpeye/awesome-mcp-servers/pull/10946
 - Awesome Remote MCP Servers PR: https://github.com/jaw9c/awesome-remote-mcp-servers/pull/627 (refreshes the existing UIZZE row to the free preview and canonical repository; supersedes broken PR #502)
 - Hosted & Managed MCP Servers PR: https://github.com/sylviangth/awesome-remote-mcp-servers/pull/64 (separate hosted-MCP directory submission with the free preview and canonical copy)
+- mctrinh Awesome MCP Servers PR: https://github.com/mctrinh/awesome-mcp-servers/pull/82 (canonical-link repair for an open listing; retired `uizze/uizze-mcp` reference removed)
 - Awesome Codex CLI PR: https://github.com/RoggeOhta/awesome-codex-cli/pull/207 (direct Codex CLI Specialized Skills listing with the free-first anti-UI-slop and preview paths; review pending)
 - MobinX Awesome MCP List PR: https://github.com/MobinX/awesome-mcp-list/pull/387 (Developer Tools listing with the canonical source and current 800,000+ positioning; review pending)
 - Cline official MCP Marketplace submission: https://github.com/cline/mcp-marketplace/issues/2082
