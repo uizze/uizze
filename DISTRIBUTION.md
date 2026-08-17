@@ -76,6 +76,12 @@ Submit the canonical repository next:
 - GetBindu Awesome Claude Skills: https://github.com/GetBindu/awesome-claude-code-and-skills (PR #156 adds UIZZE to Core Development Skills)
 - BehiSecc Awesome Claude Skills: https://github.com/BehiSecc/awesome-claude-skills (PR #579 adds UIZZE to Development & Code Tools)
 - Official Cursor plugins: https://github.com/cursor/plugins
+- Docker MCP Registry: https://github.com/docker/mcp-registry (PR #4473 now points at the canonical `uizze/uizze` repository and uses the current 800,000+ real web and iOS screens copy; Docker maintainer review is pending)
+- Cline marketplace: https://github.com/cline/marketplace (PR #17 adds the free anti-ui-slop Skill and PR #18 adds the no-account preview MCP; both are open for maintainer review)
+- Cline plugins: https://github.com/cline/plugins (PR #224 adds the portable anti-ui-slop plugin; maintainer review is pending)
+- UI Skills registry: https://github.com/ibelick/ui-skills (PR #36 adds the canonical domain-hosted anti-ui-slop Skill; checks are clean)
+- Brad Traversy Design Resources: https://github.com/bradtraversy/design-resources-for-developers (PR #1649 adds UIZZE to Design Inspiration; checks are clean)
+- Claude Code Templates: https://github.com/davila7/claude-code-templates (PR #747 adds the free Skill and optional MCP component; catalog review is pending)
 - Awesome Cursor Rules: https://github.com/PatrickJS/awesome-cursorrules
 - Awesome Claude Skills: https://github.com/ComposioHQ/awesome-claude-skills
 - TravisVN Awesome Claude Skills: https://github.com/travisvn/awesome-claude-skills (PR #1123 adds UIZZE to the community skills table)
@@ -123,6 +129,13 @@ Keep these surfaces aligned with the canonical copy above:
 - Awesome MCP Servers PR: https://github.com/punkpeye/awesome-mcp-servers/pull/10946
 - Agentic Awesome Skills PR: https://github.com/sickn33/agentic-awesome-skills/pull/1166 (PR branch now removes the retired `aislon/uizze-mcp` source and keeps the canonical `uizze/uizze` entry)
 - Official Cursor plugins PR: https://github.com/cursor/plugins/pull/217
+- Docker MCP Registry PR: https://github.com/docker/mcp-registry/pull/4473 (canonical source and current public copy corrected in commit `ceaad7ba`; Docker review is pending)
+- Cline marketplace Skill PR: https://github.com/cline/marketplace/pull/17
+- Cline marketplace MCP PR: https://github.com/cline/marketplace/pull/18
+- Cline plugins PR: https://github.com/cline/plugins/pull/224
+- UI Skills registry PR: https://github.com/ibelick/ui-skills/pull/36
+- Brad Traversy Design Resources PR: https://github.com/bradtraversy/design-resources-for-developers/pull/1649
+- Claude Code Templates PR: https://github.com/davila7/claude-code-templates/pull/747
 - Cursor MDC rules PR: https://github.com/sanjeed5/awesome-cursor-rules-mdc/pull/58
 - Wshobson Agentic Plugin Marketplace issue: https://github.com/wshobson/agents/issues/657
 - Wshobson Agentic Plugin Marketplace PR: https://github.com/wshobson/agents/pull/658
