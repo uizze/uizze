@@ -275,3 +275,10 @@ Already listed:
 - Chat2AnyLLM source hub: https://github.com/Chat2AnyLLM/awesome-repo-configs/pull/144 (plugin source entry merged and live); its downstream README now lists `uizze/uizze` as a healthy `.claude-plugin` marketplace source after https://github.com/Chat2AnyLLM/awesome-repo-configs/pull/146 quarantined the malformed source that blocked generation (related maintainer issue: https://github.com/Chat2AnyLLM/awesome-claude-plugins/issues/50); MCP source follow-up: https://github.com/Chat2AnyLLM/awesome-repo-configs/pull/145, with the missing review trigger tracked in https://github.com/Chat2AnyLLM/awesome-repo-configs/pull/147
 - HOL Awesome Codex Plugins: https://github.com/hashgraph-online/awesome-codex-plugins (UIZZE is already listed; PR #368 refreshes its public copy and triggers the generator to sync the current v1.2.11 canonical source, with all checks passing)
 - Agentic Awesome Skills: https://github.com/sickn33/agentic-awesome-skills/pull/1166 (merged; live canonical entry)
+- Developer Resources: https://github.com/marcelscruz/dev-resources/pull/1170 (merged UIZZE entry in a 1,327-star collaborative developer-resources list)
+- ToolSDK MCP Registry: https://github.com/toolsdk-ai/toolsdk-mcp-registry/pull/398 (merged structured MCP registry entry using the canonical UIZZE source)
+- Awesome Vibe Coding Resources: https://github.com/acvnace/awesome-vibe-coding-resources/pull/45 (merged UIZZE anti-UI-slop workflow entry in the 266-star resource list)
+- Awesome Webdesign Tools: https://github.com/nafasebra/awesome-webdesign-tools/pull/59 (merged UIZZE design-tool entry in the 159-star website/CSS tools list)
+- Awesome Agent Skills: https://github.com/JayLZhou/Awesome-Agent-Skills/pull/22 (merged UIZZE ecosystem resource in the 136-star Agent Skills list)
+- Awesome Inspiration: https://github.com/shsfwork/awesome-inspiration/pull/13 (merged UIZZE entry in the 99-star design and developer inspiration list)
+- Awesome Design Resources: https://github.com/darelova/Awesome-Design-Resources-List/pull/19 (merged UIZZE entry in the 64-star design resources list)
