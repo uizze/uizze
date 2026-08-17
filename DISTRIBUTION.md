@@ -123,6 +123,7 @@ Submit the canonical repository next:
 - Addy Osmani Agent Skills: https://github.com/addyosmani/agent-skills (PR #496 adds reference-led UI finish checks; maintainer review is pending)
 - Awesome Frontend Skills: https://github.com/finfin/awesome-frontend-skills
 - Requestly Awesome Frontend Resources: https://github.com/requestly/awesome-frontend-resources (PR #33 adds the free-first UIZZE Skill and deterministic preview)
+- Awesome AI Tools for UI: https://github.com/maxbogo/awesome-ai-tools-for-ui/pull/34 (823-star UI-specific catalogue; PR adds the free anti-ui-slop Skill to its Skills section with the live source, install path, and 800,000+ distinction)
 - Web Development Resources: https://github.com/markodenic/web-development-resources
 - Trend Micro Awesome Frontend: https://github.com/trendmicro-frontend/awesome (issue #7 suggests UIZZE for the maintained AI/frontend resources list)
 - Wshobson Agentic Plugin Marketplace: https://github.com/wshobson/agents
@@ -170,6 +171,7 @@ Keep these surfaces aligned with the canonical copy above:
 - Addy Osmani Agent Skills PR: https://github.com/addyosmani/agent-skills/pull/496
 - Awesome Frontend Skills PR: https://github.com/finfin/awesome-frontend-skills/pull/3
 - Requestly Awesome Frontend Resources PR: https://github.com/requestly/awesome-frontend-resources/pull/33 (free-first UIZZE entry in Some Awesome Projects)
+- Awesome AI Tools for UI PR: https://github.com/maxbogo/awesome-ai-tools-for-ui/pull/34 (free anti-ui-slop Skill in the UI-specific Skills catalogue; live links verified HTTP 200)
 - Web Development Resources PR: https://github.com/markodenic/web-development-resources/pull/813
 - Awesome MCP Servers PR: https://github.com/punkpeye/awesome-mcp-servers/pull/10946
 - Awesome Remote MCP Servers PR: https://github.com/jaw9c/awesome-remote-mcp-servers/pull/627 (refreshes the existing UIZZE row to the free preview and canonical repository; supersedes broken PR #502)
