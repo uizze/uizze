@@ -59,7 +59,8 @@ Submit the canonical repository next:
 - Anthropic Agent Skills: https://github.com/anthropics/skills (PR #1595 proposes a link-only UIZZE partner listing in the official Agent Skills repository, which has 170,000+ stars)
 - Anthropic Claude plugin marketplaces: https://github.com/anthropics/claude-plugins-official (33,000+ stars, Anthropic-maintained plugins) and https://github.com/anthropics/claude-plugins-community (read-only community mirror; 351 stars). Third-party submissions use https://clau.de/plugin-directory-submission; direct pull requests to the community mirror close automatically. UIZZE is not listed yet.
 - Smithery: https://smithery.ai/servers?q=uizze
-- MCP.so: https://mcp.so/submit?type=server (existing GitHub intake issue #3117 was reopened with the canonical `uizze/uizze` source and current anti-UI-slop copy)
+- MCP.so: https://mcp.so/submit?type=server (GitHub intake issue #3117 now leads with the free `check_ui_slop` preview, canonical `uizze/uizze` source, and current anti-UI-slop copy)
+- Wong2 Awesome MCP Servers: https://github.com/wong2/awesome-mcp-servers (4,265 stars; the repository does not accept PRs, so submissions use https://mcpservers.org/submit)
 - Awesome Remote MCP Servers: https://github.com/jaw9c/awesome-remote-mcp-servers (PR #627 refreshes the existing UIZZE row to the free, no-account `https://uizze.com/mcp/preview` endpoint; broken PR #502 was closed after GitHub renamed its fork)
 - Hosted & Managed MCP Servers: https://github.com/sylviangth/awesome-remote-mcp-servers (separate 65-star directory; PR #64 now uses the free preview and canonical UIZZE copy, with maintainer review pending)
 - Awesome MCP Servers: https://github.com/punkpeye/awesome-mcp-servers (PR #10946 is open; live preview endpoint and canonical Glama connector evidence were posted, but the maintainer still requires a Glama source-server quality score)
