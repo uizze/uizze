@@ -149,7 +149,7 @@ Keep these surfaces aligned with the canonical copy above:
 - Organization profile: https://github.com/uizze/.github/blob/main/profile/README.md
 - Start-here discussion: https://github.com/uizze/uizze/discussions/15 (high-traffic entry point refreshed with canonical links, free preview, Action, DESIGN.md, and Registry paths)
 - Launch discussion: https://github.com/uizze/uizze/discussions/44
-- Latest distribution update: https://github.com/uizze/uizze/discussions/44#discussioncomment-18048016
+- Latest distribution update: https://github.com/uizze/uizze/discussions/44#discussioncomment-18048047
 - Latest distribution release: https://github.com/uizze/uizze/releases/latest
 - Anthropic Skills partner listing PR: https://github.com/anthropics/skills/pull/1595 (link-only UIZZE entry for the official Agent Skills repository; maintainer review pending)
 - Claude Code Frontend Design Toolkit PR: https://github.com/wilwaldon/Claude-Code-Frontend-Design-Toolkit/pull/5 (README source repaired to the canonical `uizze/uizze` repository; checks are clean)
@@ -258,7 +258,7 @@ Keep these surfaces aligned with the canonical copy above:
 - Chinese Awesome Claude Skills PR: https://github.com/shishirui/awesome-claude-skills-zh/pull/10
 - KaranB192 Awesome Claude Skills PR: https://github.com/karanb192/awesome-claude-skills/pull/162
 
-Marketplace status: `v1.2.11` is the current release with valid root Action metadata and the aligned `v1` tag, but its GitHub Marketplace publish checkbox remains unsubmitted. Marketplace search still returns zero public results; an earlier category-save attempt returned a GitHub 500, and the authenticated release form still requires the final publish action. GitHub’s public REST and GraphQL APIs expose no supported Marketplace publish mutation, so this remains a release-form action.
+Marketplace status: `v1.2.11` is the current release with valid root Action metadata and the aligned `v1` tag. The authenticated release form was completed, but public Marketplace search still returns zero results, so GitHub-side indexing or publication visibility remains unresolved. An earlier category-save attempt returned a GitHub 500, and GitHub’s public REST and GraphQL APIs expose no supported Marketplace publish mutation.
 
 Already listed:
 
