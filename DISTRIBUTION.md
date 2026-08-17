@@ -149,7 +149,7 @@ Keep these surfaces aligned with the canonical copy above:
 - Organization profile: https://github.com/uizze/.github/blob/main/profile/README.md
 - Start-here discussion: https://github.com/uizze/uizze/discussions/15 (high-traffic entry point refreshed with canonical links, free preview, Action, DESIGN.md, and Registry paths)
 - Launch discussion: https://github.com/uizze/uizze/discussions/44
-- Latest distribution update: https://github.com/uizze/uizze/discussions/44#discussioncomment-18048258
+- Latest distribution update: https://github.com/uizze/uizze/discussions/44#discussioncomment-18048324
 - Latest distribution release: https://github.com/uizze/uizze/releases/latest
 - Anthropic Skills partner listing PR: https://github.com/anthropics/skills/pull/1595 (link-only UIZZE entry for the official Agent Skills repository; maintainer review pending)
 - Claude Code Frontend Design Toolkit PR: https://github.com/wilwaldon/Claude-Code-Frontend-Design-Toolkit/pull/5 (README source repaired to the canonical `uizze/uizze` repository; checks are clean)
@@ -168,7 +168,7 @@ Keep these surfaces aligned with the canonical copy above:
 - Tech Leads Club Agent Skills intake issue: https://github.com/tech-leads-club/agent-skills/issues/167 (issue refreshed with v1.2.11, current free preview, 800,000+ evidence, and passing HOL Plugin Scanner status)
 - Awesome Hermes Agent recommendation issue: https://github.com/0xNyk/awesome-hermes-agent/issues/325 (portable anti-UI-slop skill recommendation for the agentskills.io ecosystem)
 - Awesome Hermes Skills: https://github.com/ZeroPointRepo/awesome-hermes-skills/pull/29 (merged UIZZE anti-ui-slop Skill listing in Creative & Media Generation)
-- Agent Skill Index PR: https://github.com/heilcheng/awesome-agent-skills/pull/420
+- Agent Skill Index PR: https://github.com/heilcheng/awesome-agent-skills/pull/420 (existing UIZZE listing; current verification comment confirms the canonical Skill, free install path, v1.2.11 metadata, and 800,000+ evidence)
 - Skillmatic Agent Skills PR: https://github.com/skillmatic-ai/awesome-agent-skills/pull/153
 - SkillCreator Agent Skills PR: https://github.com/skillcreatorai/Awesome-Agent-Skills/pull/10
 - Claude Code Toolkit PR: https://github.com/rohitg00/awesome-claude-code-toolkit/pull/730
