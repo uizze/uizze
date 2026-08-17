@@ -105,7 +105,7 @@ Submit the canonical repository next:
 - jqueryscript Awesome Claude Code: https://github.com/jqueryscript/awesome-claude-code (PR #598 adds UIZZE to the Agent Skills section)
 - GetBindu Awesome Claude Skills: https://github.com/GetBindu/awesome-claude-code-and-skills (PR #156 adds UIZZE to Core Development Skills)
 - BehiSecc Awesome Claude Skills: https://github.com/BehiSecc/awesome-claude-skills (PR #579 adds UIZZE to Development & Code Tools)
-- Official Cursor plugins: https://github.com/cursor/plugins (PR #217 adds the UIZZE Cursor plugin; Cursor Bugbot passed and maintainer review is pending)
+- Official Cursor plugins: https://github.com/cursor/plugins (PR #217 adds the UIZZE Cursor plugin; Cursor Bugbot passed, and current v1.2.11 / free-install verification is recorded at https://github.com/cursor/plugins/pull/217#issuecomment-5313138215)
 - Docker MCP Registry: https://github.com/docker/mcp-registry (PR #4473 now points at the canonical `uizze/uizze` repository and uses the current 800,000+ real web and iOS screens copy; Docker maintainer review is pending)
 - Cline marketplace: https://github.com/cline/marketplace (PR #17 adds the free anti-ui-slop Skill and PR #18 adds the no-account preview MCP; both are open for maintainer review)
 - Cline plugins: https://github.com/cline/plugins (PR #224 adds the portable anti-ui-slop plugin; maintainer review is pending)
@@ -153,7 +153,7 @@ Keep these surfaces aligned with the canonical copy above:
 - Organization profile: https://github.com/uizze/.github/blob/main/profile/README.md
 - Start-here discussion: https://github.com/uizze/uizze/discussions/15 (high-traffic entry point refreshed with canonical links, free preview, Action, DESIGN.md, and Registry paths)
 - Launch discussion: https://github.com/uizze/uizze/discussions/44
-- Latest distribution update: https://github.com/uizze/uizze/discussions/44#discussioncomment-18048512
+- Latest distribution update: https://github.com/uizze/uizze/discussions/44#discussioncomment-18048561
 - Latest distribution release: https://github.com/uizze/uizze/releases/latest
 - Anthropic Skills partner listing PR: https://github.com/anthropics/skills/pull/1595 (link-only UIZZE entry for the official Agent Skills repository; maintainer review pending)
 - Claude Code Frontend Design Toolkit PR: https://github.com/wilwaldon/Claude-Code-Frontend-Design-Toolkit/pull/5 (README source repaired to the canonical `uizze/uizze` repository; checks are clean)
@@ -219,7 +219,7 @@ Keep these surfaces aligned with the canonical copy above:
 - Vercel Agent Skills PR: https://github.com/vercel-labs/agent-skills/pull/321 (Design-group anti-ui-slop review skill; content and security checks passed; only the fork-preview authorization prerequisite remains; maintainer review pending)
 - Anthony Fu Skills PR: https://github.com/antfu/skills/pull/36 (canonical UIZZE anti-ui-slop Skill synced through the repository’s vendor workflow; lint and sync parity passed; maintainer review pending)
 - Alirezarezvani Claude Skills proposal: https://github.com/alirezarezvani/claude-skills/issues/962 (new anti-ui-slop quality-gate proposal; maintainer review pending)
-- Official Cursor plugins PR: https://github.com/cursor/plugins/pull/217 (manifest synchronized to v1.2.11 and current 800,000+ real web and iOS screens copy in commit `3175e48`; Cursor review is pending)
+- Official Cursor plugins PR: https://github.com/cursor/plugins/pull/217 (manifest synchronized to v1.2.11 and current 800,000+ real web and iOS screens copy in commit `3175e48`; Cursor Bugbot passed, and current free-install verification is linked above; Cursor review is pending)
 - Docker MCP Registry PR: https://github.com/docker/mcp-registry/pull/4473 (canonical source and current public copy corrected in commit `ceaad7ba`; Docker review is pending)
 - Cline marketplace Skill PR: https://github.com/cline/marketplace/pull/17
 - Cline marketplace MCP PR: https://github.com/cline/marketplace/pull/18
