@@ -113,6 +113,9 @@ Keep these surfaces aligned with the canonical copy above:
 - Launch discussion: https://github.com/uizze/uizze/discussions/44
 - Latest distribution update: https://github.com/uizze/uizze/discussions/44#discussioncomment-18045216
 - Latest distribution release: https://github.com/uizze/uizze/releases/latest
+- Anthropic Skills partner listing PR: https://github.com/anthropics/skills/pull/1595 (link-only UIZZE entry for the official Agent Skills repository; maintainer review pending)
+- Claude Code Frontend Design Toolkit PR: https://github.com/wilwaldon/Claude-Code-Frontend-Design-Toolkit/pull/5 (README source repaired to the canonical `uizze/uizze` repository; checks are clean)
+- Awesome Vibe Coding documentation PR: https://github.com/filipecalegario/awesome-vibe-coding/pull/257 (first-party disclosure and current free-first copy in the PR body; review pending)
 - GitHub Action directory PR: https://github.com/sdras/awesome-actions/pull/899
 - Claude Code plugins directory PR: https://github.com/ccplugins/awesome-claude-code-plugins/pull/350
 - Agent Skills directory PR: https://github.com/VoltAgent/awesome-agent-skills/pull/911
