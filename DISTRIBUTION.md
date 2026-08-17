@@ -78,7 +78,7 @@ Submit the canonical repository next:
 - Awesome LLM Resources: https://github.com/WangRongsheng/awesome-LLM-resources (PR #194 adds the canonical anti-ui-slop Skill to 技能 Skills)
 - VoltAgent Awesome DESIGN.md: https://github.com/VoltAgent/awesome-design-md (issue #459 now has the public UIZZE DESIGN.md artifact and canonical source for indexing)
 - Bergside Awesome Design Skills: https://github.com/bergside/awesome-design-skills (issue #16 proposes UIZZE for the separate Related QA tooling section, alongside design-skill quality gates)
-- E2B Awesome SDKs for AI Agents: https://github.com/e2b-dev/awesome-sdks-for-ai-agents (PR #335 adds UIZZE as a UI quality tool; maintainer CLA is pending)
+- E2B Awesome SDKs for AI Agents: https://github.com/e2b-dev/awesome-ai-sdks (PR #335 adds UIZZE as a UI quality tool; maintainer CLA is pending)
 - Awesome Design Systems: https://github.com/alexpate/awesome-design-systems (PR #356 adds the public UIZZE DESIGN.md under Voice & Tone and Source code)
 - Awesome Claude Code Skills: https://github.com/helloianneo/awesome-claude-code-skills (PR #72 adds UIZZE to the design/UI skills section)
 - jqueryscript Awesome Claude Code: https://github.com/jqueryscript/awesome-claude-code (PR #598 adds UIZZE to the Agent Skills section)
@@ -133,6 +133,12 @@ Keep these surfaces aligned with the canonical copy above:
 - Awesome Cursor Rules PR: https://github.com/PatrickJS/awesome-cursorrules/pull/353
 - Awesome Claude Skills PR: https://github.com/ComposioHQ/awesome-claude-skills/pull/1648
 - Awesome Codex Skills PR: https://github.com/composio-community/awesome-codex-skills/pull/236
+- HOL Awesome Codex Plugins PR: https://github.com/hashgraph-online/awesome-codex-plugins/pull/368 (refreshes the existing UIZZE entry to the canonical v1.2.11 source)
+- E2B Awesome SDKs for AI Agents PR: https://github.com/e2b-dev/awesome-ai-sdks/pull/335 (UIZZE UI quality tool for agent workflows; maintainer CLA is pending)
+- Awesome Claude Design PR: https://github.com/rohitg00/awesome-claude-design/pull/38 (catalogue-backed anti-slop finish gate in the Claude design directory)
+- Awesome Product Design PR: https://github.com/ttt30ga/awesome-product-design/pull/40 (UIZZE UI inspiration and quality reference)
+- Founders Kit PR: https://github.com/avinash201199/founders-kit/pull/18 (UIZZE product listing for founders and builders)
+- iOSDevLinks PR: https://github.com/giftbott/iOSDevLinks/pull/21 (UIZZE design reference for iOS developers)
 - Awesome Codex Subagents PR: https://github.com/VoltAgent/awesome-codex-subagents/pull/46
 - Addy Osmani Agent Skills PR: https://github.com/addyosmani/agent-skills/pull/496
 - Awesome Frontend Skills PR: https://github.com/finfin/awesome-frontend-skills/pull/3
@@ -177,7 +183,6 @@ Keep these surfaces aligned with the canonical copy above:
 - Awesome OpenClaw PR: https://github.com/Anil-matcha/awesome-openclaw/pull/201 (portable UIZZE Skill in Notable Skills)
 - Awesome Harness Engineering PR: https://github.com/ai-boost/awesome-harness-engineering/pull/200 (UIZZE Action and MCP workflow in Verification & CI Integration)
 - Awesome LLM Resources PR: https://github.com/WangRongsheng/awesome-LLM-resources/pull/194 (canonical anti-ui-slop Skill in 技能 Skills)
-- E2B Awesome SDKs for AI Agents PR: https://github.com/e2b-dev/awesome-sdks-for-ai-agents/pull/335 (UIZZE UI quality tool for agent workflows; CLA pending)
 - Awesome Design Systems PR: https://github.com/alexpate/awesome-design-systems/pull/356 (public UIZZE DESIGN.md under Voice & Tone and Source code)
 - VoltAgent Awesome DESIGN.md request: https://github.com/VoltAgent/awesome-design-md/issues/459 (UIZZE DESIGN.md request for the AI Design + Build ecosystem)
 - Bergside Awesome Design Skills request: https://github.com/bergside/awesome-design-skills/issues/16 (UIZZE proposed as related QA tooling, not as a copied registry skill)
