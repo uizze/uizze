@@ -71,6 +71,10 @@ Submit the canonical repository next:
 - YuzeHao2023 Awesome MCP Servers: https://github.com/YuzeHao2023/Awesome-MCP-Servers (PR #369 adds the canonical UIZZE entry to the active Community Servers list; issue #420 is the original intake request)
 - adw0rd Awesome MCP Servers: https://github.com/adw0rd/awesome-mcp-servers/issues/16 (canonical-source correction posted; original issue body still needs maintainer-side replacement)
 - libukai Awesome Agent Skills: https://github.com/libukai/awesome-agent-skills (canonical UIZZE intake is tracked in https://github.com/libukai/awesome-agent-skills/pull/107 and issue #128 for the curated programming/design section)
+- junminhong Awesome Agent Skills: https://github.com/junminhong/awesome-agent-skills/pull/23 (organization-source correction for the bilingual listing; changes requested)
+- Ezeafk Awesome Agent Skills: https://github.com/Ezeafk/awesome-agent-skills/pull/9 (anti-ui-slop Skill in Design and Frontend; review pending)
+- Kodustech Awesome Agent Skills: https://github.com/kodustech/awesome-agent-skills/pull/59 (frontend anti-ui-slop Skill; review pending)
+- NextLevelBuilder SkillX: https://github.com/nextlevelbuilder/skillx/pull/20 (manual SkillX seed registry entry; review pending)
 - futantan Agent Skills Explorer: https://github.com/futantan/agent-skills.md (issue #24 requests indexing the canonical anti-ui-slop Skill)
 - Awesome Claude Plugins: https://github.com/composio-community/awesome-claude-plugins (PR #422 adds UIZZE to Frontend & Design)
 - JackyST0 Awesome Agent Skills: https://github.com/JackyST0/awesome-agent-skills (PR #78 adds bilingual UIZZE entries to Design / 设计相关)
@@ -101,6 +105,14 @@ Submit the canonical repository next:
 - Awesome Claude Skills: https://github.com/ComposioHQ/awesome-claude-skills
 - TravisVN Awesome Claude Skills: https://github.com/travisvn/awesome-claude-skills (PR #1123 adds UIZZE to the community skills table)
 - Awesome Codex Skills: https://github.com/composio-community/awesome-codex-skills
+- Awesome Codex CLI: https://github.com/milisp/awesome-codex-cli/pull/72 (hosted UIZZE MCP entry; maintainer requested usage evidence)
+- Awesome Vibe Coding Tools: https://github.com/jiji262/awesome-vibe-coding-tools/pull/35 (Skill and MCP entry; review pending)
+- Awesome Skills: https://github.com/gmh5225/awesome-skills/pull/39 (anti-ui-slop Skill; review pending)
+- AgenticX Agent Skills: https://github.com/DemonDamon/AgenticX-AgentSkills/pull/3 (portable Skill and marketplace seed entry; review pending)
+- Frontend Design Resources: https://github.com/megh-bari/frontend-design-resources/pull/4 (Design Inspiration entry; review pending)
+- Tastemaker: https://github.com/codeswithroh/tastemaker/pull/1 (optional UI-reference research integration; review pending)
+- Software Engineer Affiliate Program Hub: https://github.com/digital-marketing-engineer/software-engineer-affiliate-program-hub/pull/17 (affiliate directory entry; review pending)
+- Cline Rules: https://github.com/cline/clinerules/pull/3 (portable STOP UI SLOP rule; review pending)
 - Awesome Codex Subagents: https://github.com/VoltAgent/awesome-codex-subagents
 - Addy Osmani Agent Skills: https://github.com/addyosmani/agent-skills (PR #496 adds reference-led UI finish checks; maintainer review is pending)
 - Awesome Frontend Skills: https://github.com/finfin/awesome-frontend-skills
@@ -117,7 +129,7 @@ Keep these surfaces aligned with the canonical copy above:
 - Organization profile: https://github.com/uizze/.github/blob/main/profile/README.md
 - Start-here discussion: https://github.com/uizze/uizze/discussions/15 (high-traffic entry point refreshed with canonical links, free preview, Action, DESIGN.md, and Registry paths)
 - Launch discussion: https://github.com/uizze/uizze/discussions/44
-- Latest distribution update: https://github.com/uizze/uizze/discussions/44#discussioncomment-18045216
+- Latest distribution update: https://github.com/uizze/uizze/discussions/44#discussioncomment-18046566
 - Latest distribution release: https://github.com/uizze/uizze/releases/latest
 - Anthropic Skills partner listing PR: https://github.com/anthropics/skills/pull/1595 (link-only UIZZE entry for the official Agent Skills repository; maintainer review pending)
 - Claude Code Frontend Design Toolkit PR: https://github.com/wilwaldon/Claude-Code-Frontend-Design-Toolkit/pull/5 (README source repaired to the canonical `uizze/uizze` repository; checks are clean)
@@ -130,6 +142,7 @@ Keep these surfaces aligned with the canonical copy above:
 - Awesome Design Systems resource PR: https://github.com/klaufel/awesome-design-systems/pull/32
 - Frontend Development Bookmarks PR: https://github.com/dypsilon/frontend-dev-bookmarks/pull/528
 - Awesome Web Design inspiration PR: https://github.com/nicolesaidy/awesome-web-design/pull/71
+- Nanobot well-known Skills compatibility PR: https://github.com/HKUDS/nanobot/pull/5186 (allows `uizze.com` discovery sources in search, trends, and installation; review pending)
 - Meng To design skills PR: https://github.com/MengTo/Skills/pull/7
 - Tech Leads Club Agent Skills intake issue: https://github.com/tech-leads-club/agent-skills/issues/167 (issue refreshed with v1.2.11, current free preview, 800,000+ evidence, and passing HOL Plugin Scanner status)
 - Awesome Hermes Agent recommendation issue: https://github.com/0xNyk/awesome-hermes-agent/issues/325 (portable anti-UI-slop skill recommendation for the agentskills.io ecosystem)
