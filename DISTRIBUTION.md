@@ -27,6 +27,10 @@ UIZZE gives coding agents a free anti-ui-slop workflow plus an optional hosted M
 - GitHub Action major tag: https://github.com/uizze/uizze/tree/v1/integrations/github-action (currently aligned with v1.2.11)
 - Official MCP Registry: https://github.com/mcp/uizze/uizze
 
+## GitHub repository metadata
+
+The canonical repository uses GitHub's full 20-topic limit. The current set keeps the core agent, UI, MCP, Action, and anti-ui-slop topics, and includes the plain `skills` topic for direct Agent Skill discovery. On 2026-08-17, `skills` replaced the broader `vibe-coding` topic; do not add unrelated broad terms.
+
 ## Install language
 
 ```bash
@@ -149,7 +153,7 @@ Keep these surfaces aligned with the canonical copy above:
 - Organization profile: https://github.com/uizze/.github/blob/main/profile/README.md
 - Start-here discussion: https://github.com/uizze/uizze/discussions/15 (high-traffic entry point refreshed with canonical links, free preview, Action, DESIGN.md, and Registry paths)
 - Launch discussion: https://github.com/uizze/uizze/discussions/44
-- Latest distribution update: https://github.com/uizze/uizze/discussions/44#discussioncomment-18048485
+- Latest distribution update: https://github.com/uizze/uizze/discussions/44#discussioncomment-18048512
 - Latest distribution release: https://github.com/uizze/uizze/releases/latest
 - Anthropic Skills partner listing PR: https://github.com/anthropics/skills/pull/1595 (link-only UIZZE entry for the official Agent Skills repository; maintainer review pending)
 - Claude Code Frontend Design Toolkit PR: https://github.com/wilwaldon/Claude-Code-Frontend-Design-Toolkit/pull/5 (README source repaired to the canonical `uizze/uizze` repository; checks are clean)
