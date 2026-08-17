@@ -149,7 +149,7 @@ Keep these surfaces aligned with the canonical copy above:
 - Organization profile: https://github.com/uizze/.github/blob/main/profile/README.md
 - Start-here discussion: https://github.com/uizze/uizze/discussions/15 (high-traffic entry point refreshed with canonical links, free preview, Action, DESIGN.md, and Registry paths)
 - Launch discussion: https://github.com/uizze/uizze/discussions/44
-- Latest distribution update: https://github.com/uizze/uizze/discussions/44#discussioncomment-18048448
+- Latest distribution update: https://github.com/uizze/uizze/discussions/44#discussioncomment-18048485
 - Latest distribution release: https://github.com/uizze/uizze/releases/latest
 - Anthropic Skills partner listing PR: https://github.com/anthropics/skills/pull/1595 (link-only UIZZE entry for the official Agent Skills repository; maintainer review pending)
 - Claude Code Frontend Design Toolkit PR: https://github.com/wilwaldon/Claude-Code-Frontend-Design-Toolkit/pull/5 (README source repaired to the canonical `uizze/uizze` repository; checks are clean)
@@ -267,7 +267,7 @@ Already listed:
 - GitHub Awesome Copilot follow-up PR: https://github.com/github/awesome-copilot/pull/2685 (merged; GitHub's official collection now documents the separate anonymous `check_ui_slop` preview)
 - GitHub Awesome Copilot external plugin intake: https://github.com/github/awesome-copilot/issues/2690 (immutable commit `0d7ab5d`; metadata, Agent Plugins v1 install smoke, `vally lint`, version, and SHA checks pass; `ready-for-review`)
 - Awesome Copilot Agents PR: https://github.com/Code-and-Sorts/awesome-copilot-agents/pull/81 (links the maintained UIZZE anti-ui-slop skill in the Development Agent Skills list)
-- skills.sh: https://www.skills.sh/site/uizze.com/anti-ui-slop
+- skills.sh: https://www.skills.sh/site/uizze.com/anti-ui-slop (live free-install listing; the page reported 335.6K installs on 2026-08-17, a third-party directory metric rather than a UIZZE product-usage claim)
 - Chat2AnyLLM source hub: https://github.com/Chat2AnyLLM/awesome-repo-configs/pull/144 (plugin source entry merged and live); its downstream README now lists `uizze/uizze` as a healthy `.claude-plugin` marketplace source after https://github.com/Chat2AnyLLM/awesome-repo-configs/pull/146 quarantined the malformed source that blocked generation (related maintainer issue: https://github.com/Chat2AnyLLM/awesome-claude-plugins/issues/50); MCP source follow-up: https://github.com/Chat2AnyLLM/awesome-repo-configs/pull/145, with the missing review trigger tracked in https://github.com/Chat2AnyLLM/awesome-repo-configs/pull/147
 - HOL Awesome Codex Plugins: https://github.com/hashgraph-online/awesome-codex-plugins (UIZZE is already listed; PR #368 refreshes its public copy and triggers the generator to sync the current v1.2.11 canonical source, with all checks passing)
 - Agentic Awesome Skills: https://github.com/sickn33/agentic-awesome-skills/pull/1166 (merged; live canonical entry)
