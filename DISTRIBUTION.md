@@ -67,7 +67,7 @@ Submit the canonical repository next:
 - mctrinh Awesome MCP Servers: https://github.com/mctrinh/awesome-mcp-servers (PR #82 repairs an open listing that still referenced retired `uizze/uizze-mcp`; the branch now uses `uizze/uizze` and the free preview, with maintainer review pending)
 - TensorBlock MCP Index: https://github.com/TensorBlock/awesome-mcp-servers (PR #1777 merged and deployed; live profile is https://tensorblock.co/mcp/servers/github-uizze-uizze-2a597cfa with canonical `uizze/uizze` metadata)
 - appcypher Awesome MCP Servers: https://github.com/appcypher/awesome-mcp-servers (archived/read-only upstream; a prepared fork cannot become a live directory PR)
-- YuzeHao2023 Awesome MCP Servers: https://github.com/YuzeHao2023/Awesome-MCP-Servers (issue #420 requests a canonical UIZZE entry in the active Community Servers list)
+- YuzeHao2023 Awesome MCP Servers: https://github.com/YuzeHao2023/Awesome-MCP-Servers (PR #369 adds the canonical UIZZE entry to the active Community Servers list; issue #420 is the original intake request)
 - adw0rd Awesome MCP Servers: https://github.com/adw0rd/awesome-mcp-servers/issues/16 (canonical-source correction posted; original issue body still needs maintainer-side replacement)
 - libukai Awesome Agent Skills: https://github.com/libukai/awesome-agent-skills (canonical UIZZE intake is tracked in https://github.com/libukai/awesome-agent-skills/pull/107 and issue #128 for the curated programming/design section)
 - futantan Agent Skills Explorer: https://github.com/futantan/agent-skills.md (issue #24 requests indexing the canonical anti-ui-slop Skill)
