@@ -115,10 +115,10 @@ Keep these surfaces aligned with the canonical copy above:
 - Latest distribution release: https://github.com/uizze/uizze/releases/latest
 - Anthropic Skills partner listing PR: https://github.com/anthropics/skills/pull/1595 (link-only UIZZE entry for the official Agent Skills repository; maintainer review pending)
 - Claude Code Frontend Design Toolkit PR: https://github.com/wilwaldon/Claude-Code-Frontend-Design-Toolkit/pull/5 (README source repaired to the canonical `uizze/uizze` repository; checks are clean)
-- Awesome Vibe Coding documentation PR: https://github.com/filipecalegario/awesome-vibe-coding/pull/257 (first-party disclosure and current free-first copy in the PR body; review pending)
-- GitHub Action directory PR: https://github.com/sdras/awesome-actions/pull/899
+- Awesome Vibe Coding documentation PR: https://github.com/filipecalegario/awesome-vibe-coding/pull/257 (visible entry now leads with the free Skill and deterministic preview, then distinguishes full UIZZE and its 800,000+ real web and iOS screens)
+- GitHub Action directory PR: https://github.com/sdras/awesome-actions/pull/899 (visible entry now includes the 800,000+ provenance while keeping the Action itself a focused local source check)
 - Claude Code plugins directory PR: https://github.com/ccplugins/awesome-claude-code-plugins/pull/350
-- Agent Skills directory PR: https://github.com/VoltAgent/awesome-agent-skills/pull/911
+- Agent Skills directory PR: https://github.com/VoltAgent/awesome-agent-skills/pull/911 (visible entry now identifies the free Skill and its 800,000+ real web and iOS screen grounding)
 - Design tools directory PR: https://github.com/goabstract/Awesome-Design-Tools/pull/586
 - Awesome Design Systems resource PR: https://github.com/klaufel/awesome-design-systems/pull/32
 - Frontend Development Bookmarks PR: https://github.com/dypsilon/frontend-dev-bookmarks/pull/528
@@ -181,7 +181,7 @@ Keep these surfaces aligned with the canonical copy above:
 - Awesome Design Systems PR: https://github.com/alexpate/awesome-design-systems/pull/356 (public UIZZE DESIGN.md under Voice & Tone and Source code)
 - VoltAgent Awesome DESIGN.md request: https://github.com/VoltAgent/awesome-design-md/issues/459 (UIZZE DESIGN.md request for the AI Design + Build ecosystem)
 - Bergside Awesome Design Skills request: https://github.com/bergside/awesome-design-skills/issues/16 (UIZZE proposed as related QA tooling, not as a copied registry skill)
-- Awesome AI Coding Tools PR: https://github.com/ai-for-developers/awesome-ai-coding-tools/pull/627 (UI quality gate entry in Code Review and Refactoring)
+- Awesome AI Coding Tools PR: https://github.com/ai-for-developers/awesome-ai-coding-tools/pull/627 (visible entry now leads with the free Skill and deterministic preview, then distinguishes full UIZZE and its 800,000+ real web and iOS screens)
 - Awesome AI Tools PR: https://github.com/mahseema/awesome-ai-tools/pull/1982 (UIZZE developer-tool entry with the 800,000+ claim and free paths)
 - Awesome Generative AI PR: https://github.com/filipecalegario/awesome-generative-ai/pull/669 (UIZZE entry in Vibe Coding)
 - Awesome Vibe Coding PR: https://github.com/awesome-vibe-coding/awesome-vibe-coding/pull/128 (UIZZE entry in Extensions & Plugins)
