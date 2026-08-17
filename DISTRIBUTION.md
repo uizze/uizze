@@ -185,7 +185,6 @@ Keep these surfaces aligned with the canonical copy above:
 - Awesome AI Tools PR: https://github.com/mahseema/awesome-ai-tools/pull/1982 (UIZZE developer-tool entry with the 800,000+ claim and free paths)
 - Awesome Generative AI PR: https://github.com/filipecalegario/awesome-generative-ai/pull/669 (UIZZE entry in Vibe Coding)
 - Awesome Vibe Coding PR: https://github.com/awesome-vibe-coding/awesome-vibe-coding/pull/128 (UIZZE entry in Extensions & Plugins)
-- Awesome Vibe Coding (filipecalegario) PR: https://github.com/filipecalegario/awesome-vibe-coding/pull/290 (UIZZE entry in Plugins and Extensions)
 - Awesome OpenCode PR: https://github.com/awesome-opencode/awesome-opencode/pull/609 (UIZZE project entry for OpenCode's MCP workflow)
 - Awesome MCP ZH PR: https://github.com/yzfly/Awesome-MCP-ZH/pull/463 (Chinese-language MCP directory entry for the free UI slop preview)
 - Awesome ChatGPT Repositories PR: https://github.com/taishi-i/awesome-ChatGPT-repositories/pull/209 (UIZZE anti-UI-slop toolkit entry for coding agents)
