@@ -91,6 +91,7 @@ Submit the canonical repository next:
 - junminhong Awesome Agent Skills: https://github.com/junminhong/awesome-agent-skills/pull/23 (organization-source correction for the bilingual listing; changes requested)
 - Ezeafk Awesome Agent Skills: https://github.com/Ezeafk/awesome-agent-skills/pull/9 (anti-ui-slop Skill in Design and Frontend; review pending)
 - Kodustech Awesome Agent Skills: https://github.com/kodustech/awesome-agent-skills/pull/59 (frontend anti-ui-slop Skill; review pending)
+- Agentic Awesome Skills: https://github.com/sickn33/agentic-awesome-skills/pull/1176 (45,000+ star Agent Skills catalog; repairs all three mirrored UIZZE Skill metadata records from retired `aislon/uizze-mcp` to the canonical `uizze/uizze` source; generated artifacts are intentionally left to maintainer sync)
 - NextLevelBuilder SkillX: https://github.com/nextlevelbuilder/skillx/pull/20 (manual SkillX seed registry entry; review pending)
 - futantan Agent Skills Explorer: https://github.com/futantan/agent-skills.md (issue #24 requests indexing the canonical anti-ui-slop Skill)
 - Awesome Claude Plugins: https://github.com/composio-community/awesome-claude-plugins (PR #422 adds UIZZE to Frontend & Design)
@@ -224,7 +225,7 @@ Keep these surfaces aligned with the canonical copy above:
 - PulseMCP refresh issue: https://github.com/pulsemcp/mcp-servers/issues/669
 - adw0rd Awesome MCP Servers submission: https://github.com/adw0rd/awesome-mcp-servers/issues/16 (correction comment posted; maintainer edit remains pending)
 - YuzeHao2023 Awesome MCP Servers PR: https://github.com/YuzeHao2023/Awesome-MCP-Servers/pull/369
-- Agentic Awesome Skills PR: https://github.com/sickn33/agentic-awesome-skills/pull/1166 (merged; the live directory entry now uses the canonical `uizze/uizze` source)
+- Agentic Awesome Skills PR: https://github.com/sickn33/agentic-awesome-skills/pull/1166 (merged; the live directory entry exists, with follow-up source metadata repair in https://github.com/sickn33/agentic-awesome-skills/pull/1176)
 - Awesome LLM Apps PR: https://github.com/Shubhamsaboo/awesome-llm-apps/pull/1105 (self-contained runnable Skill; maintainer review pending)
 - jakubkrehel Interface Skills PR: https://github.com/jakubkrehel/skills/pull/14 (focused anti-ui-slop finish gate; plugin validator passed; maintainer review pending)
 - Vercel Agent Skills PR: https://github.com/vercel-labs/agent-skills/pull/321 (Design-group anti-ui-slop review skill; content and security checks passed; only the fork-preview authorization prerequisite remains; maintainer review pending)
@@ -288,7 +289,7 @@ Already listed:
 - skills.sh: https://www.skills.sh/site/uizze.com/anti-ui-slop (stable live free-install listing; the page reported 335.6K installs on 2026-08-17, a third-party directory metric rather than a UIZZE product-usage claim; the stale-snapshot reproduction was resolved and closed at https://github.com/vercel-labs/skills/issues/1781)
 - Chat2AnyLLM source hub: https://github.com/Chat2AnyLLM/awesome-repo-configs/pull/144 (plugin source entry merged and live); its downstream README now lists `uizze/uizze` as a healthy `.claude-plugin` marketplace source after https://github.com/Chat2AnyLLM/awesome-repo-configs/pull/146 quarantined the malformed source that blocked generation (related maintainer issue: https://github.com/Chat2AnyLLM/awesome-claude-plugins/issues/50); MCP source follow-up: https://github.com/Chat2AnyLLM/awesome-repo-configs/pull/145, with the missing review trigger tracked in https://github.com/Chat2AnyLLM/awesome-repo-configs/pull/147
 - HOL Awesome Codex Plugins: https://github.com/hashgraph-online/awesome-codex-plugins (UIZZE is already listed; PR #368 refreshes its public copy and triggers the generator to sync the current v1.2.11 canonical source, with all checks passing)
-- Agentic Awesome Skills: https://github.com/sickn33/agentic-awesome-skills/pull/1166 (merged; live canonical entry)
+- Agentic Awesome Skills: https://github.com/sickn33/agentic-awesome-skills/pull/1166 (merged; live entry) with source metadata repair pending in https://github.com/sickn33/agentic-awesome-skills/pull/1176
 - Developer Resources: https://github.com/marcelscruz/dev-resources/pull/1170 (merged UIZZE entry in a 1,327-star collaborative developer-resources list)
 - ToolSDK MCP Registry: https://github.com/toolsdk-ai/toolsdk-mcp-registry/pull/398 (merged structured MCP registry entry; follow-up PR #458 repairs the lingering retired-repository URL and aligns the free Skill/no-account preview versus full hosted MCP copy; validation and Biome checks pass)
 - Wundercorp Awesome MCP: https://github.com/wundercorp/awesome-mcp/pull/47 (follow-up to merged PR #24; repairs the existing design-directory entry to use canonical `uizze/uizze` and the current free/full scope; catalog validation passes)
