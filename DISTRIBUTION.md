@@ -141,7 +141,7 @@ Keep these surfaces aligned with the canonical copy above:
 - Organization profile: https://github.com/uizze/.github/blob/main/profile/README.md
 - Start-here discussion: https://github.com/uizze/uizze/discussions/15 (high-traffic entry point refreshed with canonical links, free preview, Action, DESIGN.md, and Registry paths)
 - Launch discussion: https://github.com/uizze/uizze/discussions/44
-- Latest distribution update: https://github.com/uizze/uizze/discussions/44#discussioncomment-18046566
+- Latest distribution update: https://github.com/uizze/uizze/discussions/44#discussioncomment-18047701
 - Latest distribution release: https://github.com/uizze/uizze/releases/latest
 - Anthropic Skills partner listing PR: https://github.com/anthropics/skills/pull/1595 (link-only UIZZE entry for the official Agent Skills repository; maintainer review pending)
 - Claude Code Frontend Design Toolkit PR: https://github.com/wilwaldon/Claude-Code-Frontend-Design-Toolkit/pull/5 (README source repaired to the canonical `uizze/uizze` repository; checks are clean)
