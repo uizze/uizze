@@ -51,7 +51,7 @@ Use “800,000+ real web and iOS screens” in public copy. Keep the free anti-u
 
 Update existing entries first:
 
-- Tons of Skills: https://github.com/uizze/uizze/issues/38 (catalogue validator intake; the public anti-ui-slop Skill now has the required Overview, Prerequisites, Output, Error Handling, and Resources sections, and the live domain-backed copy is verified byte-for-byte against this repository)
+- Tons of Skills: https://github.com/uizze/uizze/issues/38 (closed after the public anti-ui-slop Skill gained the required Overview, Prerequisites, Output, Error Handling, and Resources sections; the live domain-backed copy is verified byte-for-byte against this repository)
 - iFlytek SkillHub: https://github.com/iflytek/skillhub/issues/719 (4,872-star self-hosted Agent Skill registry; starter-collection proposal uses the canonical MIT Skill source and preserves UIZZE's public version/license metadata)
 - Claude Plugins registry: https://github.com/Kamalnrf/claude-plugins/issues/124 (532-star registry with 63,000+ indexed Agent Skills; direct indexing request for the canonical anti-ui-slop Skill after the public index returned no UIZZE match)
 - SkillsHub: https://github.com/ComeOnOliver/skillshub/issues/81 (active open registry with 5,900+ indexed skills; import request identifies the canonical `anti-ui-slop` and `ui-slop-score` paths and asks the indexer to avoid duplicate platform copies)
