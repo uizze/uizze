@@ -127,6 +127,7 @@ Submit the canonical repository next:
 - Awesome AI Tools for UI: https://github.com/maxbogo/awesome-ai-tools-for-ui/pull/34 (823-star UI-specific catalogue; PR adds the free anti-ui-slop Skill to its Skills section with the live source, install path, and 800,000+ distinction)
 - Developer Roadmap: https://github.com/kamranahmedse/developer-roadmap/pull/10238 (364,000+ star developer education repository; concise open-source UIZZE Skill resource added to the existing Claude Code Skills topic, within its eight-link limit)
 - Claude Code Best Practice: https://github.com/shanraisshan/claude-code-best-practice/pull/187 (64,000+ star Claude Code guide; one-line UIZZE anti-ui-slop workflow entry in its development-workflow resources, with the free MIT Skill source and accurate 800,000+ full-workflow distinction)
+- Datawhale Easy-Vibe: https://github.com/datawhalechina/easy-vibe/issues/71#issuecomment-5312518381 (18,968-star Chinese AI-native product-building course; recommendation in its open content-suggestions thread for the frontend UI, AI design, and Claude Code/Skills curriculum)
 - GitHubDaily: https://github.com/GitHubDaily/GitHubDaily/issues/1030 (47,000+ star Chinese developer-discovery repository; Chinese-language recommendation for the free Skill, preview MCP, GitHub Action, and accurate 800,000+ distinction)
 - 程序员鱼皮 AI Guide: https://github.com/liyupi/ai-guide/issues/71 (18,650-star Chinese AI/Vibe Coding resource hub; recommendation for the free anti-ui-slop Skill, preview MCP, and full 800,000+ workflow distinction)
 - Chinese Front-End Learning Resources: https://github.com/helloqingfeng/Awsome-Front-End-learning-resource/issues/29 (10,000+ star Chinese front-end resource hub; focused recommendation for UIZZE as an AI UI-reference and quality workflow alongside front-end checklists)
@@ -142,7 +143,7 @@ Keep these surfaces aligned with the canonical copy above:
 - Organization profile: https://github.com/uizze/.github/blob/main/profile/README.md
 - Start-here discussion: https://github.com/uizze/uizze/discussions/15 (high-traffic entry point refreshed with canonical links, free preview, Action, DESIGN.md, and Registry paths)
 - Launch discussion: https://github.com/uizze/uizze/discussions/44
-- Latest distribution update: https://github.com/uizze/uizze/discussions/44#discussioncomment-18047755
+- Latest distribution update: https://github.com/uizze/uizze/discussions/44#discussioncomment-18047791
 - Latest distribution release: https://github.com/uizze/uizze/releases/latest
 - Anthropic Skills partner listing PR: https://github.com/anthropics/skills/pull/1595 (link-only UIZZE entry for the official Agent Skills repository; maintainer review pending)
 - Claude Code Frontend Design Toolkit PR: https://github.com/wilwaldon/Claude-Code-Frontend-Design-Toolkit/pull/5 (README source repaired to the canonical `uizze/uizze` repository; checks are clean)
@@ -181,6 +182,7 @@ Keep these surfaces aligned with the canonical copy above:
 - Awesome AI Tools for UI PR: https://github.com/maxbogo/awesome-ai-tools-for-ui/pull/34 (free anti-ui-slop Skill in the UI-specific Skills catalogue; live links verified HTTP 200)
 - Developer Roadmap content PR: https://github.com/kamranahmedse/developer-roadmap/pull/10238 (one verified live Skill resource in the Claude Code Skills topic; no new roadmap node)
 - Claude Code Best Practice workflow PR: https://github.com/shanraisshan/claude-code-best-practice/pull/187 (one verified live Skill resource in the Claude Code development-workflow resources; 64,000+ star guide)
+- Datawhale Easy-Vibe content suggestion: https://github.com/datawhalechina/easy-vibe/issues/71#issuecomment-5312518381 (Chinese-language recommendation for an 18,968-star AI-native product-building course; free Skill source and 800,000+ full-workflow distinction included)
 - GitHubDaily recommendation issue: https://github.com/GitHubDaily/GitHubDaily/issues/1030 (Chinese-language project recommendation with official source, MIT license, free install path, and separate preview/full-product scope)
 - 程序员鱼皮 AI Guide recommendation issue: https://github.com/liyupi/ai-guide/issues/71 (Chinese-language recommendation for the AI tools and Vibe Coding resource sections; official source, MIT Skill, free install path, and separate preview/full-product scope)
 - Chinese Front-End Learning Resources recommendation issue: https://github.com/helloqingfeng/Awsome-Front-End-learning-resource/issues/29 (Chinese-language front-end resource recommendation with the official Skill source, free install path, and 800,000+ evidence)
