@@ -57,7 +57,7 @@ Update existing entries first:
 Submit the canonical repository next:
 
 - Anthropic Agent Skills: https://github.com/anthropics/skills (PR #1595 proposes a link-only UIZZE partner listing in the official Agent Skills repository, which has 170,000+ stars)
-- Official Claude Plugins Directory: https://github.com/anthropics/claude-plugins-official (Anthropic's actively maintained 33,000+ star marketplace accepts third-party plugins through the official submission form at https://clau.de/plugin-directory-submission; UIZZE is not listed yet and this intake does not use GitHub pull requests)
+- Anthropic Claude plugin marketplaces: https://github.com/anthropics/claude-plugins-official (33,000+ stars, Anthropic-maintained plugins) and https://github.com/anthropics/claude-plugins-community (read-only community mirror; 351 stars). Third-party submissions use https://clau.de/plugin-directory-submission; direct pull requests to the community mirror close automatically. UIZZE is not listed yet.
 - Smithery: https://smithery.ai/servers?q=uizze
 - MCP.so: https://mcp.so/submit?type=server (existing GitHub intake issue #3117 was reopened with the canonical `uizze/uizze` source and current anti-UI-slop copy)
 - Awesome Remote MCP Servers: https://github.com/jaw9c/awesome-remote-mcp-servers (PR #627 refreshes the existing UIZZE row to the free, no-account `https://uizze.com/mcp/preview` endpoint; broken PR #502 was closed after GitHub renamed its fork)
