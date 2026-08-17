@@ -1,5 +1,5 @@
 name: UIZZE UI Slop Gate
-description: If your UI screams AI, your app is dead. Catch UI slop in every pull request before it ships.
+description: Free GitHub Action that catches generic UI, missing states, inert controls, and token drift before they ship.
 author: UIZZE
 
 branding:
