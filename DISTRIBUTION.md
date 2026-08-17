@@ -121,7 +121,7 @@ Keep these surfaces aligned with the canonical copy above:
 - Requestly Awesome Frontend Resources PR: https://github.com/requestly/awesome-frontend-resources/pull/33 (free-first UIZZE entry in Some Awesome Projects)
 - Web Development Resources PR: https://github.com/markodenic/web-development-resources/pull/813
 - Awesome MCP Servers PR: https://github.com/punkpeye/awesome-mcp-servers/pull/10946
-- Agentic Awesome Skills PR: https://github.com/sickn33/agentic-awesome-skills/pull/1166
+- Agentic Awesome Skills PR: https://github.com/sickn33/agentic-awesome-skills/pull/1166 (PR branch now removes the retired `aislon/uizze-mcp` source and keeps the canonical `uizze/uizze` entry)
 - Official Cursor plugins PR: https://github.com/cursor/plugins/pull/217
 - Cursor MDC rules PR: https://github.com/sanjeed5/awesome-cursor-rules-mdc/pull/58
 - Wshobson Agentic Plugin Marketplace issue: https://github.com/wshobson/agents/issues/657
