@@ -81,7 +81,7 @@ Submit the canonical repository next:
 - appcypher Awesome MCP Servers: https://github.com/appcypher/awesome-mcp-servers (archived/read-only upstream; a prepared fork cannot become a live directory PR)
 - YuzeHao2023 Awesome MCP Servers: https://github.com/YuzeHao2023/Awesome-MCP-Servers (PR #369 adds the canonical UIZZE entry to the active Community Servers list; issue #420 is the original intake request)
 - adw0rd Awesome MCP Servers: https://github.com/adw0rd/awesome-mcp-servers/issues/16 (canonical-source correction posted; original issue body still needs maintainer-side replacement)
-- libukai Awesome Agent Skills: https://github.com/libukai/awesome-agent-skills (canonical UIZZE intake is tracked in https://github.com/libukai/awesome-agent-skills/pull/107 and issue #128 for the curated programming/design section)
+- libukai Awesome Agent Skills: https://github.com/libukai/awesome-agent-skills (current UIZZE intake is tracked in https://github.com/libukai/awesome-agent-skills/pull/107 and issue #128 for the curated programming/design section; PR copy refreshed to the canonical free-first workflow and v1.2.11 source)
 - junminhong Awesome Agent Skills: https://github.com/junminhong/awesome-agent-skills/pull/23 (organization-source correction for the bilingual listing; changes requested)
 - Ezeafk Awesome Agent Skills: https://github.com/Ezeafk/awesome-agent-skills/pull/9 (anti-ui-slop Skill in Design and Frontend; review pending)
 - Kodustech Awesome Agent Skills: https://github.com/kodustech/awesome-agent-skills/pull/59 (frontend anti-ui-slop Skill; review pending)
@@ -255,7 +255,7 @@ Keep these surfaces aligned with the canonical copy above:
 - Awesome Generative AI PR: https://github.com/filipecalegario/awesome-generative-ai/pull/669 (UIZZE entry in Vibe Coding)
 - Awesome Vibe Coding PR: https://github.com/awesome-vibe-coding/awesome-vibe-coding/pull/128 (UIZZE entry in Extensions & Plugins)
 - Awesome OpenCode PR: https://github.com/awesome-opencode/awesome-opencode/pull/609 (UIZZE project entry for OpenCode's MCP workflow)
-- Awesome MCP ZH PR: https://github.com/yzfly/Awesome-MCP-ZH/pull/463 (Chinese-language MCP directory entry for the free UI slop preview)
+- Awesome MCP ZH PR: https://github.com/yzfly/Awesome-MCP-ZH/pull/463 (Chinese-language MCP directory entry refreshed with the canonical free preview, deterministic `check_ui_slop` behavior, and the separate full 800,000+ workflow scope)
 - Awesome ChatGPT Repositories PR: https://github.com/taishi-i/awesome-ChatGPT-repositories/pull/209 (UIZZE anti-UI-slop toolkit entry for coding agents)
 - Claude Code Everything guide PR: https://github.com/wesammustafa/Claude-Code-Everything-You-Need-to-Know/pull/30 (adds UIZZE to the quality, review, and debugging skill table)
 - LangGPT Awesome Claude Code PR: https://github.com/LangGPT/awesome-claude-code/pull/121
