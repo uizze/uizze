@@ -105,7 +105,7 @@ Submit the canonical repository next:
 - Docker MCP Registry: https://github.com/docker/mcp-registry (PR #4473 now points at the canonical `uizze/uizze` repository and uses the current 800,000+ real web and iOS screens copy; Docker maintainer review is pending)
 - Cline marketplace: https://github.com/cline/marketplace (PR #17 adds the free anti-ui-slop Skill and PR #18 adds the no-account preview MCP; both are open for maintainer review)
 - Cline plugins: https://github.com/cline/plugins (PR #224 adds the portable anti-ui-slop plugin; maintainer review is pending)
-- UI Skills registry: https://github.com/ibelick/ui-skills (PR #36 adds the canonical domain-hosted anti-ui-slop Skill; checks are clean)
+- UI Skills registry: https://github.com/ibelick/ui-skills (PR #36 adds the canonical domain-hosted anti-ui-slop Skill; current verification comment confirms the live v1.2.11 source and free install path: https://github.com/ibelick/ui-skills/pull/36#issuecomment-5313001709)
 - Brad Traversy Design Resources: https://github.com/bradtraversy/design-resources-for-developers (PR #1649 adds UIZZE to Design Inspiration; checks are clean)
 - Claude Code Templates: https://github.com/davila7/claude-code-templates (PR #747 adds the free Skill and optional MCP component; catalog review is pending)
 - Awesome Cursor Rules: https://github.com/PatrickJS/awesome-cursorrules
@@ -149,7 +149,7 @@ Keep these surfaces aligned with the canonical copy above:
 - Organization profile: https://github.com/uizze/.github/blob/main/profile/README.md
 - Start-here discussion: https://github.com/uizze/uizze/discussions/15 (high-traffic entry point refreshed with canonical links, free preview, Action, DESIGN.md, and Registry paths)
 - Launch discussion: https://github.com/uizze/uizze/discussions/44
-- Latest distribution update: https://github.com/uizze/uizze/discussions/44#discussioncomment-18048324
+- Latest distribution update: https://github.com/uizze/uizze/discussions/44#discussioncomment-18048404
 - Latest distribution release: https://github.com/uizze/uizze/releases/latest
 - Anthropic Skills partner listing PR: https://github.com/anthropics/skills/pull/1595 (link-only UIZZE entry for the official Agent Skills repository; maintainer review pending)
 - Claude Code Frontend Design Toolkit PR: https://github.com/wilwaldon/Claude-Code-Frontend-Design-Toolkit/pull/5 (README source repaired to the canonical `uizze/uizze` repository; checks are clean)
