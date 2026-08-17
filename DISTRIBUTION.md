@@ -37,7 +37,7 @@ The free skill runs locally without an account. Connect the free preview MCP for
 
 ## Canonical repository rule
 
-Use `https://github.com/uizze/uizze` for every new listing. Treat `uizze/uizze-mcp`, `aislon/uizze-mcp`, and `samuelbushi/uizze-mcp` as retired distribution URLs. Update or remove those entries instead of creating another duplicate.
+Use `https://github.com/uizze/uizze` for every new listing. Treat `uizze/uizze-mcp`, `aislon/uizze-mcp`, and `samuelbushi/uizze-mcp` as retired distribution URLs. The personal archive at `samuelbushi/uizze-mcp` is now archived with a repository-level redirect and deprecation README. Update or remove those entries instead of creating another duplicate.
 
 ## Claim rule
 
