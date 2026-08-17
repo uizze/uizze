@@ -93,6 +93,7 @@ Submit the canonical repository next:
 - Awesome Harness Engineering: https://github.com/ai-boost/awesome-harness-engineering (PR #200 adds the UIZZE Action and MCP workflow to Verification & CI Integration)
 - Awesome LLM Resources: https://github.com/WangRongsheng/awesome-LLM-resources (PR #194 adds the canonical anti-ui-slop Skill to 技能 Skills)
 - Awesome LLM Apps: https://github.com/Shubhamsaboo/awesome-llm-apps (PR #1105 adds a self-contained runnable anti-ui-slop Skill; commit `769a54f` now installs from the canonical `uizze/uizze` source instead of the forked directory copy; maintainer review is pending)
+- Awesome AI Agents: https://github.com/jim-schwoebel/awesome_ai_agents (PR #448 adds UIZZE to the Tools section; the entry uses the free Skill/no-account preview and accurately separates the full 800,000+ product scope; maintainer review is pending)
 - jakubkrehel Interface Skills: https://github.com/jakubkrehel/skills (PR #14 proposes a focused anti-ui-slop finish gate alongside its interface-quality skills; maintainer review is pending)
 - Vercel Agent Skills: https://github.com/vercel-labs/agent-skills (PR #321 proposes a focused anti-ui-slop review skill in the Design group, complementary to Vercel’s Web Interface Guidelines; current validation and the fork-preview authorization prerequisite are recorded at https://github.com/vercel-labs/agent-skills/pull/321#issuecomment-5313043110)
 - Anthony Fu Skills: https://github.com/antfu/skills (PR #36 adds the canonical UIZZE anti-ui-slop Skill as a maintained vendored source for the Vite, Nuxt, and Vue audience; maintainer review is pending)
@@ -240,6 +241,7 @@ Keep these surfaces aligned with the canonical copy above:
 - BehiSecc Awesome Claude Skills PR: https://github.com/BehiSecc/awesome-claude-skills/pull/579
 - Awesome LLM Apps Agent Skills PR: https://github.com/Shubhamsaboo/awesome-llm-apps/pull/1105 (self-contained runnable anti-ui-slop Skill; canonical install repair in commit `769a54f`; GitGuardian check passed; maintainer review pending)
 - Awesome LLM Skills PR: https://github.com/Prat011/awesome-llm-skills/pull/181 (canonical UIZZE UI research Skill entry)
+- Awesome AI Agents Tools PR: https://github.com/jim-schwoebel/awesome_ai_agents/pull/448 (adds UIZZE to a 1,900+ star AI-agent resource list; free-first public copy and canonical links; maintainer review pending)
 - Awesome AI DevTools PR: https://github.com/jamesmurdza/awesome-ai-devtools/pull/985 (canonical UIZZE UI context and verification tool entry; required PR-template check passed)
 - Awesome AI Coding PR: https://github.com/wsxiaoys/awesome-ai-coding/pull/143 (UIZZE project entry)
 - Awesome DevTools PR: https://github.com/devtoolsd/awesome-devtools/pull/364 (UIZZE UI quality gate entry in AI Coding Tools)
