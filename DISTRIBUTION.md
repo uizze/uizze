@@ -51,6 +51,7 @@ Update existing entries first:
 - iFlytek SkillHub: https://github.com/iflytek/skillhub/issues/719 (4,872-star self-hosted Agent Skill registry; starter-collection proposal uses the canonical MIT Skill source and preserves UIZZE's public version/license metadata)
 - Claude Plugins registry: https://github.com/Kamalnrf/claude-plugins/issues/124 (532-star registry with 63,000+ indexed Agent Skills; direct indexing request for the canonical anti-ui-slop Skill after the public index returned no UIZZE match)
 - HeyClaude / awesome-claude: https://github.com/JSONbored/awesome-claude/pull/5792 (291-star GitHub-native Claude workflow registry; focused source-backed Skill PR with current v1.2.11 metadata, free install path, safety/privacy notes, and the 800,000+ product distinction)
+- Build with Claude: https://github.com/davepoon/buildwithclaude (3,298-star Claude discovery hub; merged PR #249 adds the anti-ui-slop Skill and follow-up PR #251 aligns its public copy with UIZZE)
 - Awesome QA Skills: https://github.com/naodeng/awesome-qa-skills/issues/3 (167-star bilingual QA Skill library; proposes the anti-ui-slop Skill as a directly relevant UX quality and pre-ship testing workflow, not a generic product listing)
 - Glama connector: https://glama.ai/mcp/connectors/io.github.uizze/uizze (canonical hosted record is now verified, has a healthy `glama.json`, points to `https://uizze.com/mcp/preview`, and reports 4.3/5 across one tool; the separate server record at https://glama.ai/mcp/servers/uizze/uizze-mcp still points to retired `uizze/uizze-mcp` and has no score)
 - Glama source-server submission: https://glama.ai/mcp/servers (use **Add Server** → **Server** and submit `https://github.com/uizze/uizze`; the current `/api/mcp/servers/submit` endpoint redirects unauthenticated visitors to sign-up, so the canonical source-server listing and score remain externally gated; do not restore the retired repository)
@@ -145,6 +146,7 @@ Keep these surfaces aligned with the canonical copy above:
 - GitHub Action metadata PR: https://github.com/uizze/uizze/pull/144 (merged; root Action metadata now uses a concrete searchable description for generic UI, missing states, inert controls, and token drift)
 - Claude Code plugins directory PR: https://github.com/ccplugins/awesome-claude-code-plugins/pull/350
 - Agent Skills directory PR: https://github.com/VoltAgent/awesome-agent-skills/pull/911 (visible entry now identifies the free Skill and its 800,000+ real web and iOS screen grounding)
+- Build with Claude Skill PRs: https://github.com/davepoon/buildwithclaude/pull/251 (merged; existing `plugins/all-skills/skills/anti-ui-slop/SKILL.md` listing refreshed from the canonical UIZZE workflow)
 - Design tools directory PR: https://github.com/goabstract/Awesome-Design-Tools/pull/586
 - Awesome Design Systems resource PR: https://github.com/klaufel/awesome-design-systems/pull/32
 - Frontend Development Bookmarks PR: https://github.com/dypsilon/frontend-dev-bookmarks/pull/528
