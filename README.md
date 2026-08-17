@@ -122,5 +122,5 @@ Use [DISTRIBUTION.md](DISTRIBUTION.md) for canonical public copy, install langua
 - [Official MCP Registry record](https://github.com/mcp/uizze/uizze)
 - [GitHub Copilot anti-ui-slop Skill](https://github.com/github/awesome-copilot/tree/main/skills/anti-ui-slop)
 - [UIZZE organization profile](https://github.com/uizze)
-- [Latest distribution update](https://github.com/uizze/uizze/discussions/44#discussioncomment-18048324)
+- [Latest distribution update](https://github.com/uizze/uizze/discussions/44#discussioncomment-18048404)
 - [Full distribution map](DISTRIBUTION.md)
