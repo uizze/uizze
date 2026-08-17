@@ -180,7 +180,7 @@ Keep these surfaces aligned with the canonical copy above:
 - Chinese Awesome Claude Skills PR: https://github.com/shishirui/awesome-claude-skills-zh/pull/10
 - KaranB192 Awesome Claude Skills PR: https://github.com/karanb192/awesome-claude-skills/pull/162
 
-Marketplace status: public release `v1.2.10` remains the Marketplace-ready Action release and `v1.2.11` is the current metadata-sync release, but GitHub Marketplace search still returns zero public results; saving Marketplace categories on the real release currently returns a GitHub 500, so the Action is not yet publicly discoverable in the Marketplace index.
+Marketplace status: `v1.2.11` is the current release with valid root Action metadata and the aligned `v1` tag, but its GitHub Marketplace publish checkbox remains unsubmitted. Marketplace search still returns zero public results; an earlier category-save attempt returned a GitHub 500, and the authenticated release form still requires the final publish action.
 
 Already listed:
 
