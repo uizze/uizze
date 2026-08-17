@@ -160,7 +160,7 @@ Keep these surfaces aligned with the canonical copy above:
 - Anthropic Skills partner listing PR: https://github.com/anthropics/skills/pull/1595 (link-only UIZZE entry for the official Agent Skills repository; maintainer review pending)
 - Claude Code Frontend Design Toolkit PR: https://github.com/wilwaldon/Claude-Code-Frontend-Design-Toolkit/pull/5 (README source repaired to the canonical `uizze/uizze` repository; checks are clean)
 - Awesome Vibe Coding documentation PR: https://github.com/filipecalegario/awesome-vibe-coding/pull/257 (visible entry now leads with the free Skill and deterministic preview, then distinguishes full UIZZE and its 800,000+ real web and iOS screens)
-- GitHub Action directory PR: https://github.com/sdras/awesome-actions/pull/899 (visible entry now includes the 800,000+ provenance while keeping the Action itself a focused local source check)
+- GitHub Action directory PR: https://github.com/sdras/awesome-actions/pull/899 (28,000+ star directory; visible entry includes the 800,000+ provenance while keeping the Action itself a focused local source check; current v1.2.11 verification is recorded at https://github.com/sdras/awesome-actions/pull/899#issuecomment-5320804928)
 - GitHub Action metadata PR: https://github.com/uizze/uizze/pull/144 (merged; root Action metadata now uses a concrete searchable description for generic UI, missing states, inert controls, and token drift)
 - Claude Code plugins directory PR: https://github.com/ccplugins/awesome-claude-code-plugins/pull/350
 - Agent Skills directory PR: https://github.com/VoltAgent/awesome-agent-skills/pull/911 (visible entry now identifies the free Skill and its 800,000+ real web and iOS screen grounding)
