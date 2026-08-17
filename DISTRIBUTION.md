@@ -136,7 +136,7 @@ Submit the canonical repository next:
 - Cline Rules: https://github.com/cline/clinerules/pull/3 (portable STOP UI SLOP rule; review pending)
 - Awesome Codex Subagents: https://github.com/VoltAgent/awesome-codex-subagents
 - Addy Osmani Agent Skills: https://github.com/addyosmani/agent-skills (PR #496 adds reference-led UI finish checks; maintainer review is pending)
-- Awesome Frontend Skills: https://github.com/finfin/awesome-frontend-skills
+- Awesome Frontend Skills: https://github.com/finfin/awesome-frontend-skills (178-star maintained frontend Agent Skills index; existing PR #3 adds the canonical `anti-ui-slop` Skill to Design and now separates the free workflow from full UIZZE’s 800,000+ live reference/search scope)
 - JingwenTian Awesome Frontend: https://github.com/JingwenTian/awesome-frontend/pull/26 (1,700+ star frontend resource index; adds the free anti-ui-slop Skill with the canonical install source and accurate full 800,000+ distinction)
 - Requestly Awesome Frontend Resources: https://github.com/requestly/awesome-frontend-resources (PR #33 adds the free-first UIZZE Skill and deterministic preview)
 - Awesome AI Tools for UI: https://github.com/maxbogo/awesome-ai-tools-for-ui/pull/34 (823-star UI-specific catalogue; PR adds the free anti-ui-slop Skill to its Skills section with the live source, install path, and 800,000+ distinction)
@@ -199,7 +199,7 @@ Keep these surfaces aligned with the canonical copy above:
 - iOSDevLinks PR: https://github.com/giftbott/iOSDevLinks/pull/21 (UIZZE design reference for iOS developers)
 - Awesome Codex Subagents PR: https://github.com/VoltAgent/awesome-codex-subagents/pull/46
 - Addy Osmani Agent Skills PR: https://github.com/addyosmani/agent-skills/pull/496
-- Awesome Frontend Skills PR: https://github.com/finfin/awesome-frontend-skills/pull/3
+- Awesome Frontend Skills PR: https://github.com/finfin/awesome-frontend-skills/pull/3 (existing UIZZE submission; corrected free/full product wording is pushed in commit `821d9f7`)
 - JingwenTian Awesome Frontend PR: https://github.com/JingwenTian/awesome-frontend/pull/26 (free-first UI quality workflow entry; maintainer review pending)
 - Requestly Awesome Frontend Resources PR: https://github.com/requestly/awesome-frontend-resources/pull/33 (free-first UIZZE entry in Some Awesome Projects)
 - Awesome AI Tools for UI PR: https://github.com/maxbogo/awesome-ai-tools-for-ui/pull/34 (free anti-ui-slop Skill in the UI-specific Skills catalogue; live links verified HTTP 200)
