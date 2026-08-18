@@ -288,7 +288,7 @@ Keep these surfaces aligned with the canonical copy above:
 - Claude Code Everything guide PR: https://github.com/wesammustafa/Claude-Code-Everything-You-Need-to-Know/pull/30 (adds UIZZE to the quality, review, and debugging skill table)
 - LangGPT Awesome Claude Code PR: https://github.com/LangGPT/awesome-claude-code/pull/121
 - Chinese Awesome Claude Skills PR: https://github.com/shishirui/awesome-claude-skills-zh/pull/10
-- KaranB192 Awesome Claude Skills PR: https://github.com/karanb192/awesome-claude-skills/pull/162
+- KaranB192 Awesome Claude Skills PR: https://github.com/karanb192/awesome-claude-skills/pull/162 (conflict-repaired and mergeable; the entry now uses free-first copy and separates the optional 800,000+ workflow)
 
 Marketplace status: `v1.2.11` is the current release with valid root Action metadata and the aligned `v1` tag. The authenticated release form was completed, but public Marketplace search still returns zero results, so GitHub-side indexing or publication visibility remains unresolved. An earlier category-save attempt returned a GitHub 500, and GitHub’s public REST and GraphQL APIs expose no supported Marketplace publish mutation.
 
