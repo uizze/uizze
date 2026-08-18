@@ -2,6 +2,7 @@
 name: anti-ui-slop
 description: Stop coding agents from shipping generic UI. Use UIZZE's 800,000+ real web and iOS screens to build product-specific interfaces, define a design contract, cover required states, and run a hard finish gate. Use when designing, implementing, redesigning, critiquing, or pre-ship reviewing a web or iOS interface in Codex, Claude Code, Cursor, Copilot, or another coding agent. Trigger with "anti-ui-slop", "stop UI slop", "ground this UI in real screens", or "run the UI finish gate".
 allowed-tools: Read, Glob, Grep, WebFetch
+argument-hint: "[command] [target]"
 version: 1.2.11
 author: "UIZZE <business@uizze.com>"
 license: MIT
@@ -47,7 +48,7 @@ Core principles:
 
 ## Instructions
 
-Use `Read`, `Glob`, and `Grep` or equivalent project-inspection tools to understand the product before making layout decisions.
+1. Use `Read`, `Glob`, and `Grep` or equivalent project-inspection tools to understand the product before making layout decisions.
 
 - **The brief wins.** Honor pinned aesthetics, eras, materials, fonts, and palettes even when they conflict with a saturated-pattern warning. Redirecting a clear brief toward your taste is failure. <!-- rule:skill-brief-wins -->
 - **Refinement preserves; redesign replaces.** Refinement keeps the incumbent identity, behavior, copy, and everything outside scope. Ask before replacing factual copy or adding claims. Redesign keeps product truth, content, function, native affordances, and constraints, but treats the old look as evidence and anti-reference; choose a replacement world in new-work and replace DESIGN.md. Never split the difference into polish on the discarded look. <!-- rule:skill-world-change-semantics -->
