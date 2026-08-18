@@ -1,4 +1,4 @@
-> ***If your UI screams AI, your app is dead.***
+> **Stop AI coding agents from shipping generic UI.**
 
 # UIZZE UI Slop Finish Gate for Kiro
 

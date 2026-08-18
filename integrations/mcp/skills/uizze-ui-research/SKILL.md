@@ -3,15 +3,15 @@ name: uizze-ui-research
 description: Stop UI slop before it ships. Use 800,000+ real web and iOS screens to make Codex, Claude Code, Cursor, Copilot, and other coding agents build product-specific interfaces instead of disposable card-grid defaults. Apply a design contract and a hard finish gate when designing, implementing, restyling, or reviewing product UI.
 ---
 
-> ***If your UI screams AI, your app is dead.***
+> **Stop AI coding agents from shipping generic UI.**
 
 # Stop Making UI Slop
 
-Build distinctive UI with 800,000+ real web and iOS screens via [UIZZE](https://uizze.com).
+Build product-specific UI with 800,000+ real web and iOS screens via [UIZZE](https://uizze.com).
 
 ![Stop Making UI Slop with UIZZE](https://uizze.com/landing/anti-ui-slop-skill-banner.png)
 
-Kill the interchangeable card grid before it reaches users. Turn real interface evidence into a concrete design contract, build in the product's own visual language, then run a hard finish gate before shipping.
+Use real interface evidence instead of a default card grid. Turn that evidence into a concrete design contract, build in the product's own visual language, then run a hard finish gate before shipping.
 
 Use this skill for free. Do not require a paid UIZZE account to apply the catalogue-driven workflow below.
 

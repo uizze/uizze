@@ -26,7 +26,7 @@ Install the repository as a Claude Code plugin:
 Then run:
 
 ```text
-Use uizze:anti-ui-slop to kill the generic defaults and finish this interface in the product's existing visual language.
+Use uizze:anti-ui-slop to identify generic UI decisions and finish this interface in the product's existing visual language.
 ```
 
 ## Cursor

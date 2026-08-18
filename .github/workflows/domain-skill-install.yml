@@ -49,7 +49,7 @@ jobs:
           test -s "$skill"
           grep -qx 'name: anti-ui-slop' "$skill"
           grep -qx '# Stop Making UI Slop' "$skill"
-          grep -Fqx '> ***If your UI screams AI, your app is dead.***' "$skill"
+          grep -Fqx '> **Stop AI coding agents from shipping generic UI.**' "$skill"
           grep -Fq 'anti-ui-slop-skill-banner.png' "$skill"
           grep -Fq 'https://uizze.com' "$skill"
           if grep -Fq 'github.com' "$skill"; then
