@@ -121,6 +121,7 @@ Use [DISTRIBUTION.md](DISTRIBUTION.md) for canonical public copy, install langua
 
 - [Official MCP Registry record](https://github.com/mcp/uizze/uizze)
 - [GitHub Copilot anti-ui-slop Skill](https://github.com/github/awesome-copilot/tree/main/skills/anti-ui-slop)
+- [Agent Skill Index listing](https://github.com/heilcheng/awesome-agent-skills/pull/420) (6,110-star directory; maintainer review pending)
 - [UIZZE on skills.sh](https://www.skills.sh/site/uizze.com/anti-ui-slop) (free install listing; the page reports 348.5K installs on 2026-08-18, a third-party directory metric rather than a UIZZE product-usage claim)
 - [UIZZE organization profile](https://github.com/uizze)
 - [Latest distribution update](https://github.com/uizze/uizze/discussions/44#discussioncomment-18058606)
