@@ -126,6 +126,7 @@ Submit the canonical repository next:
 - Awesome Cursor Rules: https://github.com/PatrickJS/awesome-cursorrules
 - Awesome Claude Skills: https://github.com/ComposioHQ/awesome-claude-skills
 - TravisVN Awesome Claude Skills: https://github.com/travisvn/awesome-claude-skills (PR #1123 adds UIZZE to the community skills table)
+- Awesome LLM Skills: https://github.com/Prat011/awesome-llm-skills (1,400+ star maintained LLM and Agent Skills directory; PR #181 adds the canonical free-first UIZZE entry)
 - Awesome Codex Skills: https://github.com/composio-community/awesome-codex-skills
 - Awesome Codex CLI: https://github.com/milisp/awesome-codex-cli/pull/72 (hosted UIZZE MCP entry; maintainer requested usage evidence)
 - Awesome Vibe Coding Tools: https://github.com/jiji262/awesome-vibe-coding-tools/pull/35 (Skill and MCP entry; review pending)
@@ -252,7 +253,7 @@ Keep these surfaces aligned with the canonical copy above:
 - GetBindu Awesome Claude Skills PR: https://github.com/GetBindu/awesome-claude-code-and-skills/pull/156
 - BehiSecc Awesome Claude Skills PR: https://github.com/BehiSecc/awesome-claude-skills/pull/579
 - Awesome LLM Apps Agent Skills PR: https://github.com/Shubhamsaboo/awesome-llm-apps/pull/1105 (self-contained runnable anti-ui-slop Skill; canonical install repair in commit `769a54f`; GitGuardian check passed; maintainer review pending)
-- Awesome LLM Skills PR: https://github.com/Prat011/awesome-llm-skills/pull/181 (canonical UIZZE UI research Skill entry)
+- Awesome LLM Skills PR: https://github.com/Prat011/awesome-llm-skills/pull/181 (existing link-only entry now leads with the free MIT `anti-ui-slop` Skill and no-account preview, then separates full UIZZE's live search, validation, and audits across 800,000+ real web and iOS screens)
 - Awesome AI Agents Tools PR: https://github.com/jim-schwoebel/awesome_ai_agents/pull/448 (adds UIZZE to a 1,900+ star AI-agent resource list; free-first public copy and canonical links; maintainer review pending)
 - Awesome AI Agents 2026 PR: https://github.com/caramaschiHG/awesome-ai-agents-2026/pull/512 (adds UIZZE to the 1,500+ star directory’s 3D and Design section; monthly-maintained audience, concise factual copy, and Free / Paid scope)
 - E2B Awesome AI Agents PR: https://github.com/e2b-dev/awesome-ai-agents/pull/1410 (adds UIZZE to the 29,000+ star open-source AI-agent directory after UFO; free Skill, no-account preview MCP, and full 800,000+ workflow are separated; first-party disclosure included)
