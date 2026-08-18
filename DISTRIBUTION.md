@@ -177,7 +177,7 @@ Keep these surfaces aligned with the canonical copy above:
 - Organization profile: https://github.com/uizze/.github/blob/main/profile/README.md
 - Start-here discussion: https://github.com/uizze/uizze/discussions/15 (high-traffic entry point refreshed with canonical links, free preview, Action, DESIGN.md, and Registry paths)
 - Launch discussion: https://github.com/uizze/uizze/discussions/44
-- Latest distribution update: https://github.com/uizze/uizze/discussions/44#discussioncomment-18059420
+- Latest distribution update: https://github.com/uizze/uizze/discussions/44#discussioncomment-18059453
 - Latest distribution release: https://github.com/uizze/uizze/releases/latest (v1.2.11 notes refreshed with the live skills.sh install route and current distribution pointer)
 - Anthropic Skills partner listing PR: https://github.com/anthropics/skills/pull/1595 (link-only UIZZE entry for the official Agent Skills repository; maintainer review pending)
 - Claude Code Frontend Design Toolkit PR: https://github.com/wilwaldon/Claude-Code-Frontend-Design-Toolkit/pull/5 (README source repaired to the canonical `uizze/uizze` repository; checks are clean)
@@ -325,3 +325,4 @@ Already listed:
 - Awesome Design Resources: https://github.com/darelova/Awesome-Design-Resources-List/pull/19 (merged UIZZE entry in the 64-star design resources list)
 - Hqasmei Awesome Design Resources: https://github.com/hqasmei/awesome-design-resources/pull/28 (78-star design resources list; adds UIZZE under Design Inspiration & Resources with the canonical GitHub source, free MIT Skill, and separated optional 800,000+ screen workflow; clean and mergeable)
 - Slavakurilyak Awesome AI Agents: https://github.com/slavakurilyak/awesome-ai-agents/pull/390 (2,179-star AI agents directory; adds UIZZE under UI Development with the free MIT anti-ui-slop Skill, canonical sources, and separated optional 800,000+ screen workflow; source and generated artifacts validated)
+- Mahseema Awesome AI Tools: https://github.com/mahseema/awesome-ai-tools/pull/1992 (5,984-star AI tools directory; adds UIZZE under Developer tools with the free anti-ui-slop Skill and UI Slop Gate, then separates the optional 800,000+ screen workflow; one-line diff)
