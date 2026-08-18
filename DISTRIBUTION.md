@@ -190,7 +190,7 @@ Keep these surfaces aligned with the canonical copy above:
 - Meng To design skills PR: https://github.com/MengTo/Skills/pull/7
 - Tech Leads Club Agent Skills intake issue: https://github.com/tech-leads-club/agent-skills/issues/167 (issue refreshed with v1.2.11, current free preview, 800,000+ evidence, and passing HOL Plugin Scanner status)
 - Awesome Hermes Agent recommendation issue: https://github.com/0xNyk/awesome-hermes-agent/issues/325 (portable anti-UI-slop skill recommendation for the agentskills.io ecosystem)
-- Awesome Hermes Skills: https://github.com/ZeroPointRepo/awesome-hermes-skills/pull/29 (merged UIZZE anti-ui-slop Skill listing in Creative & Media Generation)
+- Awesome Hermes Skills: https://github.com/ZeroPointRepo/awesome-hermes-skills/pull/29 (merged UIZZE anti-ui-slop Skill listing in Creative & Media Generation); maintenance refresh: https://github.com/ZeroPointRepo/awesome-hermes-skills/pull/50 (419-star Hermes ecosystem directory; updates the existing copy with the MIT Skill, no-account preview, and accurate full 800,000+ scope; format check passes)
 - Agent Skill Index PR: https://github.com/heilcheng/awesome-agent-skills/pull/420 (existing UIZZE listing; current verification comment confirms the canonical Skill, free install path, v1.2.11 metadata, and 800,000+ evidence)
 - Skillmatic Agent Skills PR: https://github.com/skillmatic-ai/awesome-agent-skills/pull/153
 - SkillCreator Agent Skills PR: https://github.com/skillcreatorai/Awesome-Agent-Skills/pull/10
