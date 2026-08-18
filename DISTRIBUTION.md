@@ -177,7 +177,7 @@ Keep these surfaces aligned with the canonical copy above:
 - Organization profile: https://github.com/uizze/.github/blob/main/profile/README.md
 - Start-here discussion: https://github.com/uizze/uizze/discussions/15 (high-traffic entry point refreshed with canonical links, free preview, Action, DESIGN.md, and Registry paths)
 - Launch discussion: https://github.com/uizze/uizze/discussions/44
-- Latest distribution update: https://github.com/uizze/uizze/discussions/44#discussioncomment-18059206
+- Latest distribution update: https://github.com/uizze/uizze/discussions/44#discussioncomment-18059266
 - Latest distribution release: https://github.com/uizze/uizze/releases/latest (v1.2.11 notes refreshed with the live skills.sh install route and current distribution pointer)
 - Anthropic Skills partner listing PR: https://github.com/anthropics/skills/pull/1595 (link-only UIZZE entry for the official Agent Skills repository; maintainer review pending)
 - Claude Code Frontend Design Toolkit PR: https://github.com/wilwaldon/Claude-Code-Frontend-Design-Toolkit/pull/5 (README source repaired to the canonical `uizze/uizze` repository; checks are clean)
@@ -323,3 +323,4 @@ Already listed:
 - Awesome Agent Skills: https://github.com/JayLZhou/Awesome-Agent-Skills/pull/22 (merged UIZZE ecosystem resource in the 136-star Agent Skills list); maintenance refresh: https://github.com/JayLZhou/Awesome-Agent-Skills/pull/29 (updates the existing row with the free MIT Skill, no-account preview, and accurate full 800,000+ scope; clean and mergeable)
 - Awesome Inspiration: https://github.com/shsfwork/awesome-inspiration/pull/13 (merged UIZZE entry in the 99-star design and developer inspiration list); maintenance refresh: https://github.com/shsfwork/awesome-inspiration/pull/16 (updates the UI & UX row with the free MIT Skill, design-contract/finish-gate workflow, and accurate full 800,000+ scope; clean and mergeable)
 - Awesome Design Resources: https://github.com/darelova/Awesome-Design-Resources-List/pull/19 (merged UIZZE entry in the 64-star design resources list)
+- Hqasmei Awesome Design Resources: https://github.com/hqasmei/awesome-design-resources/pull/28 (78-star design resources list; adds UIZZE under Design Inspiration & Resources with the canonical GitHub source, free MIT Skill, and separated optional 800,000+ screen workflow; clean and mergeable)
