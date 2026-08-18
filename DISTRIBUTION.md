@@ -185,7 +185,7 @@ Keep these surfaces aligned with the canonical copy above:
 - GitHub Action directory PR: https://github.com/sdras/awesome-actions/pull/899 (28,000+ star directory; visible entry includes the 800,000+ provenance while keeping the Action itself a focused local source check; current v1.2.11 verification is recorded at https://github.com/sdras/awesome-actions/pull/899#issuecomment-5320804928)
 - GitHub Action metadata PR: https://github.com/uizze/uizze/pull/144 (merged; root Action metadata now uses a concrete searchable description for generic UI, missing states, inert controls, and token drift)
 - Claude Code plugins directory PR: https://github.com/ccplugins/awesome-claude-code-plugins/pull/350
-- Agent Skills directory PR: https://github.com/VoltAgent/awesome-agent-skills/pull/911 (visible entry now identifies the free Skill and its 800,000+ real web and iOS screen grounding)
+- Agent Skills directory PR: https://github.com/VoltAgent/awesome-agent-skills/pull/919 (visible entry now identifies the free Skill and its 800,000+ real web and iOS screen grounding; supersedes duplicate PR #911)
 - Build with Claude Skill PRs: https://github.com/davepoon/buildwithclaude/pull/251 (merged; existing `plugins/all-skills/skills/anti-ui-slop/SKILL.md` listing refreshed from the canonical UIZZE workflow)
 - Design tools directory PR: https://github.com/goabstract/Awesome-Design-Tools/pull/586
 - Awesome Design Systems resource PR: https://github.com/klaufel/awesome-design-systems/pull/32
