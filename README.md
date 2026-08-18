@@ -13,7 +13,7 @@ Build distinctive UI with 800,000+ real web and iOS screens via [UIZZE](https://
 
 This is the single public home for UIZZE: the `anti-ui-slop` skill, agent plugins, MCP setup, GitHub Action, Kiro Power, integrations, examples, and benchmarks.
 
-<p><a href="https://uizze.com"><strong>STOP UI SLOP →</strong></a></p>
+[**STOP UI SLOP →**](https://uizze.com)
 
 ## Install
 
