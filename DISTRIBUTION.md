@@ -62,7 +62,7 @@ Update existing entries first:
 - Awesome Front-End Learning Resource: https://github.com/helloqingfeng/Awsome-Front-End-learning-resource/pull/30 (10,000+ star Chinese frontend-resource index; adds UIZZE to the main list with the free Skill install path and current 800,000+ real web/iOS scope)
 - Skills Manager: https://github.com/xingkongliang/skills-manager/pull/382 (3,800+ star desktop skill manager; fixes installation of website-synced skills such as `https://www.skills.sh/site/uizze.com/ui-radar` instead of misclassifying the source as a GitHub repository; PR workflow is waiting for maintainer approval)
 - HeyClaude / awesome-claude: https://github.com/JSONbored/awesome-claude/pull/5792 (291-star GitHub-native Claude workflow registry; focused source-backed Skill PR with current v1.2.11 metadata, free install path, safety/privacy notes, and the 800,000+ product distinction; repository checks are green and current verification is recorded at https://github.com/JSONbored/awesome-claude/pull/5792#issuecomment-5320744708)
-- Build with Claude: https://github.com/davepoon/buildwithclaude (3,298-star Claude discovery hub; merged PR #249 adds the anti-ui-slop Skill and follow-up PR #251 aligns its public copy with UIZZE)
+- Build with Claude: https://github.com/davepoon/buildwithclaude (3,300+ star Claude discovery hub; merged PR #249 adds the anti-ui-slop Skill and follow-up PR #251 aligns its public copy with UIZZE; live count verified 2026-08-18)
 - Awesome QA Skills: https://github.com/naodeng/awesome-qa-skills/issues/3 (167-star bilingual QA Skill library; proposes the anti-ui-slop Skill as a directly relevant UX quality and pre-ship testing workflow, not a generic product listing)
 - Glama connector: https://glama.ai/mcp/connectors/io.github.uizze/uizze (canonical hosted record is now verified, has a healthy `glama.json`, points to `https://uizze.com/mcp/preview`, and reports 4.3/5 across one tool; the separate server record at https://glama.ai/mcp/servers/uizze/uizze-mcp still points to retired `uizze/uizze-mcp` and has no score)
 - Glama source-server submission: https://glama.ai/mcp/servers (use **Add Server** → **Server** and submit `https://github.com/uizze/uizze`; the current `/api/mcp/servers/submit` endpoint redirects unauthenticated visitors to sign-up, so the canonical source-server listing and score remain externally gated; do not restore the retired repository)
@@ -176,10 +176,10 @@ Submit the canonical repository next:
 
 Keep these surfaces aligned with the canonical copy above:
 
-- Organization profile: https://github.com/uizze/.github/blob/main/profile/README.md (PRs #25–#27 merged; profile now surfaces accepted Agentic Awesome Skills and Developer Resources plus high-signal Codex, frontend system-design, and MCP directory routes)
+- Organization profile: https://github.com/uizze/.github/blob/main/profile/README.md (PRs #25–#28 merged; profile now surfaces accepted Agentic Awesome Skills, Developer Resources, Agency Agents, and Build with Claude plus high-signal Codex, frontend system-design, and MCP directory routes)
 - Start-here discussion: https://github.com/uizze/uizze/discussions/15 (high-traffic entry point refreshed with canonical links, free preview, Action, DESIGN.md, and Registry paths)
 - Launch discussion: https://github.com/uizze/uizze/discussions/44
-- Latest distribution update: https://github.com/uizze/uizze/discussions/44#discussioncomment-18059482
+- Latest distribution update: https://github.com/uizze/uizze/discussions/44#discussioncomment-18060242
 - Latest distribution release: https://github.com/uizze/uizze/releases/latest (v1.2.11 notes refreshed with the live skills.sh install route and current distribution pointer)
 - Anthropic Skills partner listing PR: https://github.com/anthropics/skills/pull/1595 (link-only UIZZE entry for the official Agent Skills repository; maintainer review pending)
 - Claude Code Frontend Design Toolkit PR: https://github.com/wilwaldon/Claude-Code-Frontend-Design-Toolkit/pull/5 (README source repaired to the canonical `uizze/uizze` repository; checks are clean)
@@ -189,6 +189,7 @@ Keep these surfaces aligned with the canonical copy above:
 - Claude Code plugins directory PR: https://github.com/ccplugins/awesome-claude-code-plugins/pull/350
 - Agent Skills directory PR: https://github.com/VoltAgent/awesome-agent-skills/pull/919 (visible entry now identifies the free Skill and its 800,000+ real web and iOS screen grounding; supersedes duplicate PR #911)
 - Build with Claude Skill PRs: https://github.com/davepoon/buildwithclaude/pull/251 (merged; existing `plugins/all-skills/skills/anti-ui-slop/SKILL.md` listing refreshed from the canonical UIZZE workflow)
+- Agency Agents UI Finish-Gate Reviewer: https://github.com/msitarzewski/agency-agents/blob/main/design/design-ui-finish-gate-reviewer.md (live in the 146,000+ star directory through merged PR #742; maintenance PR #792 refreshes the reviewer to the canonical UIZZE Skill and remains open)
 - Design tools directory PR: https://github.com/goabstract/Awesome-Design-Tools/pull/586
 - Awesome Design Systems resource PR: https://github.com/klaufel/awesome-design-systems/pull/32
 - Frontend Development Bookmarks PR: https://github.com/dypsilon/frontend-dev-bookmarks/pull/528 (commit `51ab891` clarifies the free anti-ui-slop Skill/no-account preview versus the full UIZZE product and its 800,000+ real web and iOS screens)
@@ -316,7 +317,7 @@ Already listed:
 - VoltAgent Awesome Agent Skills: https://github.com/VoltAgent/awesome-agent-skills/pull/919 (open and mergeable; the one-line entry links directly to `uizze/uizze/tree/main/skills/anti-ui-slop` and preserves the directory's short-description quality bar)
 - Skillmatic Awesome Agent Skills: https://github.com/skillmatic-ai/awesome-agent-skills/pull/154 (open and mergeable; the concise entry links directly to the MIT `anti-ui-slop` Skill and preserves the directory's no-duplicate contribution policy)
 - Awesome AI Coding Techniques: https://github.com/inmve/awesome-ai-coding-techniques/issues/46 (open technique proposal; documents the portable design contract, required UI states, and bounded finish-gate review as an actionable workflow)
-- Agency Agents UI Finish-Gate Reviewer: https://github.com/msitarzewski/agency-agents/blob/main/design/design-ui-finish-gate-reviewer.md (existing UIZZE-related agent in the 145,000+ star directory, merged through PR #742; maintenance PR #792 links the canonical anti-ui-slop Skill and clarifies the free/full 800,000+ scope, with repository checks passing)
+- Agency Agents UI Finish-Gate Reviewer: https://github.com/msitarzewski/agency-agents/blob/main/design/design-ui-finish-gate-reviewer.md (existing UIZZE-related agent in the 146,000+ star directory, merged through PR #742; maintenance PR #792 links the canonical anti-ui-slop Skill and clarifies the free/full 800,000+ scope, with repository checks passing; live count verified 2026-08-18)
 - Datawhale easy-vibe: https://github.com/datawhalechina/easy-vibe/pull/141 (18,000+ star bilingual AI-native product course; adds the canonical anti-ui-slop Skill to the English and Simplified Chinese frontend Skill chapters with the free install path and accurate full-product scope; the open PR is mergeable)
 - HOL Awesome AI Plugins: https://github.com/hashgraph-online/awesome-ai-plugins/pull/99 (existing UIZZE entry refresh; the README copy now uses the canonical repository, free MIT Skill, no-account preview, and accurate full 800,000+ scope; all contribution checks pass while the directory maintainer reviews it)
 - Developer Resources: https://github.com/marcelscruz/dev-resources/pull/1170 (merged UIZZE entry in a 1,328-star collaborative developer-resources list)
