@@ -135,7 +135,7 @@ Submit the canonical repository next:
 - Awesome Claude Skills: https://github.com/ComposioHQ/awesome-claude-skills
 - TravisVN Awesome Claude Skills: https://github.com/travisvn/awesome-claude-skills (PR #1123 adds UIZZE to the community skills table)
 - Awesome LLM Skills: https://github.com/Prat011/awesome-llm-skills (1,400+ star maintained LLM and Agent Skills directory; PR #181 adds the canonical free-first UIZZE entry)
-- Awesome Codex Skills: https://github.com/composio-community/awesome-codex-skills
+- Awesome Codex Skills: https://github.com/composio-community/awesome-codex-skills (15,896-star Codex skill directory; UIZZE PR #236 adds the portable free MIT anti-ui-slop Skill with the optional 800,000+ workflow clearly separated)
 - Awesome Codex CLI: https://github.com/milisp/awesome-codex-cli/pull/72 (hosted UIZZE MCP entry; maintainer requested usage evidence)
 - Awesome Vibe Coding Tools: https://github.com/jiji262/awesome-vibe-coding-tools/pull/35 (Skill and MCP entry; review pending)
 - Awesome Skills: https://github.com/gmh5225/awesome-skills/pull/39 (anti-ui-slop Skill; review pending)
@@ -149,7 +149,7 @@ Submit the canonical repository next:
 - Awesome Frontend Skills: https://github.com/finfin/awesome-frontend-skills (178-star maintained frontend Agent Skills index; existing PR #3 adds the canonical `anti-ui-slop` Skill to Design and now separates the free workflow from full UIZZE’s 800,000+ live reference/search scope)
 - JingwenTian Awesome Frontend: https://github.com/JingwenTian/awesome-frontend/pull/26 (1,700+ star frontend resource index; adds the free anti-ui-slop Skill with the canonical install source and accurate full 800,000+ distinction)
 - Requestly Awesome Frontend Resources: https://github.com/requestly/awesome-frontend-resources (PR #33 adds the free-first UIZZE Skill and deterministic preview)
-- Awesome AI Tools for UI: https://github.com/maxbogo/awesome-ai-tools-for-ui/pull/34 (823-star UI-specific catalogue; PR adds the free anti-ui-slop Skill to its Skills section with the live source, install path, and 800,000+ distinction)
+- Awesome AI Tools for UI: https://github.com/maxbogo/awesome-ai-tools-for-ui/pull/34 (825-star UI-specific catalogue; PR adds the free anti-ui-slop Skill to its Skills section with the live source, install path, and 800,000+ distinction)
 - EUDK Awesome AI Tools: https://github.com/eudk/awesome-ai-tools/pull/538 (570-star directory updated in 2026; adds a concise free-first UIZZE entry to AI-Related Tools with the canonical product and GitHub links; maintainer review pending)
 - Developer Roadmap: https://github.com/nilbuild/developer-roadmap/pull/10238 (364,000+ star developer education repository; maintainer closed the unsolicited resource PR as personal promotion, so do not resubmit without an invited contribution path)
 - Claude Code Best Practice: https://github.com/shanraisshan/claude-code-best-practice/pull/187 (64,000+ star Claude Code guide; one-line UIZZE anti-ui-slop workflow entry in its development-workflow resources, with the canonical GitHub install, free MIT Skill source, and accurate 800,000+ full-workflow distinction)
