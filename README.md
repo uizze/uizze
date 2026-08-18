@@ -121,6 +121,11 @@ Use [DISTRIBUTION.md](DISTRIBUTION.md) for canonical public copy, install langua
 
 - [Official MCP Registry record](https://github.com/mcp/uizze/uizze)
 - [GitHub Copilot anti-ui-slop Skill](https://github.com/github/awesome-copilot/tree/main/skills/anti-ui-slop)
+- [Agentic Awesome Skills listing](https://github.com/sickn33/agentic-awesome-skills) (accepted in the active 45,000+ star catalog via [PR #1166](https://github.com/sickn33/agentic-awesome-skills/pull/1166); source metadata repair is tracked in [PR #1176](https://github.com/sickn33/agentic-awesome-skills/pull/1176))
+- [Developer Resources listing](https://github.com/marcelscruz/dev-resources) (accepted in the active 1,328-star developer-resources index via [PR #1170](https://github.com/marcelscruz/dev-resources/pull/1170))
+- [Awesome Codex Skills submission](https://github.com/composio-community/awesome-codex-skills/pull/236) (15,896-star directory; maintainer review pending)
+- [GreatFrontEnd Front-End System Design submission](https://github.com/greatfrontend/awesome-front-end-system-design/pull/9) (8,400+ star directory; maintainer review pending)
+- [Awesome MCP Servers submission](https://github.com/punkpeye/awesome-mcp-servers/pull/10946) (92,000+ star directory; Glama scored-server requirement remains external)
 - [Agent Skill Index listing](https://github.com/heilcheng/awesome-agent-skills/pull/420) (6,110-star directory; maintainer review pending)
 - [UIZZE on skills.sh](https://www.skills.sh/site/uizze.com/anti-ui-slop) (free install listing; the page reports 348.5K installs on 2026-08-18, a third-party directory metric rather than a UIZZE product-usage claim)
 - [UIZZE organization profile](https://github.com/uizze)
