@@ -51,7 +51,7 @@ Use “800,000+ real web and iOS screens” in public copy. Keep the free anti-u
 
 Update existing entries first:
 
-- Tons of Skills: https://github.com/uizze/uizze/issues/38 (closed after the public anti-ui-slop Skill gained the required Overview, Prerequisites, Output, Error Handling, and Resources sections; the live domain-backed copy is verified byte-for-byte against this repository)
+- Tons of Skills: https://github.com/uizze/uizze/issues/38 (2,600+ star Claude Code marketplace; the public anti-ui-slop Skill gained the required Overview, Prerequisites, Output, Error Handling, and Resources sections, and the domain-backed copy is verified byte-for-byte against this repository; the Path B source was accepted in merged PR #1127, while sync PR #1223 currently conflicts before the marketplace mirror can become live)
 - iFlytek SkillHub: https://github.com/iflytek/skillhub/issues/719 (4,872-star self-hosted Agent Skill registry; starter-collection proposal uses the canonical MIT Skill source and preserves UIZZE's public version/license metadata)
 - Claude Plugins registry: https://github.com/Kamalnrf/claude-plugins/issues/124 (532-star registry with 63,000+ indexed Agent Skills; direct indexing request for the canonical anti-ui-slop Skill after the public index returned no UIZZE match)
 - SkillsHub: https://github.com/ComeOnOliver/skillshub/issues/81 (active open registry with 5,900+ indexed skills; import request identifies the canonical `anti-ui-slop` and `ui-slop-score` paths and asks the indexer to avoid duplicate platform copies)
@@ -292,6 +292,7 @@ Marketplace status: `v1.2.11` is the current release with valid root Action meta
 Already listed:
 
 - GitHub MCP Registry: https://github.com/mcp/uizze/uizze (official registry is active at `io.github.uizze/uizze`, latest `v1.2.11`, with the canonical repository URL; older retired-repository records are deprecated)
+- Tons of Skills external source: https://github.com/jeremylongshore/claude-code-plugins-plus-skills/pull/1127 (accepted Path B source for the 2,600+ star Claude Code marketplace; its current sync PR #1223 contains the UIZZE mirror but is conflicting, so `plugins/design/uizze/` remains pending maintainer sync repair)
 - GitHub Awesome Copilot skill: https://github.com/github/awesome-copilot/blob/main/skills/anti-ui-slop/SKILL.md
 - GitHub Awesome Copilot follow-up PR: https://github.com/github/awesome-copilot/pull/2685 (merged; GitHub's official collection now documents the separate anonymous `check_ui_slop` preview)
 - GitHub Awesome Copilot external plugin intake: https://github.com/github/awesome-copilot/issues/2690 (clean automated intake on immutable commit `718db3f8bd1bf38a319de1a7c3b44ed186154b43`; explicit `.github/plugin` path; Agent Plugins v1 spec, install smoke, `vally lint`, and version checks pass; `ready-for-review`, maintainer review pending)
