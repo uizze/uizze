@@ -177,7 +177,7 @@ Keep these surfaces aligned with the canonical copy above:
 - Organization profile: https://github.com/uizze/.github/blob/main/profile/README.md
 - Start-here discussion: https://github.com/uizze/uizze/discussions/15 (high-traffic entry point refreshed with canonical links, free preview, Action, DESIGN.md, and Registry paths)
 - Launch discussion: https://github.com/uizze/uizze/discussions/44
-- Latest distribution update: https://github.com/uizze/uizze/discussions/44#discussioncomment-18051248
+- Latest distribution update: https://github.com/uizze/uizze/discussions/44#discussioncomment-18059206
 - Latest distribution release: https://github.com/uizze/uizze/releases/latest (v1.2.11 notes refreshed with the live skills.sh install route and current distribution pointer)
 - Anthropic Skills partner listing PR: https://github.com/anthropics/skills/pull/1595 (link-only UIZZE entry for the official Agent Skills repository; maintainer review pending)
 - Claude Code Frontend Design Toolkit PR: https://github.com/wilwaldon/Claude-Code-Frontend-Design-Toolkit/pull/5 (README source repaired to the canonical `uizze/uizze` repository; checks are clean)
@@ -199,7 +199,7 @@ Keep these surfaces aligned with the canonical copy above:
 - Agent Skill Index PR: https://github.com/heilcheng/awesome-agent-skills/pull/420 (6,110-star Agent Skill directory; the existing UIZZE row now names the free MIT Skill, no-account preview checks, and the optional full workflow across 800,000+ real web and iOS screens; refreshed in commit `0eed872`, maintainer review pending)
 - Skillmatic Agent Skills PR: https://github.com/skillmatic-ai/awesome-agent-skills/pull/153
 - SkillCreator Agent Skills PR: https://github.com/skillcreatorai/Awesome-Agent-Skills/pull/10
-- Claude Code Toolkit PR: https://github.com/rohitg00/awesome-claude-code-toolkit/pull/730
+- Claude Code Toolkit PR: https://github.com/rohitg00/awesome-claude-code-toolkit/pull/734 (2,524-star Claude Code toolkit; adds the free MIT anti-ui-slop Skill to Community Skills with the canonical install command and a separated optional 800,000+ workflow; clean and mergeable)
 - Awesome Cursor Rules PR: https://github.com/PatrickJS/awesome-cursorrules/pull/353
 - Awesome Claude Skills PR: https://github.com/ComposioHQ/awesome-claude-skills/pull/1648 (all validation and Socket checks pass; the entry leads with the free MIT Skill and separates the optional 800,000+ workflow)
 - Awesome Codex Skills PR: https://github.com/composio-community/awesome-codex-skills/pull/236
