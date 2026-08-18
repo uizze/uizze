@@ -190,14 +190,14 @@ Keep these surfaces aligned with the canonical copy above:
 - Design tools directory PR: https://github.com/goabstract/Awesome-Design-Tools/pull/586
 - Awesome Design Systems resource PR: https://github.com/klaufel/awesome-design-systems/pull/32
 - Frontend Development Bookmarks PR: https://github.com/dypsilon/frontend-dev-bookmarks/pull/528 (commit `51ab891` clarifies the free anti-ui-slop Skill/no-account preview versus the full UIZZE product and its 800,000+ real web and iOS screens)
-- Awesome Web Design inspiration PR: https://github.com/nicolesaidy/awesome-web-design/pull/71
+- Awesome Web Design inspiration PR: https://github.com/nicolesaidy/awesome-web-design/pull/73 (supersedes duplicate PR #71)
 - Nanobot well-known Skills compatibility PR: https://github.com/HKUDS/nanobot/pull/5186 (allows `uizze.com` discovery sources in search, trends, and installation; review pending)
 - Meng To design skills PR: https://github.com/MengTo/Skills/pull/7
 - Tech Leads Club Agent Skills intake issue: https://github.com/tech-leads-club/agent-skills/issues/167 (issue refreshed with v1.2.11, current free preview, 800,000+ evidence, and passing HOL Plugin Scanner status)
 - Awesome Hermes Agent recommendation issue: https://github.com/0xNyk/awesome-hermes-agent/issues/325 (portable anti-UI-slop skill recommendation for the agentskills.io ecosystem)
 - Awesome Hermes Skills: https://github.com/ZeroPointRepo/awesome-hermes-skills/pull/29 (merged UIZZE anti-ui-slop Skill listing in Creative & Media Generation); maintenance refresh: https://github.com/ZeroPointRepo/awesome-hermes-skills/pull/50 (419-star Hermes ecosystem directory; updates the existing copy with the MIT Skill, no-account preview, and accurate full 800,000+ scope; format check passes)
 - Agent Skill Index PR: https://github.com/heilcheng/awesome-agent-skills/pull/420 (6,110-star Agent Skill directory; the existing UIZZE row now names the free MIT Skill, no-account preview checks, and the optional full workflow across 800,000+ real web and iOS screens; refreshed in commit `0eed872`, maintainer review pending)
-- Skillmatic Agent Skills PR: https://github.com/skillmatic-ai/awesome-agent-skills/pull/153
+- Skillmatic Agent Skills PR: https://github.com/skillmatic-ai/awesome-agent-skills/pull/154 (supersedes duplicate PR #153)
 - SkillCreator Agent Skills PR: https://github.com/skillcreatorai/Awesome-Agent-Skills/pull/10
 - Claude Code Toolkit PR: https://github.com/rohitg00/awesome-claude-code-toolkit/pull/734 (2,524-star Claude Code toolkit; adds the free MIT anti-ui-slop Skill to Community Skills with the canonical install command and a separated optional 800,000+ workflow; clean and mergeable)
 - Awesome Cursor Rules PR: https://github.com/PatrickJS/awesome-cursorrules/pull/353
@@ -281,7 +281,7 @@ Keep these surfaces aligned with the canonical copy above:
 - VoltAgent Awesome DESIGN.md request: https://github.com/VoltAgent/awesome-design-md/issues/459 (UIZZE DESIGN.md request for the AI Design + Build ecosystem)
 - Bergside Awesome Design Skills request: https://github.com/bergside/awesome-design-skills/issues/16 (UIZZE proposed as related QA tooling, not as a copied registry skill)
 - Awesome AI Coding Tools PR: https://github.com/ai-for-developers/awesome-ai-coding-tools/pull/627 (visible entry leads with the free MIT Skill, canonical install, and no-account preview, then separates the optional 800,000+ workflow)
-- Awesome AI Tools PR: https://github.com/mahseema/awesome-ai-tools/pull/1982 (UIZZE developer-tool entry with the 800,000+ claim and free paths)
+- Awesome AI Tools PR: https://github.com/mahseema/awesome-ai-tools/pull/1992 (UIZZE developer-tool entry with the free-first copy and optional 800,000+ workflow; supersedes duplicate PR #1982)
 - EUDK Awesome AI Tools PR: https://github.com/eudk/awesome-ai-tools/pull/538 (first-party, disclosed submission; free Skill/no-account preview separated from the full 800,000+ product scope; maintainer review pending)
 - Awesome Generative AI PR: https://github.com/filipecalegario/awesome-generative-ai/pull/669 (UIZZE entry in Vibe Coding)
 - Awesome Vibe Coding PR: https://github.com/awesome-vibe-coding/awesome-vibe-coding/pull/128 (UIZZE entry in Extensions & Plugins)
