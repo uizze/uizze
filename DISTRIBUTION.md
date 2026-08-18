@@ -55,6 +55,7 @@ Update existing entries first:
 - iFlytek SkillHub: https://github.com/iflytek/skillhub/issues/719 (4,872-star self-hosted Agent Skill registry; starter-collection proposal uses the canonical MIT Skill source and preserves UIZZE's public version/license metadata)
 - Claude Plugins registry: https://github.com/Kamalnrf/claude-plugins/issues/124 (532-star registry with 63,000+ indexed Agent Skills; direct indexing request for the canonical anti-ui-slop Skill after the public index returned no UIZZE match)
 - SkillsHub: https://github.com/ComeOnOliver/skillshub/issues/81 (active open registry with 5,900+ indexed skills; import request identifies the canonical `anti-ui-slop` and `ui-slop-score` paths and asks the indexer to avoid duplicate platform copies)
+- Claude Skills Registry: https://github.com/majiayu000/claude-skill-registry-core/issues/280 (565-star daily registry with a public search site and CLI; UIZZE is absent from the source list and live index, and the intake issue requests the canonical `anti-ui-slop` Skill under `design`)
 - Awesome Design: https://github.com/gztchan/awesome-design/pull/229 (17,000+ star design-resource directory; adds UIZZE to Toolkit with the free MIT Skill separated from optional hosted tools and the current 800,000+ real-screen scope)
 - liyupi/ai-guide: https://github.com/liyupi/ai-guide/pull/73 (18,000+ star Chinese AI and Vibe Coding guide; adds UIZZE alongside frontend-design with the no-account install path and a clear free Skill/full workflow distinction)
 - Awesome Front-End Learning Resource: https://github.com/helloqingfeng/Awsome-Front-End-learning-resource/pull/30 (10,000+ star Chinese frontend-resource index; adds UIZZE to the main list with the free Skill install path and current 800,000+ real web/iOS scope)
@@ -163,6 +164,8 @@ Submit the canonical repository next:
 - Web Development Resources: https://github.com/markodenic/web-development-resources
 - Trend Micro Awesome Frontend: https://github.com/trendmicro-frontend/awesome (issue #7 suggests UIZZE for the maintained AI/frontend resources list)
 - Wshobson Agentic Plugin Marketplace: https://github.com/wshobson/agents
+- OpenClaw Skills: https://github.com/VoltAgent/awesome-openclaw-skills (52,000+ star directory; it accepts ClawHub links only, so UIZZE must publish the Skill to ClawHub before this GitHub route can accept a listing)
+- ClawHub: https://github.com/openclaw/clawhub (9,300+ star registry and CLI; the publisher path is available, but this environment has no authenticated ClawHub account)
 - GitHub Marketplace: https://github.com/marketplace?type=actions&query=uizze
 
 ## GitHub-native discovery
