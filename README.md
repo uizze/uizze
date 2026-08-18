@@ -123,5 +123,5 @@ Use [DISTRIBUTION.md](DISTRIBUTION.md) for canonical public copy, install langua
 - [GitHub Copilot anti-ui-slop Skill](https://github.com/github/awesome-copilot/tree/main/skills/anti-ui-slop)
 - [UIZZE on skills.sh](https://www.skills.sh/site/uizze.com/anti-ui-slop) (free install listing; the page reported 335.6K installs on 2026-08-17)
 - [UIZZE organization profile](https://github.com/uizze)
-- [Latest distribution update](https://github.com/uizze/uizze/discussions/44#discussioncomment-18051248)
+- [Latest distribution update](https://github.com/uizze/uizze/discussions/44#discussioncomment-18058549)
 - [Full distribution map](DISTRIBUTION.md)
