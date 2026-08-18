@@ -152,7 +152,7 @@ Submit the canonical repository next:
 - Awesome AI Tools for UI: https://github.com/maxbogo/awesome-ai-tools-for-ui/pull/34 (823-star UI-specific catalogue; PR adds the free anti-ui-slop Skill to its Skills section with the live source, install path, and 800,000+ distinction)
 - EUDK Awesome AI Tools: https://github.com/eudk/awesome-ai-tools/pull/538 (570-star directory updated in 2026; adds a concise free-first UIZZE entry to AI-Related Tools with the canonical product and GitHub links; maintainer review pending)
 - Developer Roadmap: https://github.com/nilbuild/developer-roadmap/pull/10238 (364,000+ star developer education repository; maintainer closed the unsolicited resource PR as personal promotion, so do not resubmit without an invited contribution path)
-- Claude Code Best Practice: https://github.com/shanraisshan/claude-code-best-practice/pull/187 (64,000+ star Claude Code guide; one-line UIZZE anti-ui-slop workflow entry in its development-workflow resources, with the free MIT Skill source and accurate 800,000+ full-workflow distinction)
+- Claude Code Best Practice: https://github.com/shanraisshan/claude-code-best-practice/pull/187 (64,000+ star Claude Code guide; one-line UIZZE anti-ui-slop workflow entry in its development-workflow resources, with the canonical GitHub install, free MIT Skill source, and accurate 800,000+ full-workflow distinction)
 - Datawhale Easy-Vibe: https://github.com/datawhalechina/easy-vibe/issues/71#issuecomment-5312518381 (18,968-star Chinese AI-native product-building course; recommendation in its open content-suggestions thread for the frontend UI, AI design, and Claude Code/Skills curriculum)
 - Awesome Design: https://github.com/gztchan/awesome-design/issues/228 (17,000+ star design-resource directory; Toolkit recommendation for the free anti-ui-slop Skill as an AI-assisted UI quality workflow, with an own-project disclosure)
 - Google Labs DESIGN.md: https://github.com/google-labs-code/design.md/pull/170 (27,000+ star design-contract format repo; format-native UIZZE example with local lint at 0 errors and 0 warnings; Google CLA check remains an external prerequisite)
@@ -257,7 +257,7 @@ Keep these surfaces aligned with the canonical copy above:
 - Cursor MDC rules PR: https://github.com/sanjeed5/awesome-cursor-rules-mdc/pull/58
 - Wshobson Agentic Plugin Marketplace issue: https://github.com/wshobson/agents/issues/657
 - Wshobson Agentic Plugin Marketplace PR: https://github.com/wshobson/agents/pull/658
-- Awesome Claude Code recommendation: https://github.com/hesreallyhim/awesome-claude-code/issues/2548 (52,000+ star Claude Code directory; intake body refreshed with the canonical v1.2.11 source, free install, anonymous preview, GitHub Action, and accurate free/full 800,000+ distinction; maintainer review pending)
+- Awesome Claude Code recommendation: https://github.com/hesreallyhim/awesome-claude-code/issues/2548 (52,000+ star Claude Code directory; intake body refreshed on 2026-08-18 with the canonical GitHub install, v1.2.11 source, free install, anonymous preview, GitHub Action, and accurate free/full 800,000+ distinction; maintainer review pending)
 - TravisVN Awesome Claude Skills PR: https://github.com/travisvn/awesome-claude-skills/pull/1123
 - Awesome Claude Code Skills PR: https://github.com/helloianneo/awesome-claude-code-skills/pull/72
 - jqueryscript Awesome Claude Code PR: https://github.com/jqueryscript/awesome-claude-code/pull/598
