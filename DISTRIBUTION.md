@@ -181,7 +181,7 @@ Submit the canonical repository next:
 
 Keep these surfaces aligned with the canonical copy above:
 
-- Organization profile: https://github.com/uizze/.github/blob/main/profile/README.md (PRs #25–#39 merged; profile now surfaces accepted Agentic Awesome Skills, Developer Resources, Agency Agents, and Build with Claude plus the high-reach shortlist and high-signal Codex, frontend system-design, MCP, Agentic Patterns, Chinese Agentic AI, Hello-Agents, GitHubDaily, Wshobson marketplace, and catalog-repair routes)
+- Organization profile: https://github.com/uizze/.github/blob/main/profile/README.md (PRs #25–#40 merged; profile now surfaces accepted Agentic Awesome Skills, Developer Resources, Agency Agents, and Build with Claude plus the high-reach shortlist and high-signal Codex, frontend system-design, MCP, Agentic Patterns, Chinese Agentic AI, Hello-Agents, GitHubDaily, Wshobson marketplace, catalog-repair, and official Codex marketplace routes)
 - Start-here discussion: https://github.com/uizze/uizze/discussions/15 (high-traffic entry point refreshed with canonical links, free preview, Action, DESIGN.md, and Registry paths)
 - Launch discussion: https://github.com/uizze/uizze/discussions/44
 - Latest distribution update: https://github.com/uizze/uizze/discussions/44#discussioncomment-18062303
