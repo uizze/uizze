@@ -199,7 +199,7 @@ Keep these surfaces aligned with the canonical copy above:
 - SkillCreator Agent Skills PR: https://github.com/skillcreatorai/Awesome-Agent-Skills/pull/10
 - Claude Code Toolkit PR: https://github.com/rohitg00/awesome-claude-code-toolkit/pull/730
 - Awesome Cursor Rules PR: https://github.com/PatrickJS/awesome-cursorrules/pull/353
-- Awesome Claude Skills PR: https://github.com/ComposioHQ/awesome-claude-skills/pull/1648
+- Awesome Claude Skills PR: https://github.com/ComposioHQ/awesome-claude-skills/pull/1648 (all validation and Socket checks pass; the entry leads with the free MIT Skill and separates the optional 800,000+ workflow)
 - Awesome Codex Skills PR: https://github.com/composio-community/awesome-codex-skills/pull/236
 - HOL Awesome Codex Plugins PR: https://github.com/hashgraph-online/awesome-codex-plugins/pull/368 (refreshes the existing UIZZE entry to the canonical v1.2.11 source)
 - E2B Awesome SDKs for AI Agents PR: https://github.com/e2b-dev/awesome-ai-sdks/pull/335 (UIZZE UI quality tool for agent workflows; maintainer CLA is pending)
@@ -277,7 +277,7 @@ Keep these surfaces aligned with the canonical copy above:
 - Awesome Design Systems PR: https://github.com/alexpate/awesome-design-systems/pull/356 (public UIZZE DESIGN.md under Voice & Tone and Source code)
 - VoltAgent Awesome DESIGN.md request: https://github.com/VoltAgent/awesome-design-md/issues/459 (UIZZE DESIGN.md request for the AI Design + Build ecosystem)
 - Bergside Awesome Design Skills request: https://github.com/bergside/awesome-design-skills/issues/16 (UIZZE proposed as related QA tooling, not as a copied registry skill)
-- Awesome AI Coding Tools PR: https://github.com/ai-for-developers/awesome-ai-coding-tools/pull/627 (visible entry now leads with the free Skill and deterministic preview, then distinguishes full UIZZE and its 800,000+ real web and iOS screens)
+- Awesome AI Coding Tools PR: https://github.com/ai-for-developers/awesome-ai-coding-tools/pull/627 (visible entry leads with the free MIT Skill, canonical install, and no-account preview, then separates the optional 800,000+ workflow)
 - Awesome AI Tools PR: https://github.com/mahseema/awesome-ai-tools/pull/1982 (UIZZE developer-tool entry with the 800,000+ claim and free paths)
 - EUDK Awesome AI Tools PR: https://github.com/eudk/awesome-ai-tools/pull/538 (first-party, disclosed submission; free Skill/no-account preview separated from the full 800,000+ product scope; maintainer review pending)
 - Awesome Generative AI PR: https://github.com/filipecalegario/awesome-generative-ai/pull/669 (UIZZE entry in Vibe Coding)
