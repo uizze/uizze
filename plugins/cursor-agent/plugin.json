@@ -1,0 +1,23 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "uizze",
+  "description": "UIZZE's portable anti-ui-slop workflow for product-specific interface design, required states, and a hard finish gate, with an optional full UIZZE MCP for live references and rendered review.",
+  "version": "1.2.11",
+  "author": {
+    "name": "UIZZE",
+    "email": "business@uizze.com",
+    "url": "https://uizze.com"
+  },
+  "homepage": "https://uizze.com/?utm_source=cursor&utm_medium=plugin_marketplace&utm_campaign=cursor_plugin_v1",
+  "repository": "https://github.com/uizze/uizze",
+  "license": "MIT",
+  "keywords": [
+    "ui",
+    "design",
+    "frontend",
+    "cursor",
+    "mcp",
+    "anti-slop",
+    "agent-skill"
+  ]
+}
