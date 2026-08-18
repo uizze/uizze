@@ -171,7 +171,7 @@ Submit the canonical repository next:
 - Chinese Front-End Learning Resources: https://github.com/helloqingfeng/Awsome-Front-End-learning-resource/issues/29 (10,000+ star Chinese front-end resource hub; focused recommendation for UIZZE as an AI UI-reference and quality workflow alongside front-end checklists)
 - Web Development Resources: https://github.com/markodenic/web-development-resources
 - Trend Micro Awesome Frontend: https://github.com/trendmicro-frontend/awesome (issue #7 suggests UIZZE for the maintained AI/frontend resources list)
-- Wshobson Agentic Plugin Marketplace: https://github.com/wshobson/agents
+- Wshobson Agentic Plugin Marketplace: https://github.com/wshobson/agents/issues/657 and https://github.com/wshobson/agents/pull/658 (38,000+ star multi-harness marketplace; PR approved and mergeable; canonical free Skill proposed across Claude Code, Codex CLI, Cursor, OpenCode, Copilot, and Gemini CLI, with the optional 800,000+ workflow separated)
 - OpenClaw Skills: https://github.com/VoltAgent/awesome-openclaw-skills (52,000+ star directory; it accepts ClawHub links only, so UIZZE must publish the Skill to ClawHub before this GitHub route can accept a listing)
 - ClawHub: https://github.com/openclaw/clawhub (9,300+ star registry and CLI; the publisher path is available, but this environment has no authenticated ClawHub account)
 - GitHub Marketplace: https://github.com/marketplace?type=actions&query=uizze
@@ -266,7 +266,7 @@ Keep these surfaces aligned with the canonical copy above:
 - Claude Code Templates PR: https://github.com/davila7/claude-code-templates/pull/747
 - Cursor MDC rules PR: https://github.com/sanjeed5/awesome-cursor-rules-mdc/pull/58
 - Wshobson Agentic Plugin Marketplace issue: https://github.com/wshobson/agents/issues/657
-- Wshobson Agentic Plugin Marketplace PR: https://github.com/wshobson/agents/pull/658
+- Wshobson Agentic Plugin Marketplace PR: https://github.com/wshobson/agents/pull/658 (approved and mergeable; validation is clean and the entry links to the canonical free Skill)
 - Awesome Claude Code recommendation: https://github.com/hesreallyhim/awesome-claude-code/issues/2548 (52,000+ star Claude Code directory; intake body refreshed on 2026-08-18 with the canonical GitHub install, v1.2.11 source, free install, anonymous preview, GitHub Action, and accurate free/full 800,000+ distinction; maintainer review pending)
 - TravisVN Awesome Claude Skills PR: https://github.com/travisvn/awesome-claude-skills/pull/1123
 - Awesome Claude Code Skills PR: https://github.com/helloianneo/awesome-claude-code-skills/pull/72
