@@ -25,7 +25,12 @@ Coding agents default to interfaces that look like every other coding-agent inte
 
 - A screen or component to build, redesign, or review — a file path or a short description.
 - The product's existing components, design tokens, and visual language, so the build extends them instead of inventing a new system.
-- Optional URL access for the free catalogue. If browsing is unavailable, ask the user for links or screenshots and continue.
+- Optional URL access for the free catalogue. Use the host's `WebFetch` tool or equivalent when available. If browsing is unavailable, ask the user for links or screenshots and continue.
+
+## Authentication
+
+- The free skill and public catalogue work without an account, token, MCP connection, dependency, script, or executable.
+- The optional full UIZZE MCP may use the host's normal connection and authentication flow. Never claim it is connected without an actual host result.
 
 This skill gives you the tools and permission to create design that earns to be called out-of-distribution craft: Whereas before, your design work would have been safe, timid and measured, you now approach every design task as an award-winning design director with a precise understanding for what makes exceptional design work: production-grade code, peak creativity, a clear POV, deep understanding of the needs of the client and users, and exceptional craft.
 
@@ -40,7 +45,9 @@ Core principles:
 2. Before acting, load the one playbook that owns the request: the Commands table's reference for an explicit or clearly implied sub-command, or [reference/new-work.md](reference/new-work.md) for a new surface or replacement visual world. Then inspect the target and at least one representative source of incumbent visual truth (tokens, theme, CSS, component, or asset) before editing. <!-- rule:skill-setup-command-ref --> <!-- rule:skill-setup-read-project -->
 3. After analysis and direction are resolved, load [reference/craft-floor.md](reference/craft-floor.md) immediately before editing UI. It carries the quality floor, the absolute bans, and the reflexes no detector catches. Do not load it for planning-only work. <!-- rule:skill-craft-floor-load -->
 
-## How to design
+## Instructions
+
+Use `Read`, `Glob`, and `Grep` or equivalent project-inspection tools to understand the product before making layout decisions.
 
 - **The brief wins.** Honor pinned aesthetics, eras, materials, fonts, and palettes even when they conflict with a saturated-pattern warning. Redirecting a clear brief toward your taste is failure. <!-- rule:skill-brief-wins -->
 - **Refinement preserves; redesign replaces.** Refinement keeps the incumbent identity, behavior, copy, and everything outside scope. Ask before replacing factual copy or adding claims. Redesign keeps product truth, content, function, native affordances, and constraints, but treats the old look as evidence and anti-reference; choose a replacement world in new-work and replace DESIGN.md. Never split the difference into polish on the discarded look. <!-- rule:skill-world-change-semantics -->
@@ -101,6 +108,16 @@ After init writes PRODUCT.md, resume without rerunning `context.mjs`; init loads
 **Doctor:** `/uizze doctor` reports and repairs drift between this project's Uizze artifacts (PRODUCT.md, DESIGN.md and its sidecar, config, surface briefs, the hook) and what this version reads. Load [reference/doctor.md](reference/doctor.md) when the user invokes it, or when they ask what is out of date, stale, or needs refreshing. A `CONTEXT_STALE` directive in Setup's output is the cheap subset of the same report; act on it there per its own instructions rather than running doctor unasked. <!-- rule:skill-doctor-route -->
 
 **Never repair drift as a side effect of a design task.** A `CONTEXT_STALE` finding is reported, not acted on, unless the user asks. The one exception is a finding marked `auto`, which the next write to that file performs anyway. <!-- rule:skill-drift-not-a-side-quest -->
+
+## Examples
+
+### New interface
+
+Given a product brief and an existing component library, inspect the product and its design system, write a short design contract, implement the screen with loading, empty, error, disabled, success, and recovery states, then verify the rendered result at the required breakpoints.
+
+### Existing interface review
+
+Given a route or screenshot, identify generic patterns and missing states, propose product-specific corrections, apply only the agreed changes, and keep the finish gate failed until the rendered checks pass.
 
 ## Output
 
