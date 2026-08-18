@@ -77,6 +77,7 @@ Submit the canonical repository next:
 
 - Anthropic Agent Skills: https://github.com/anthropics/skills (PR #1595 proposes a link-only UIZZE partner listing in the official Agent Skills repository, which has 170,000+ stars)
 - OpenAI Plugins: https://github.com/openai/plugins (official Codex plugin examples repository with 5,000+ stars; no public issue, pull-request, or contributor intake is available, so no unsolicited submission has been opened; revisit through the documented official plugin path)
+- OpenAI Codex curated marketplace: https://github.com/openai/codex/issues/39168 (106,000+ star official Codex repository; issue-based marketplace review request for the canonical UIZZE plugin, free Skill, and no-account preview)
 - Anthropic Claude plugin marketplaces: https://github.com/anthropics/claude-plugins-official (33,000+ stars, Anthropic-maintained plugins) and https://github.com/anthropics/claude-plugins-community (read-only community mirror; 351 stars). Third-party submissions use https://clau.de/plugin-directory-submission; direct pull requests to the community mirror close automatically. UIZZE is not listed yet.
 - Smithery: https://smithery.ai/servers?q=uizze
 - MCP.so: https://mcp.so/submit?type=server (GitHub intake issue #3117 now leads with the free `check_ui_slop` preview, canonical `uizze/uizze` source, and current anti-UI-slop copy)
@@ -183,7 +184,7 @@ Keep these surfaces aligned with the canonical copy above:
 - Organization profile: https://github.com/uizze/.github/blob/main/profile/README.md (PRs #25–#39 merged; profile now surfaces accepted Agentic Awesome Skills, Developer Resources, Agency Agents, and Build with Claude plus the high-reach shortlist and high-signal Codex, frontend system-design, MCP, Agentic Patterns, Chinese Agentic AI, Hello-Agents, GitHubDaily, Wshobson marketplace, and catalog-repair routes)
 - Start-here discussion: https://github.com/uizze/uizze/discussions/15 (high-traffic entry point refreshed with canonical links, free preview, Action, DESIGN.md, and Registry paths)
 - Launch discussion: https://github.com/uizze/uizze/discussions/44
-- Latest distribution update: https://github.com/uizze/uizze/discussions/44#discussioncomment-18062119
+- Latest distribution update: https://github.com/uizze/uizze/discussions/44#discussioncomment-18062303
 - Latest distribution release: https://github.com/uizze/uizze/releases/latest (v1.2.11 notes refreshed with the live skills.sh install route and current distribution pointer)
 - Domain Skill Install parity: https://github.com/uizze/uizze/actions/runs/32106467971 (manual verification passed after app PR #188 and the parity-only Cloudflare deployment; the live installer and canonical `skills/anti-ui-slop/SKILL.md` are byte-identical at SHA-256 `f6ebda2901effc3132c35b5cfde04e4cfab2a1cc89f7ee0d136b490551d8d764`)
 - Anthropic Skills partner listing PR: https://github.com/anthropics/skills/pull/1595 (link-only UIZZE entry for the official Agent Skills repository; maintainer review pending)
