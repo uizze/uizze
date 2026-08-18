@@ -136,5 +136,5 @@ Use [DISTRIBUTION.md](DISTRIBUTION.md) for canonical public copy, install langua
 - Additional high-reach routes under review: [Anthropic Agent Skills](https://github.com/anthropics/skills/pull/1595) (170,000+ stars), [Claude Code Best Practice](https://github.com/shanraisshan/claude-code-best-practice/pull/187) (64,000+ stars), [Awesome Claude Code](https://github.com/hesreallyhim/awesome-claude-code/issues/2548) (52,000+ stars), [Awesome Actions](https://github.com/sdras/awesome-actions/pull/899) (28,000+ stars), and [Awesome Design](https://github.com/gztchan/awesome-design/pull/229) (17,000+ stars)
 - [UIZZE on skills.sh](https://www.skills.sh/site/uizze.com/anti-ui-slop) (free install listing; the page reports 348.5K installs on 2026-08-18, a third-party directory metric rather than a UIZZE product-usage claim)
 - [UIZZE organization profile](https://github.com/uizze)
-- [Latest distribution update](https://github.com/uizze/uizze/discussions/44#discussioncomment-18061510)
+- [Latest distribution update](https://github.com/uizze/uizze/discussions/44#discussioncomment-18061709)
 - [Full distribution map](DISTRIBUTION.md)
