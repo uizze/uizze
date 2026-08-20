@@ -36,6 +36,8 @@ jobs:
           done < <(git ls-files '*.json')
           cmp skills/anti-ui-slop/SKILL.md plugins/claude-directory/skills/anti-ui-slop/SKILL.md
           cmp skills/anti-ui-slop/SKILL.md plugins/openai-directory/uizze/skills/anti-ui-slop/SKILL.md
+          cmp skills/anti-ui-slop/SKILL.md plugins/cursor-agent/skills/anti-ui-slop/SKILL.md
+          node .github/scripts/verify-skill-bundles.mjs
 
       - name: Verify GitHub Action
         run: npm run verify

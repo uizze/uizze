@@ -45,13 +45,28 @@ jobs:
         working-directory: ${{ runner.temp }}
         shell: bash
         run: |
-          skill=".agents/skills/anti-ui-slop/SKILL.md"
+          skill_dir=".agents/skills/anti-ui-slop"
+          skill="$skill_dir/SKILL.md"
           test -s "$skill"
           grep -qx 'name: anti-ui-slop' "$skill"
           grep -qx '# Stop Making UI Slop' "$skill"
           grep -Fqx '> **Stop AI coding agents from shipping generic UI.**' "$skill"
           grep -Fq 'anti-ui-slop-skill-banner.png' "$skill"
           grep -Fq 'https://uizze.com' "$skill"
+          for required in \
+            CHECKSUMS.sha256 \
+            MANIFEST.json \
+            scripts/context.mjs \
+            scripts/detect.mjs \
+            scripts/critique-storage.mjs \
+            scripts/live-server.mjs; do
+            test -s "$skill_dir/$required"
+            cmp "$skill_dir/$required" "$GITHUB_WORKSPACE/skills/anti-ui-slop/$required"
+          done
+          fixture="$(mktemp --suffix=.html)"
+          printf '<main><button>Save</button></main>\n' > "$fixture"
+          node "$skill_dir/scripts/detect.mjs" --json "$fixture" | jq empty
+          rm -f "$fixture"
           if grep -Fq 'github.com' "$skill"; then
             echo "The domain-backed skill must keep uizze.com as its public destination."
             exit 1
