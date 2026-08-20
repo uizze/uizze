@@ -2,7 +2,7 @@
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "uizze",
   "description": "UIZZE's portable anti-ui-slop workflow for product-specific interface design, required states, and a hard finish gate, with an optional full UIZZE MCP for live references and rendered review.",
-  "version": "1.2.11",
+  "version": "1.2.12",
   "author": {
     "name": "UIZZE",
     "email": "business@uizze.com",

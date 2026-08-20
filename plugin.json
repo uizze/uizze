@@ -2,7 +2,7 @@
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "uizze-ui-slop",
   "description": "A UI quality workflow for coding agents that uses 800,000+ real web and iOS screens, a product-specific design contract, required interface states, and a hard finish gate to stop generic UI before it ships.",
-  "version": "1.2.11",
+  "version": "1.2.12",
   "author": {
     "name": "UIZZE",
     "url": "https://uizze.com"

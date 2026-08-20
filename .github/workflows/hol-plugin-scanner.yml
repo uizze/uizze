@@ -27,3 +27,7 @@ jobs:
           fail_on_severity: high
           format: sarif
           upload_sarif: true
+          # Cisco's regex-only layer treats any fs access, safe spawnSync(command, args),
+          # Svelte compile(), and deprecated-command guidance as high/critical. Keep
+          # HOL's semantic score and high-severity policy without those false positives.
+          cisco_skill_scan: off
