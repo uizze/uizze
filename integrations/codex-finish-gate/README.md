@@ -86,7 +86,10 @@ Evidence:
 
 ## Optional: add real interface context
 
-This starter is useful on its own. If you want Codex to work from real interface references and a documented contract → evidence → manifest validation → audit → critique workflow, [connect UIZZE](https://uizze.com).
+This starter is useful on its own. If a concrete visual question would benefit
+from real interface references or hosted design materials, [connect
+UIZZE](https://uizze.com). Its authenticated MCP exposes only
+`find_ui_references` and `find_ui_materials`; an empty result is a valid no-op.
 
 For a separate review of the finished interface, run the free [UIZZE UI Specificity Check](https://uizze.com/tools/ui-specificity-check). It checks the implementation evidence for missing states and generic UI patterns, then produces a local report without uploading the project.
 

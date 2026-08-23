@@ -2,23 +2,32 @@
 
 # Stop Making UI Slop
 
-Build product-specific UI with the free `anti-ui-slop` skill and, when useful,
-focused references from [UIZZE](https://uizze.com).
+Build product-specific UI with four free skills and, when useful, focused
+references from [UIZZE](https://uizze.com).
 
 ![Stop Making UI Slop with UIZZE](https://uizze.com/landing/anti-ui-slop-skill-banner.png)
 
 [![CI](https://github.com/uizze/uizze/actions/workflows/ci.yml/badge.svg)](https://github.com/uizze/uizze/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-black.svg)](LICENSE)
 
-## Install the skill
+## Install a skill
+
+Use `ui-design` as the broad design and implementation workflow:
+
+```bash
+npx skills add https://uizze.com --skill ui-design
+```
+
+Use `anti-ui-slop` when the task is specifically about preventing or reviewing
+generic UI:
 
 ```bash
 npx skills add https://uizze.com --skill anti-ui-slop
 ```
 
-The skill works without an account, token, script, or MCP connection. The
-domain package is the canonical source; the copies in this repository are kept
-byte-for-byte identical for GitHub-native installers.
+The skills work without an account, token, script, or MCP connection. The
+domain packages are canonical; the four copies in this repository match them
+for GitHub-native installers.
 
 ## Connect the paid MCP
 
@@ -58,8 +67,10 @@ review. See [integrations/github-action](integrations/github-action).
 
 | Path | Purpose |
 | --- | --- |
-| [`skills/anti-ui-slop`](skills/anti-ui-slop) | Canonical GitHub mirror of the public skill package |
-| [`skills/ui-slop-score`](skills/ui-slop-score) | Small rendered-interface review skill |
+| [`skills/anti-ui-slop`](skills/anti-ui-slop) | Prevent or review generic UI |
+| [`skills/ui-design`](skills/ui-design) | Design, build, redesign, or improve interfaces |
+| [`skills/ui-radar`](skills/ui-radar) | Find and compare focused UI references |
+| [`skills/ui-slop-score`](skills/ui-slop-score) | Review a rendered interface for generic choices |
 | [`integrations/mcp`](integrations/mcp) | Authenticated MCP setup and registry metadata |
 | [`integrations/github-action`](integrations/github-action) | Local pull-request source check |
 | [`integrations`](integrations) | Optional examples and host-specific packaging |

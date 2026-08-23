@@ -9,7 +9,11 @@ Production is the source of truth. Directory copy must match these endpoints:
 
 ## Current product facts
 
-- The public skill works without an account or MCP connection.
+- Production publishes exactly four free skills: `anti-ui-slop`, `ui-design`,
+  `ui-radar`, and `ui-slop-score`.
+- The skills work without an account or MCP connection.
+- GitHub mirrors those four packages under `skills/`; production remains the
+  canonical source.
 - The hosted MCP is authenticated at `https://uizze.com/mcp`.
 - The MCP exposes `find_ui_references` and `find_ui_materials` only.
 - Empty retrieval is an intentional no-op.

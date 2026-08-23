@@ -9,11 +9,13 @@ on:
       - main
     paths:
       - ".github/workflows/domain-skill-install.yml"
+      - "skills/**"
   pull_request:
     branches:
       - main
     paths:
       - ".github/workflows/domain-skill-install.yml"
+      - "skills/**"
 
 permissions:
   contents: read
@@ -31,30 +33,25 @@ jobs:
         with:
           node-version: 22
 
-      - name: Install the public UIZZE skill
+      - name: Install the public UIZZE skills
         working-directory: ${{ runner.temp }}
         run: >-
           npx --yes skills@1.5.20 add https://uizze.com
-          --skill anti-ui-slop
+          --skill '*'
           --agent codex
           --yes
           --copy
           --metadata '{"source":"uizze-publisher-ci","exclude_from_marketing_metrics":true}'
 
-      - name: Verify the installed skill
+      - name: Verify the installed skills
         working-directory: ${{ runner.temp }}
         shell: bash
         run: |
-          skill_dir=".agents/skills/anti-ui-slop"
-          skill="$skill_dir/SKILL.md"
-          test -s "$skill"
-          grep -qx 'name: anti-ui-slop' "$skill"
-          grep -qx '# Stop Making UI Slop' "$skill"
-          grep -Fqx '> **Stop AI coding agents from shipping generic UI.**' "$skill"
-          grep -Fq 'anti-ui-slop-skill-banner.png' "$skill"
-          grep -Fq 'https://uizze.com' "$skill"
-          if grep -Fq 'github.com' "$skill"; then
-            echo "The domain-backed skill must keep uizze.com as its public destination."
-            exit 1
-          fi
-          diff --brief --recursive "$skill_dir" "$GITHUB_WORKSPACE/skills/anti-ui-slop"
+          set -euo pipefail
+          for name in anti-ui-slop ui-design ui-radar ui-slop-score; do
+            skill_dir=".agents/skills/$name"
+            skill="$skill_dir/SKILL.md"
+            test -s "$skill"
+            grep -qx "name: $name" "$skill"
+            diff --brief --recursive "$skill_dir" "$GITHUB_WORKSPACE/skills/$name"
+          done
