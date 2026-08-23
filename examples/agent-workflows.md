@@ -45,4 +45,4 @@ The skill is also live in [github/awesome-copilot](https://github.com/github/awe
 
 Copy [the least-privilege workflow](../.github/workflows/uizze-ui-review.yml) into a repository. It scans changed frontend files locally on the GitHub runner, emits file/line annotations and a concise job summary, and never transmits source or screenshots.
 
-For automated reference search, design contracts, audits, and screenshot critique, connect the full UIZZE MCP from https://uizze.com.
+For focused reference or hosted-material search, connect the authenticated UIZZE MCP from https://uizze.com/docs.

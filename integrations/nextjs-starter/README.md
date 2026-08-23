@@ -2,7 +2,8 @@
 
 # Stop Making UI Slop
 
-Build product-specific UI with the free anti-ui-slop Skill and UI Slop Gate. Optional full UIZZE adds 800,000+ real web and iOS screens via [UIZZE](https://uizze.com).
+Build product-specific UI with the free anti-ui-slop skill. Optional focused
+UIZZE references are available separately at [uizze.com](https://uizze.com).
 
 ![Stop Making UI Slop with UIZZE](https://uizze.com/landing/anti-ui-slop-skill-banner.png)
 
@@ -78,8 +79,8 @@ See [docs/finish-gate.md](docs/finish-gate.md) for the review checklist.
 
 ## Optional UIZZE MCP
 
-The starter works without MCP. If automated catalogue search, design contracts,
-and screenshot critique would materially help, see [docs/mcp.md](docs/mcp.md).
+The starter works without MCP. If a concrete unresolved question would benefit
+from focused references or hosted materials, see [docs/mcp.md](docs/mcp.md).
 Keep the token in your environment; the repository contains placeholders only.
 
 The full UIZZE workflow is available at [uizze.com](https://uizze.com).

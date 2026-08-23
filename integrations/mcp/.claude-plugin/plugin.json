@@ -1,7 +1,7 @@
 {
   "name": "uizze",
-  "version": "1.1.20",
-  "description": "Stop generic UI with a free UI Slop Gate and a reference-backed finish workflow for Claude Code.",
+  "version": "1.2.13",
+  "description": "Connect Claude Code to UIZZE's focused UI references and hosted materials.",
   "author": {
     "name": "UIZZE",
     "url": "https://uizze.com"

@@ -2,7 +2,8 @@
 
 # Stop Making UI Slop
 
-Build product-specific UI with the free UI Slop Gate. Optional full UIZZE adds 800,000+ real web and iOS screens via [UIZZE](https://uizze.com/github-action).
+Build product-specific UI with a conservative local source check. Optional
+UIZZE reference search is available separately at [uizze.com](https://uizze.com/github-action).
 
 ![Stop Making UI Slop with UIZZE](https://uizze.com/landing/anti-ui-slop-skill-banner.png)
 
@@ -57,18 +58,6 @@ The action needs no token, account, API key, write permission, or network access
 | `max-files` | `200` | Scan cap, limited internally to 1–1000. |
 
 Each file is capped at 1 MiB. Generated, dependency, build, and vendor folders are ignored. Explicit paths are also constrained to the checked-out workspace.
-
-## Optional agent handoff
-
-The Action is deliberately local: it never uploads checkout files, screenshots, or findings. If a finding needs a more contextual next pass, add UIZZE's free no-token preview to the coding agent you already use:
-
-```bash
-codex mcp add uizze-preview --url https://uizze.com/mcp/preview
-```
-
-Then ask the agent to run `check_ui_slop` on the rendered HTML and CSS. That optional MCP call receives only the rendered artifacts you explicitly provide. It returns concrete UI-slop findings and fixes; it does not replace visual, accessibility, correctness, or security review.
-
-For Claude Code, Cursor, and other client setup, use the canonical [UIZZE MCP instructions](../mcp#try-the-mcp-server-free).
 
 ## Optional visual review
 

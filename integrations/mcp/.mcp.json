@@ -1,6 +1,6 @@
 {
-  "uizze-preview": {
+  "uizze": {
     "type": "http",
-    "url": "https://uizze.com/mcp/preview"
+    "url": "https://uizze.com/mcp"
   }
 }

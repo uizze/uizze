@@ -1,7 +1,7 @@
 {
   "name": "uizze",
-  "version": "1.0.4",
-  "description": "If your UI screams AI, your app is dead. Stop UI slop with 800,000+ real web and iOS screens, a product-specific design contract, and a hard finish gate.",
+  "version": "1.2.13",
+  "description": "Build product-specific UI with the free anti-ui-slop skill and optional focused UIZZE references.",
   "author": {
     "name": "UIZZE",
     "email": "business@uizze.com",
@@ -18,29 +18,21 @@
     "agent-skill"
   ],
   "skills": "./skills/",
-  "mcpServers": {
-    "uizze-preview": {
-      "type": "http",
-      "url": "https://uizze.com/mcp/preview"
-    }
-  },
   "interface": {
     "displayName": "UIZZE",
-    "shortDescription": "Kill generic UI before it ships",
-    "longDescription": "If your UI looks AI-generated, you've already lost the first impression. Use 800,000+ real interfaces, a product-specific design contract, required states, and a hard finish gate before generic UI reaches users.",
+    "shortDescription": "Build product-specific UI",
+    "longDescription": "Use the product's existing system first, then retrieve a few focused UIZZE references only when they answer a concrete UI question.",
     "developerName": "UIZZE",
     "category": "Developer Tools",
     "capabilities": [
-      "Read",
-      "Write"
+      "Read"
     ],
     "websiteURL": "https://uizze.com",
     "privacyPolicyURL": "https://uizze.com/privacy",
     "termsOfServiceURL": "https://uizze.com/terms",
     "defaultPrompt": [
-      "Kill the generic defaults, define a product-specific design contract, then implement it.",
-      "Run the UIZZE finish gate and fix every blocking issue before shipping.",
-      "Ground this responsive interface in real product evidence and include every state."
+      "Find focused references for this interface and explain the transferable decisions.",
+      "Find a hosted font or icon only if this screen actually needs one."
     ],
     "brandColor": "#111111",
     "composerIcon": "./assets/uizze-logo.png",

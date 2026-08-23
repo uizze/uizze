@@ -34,10 +34,14 @@ jobs:
             [[ "$file" == */tsconfig.json ]] && continue
             jq empty "$file"
           done < <(git ls-files '*.json')
-          cmp skills/anti-ui-slop/SKILL.md plugins/claude-directory/skills/anti-ui-slop/SKILL.md
-          cmp skills/anti-ui-slop/SKILL.md plugins/openai-directory/uizze/skills/anti-ui-slop/SKILL.md
-          cmp skills/anti-ui-slop/SKILL.md plugins/cursor-agent/skills/anti-ui-slop/SKILL.md
-          node .github/scripts/verify-skill-bundles.mjs
+          for package in \
+            skills/anti-ui-slop \
+            plugins/claude-directory/skills/anti-ui-slop \
+            plugins/openai-directory/uizze/skills/anti-ui-slop \
+            plugins/cursor-agent/skills/anti-ui-slop; do
+            (cd "$package" && sha256sum --check CHECKSUMS.sha256)
+            diff --brief --recursive skills/anti-ui-slop "$package"
+          done
 
       - name: Verify GitHub Action
         run: npm run verify

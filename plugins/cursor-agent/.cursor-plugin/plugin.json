@@ -1,8 +1,8 @@
 {
   "name": "uizze",
   "displayName": "UIZZE",
-  "version": "1.2.12",
-  "description": "If your UI screams AI, your app is dead. Stop UI slop with 800,000+ real web and iOS screens, a product-specific design contract, and a hard finish gate.",
+  "version": "1.2.13",
+  "description": "Build product-specific UI with the free anti-ui-slop skill and optional focused UIZZE references.",
   "author": {
     "name": "UIZZE",
     "email": "business@uizze.com"
@@ -29,6 +29,5 @@
     "mcp"
   ],
   "logo": "https://raw.githubusercontent.com/uizze/uizze/main/plugins/openai-directory/uizze/assets/uizze-logo.png",
-  "skills": "./skills/anti-ui-slop/",
-  "mcpServers": "./mcp.json"
+  "skills": "./skills/anti-ui-slop/"
 }

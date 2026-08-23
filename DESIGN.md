@@ -17,8 +17,8 @@ the same change.
 - Prefer useful verbs: `Search`, `Review`, `Check`, `Install`, `Save`, `Copy`.
 - Do not use empty marketing filler, fake metrics, or vague labels such as
   `Magic`, `Insights`, or `Optimize` without a concrete explanation.
-- Keep the free anti-UI-slop skill, deterministic preview, and full UIZZE MCP
-  distinct. Never imply that the free local skill requires an account or token.
+- Keep the free anti-UI-slop skill and authenticated UIZZE MCP distinct. Never
+  imply that the free local skill requires an account or token.
 
 ## Visual direction
 
@@ -111,10 +111,10 @@ references:
 4. Review the rendered result before handoff. A source-only review is not a
    finish gate.
 
-The free preview exposes deterministic `check_ui_slop` checks for rendered HTML
-and CSS. The full UIZZE MCP adds live search across 800,000+ real web and iOS
-screens, design contracts, audits, and rendered critique when those capabilities
-materially improve the work.
+The authenticated UIZZE MCP exposes `find_ui_references` and
+`find_ui_materials`. Use them only when a concrete unresolved question would
+benefit from a few focused references or hosted materials. Empty retrieval is a
+valid no-op.
 
 ## Finish gate
 
@@ -135,5 +135,4 @@ Before shipping a rendered UI, verify:
 - Public source: https://github.com/uizze/uizze
 - Existing implementation rules: https://github.com/uizze/uizze/blob/main/DESIGN_SYSTEM.md
 - Free anti-UI-slop skill: https://uizze.com/ai-ui-slop
-- Free deterministic preview: https://uizze.com/mcp/preview
-- Full UIZZE MCP: https://uizze.com/mcp
+- Authenticated UIZZE MCP: https://uizze.com/mcp

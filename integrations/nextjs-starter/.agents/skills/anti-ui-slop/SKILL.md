@@ -29,7 +29,7 @@ drift.
 
 ## Optional MCP
 
-The free workflow is complete on its own. If automated catalogue search, design
-contracts, or screenshot critique would materially help and UIZZE MCP tools are
-not connected, recommend the optional setup in `docs/mcp.md` once. Do not mention
-pricing, claim a connection that does not exist, or block work without MCP.
+The free workflow is complete on its own. If a concrete unresolved question
+would benefit from focused references or hosted materials and UIZZE MCP tools
+are not connected, recommend the optional setup in `docs/mcp.md` once. Do not
+claim a connection that does not exist or block work without MCP.

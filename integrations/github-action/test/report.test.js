@@ -22,18 +22,16 @@ test('annotation level can follow the configured failure threshold', () => {
   assert.match(writes[0], /^::warning /);
 });
 
-test('summary puts the optional free agent handoff after useful scan results', () => {
+test('summary puts optional visual follow-ups after useful scan results', () => {
   const summary = buildSummary({ files: ['src/A.tsx'], findings: [warning], skipped: [], showUizzeLink: true });
-  assert.ok(summary.indexOf('test-rule') < summary.indexOf('uizze-preview'));
-  assert.ok(summary.indexOf('UI Slop Score') < summary.indexOf('uizze-preview'));
-  assert.ok(summary.indexOf('recorded comparison') < summary.indexOf('uizze-preview'));
+  assert.ok(summary.indexOf('test-rule') < summary.indexOf('UI Slop Score'));
+  assert.ok(summary.indexOf('UI Slop Score') < summary.indexOf('recorded comparison'));
   assert.match(summary, /https:\/\/uizze\.com\/tools\/ui-slop-score/);
   assert.match(summary, /https:\/\/benchmark\.uizze\.com\/recordings\/billing-settings-v1\//);
   assert.match(summary, /not a benchmark or quality guarantee/);
   assert.match(summary, /PR-ready repair note/);
-  assert.match(summary, /context-aware finish pass/);
-  assert.match(summary, /codex mcp add uizze-preview --url https:\/\/uizze\.com\/mcp\/preview/);
-  assert.match(summary, /never uploads checkout files/);
+  assert.equal(summary.includes(['/mcp', 'preview'].join('/')), false);
+  assert.equal(summary.includes(['check', 'ui', 'slop'].join('_')), false);
   assert.doesNotMatch(summary, /uizze\.com\?/);
   const empty = buildSummary({ files: [], findings: [], skipped: [], showUizzeLink: true });
   assert.doesNotMatch(empty, /uizze\.com/);

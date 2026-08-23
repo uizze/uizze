@@ -1,8 +1,8 @@
 # Optional authenticated UIZZE MCP
 
-The starter works without MCP. Use the bundled free skill and design contract
-first. Connect MCP only when automated catalogue search, contract generation, or
-visual critique would materially improve the work.
+The starter works without MCP. Use the bundled free skill and local product
+context first. Connect MCP only when focused references or hosted materials
+would answer a concrete unresolved question.
 
 1. Obtain access from https://uizze.com.
 2. Copy `.env.example` to a local ignored environment file.
@@ -24,4 +24,5 @@ bearer_token_env_var = "UIZZE_MCP_TOKEN"
 ```
 
 After setup, verify that the client lists UIZZE tools before telling an agent to
-use them. Never claim MCP is connected based only on the presence of a config file.
+use them. The current tools are `find_ui_references` and `find_ui_materials`.
+Never claim MCP is connected based only on the presence of a config file.
