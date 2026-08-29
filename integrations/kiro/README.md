@@ -31,6 +31,10 @@ materials, connect the authenticated MCP separately using the normal
 
 The power never copies another product's visual identity, text, imagery, or exact layout. It does not make accessibility, security, correctness, or conversion guarantees.
 
+## Free check
+
+For a one-off screenshot review, use the free [UI Slop Score](https://uizze.com/tools/ui-slop-score).
+
 ## Support
 
 - Product: https://uizze.com

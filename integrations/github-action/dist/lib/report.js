@@ -27,6 +27,7 @@ function buildSummary({ files, findings, skipped, showUizzeLink }) {
     lines.push('', 'No changed frontend files were available to inspect.');
   }
   if (showUizzeLink && files.length) {
+    lines.push('', 'Need a visual second opinion? Use the free [UI Slop Score](https://uizze.com/tools/ui-slop-score): add one rendered screen, get concrete evidence and a PR-ready repair note. No signup; the screenshot is processed transiently.');
     lines.push('', 'Want to inspect a real same-prompt case first? [Open the recorded comparison](https://benchmark.uizze.com/recordings/billing-settings-v1/): raw captures, diffs, and a narrow 96/100 to 98/100 result—not a benchmark or quality guarantee.');
   }
   return `${lines.join('\n')}\n`;
