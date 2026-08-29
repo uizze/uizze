@@ -43,7 +43,7 @@ jobs:
             diff --brief --recursive skills/anti-ui-slop "$package"
           done
           (cd skills/ui-design && sha256sum --check CHECKSUMS.sha256)
-          for skill in anti-ui-slop ui-design ui-radar ui-slop-score; do
+          for skill in anti-ui-slop ui-design ui-radar; do
             test -s "skills/$skill/SKILL.md"
             grep -qx "name: $skill" "skills/$skill/SKILL.md"
           done

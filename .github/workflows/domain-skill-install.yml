@@ -48,7 +48,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          for name in anti-ui-slop ui-design ui-radar ui-slop-score; do
+          for name in anti-ui-slop ui-design ui-radar; do
             skill_dir=".agents/skills/$name"
             skill="$skill_dir/SKILL.md"
             test -s "$skill"
