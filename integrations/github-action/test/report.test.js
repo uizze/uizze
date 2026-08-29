@@ -22,14 +22,11 @@ test('annotation level can follow the configured failure threshold', () => {
   assert.match(writes[0], /^::warning /);
 });
 
-test('summary puts optional visual follow-ups after useful scan results', () => {
+test('summary puts the optional recorded comparison after useful scan results', () => {
   const summary = buildSummary({ files: ['src/A.tsx'], findings: [warning], skipped: [], showUizzeLink: true });
-  assert.ok(summary.indexOf('test-rule') < summary.indexOf('UI Slop Score'));
-  assert.ok(summary.indexOf('UI Slop Score') < summary.indexOf('recorded comparison'));
-  assert.match(summary, /https:\/\/uizze\.com\/tools\/ui-slop-score/);
+  assert.ok(summary.indexOf('test-rule') < summary.indexOf('recorded comparison'));
   assert.match(summary, /https:\/\/benchmark\.uizze\.com\/recordings\/billing-settings-v1\//);
   assert.match(summary, /not a benchmark or quality guarantee/);
-  assert.match(summary, /PR-ready repair note/);
   assert.equal(summary.includes(['/mcp', 'preview'].join('/')), false);
   assert.equal(summary.includes(['check', 'ui', 'slop'].join('_')), false);
   assert.doesNotMatch(summary, /uizze\.com\?/);

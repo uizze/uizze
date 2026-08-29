@@ -20,7 +20,7 @@ inputs:
     required: false
     default: error
   show-uizze-link:
-    description: Offer optional free visual and agent follow-ups after useful scan results in the job summary.
+    description: Offer an optional recorded comparison after useful scan results in the job summary.
     required: false
     default: "true"
   max-files:

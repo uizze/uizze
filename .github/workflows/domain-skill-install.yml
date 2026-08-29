@@ -31,7 +31,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
-          node-version: 22
+          node-version: 24.20.0
 
       - name: Install the public UIZZE skills
         working-directory: ${{ runner.temp }}
@@ -48,7 +48,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          for name in anti-ui-slop ui-design ui-radar ui-slop-score; do
+          for name in anti-ui-slop ui-design ui-radar; do
             skill_dir=".agents/skills/$name"
             skill="$skill_dir/SKILL.md"
             test -s "$skill"

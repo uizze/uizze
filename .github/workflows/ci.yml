@@ -20,7 +20,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
-          node-version: 22
+          node-version: 24.20.0
 
       - name: Validate public repository contracts
         shell: bash
@@ -43,7 +43,7 @@ jobs:
             diff --brief --recursive skills/anti-ui-slop "$package"
           done
           (cd skills/ui-design && sha256sum --check CHECKSUMS.sha256)
-          for skill in anti-ui-slop ui-design ui-radar ui-slop-score; do
+          for skill in anti-ui-slop ui-design ui-radar; do
             test -s "skills/$skill/SKILL.md"
             grep -qx "name: $skill" "skills/$skill/SKILL.md"
           done

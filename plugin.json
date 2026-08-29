@@ -2,7 +2,7 @@
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "uizze-ui-slop",
   "description": "A compact workflow for building and reviewing product-specific interfaces without generic UI defaults.",
-  "version": "1.2.13",
+  "version": "1.2.14",
   "author": {
     "name": "UIZZE",
     "url": "https://uizze.com"

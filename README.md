@@ -2,7 +2,7 @@
 
 # Stop Making UI Slop
 
-Build product-specific UI with four free skills and, when useful, focused
+Build product-specific UI with free skills and, when useful, focused
 references from [UIZZE](https://uizze.com).
 
 ![Stop Making UI Slop with UIZZE](https://uizze.com/landing/anti-ui-slop-skill-banner.png)
@@ -26,8 +26,8 @@ npx skills add https://uizze.com --skill anti-ui-slop
 ```
 
 The skills work without an account, token, script, or MCP connection. The
-domain packages are canonical; the four copies in this repository match them
-for GitHub-native installers.
+domain packages are canonical; this repository mirrors them for GitHub-native
+installers.
 
 ## Connect the paid MCP
 
@@ -70,7 +70,6 @@ review. See [integrations/github-action](integrations/github-action).
 | [`skills/anti-ui-slop`](skills/anti-ui-slop) | Prevent or review generic UI |
 | [`skills/ui-design`](skills/ui-design) | Design, build, redesign, or improve interfaces |
 | [`skills/ui-radar`](skills/ui-radar) | Find and compare focused UI references |
-| [`skills/ui-slop-score`](skills/ui-slop-score) | Review a rendered interface for generic choices |
 | [`integrations/mcp`](integrations/mcp) | Authenticated MCP setup and registry metadata |
 | [`integrations/github-action`](integrations/github-action) | Local pull-request source check |
 | [`integrations`](integrations) | Optional examples and host-specific packaging |

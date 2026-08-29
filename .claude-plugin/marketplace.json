@@ -6,14 +6,14 @@
   },
   "metadata": {
     "description": "Build product-specific UI with the free anti-ui-slop skill and optional focused UIZZE references.",
-    "version": "1.2.13"
+    "version": "1.2.14"
   },
   "plugins": [
     {
       "name": "uizze",
       "source": "./",
       "description": "Build product-specific UI with the free anti-ui-slop skill and optional focused UIZZE references.",
-      "version": "1.2.13",
+      "version": "1.2.14",
       "author": {
         "name": "UIZZE",
         "email": "business@uizze.com"

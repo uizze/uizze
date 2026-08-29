@@ -6,14 +6,14 @@
   },
   "metadata": {
     "description": "A compact workflow for building and reviewing product-specific interfaces without generic UI defaults.",
-    "version": "1.2.13"
+    "version": "1.2.14"
   },
   "plugins": [
     {
       "name": "uizze-ui-slop",
       "source": "./",
       "description": "A compact workflow for building and reviewing product-specific interfaces without generic UI defaults.",
-      "version": "1.2.13"
+      "version": "1.2.14"
     }
   ]
 }

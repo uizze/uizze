@@ -24,7 +24,7 @@ jobs:
       - name: Use Node.js
         uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
         with:
-          node-version: 20.19.0
+          node-version: 24.20.0
           cache: pnpm
           registry-url: https://registry.npmjs.org
       - name: Install exact dependencies
@@ -74,7 +74,7 @@ jobs:
       - name: Use Node.js
         uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
         with:
-          node-version: 20.19.0
+          node-version: 24.20.0
       - name: Install the public release and build Storybook
         env:
           PACKAGE_URL: https://github.com/${{ github.repository }}/releases/download/${{ github.event.release.tag_name }}/${{ needs.github-package.outputs.package-file }}
@@ -113,7 +113,7 @@ jobs:
       - name: Use Node.js
         uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
         with:
-          node-version: 22.20.0
+          node-version: 24.20.0
           cache: pnpm
           registry-url: https://registry.npmjs.org
       - name: Install exact dependencies
