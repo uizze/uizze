@@ -20,6 +20,9 @@ on:
 permissions:
   contents: read
 
+env:
+  DISABLE_TELEMETRY: "1"
+
 jobs:
   install:
     runs-on: ubuntu-latest
@@ -41,7 +44,6 @@ jobs:
           --agent codex
           --yes
           --copy
-          --metadata '{"source":"uizze-publisher-ci","exclude_from_marketing_metrics":true}'
 
       - name: Verify the installed skills
         working-directory: ${{ runner.temp }}
