@@ -1,6 +1,6 @@
 {
   "name": "uizze-ui-slop-gate-action",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "private": true,
   "description": "Catch UI slop in every pull request before it ships.",
   "license": "MIT",
