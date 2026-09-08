@@ -39,7 +39,7 @@ jobs:
 
       - name: Run the published UIZZE Action
         id: gate
-        uses: uizze/uizze@638ab4583b5db6593b0c5cc5304d6b03932ec46d # v1.2.15
+        uses: uizze/uizze@672deb24a980bc1d152ef2a40d371dad15cb2f65 # v1.2.16
         with:
           files: integrations/github-action/test/fixtures/${{ matrix.fixture }}
           fail-on: ${{ matrix.fail-on }}
