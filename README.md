@@ -18,6 +18,8 @@ https://github.com/user-attachments/assets/0137638f-d963-4e6b-a1a6-d7e2dce87600
 
 [**Build your next screen with UIZZE →**](https://uizze.com/?utm_source=github&utm_medium=repository&utm_campaign=discovery&utm_content=readme_video)
 
+[Try a billing screen in Claude Code, Cursor, or Copilot](examples/first-screen.md): install, copy the brief, connect optional reference search, and check the result.
+
 ## Start with your next screen
 
 Install the free UI design skill:
