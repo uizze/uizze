@@ -99,6 +99,16 @@ steps:
 
 No account, API key, or source upload. [Watch the published Action check a before-and-after example](https://github.com/uizze/uizze/actions/workflows/ui-slop-gate-example.yml), then [copy the complete workflow](integrations/github-action#usage). This is a conservative source check; use rendered inspection and your normal accessibility and usability checks alongside it.
 
+## Build a screen with a worked example
+
+- [Free UI task-brief builder](https://uizze.com/tools/ui-design-prompt-builder): describe the task, user, and outcome; copy or download a concrete agent prompt. No account required.
+- [SaaS dashboard walkthrough](https://uizze.com/guides/saas-dashboard-design): compare information hierarchy and try loading, empty, error, and assignment states.
+- [DESIGN.md template](https://uizze.com/guides/design-md-for-coding-agents): download a design contract and apply it across settings and billing.
+- [Empty-state examples](https://uizze.com/guides/empty-state-ui-design): distinguish first use, no matches, service failure, and unavailable access.
+- [iOS onboarding and recovery](https://uizze.com/guides/onboarding-ui-design): try a small browser prototype and explore the native SwiftUI starter.
+
+These are original UIZZE teaching examples with fictional data. [Browse all guides](https://uizze.com/guides) for agent-specific setup, comparisons, and review workflows.
+
 ## Explore the repository
 
 - [Practical agent workflows](examples/agent-workflows.md): billing settings, data tables, permission screens, and native iOS.
