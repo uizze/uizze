@@ -1,28 +1,32 @@
-> **Stop AI coding agents from shipping generic UI.**
+# UIZZE UI Slop Gate
 
-# Stop Making UI Slop
-
-Build product-specific UI with a conservative local source check. Optional
-UIZZE reference search is available separately at [uizze.com](https://uizze.com/github-action).
+**Catch unfinished UI in pull requests.** Find placeholder controls, missing
+state markers, color drift, and generic dashboard cues before the next review.
+Free, dependency-free, and local to your GitHub runner.
 
 ![Stop Making UI Slop with UIZZE](https://uizze.com/landing/anti-ui-slop-skill-banner.png)
 
-## Catch UI Slop in Every Pull Request
+[**Inspect the live example →**](https://github.com/uizze/uizze/actions/workflows/ui-slop-gate-example.yml) · [Add it to your repository](#usage) · [Work through the findings](../../examples/agent-workflows.md)
+
+## What it catches
 
 Your tests can pass while the UI still looks generated. This free GitHub Action catches concrete finish risks in changed frontend code before they ship. It runs entirely inside the job: no source, screenshots, or scan results leave the runner.
 
 It checks changed JS, TS, JSX, TSX, CSS, HTML, Vue, and Svelte files for conservative signals:
 
-- explicitly inert or placeholder controls;
-- data-driven UI with no visible loading, empty, or error-state markers;
-- hardcoded color values that may bypass semantic design tokens; and
-- combinations of generic dashboard, card-grid, and placeholder-metric cues.
+| Source signal | Example | Default severity |
+| --- | --- | --- |
+| Explicitly unfinished control | `href="#"` or an empty click handler | Error |
+| Missing state markers | A query-backed screen without loading, empty, or error markers | Warning |
+| Color drift | Hardcoded colors that may bypass the product's semantic tokens | Warning |
+| Generic dashboard cues | Several dashboard, card-grid, and placeholder-metric cues together | Warning |
 
 Findings appear as workflow annotations and in the job summary. It is a focused source check, not a visual, accessibility, correctness, or security audit.
 
 ## Usage
 
-Pin a released version rather than a branch:
+Create `.github/workflows/ui-finish-gate.yml` in your repository. Start with
+`fail-on: never` to inspect findings while your existing checks keep working:
 
 ```yaml
 name: UI finish gate
@@ -37,16 +41,24 @@ jobs:
   ui-slop-gate:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           fetch-depth: 2
           persist-credentials: false
-      - uses: uizze/uizze@v1
+      - uses: uizze/uizze@638ab4583b5db6593b0c5cc5304d6b03932ec46d # v1.2.15
         with:
-          fail-on: error
+          fail-on: never
 ```
 
-The action needs no token, account, API key, write permission, or network access. For stronger supply-chain pinning, replace `@v1` with the release commit SHA.
+The workflow pins [v1.2.15](https://github.com/uizze/uizze/releases/tag/v1.2.15)
+to its immutable commit. Use `uizze/uizze@v1` if you prefer updates within the
+maintained major version. The Action itself needs no token, account, API key,
+write permission, or network access.
+
+After the first run, open its **Summary** to review findings and source
+locations. Change `fail-on` to `error` to block explicitly unfinished controls,
+or `warning` to block all configured findings. `never` reports every finding
+as a warning annotation and keeps the Action step successful.
 
 ## Inputs
 
@@ -62,9 +74,19 @@ Each file is capped at 1 MiB. Generated, dependency, build, and vendor folders a
 
 ## See what the Action finds
 
-[Inspect a reproducible source check](../../examples/pull-request-check.md): the input, four findings, and a command you can run locally. For the next UI task, try the [free agent workflows](../../examples/agent-workflows.md) for billing settings, permission screens, or data tables.
+[Open the live example workflow](https://github.com/uizze/uizze/actions/workflows/ui-slop-gate-example.yml)
+to compare two jobs: the original snippet produces four findings; the revised
+snippet produces none. Both run the published Action with the same read-only
+permissions as the installation above. The example checks its expected output
+so the demonstration cannot silently drift.
 
-Start with `fail-on: never` if you want to review findings before making the check required. The default `fail-on: error` blocks explicit inert controls while keeping heuristic findings as warnings.
+[Inspect the source and reproduce both results](../../examples/pull-request-check.md).
+These are source-check examples, not a rendered application or a visual-quality
+score. For your next UI task, try the [free agent workflows](../../examples/agent-workflows.md)
+for billing settings, permission screens, or data tables.
+
+Need product-specific reference screens while fixing a finding? Optional UIZZE
+reference search is available separately at [uizze.com](https://uizze.com/?utm_source=github&utm_medium=repository&utm_campaign=discovery&utm_content=action_readme).
 
 ## Optional review evidence
 
