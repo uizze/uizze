@@ -89,7 +89,7 @@ steps:
       fail-on: error
 ```
 
-No account, API key, or source upload. This is a conservative source check; use rendered inspection and your normal accessibility and usability checks alongside it. [Copy a complete workflow →](integrations/github-action#usage)
+No account, API key, or source upload. [Watch the published Action check a before-and-after example](https://github.com/uizze/uizze/actions/workflows/ui-slop-gate-example.yml), then [copy the complete workflow](integrations/github-action#usage). This is a conservative source check; use rendered inspection and your normal accessibility and usability checks alongside it.
 
 ## Explore the repository
 

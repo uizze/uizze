@@ -1,0 +1,54 @@
+name: UI Slop Gate example
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/ui-slop-gate-example.yml
+      - integrations/github-action/test/fixtures/**
+  pull_request:
+    paths:
+      - .github/workflows/ui-slop-gate-example.yml
+      - integrations/github-action/test/fixtures/**
+
+permissions:
+  contents: read
+
+jobs:
+  example:
+    name: ${{ matrix.label }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    strategy:
+      matrix:
+        include:
+          - label: Before - four findings
+            fixture: problematic.tsx
+            findings: '4'
+            fail-on: never
+          - label: After - no configured findings
+            fixture: finished.tsx
+            findings: '0'
+            fail-on: warning
+    steps:
+      - name: Check out the example source
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Run the published UIZZE Action
+        id: gate
+        uses: uizze/uizze@638ab4583b5db6593b0c5cc5304d6b03932ec46d # v1.2.15
+        with:
+          files: integrations/github-action/test/fixtures/${{ matrix.fixture }}
+          fail-on: ${{ matrix.fail-on }}
+
+      - name: Verify the documented example result
+        env:
+          EXPECTED_FINDINGS: ${{ matrix.findings }}
+          ACTUAL_FINDINGS: ${{ steps.gate.outputs.finding-count }}
+          SCANNED_FILES: ${{ steps.gate.outputs.scanned-files }}
+        run: |
+          test "$SCANNED_FILES" = '1'
+          test "$ACTUAL_FINDINGS" = "$EXPECTED_FINDINGS"

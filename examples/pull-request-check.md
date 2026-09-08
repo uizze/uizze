@@ -2,6 +2,10 @@
 
 This example runs the Action's source checker against its checked-in test fixture. You can reproduce it locally with Node.js 20 or newer. It demonstrates the source checks, not the visual quality of a finished interface.
 
+[**Inspect the live GitHub run →**](https://github.com/uizze/uizze/actions/workflows/ui-slop-gate-example.yml)
+The workflow runs both snippets with the published v1.2.15 Action and verifies
+their expected finding counts. Open a run to see the annotations and job summaries.
+
 ## Input
 
 ```tsx
@@ -34,6 +38,26 @@ Scanned **1** changed frontend file: **1** error, **3** warnings.
 
 The placeholder link is an error. The state, color, and dashboard findings are warnings for a reviewer to assess in the project's context. State markers can live outside this file; use the reviewed-state manifest when appropriate.
 
+## Compare the revised source
+
+The [revised fixture](../integrations/github-action/test/fixtures/finished.tsx)
+uses a workspace-usage task, a destination path, an explicit empty-data branch,
+loading and error messages, and a semantic surface class. Running the same
+checker on it produces **0 findings**.
+
+| Before | Revised source |
+| --- | --- |
+| `href="#"` | `/settings/usage` destination |
+| Query data rendered immediately | Loading, error, and `length === 0` branches |
+| `bg-white` | `bg-surface` semantic class |
+| Generic dashboard metrics in cards | A workspace-usage list with labels from its data |
+
+Both files are illustrative source fixtures. The query hook, destination route,
+and semantic class must be supplied by the host product; these snippets are not
+a standalone application. Zero findings means these configured source rules
+found nothing. It does not verify the destination exists, the styles render
+correctly, or the screen is accessible.
+
 ## Reproduce it
 
 Run from the repository root:
@@ -46,6 +70,19 @@ node integrations/github-action/dist/index.js
 ```
 
 The command prints GitHub workflow annotations. `fail-on: never` lets you inspect the findings without failing the process. In GitHub Actions, the runner also receives a Markdown job summary.
+
+Then run the revised snippet with warnings treated as failures:
+
+```bash
+INPUT_FILES=integrations/github-action/test/fixtures/finished.tsx \
+INPUT_FAIL_ON=warning \
+INPUT_SHOW_UIZZE_LINK=false \
+node integrations/github-action/dist/index.js
+```
+
+The process exits successfully with zero findings. The
+[example workflow](../.github/workflows/ui-slop-gate-example.yml) checks both
+the number of scanned files and the finding count for each snippet.
 
 ## Work through the findings
 
