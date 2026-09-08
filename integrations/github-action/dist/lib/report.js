@@ -27,7 +27,7 @@ function buildSummary({ files, findings, skipped, showUizzeLink }) {
     lines.push('', 'No changed frontend files were available to inspect.');
   }
   if (showUizzeLink && files.length) {
-    lines.push('', 'Want to inspect a real same-prompt case first? [Open the recorded comparison](https://benchmark.uizze.com/recordings/billing-settings-v1/): raw captures, diffs, and a narrow 96/100 to 98/100 result—not a benchmark or quality guarantee.');
+    lines.push('', 'Use the [free UIZZE UI workflows](https://github.com/uizze/uizze/blob/main/examples/agent-workflows.md) to work through these findings with your coding agent. For focused reference search, [explore UIZZE](https://uizze.com/?utm_source=github&utm_medium=action&utm_campaign=discovery&utm_content=job_summary).');
   }
   return `${lines.join('\n')}\n`;
 }

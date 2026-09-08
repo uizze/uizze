@@ -37,9 +37,10 @@ jobs:
   ui-slop-gate:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           fetch-depth: 2
+          persist-credentials: false
       - uses: uizze/uizze@v1
         with:
           fail-on: error
@@ -54,14 +55,16 @@ The action needs no token, account, API key, write permission, or network access
 | `files` | changed frontend files | Optional comma- or newline-separated local paths. |
 | `manifest` | none | Optional path to local evidence JSON. |
 | `fail-on` | `error` | Fail on `error`, `warning`, or `never`. |
-| `show-uizze-link` | `true` | Offer optional free visual and agent follow-ups after useful results. |
+| `show-uizze-link` | `true` | Link to free agent workflows and optional reference search after scan results. Set `false` to omit links. |
 | `max-files` | `200` | Scan cap, limited internally to 1–1000. |
 
 Each file is capped at 1 MiB. Generated, dependency, build, and vendor folders are ignored. Explicit paths are also constrained to the checked-out workspace.
 
-## Optional recorded comparison
+## See what the Action finds
 
-Want to see the boundary of this workflow before trying it? [Inspect one recorded same-prompt case](https://benchmark.uizze.com/recordings/billing-settings-v1/): the seed, raw captures, diffs, and a narrow 96/100 to 98/100 result are public. It is one recorded case, not a benchmark result or quality guarantee.
+[Inspect a reproducible source check](../../examples/pull-request-check.md): the input, four findings, and a command you can run locally. For the next UI task, try the [free agent workflows](../../examples/agent-workflows.md) for billing settings, permission screens, or data tables.
+
+Start with `fail-on: never` if you want to review findings before making the check required. The default `fail-on: error` blocks explicit inert controls while keeping heuristic findings as warnings.
 
 ## Optional review evidence
 

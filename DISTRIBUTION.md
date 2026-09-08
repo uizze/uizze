@@ -26,8 +26,12 @@ Production is the source of truth. Directory copy must match these endpoints:
 | Surface | URL |
 | --- | --- |
 | GitHub | https://github.com/uizze/uizze |
+| GitHub MCP Registry | https://github.com/mcp/uizze/uizze |
+| GitHub Awesome Copilot | https://github.com/github/awesome-copilot/tree/main/plugins/uizze |
+| Agentic Awesome Skills | https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/anti-ui-slop |
+| Build with Claude | https://github.com/davepoon/buildwithclaude/tree/main/plugins/all-skills/skills/anti-ui-slop |
+| Tons of Skills | https://github.com/jeremylongshore/tons-of-skills-marketplace/tree/main/plugins/design/uizze |
 | Official MCP Registry | https://registry.modelcontextprotocol.io/v0/servers?search=uizze |
-| skills.sh | https://www.skills.sh/site/uizze.com |
 | Glama | https://glama.ai/mcp/connectors/io.github.uizze/uizze |
 | MCP Market | https://mcpmarket.com/server/uizze-1 |
 | MCPServers.org | https://mcpservers.org/servers/uizze-com |
@@ -35,3 +39,5 @@ Production is the source of truth. Directory copy must match these endpoints:
 Do not track star counts, submission queues, failed pitches, or copied listing
 text here. Use the production metadata above whenever a directory needs a
 refresh.
+
+For redistribution and catalog license fields, see [the license map](LICENSING.md).

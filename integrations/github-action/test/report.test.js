@@ -22,17 +22,20 @@ test('annotation level can follow the configured failure threshold', () => {
   assert.match(writes[0], /^::warning /);
 });
 
-test('summary puts the optional recorded comparison after useful scan results', () => {
+test('summary puts optional current workflows after useful scan results and respects opt-out', () => {
   const summary = buildSummary({ files: ['src/A.tsx'], findings: [warning], skipped: [], showUizzeLink: true });
-  assert.ok(summary.indexOf('test-rule') < summary.indexOf('recorded comparison'));
-  assert.match(summary, /https:\/\/benchmark\.uizze\.com\/recordings\/billing-settings-v1\//);
-  assert.match(summary, /not a benchmark or quality guarantee/);
+  assert.ok(summary.indexOf('test-rule') < summary.indexOf('free UIZZE UI workflows'));
+  assert.match(summary, /https:\/\/github\.com\/uizze\/uizze\/blob\/main\/examples\/agent-workflows\.md/);
+  assert.match(summary, /utm_medium=action/);
+  assert.doesNotMatch(summary, /benchmark\.uizze\.com|96\/100|98\/100/);
   assert.equal(summary.includes(['/mcp', 'preview'].join('/')), false);
   assert.equal(summary.includes(['check', 'ui', 'slop'].join('_')), false);
-  assert.doesNotMatch(summary, /uizze\.com\?/);
+  const disabled = buildSummary({ files: ['src/A.tsx'], findings: [warning], skipped: [], showUizzeLink: false });
+  assert.match(disabled, /test-rule/);
+  assert.doesNotMatch(disabled, /https:\/\//);
   const empty = buildSummary({ files: [], findings: [], skipped: [], showUizzeLink: true });
   assert.doesNotMatch(empty, /uizze\.com/);
-  assert.doesNotMatch(empty, /recorded comparison/);
+  assert.doesNotMatch(empty, /free UIZZE UI workflows/);
 });
 
 test('failure threshold respects error, warning, and never', () => {
