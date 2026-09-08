@@ -1,5 +1,5 @@
 name: UIZZE UI Slop Gate
-description: Catch unfinished UI in pull requests with checks for inert controls, missing state markers, hardcoded colors, and generic dashboard cues.
+description: Catch unfinished UI in pull requests with checks for inert controls, missing states, color drift, and generic layouts.
 author: UIZZE
 
 branding:
