@@ -34,6 +34,8 @@ credentials, paid content, or generated comparison imagery is included here.
 
 ## What to do with this
 
-Use the [free UIZZE finish gate](https://benchmark.uizze.com/#quick-start) on
-your own screen first. If the screen needs real visual references and a
-contract/audit workflow inside the agent, [connect UIZZE](https://uizze.com).
+This July 2026 recording documents a historical workflow. Use the
+[current free agent workflows](../../../../../examples/agent-workflows.md)
+for a new task. The optional authenticated MCP now provides focused
+reference and hosted-material search through `find_ui_references` and
+`find_ui_materials`; see the [current connection guide](../../../../mcp).

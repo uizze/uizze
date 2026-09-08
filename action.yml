@@ -1,5 +1,5 @@
 name: UIZZE UI Slop Gate
-description: Free GitHub Action that catches generic UI, missing states, inert controls, and token drift before they ship.
+description: Catch unfinished UI in pull requests with checks for inert controls, missing state markers, hardcoded colors, and generic dashboard cues.
 author: UIZZE
 
 branding:
@@ -20,7 +20,7 @@ inputs:
     required: false
     default: error
   show-uizze-link:
-    description: Offer an optional recorded comparison after useful scan results in the job summary.
+    description: Link to free UI workflows and optional reference search after scan results. Set false to omit links.
     required: false
     default: "true"
   max-files:
