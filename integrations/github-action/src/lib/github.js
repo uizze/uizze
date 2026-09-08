@@ -2,11 +2,15 @@
 
 const fs = require('node:fs');
 
-function commandValue(value) {
+function commandData(value) {
   return String(value)
     .replaceAll('%', '%25')
     .replaceAll('\r', '%0D')
-    .replaceAll('\n', '%0A')
+    .replaceAll('\n', '%0A');
+}
+
+function commandValue(value) {
+  return commandData(value)
     .replaceAll(':', '%3A')
     .replaceAll(',', '%2C');
 }
@@ -19,7 +23,7 @@ function annotation(finding, write = console.log, forcedLevel = null) {
     `col=${finding.column}`,
     `title=${commandValue(`UIZZE ${finding.ruleId}`)}`,
   ].join(',');
-  write(`::${level} ${props}::${commandValue(finding.message)}`);
+  write(`::${level} ${props}::${commandData(finding.message)}`);
 }
 
 function setOutput(name, value, outputPath = process.env.GITHUB_OUTPUT) {

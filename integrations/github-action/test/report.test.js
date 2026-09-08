@@ -8,11 +8,14 @@ const { buildSummary, shouldFail } = require('../src/lib/report');
 const warning = { file: 'src/A.tsx', line: 4, column: 2, ruleId: 'test-rule', severity: 'warning', message: 'Check: this, please' };
 const error = { ...warning, severity: 'error' };
 
-test('annotation escapes GitHub workflow command data', () => {
+test('annotation keeps message punctuation readable and escapes command boundaries', () => {
   const writes = [];
-  annotation(warning, (line) => writes.push(line));
-  assert.match(writes[0], /^::warning /);
-  assert.match(writes[0], /Check%3A this%2C please/);
+  annotation({
+    ...warning,
+    file: 'src/A,B:C.tsx',
+    message: 'Check: this, please\n50% complete\r\nNext',
+  }, (line) => writes.push(line));
+  assert.equal(writes[0], '::warning file=src/A%2CB%3AC.tsx,line=4,col=2,title=UIZZE test-rule::Check: this, please%0A50%25 complete%0D%0ANext');
   assert.equal(commandValue('a%b\nc'), 'a%25b%0Ac');
 });
 
