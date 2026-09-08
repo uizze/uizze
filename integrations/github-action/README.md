@@ -45,12 +45,12 @@ jobs:
         with:
           fetch-depth: 2
           persist-credentials: false
-      - uses: uizze/uizze@638ab4583b5db6593b0c5cc5304d6b03932ec46d # v1.2.15
+      - uses: uizze/uizze@672deb24a980bc1d152ef2a40d371dad15cb2f65 # v1.2.16
         with:
           fail-on: never
 ```
 
-The workflow pins [v1.2.15](https://github.com/uizze/uizze/releases/tag/v1.2.15)
+The workflow pins [v1.2.16](https://github.com/uizze/uizze/releases/tag/v1.2.16)
 to its immutable commit. Use `uizze/uizze@v1` if you prefer updates within the
 maintained major version. The Action itself needs no token, account, API key,
 write permission, or network access.

@@ -3,7 +3,7 @@
 This example runs the Action's source checker against its checked-in test fixture. You can reproduce it locally with Node.js 20 or newer. It demonstrates the source checks, not the visual quality of a finished interface.
 
 [**Inspect the live GitHub run →**](https://github.com/uizze/uizze/actions/workflows/ui-slop-gate-example.yml)
-The workflow runs both snippets with the published v1.2.15 Action and verifies
+The workflow runs both snippets with the published v1.2.16 Action and verifies
 their expected finding counts. Open a run to see the annotations and job summaries.
 
 ## Input
