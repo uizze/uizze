@@ -20,13 +20,17 @@ GitHub Action are free to use.
 
 ## Start in five minutes
 
+Use Node.js 24 and npm. The complete validation runs in
+[GitHub Actions](https://github.com/uizze/uizze/actions/workflows/starter-validation.yml)
+on changes to this starter.
+
 Clone the canonical repository and copy the starter:
 
 ```bash
 git clone https://github.com/uizze/uizze.git
 cp -R uizze/integrations/nextjs-starter my-product
 cd my-product
-npm install
+npm ci
 npm run dev
 ```
 
