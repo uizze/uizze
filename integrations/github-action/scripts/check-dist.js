@@ -6,6 +6,8 @@ const path = require('node:path');
 
 const root = path.resolve(__dirname, '..');
 const metadata = fs.readFileSync(path.join(root, 'action.yml'), 'utf8');
+const description = metadata.match(/^description:\s*(.+)$/m)?.[1];
+assert.ok(description && description.length < 125, 'Marketplace description must be under 125 characters');
 assert.match(metadata, /using:\s*node24/);
 assert.match(metadata, /main:\s*dist\/index\.js/);
 assert.ok(fs.existsSync(path.join(root, 'dist', 'index.js')), 'dist/index.js is missing');
