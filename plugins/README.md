@@ -1,12 +1,13 @@
 # Uizze plugins
 
-**Build distinctive UI**
+**UI design that stands out**
 
-The published [ChatGPT plugin](https://chatgpt.com/plugins/plugin_asdk_app_6a844531edb881918d6aefb456134f4b) supplies the display name, developer name, tagline, logo, and three starter prompts in [listing.json](listing.json).
+The [ChatGPT plugin](https://chatgpt.com/plugins/plugin_asdk_app_6a844531edb881918d6aefb456134f4b) supplies the display name, developer name, logo, and three starter prompts in [listing.json](listing.json). The subtitle “UI design that stands out” matches the user-approved OpenAI 1.0.1 draft; that OpenAI draft is not yet published.
 
 - [Claude Code](claude-directory/): one complete anti-ui-slop skill and a native OAuth MCP connection.
 - [Cursor](cursor-agent/): the same skill and service, using Cursor/Agent Plugins configuration.
 - [Gemini CLI](gemini-cli/): the same skill and service, released from [uizze/gemini-extension](https://github.com/uizze/gemini-extension).
+- [Antigravity](antigravity/): the same skill and service as a custom plugin; store placement remains unverified.
 - [OpenAI package source](openai-directory/uizze/): source packaging; updates here do not change the approved marketplace snapshot.
 
 Run `node plugins/verify.mjs` from the repository root to verify names, prompts, complete skill contents, logo bytes, and connection URLs.

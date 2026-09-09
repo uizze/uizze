@@ -1,6 +1,6 @@
 # Uizze
 
-**Build distinctive UI**
+**UI design that stands out**
 
 ![Uizze](assets/uizze-logo.png)
 

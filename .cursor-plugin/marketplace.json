@@ -5,13 +5,13 @@
     "email": "business@uizze.com"
   },
   "metadata": {
-    "description": "Build distinctive UI"
+    "description": "UI design that stands out"
   },
   "plugins": [
     {
       "name": "uizze",
       "source": "./plugins/cursor-agent",
-      "description": "Build distinctive UI"
+      "description": "UI design that stands out"
     }
   ]
 }

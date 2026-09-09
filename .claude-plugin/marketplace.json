@@ -5,15 +5,15 @@
     "email": "business@uizze.com"
   },
   "metadata": {
-    "description": "Build distinctive UI",
-    "version": "1.2.15"
+    "description": "UI design that stands out",
+    "version": "1.2.16"
   },
   "plugins": [
     {
       "name": "uizze",
       "source": "./",
-      "description": "Build distinctive UI",
-      "version": "1.2.15",
+      "description": "UI design that stands out",
+      "version": "1.2.16",
       "author": {
         "name": "Uizze",
         "email": "business@uizze.com"
