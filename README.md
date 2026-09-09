@@ -78,6 +78,9 @@ Create an agent token in [UIZZE](https://uizze.com/?utm_source=github&utm_medium
 | --- | --- |
 | Codex, Claude Code, Cursor | [Install and try your first task](examples/agent-workflows.md) |
 | GitHub Copilot | [UIZZE plugin in Awesome Copilot](https://github.com/github/awesome-copilot/tree/main/plugins/uizze) |
+| Gemini CLI | [Install the Uizze extension](plugins/gemini-cli/) |
+| Antigravity | [Install the Uizze custom plugin](plugins/antigravity/) |
+| VS Code, Windsurf / Cascade, Zed | [Native MCP connection instructions](integrations/mcp/) |
 | MCP clients | [GitHub MCP Registry](https://github.com/mcp/uizze/uizze) · [Connection guide](integrations/mcp) |
 | GitHub pull requests | [UI Slop Gate Action](integrations/github-action) · [Inspect actual example output](examples/pull-request-check.md) |
 
