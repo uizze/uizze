@@ -1,0 +1,10 @@
+{
+  "name": "uizze",
+  "version": "1.2.15",
+  "description": "Build distinctive UI",
+  "mcpServers": {
+    "uizze": {
+      "httpUrl": "https://uizze.com/mcp"
+    }
+  }
+}

@@ -1,21 +1,21 @@
 {
   "name": "uizze",
   "owner": {
-    "name": "UIZZE",
+    "name": "Uizze",
     "email": "business@uizze.com"
   },
   "metadata": {
-    "description": "Build product-specific UI with the free anti-ui-slop skill and optional focused UIZZE references.",
-    "version": "1.2.14"
+    "description": "Build distinctive UI",
+    "version": "1.2.15"
   },
   "plugins": [
     {
       "name": "uizze",
       "source": "./",
-      "description": "Build product-specific UI with the free anti-ui-slop skill and optional focused UIZZE references.",
-      "version": "1.2.14",
+      "description": "Build distinctive UI",
+      "version": "1.2.15",
       "author": {
-        "name": "UIZZE",
+        "name": "Uizze",
         "email": "business@uizze.com"
       },
       "homepage": "https://uizze.com",

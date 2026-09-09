@@ -1,10 +1,10 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "uizze",
-  "description": "UIZZE's portable anti-ui-slop workflow with optional focused references from the authenticated MCP.",
-  "version": "1.2.14",
+  "description": "Build distinctive UI",
+  "version": "1.2.15",
   "author": {
-    "name": "UIZZE",
+    "name": "Uizze",
     "email": "business@uizze.com",
     "url": "https://uizze.com"
   },

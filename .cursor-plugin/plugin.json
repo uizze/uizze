@@ -1,13 +1,13 @@
 {
   "name": "uizze",
-  "displayName": "UIZZE",
-  "version": "1.2.14",
-  "description": "Build product-specific UI with the free anti-ui-slop skill and optional focused UIZZE references.",
+  "displayName": "Uizze",
+  "version": "1.2.15",
+  "description": "Build distinctive UI",
   "author": {
-    "name": "UIZZE",
+    "name": "Uizze",
     "email": "business@uizze.com"
   },
-  "publisher": "UIZZE",
+  "publisher": "Uizze",
   "homepage": "https://uizze.com",
   "repository": "https://github.com/uizze/uizze",
   "license": "MIT",

@@ -48,6 +48,9 @@ jobs:
             grep -qx "name: $skill" "skills/$skill/SKILL.md"
           done
 
+      - name: Verify plugin consistency
+        run: node plugins/verify.mjs
+
       - name: Verify GitHub Action
         run: npm run verify
         working-directory: integrations/github-action

@@ -1,1 +1,27 @@
-{"$schema":"https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json","name":"io.github.uizze/uizze","title":"Uizze","description":"Focused full-screen UI references and hosted design materials for coding agents.","websiteUrl":"https://uizze.com","icons":[{"src":"https://uizze.com/brand/icons/uizze-web-app-icon-512x512.png","mimeType":"image/png","sizes":["512x512"]}],"repository":{"url":"https://github.com/uizze/uizze","source":"github"},"version":"3.0.0","remotes":[{"type":"streamable-http","url":"https://uizze.com/mcp"}]}
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.uizze/uizze",
+  "title": "Uizze",
+  "description": "Build distinctive UI. Full-screen UI references and design materials for coding agents.",
+  "websiteUrl": "https://uizze.com",
+  "icons": [
+    {
+      "src": "https://uizze.com/brand/icons/uizze-web-app-icon-512x512.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "512x512"
+      ]
+    }
+  ],
+  "repository": {
+    "url": "https://github.com/uizze/uizze",
+    "source": "github"
+  },
+  "version": "3.0.1",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://uizze.com/mcp"
+    }
+  ]
+}

@@ -2,19 +2,17 @@
 
 **Build distinctive UI**
 
-![Uizze](https://raw.githubusercontent.com/uizze/uizze/main/plugins/openai-directory/uizze/assets/uizze-logo.png)
+![Uizze](assets/uizze-logo.png)
 
 Uizze gives coding agents a free anti-ui-slop Skill and optional full MCP access to live UI references and license-clear materials. Use the skill to inspect the product and design system, write a design contract, cover required states, and run a bounded finish gate. The MCP answers one concrete unresolved UI question with strong full-screen references and finds license-clear materials for a concrete role.
 
 ## Get started
 
-Install this package from the Claude plugin directory when available. For local testing:
-
 ```bash
-claude --plugin-dir ./plugins/claude-directory
+gemini extensions install https://github.com/uizze/gemini-extension
 ```
 
-Use `/mcp` to authenticate the Uizze connection.
+Restart Gemini CLI, then run `/mcp auth uizze` to connect your Uizze account. The extension bundles only the anti-ui-slop skill and the remote MCP configuration.
 
 ## Try it
 
@@ -33,5 +31,7 @@ The MCP exposes `find_ui_references` and `find_ui_materials`. The skill’s fini
 [Uizze](https://uizze.com/ai-ui-slop) · [Setup](https://uizze.com/docs) · [Support](https://uizze.com/contact) · [Privacy](https://uizze.com/privacy) · [Terms](https://uizze.com/terms)
 
 ## License
+
+Maintained from [uizze/uizze](https://github.com/uizze/uizze/tree/main/plugins/gemini-cli).
 
 Uizze’s entry point is MIT licensed. Included Apache-2.0 playbooks retain their LICENSE, NOTICE, and modification notices in the skill directory.
