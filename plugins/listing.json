@@ -1,0 +1,17 @@
+{
+  "displayName": "Uizze",
+  "developerName": "Uizze",
+  "shortDescription": "Build distinctive UI",
+  "defaultPrompt": [
+    "Help me ground a new interface in Uizze real screens.",
+    "Find strong full-screen UI references for this unresolved interface question.",
+    "Run the bounded UI finish gate on my rendered interface."
+  ],
+  "privacyPolicyURL": "https://uizze.com/privacy",
+  "supportURL": "https://uizze.com/contact",
+  "termsOfServiceURL": "https://uizze.com/terms",
+  "websiteURL": "https://uizze.com/ai-ui-slop",
+  "mcpURL": "https://uizze.com/mcp",
+  "logo": "plugins/openai-directory/uizze/assets/uizze-logo.png",
+  "longDescription": "Uizze gives coding agents a free anti-ui-slop Skill and optional full MCP access to live UI references and license-clear materials. Use the skill to inspect the product and design system, write a design contract, cover required states, and run a bounded finish gate. The MCP answers one concrete unresolved UI question with strong full-screen references and finds license-clear materials for a concrete role."
+}
