@@ -2,7 +2,7 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.uizze/uizze",
   "title": "Uizze",
-  "description": "Build distinctive UI. Full-screen UI references and design materials for coding agents.",
+  "description": "UI design that stands out. Full-screen UI references and design materials for coding agents.",
   "websiteUrl": "https://uizze.com",
   "icons": [
     {
@@ -17,7 +17,7 @@
     "url": "https://github.com/uizze/uizze",
     "source": "github"
   },
-  "version": "3.0.1",
+  "version": "3.0.2",
   "remotes": [
     {
       "type": "streamable-http",

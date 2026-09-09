@@ -1,7 +1,7 @@
 {
   "name": "uizze",
-  "version": "1.2.15",
-  "description": "Build distinctive UI",
+  "version": "1.2.16",
+  "description": "UI design that stands out",
   "author": {
     "name": "Uizze",
     "email": "business@uizze.com",
@@ -20,10 +20,10 @@
   "skills": "./skills/",
   "interface": {
     "displayName": "Uizze",
-    "shortDescription": "Build distinctive UI",
+    "shortDescription": "UI design that stands out",
     "longDescription": "Uizze gives coding agents a free anti-ui-slop Skill and optional full MCP access to live UI references and license-clear materials. Use the skill to inspect the product and design system, write a design contract, cover required states, and run a bounded finish gate. The MCP answers one concrete unresolved UI question with strong full-screen references and finds license-clear materials for a concrete role.",
-    "composerIcon": "./integrations/mcp/assets/uizze-logo-400x400.png",
-    "logo": "./integrations/mcp/assets/uizze-logo-400x400.png",
+    "composerIcon": "./plugins/openai-directory/uizze/assets/uizze-logo.png",
+    "logo": "./plugins/openai-directory/uizze/assets/uizze-logo.png",
     "developerName": "Uizze",
     "category": "Developer Tools",
     "capabilities": [

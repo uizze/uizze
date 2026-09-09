@@ -2,13 +2,15 @@
 
 **UI design that stands out**
 
-![Uizze](https://raw.githubusercontent.com/uizze/uizze/main/plugins/openai-directory/uizze/assets/uizze-logo.png)
+![Uizze](assets/uizze-logo.png)
 
 Uizze gives coding agents a free anti-ui-slop Skill and optional full MCP access to live UI references and license-clear materials. Use the skill to inspect the product and design system, write a design contract, cover required states, and run a bounded finish gate. The MCP answers one concrete unresolved UI question with strong full-screen references and finds license-clear materials for a concrete role.
 
 ## Get started
 
-Install this package from Cursor’s plugin marketplace when available. The bundled `mcp.json` connects to Uizze through Cursor’s native MCP authentication. If you already configured Uizze manually, keep one active connection.
+Copy this package to `.agents/plugins/uizze/` in your project, or to `~/.gemini/config/plugins/uizze/` for all projects. Keep its `skills/`, `assets/`, `plugin.json`, and `mcp_config.json` together. Restart Antigravity and authenticate Uizze in Agent Settings → Customizations.
+
+This is a custom plugin package. An Antigravity MCP Store listing and authenticated end-to-end use have not been verified.
 
 ## Try it
 
@@ -28,4 +30,8 @@ The MCP exposes `find_ui_references` and `find_ui_materials`. The skill’s fini
 
 ## License
 
+Maintained from [uizze/uizze](https://github.com/uizze/uizze/tree/main/plugins/antigravity).
+
 Uizze’s entry point is MIT licensed. Included Apache-2.0 playbooks retain their LICENSE, NOTICE, and modification notices in the skill directory.
+
+Packaging follows the [Antigravity plugin documentation](https://antigravity.google/docs/plugins) and [remote MCP configuration](https://antigravity.google/docs/mcp), checked September 9, 2026.

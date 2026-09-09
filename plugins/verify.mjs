@@ -22,7 +22,7 @@ for (const path of ['.codex-plugin/plugin.json', '.claude-plugin/plugin.json', '
     assert.equal(manifest.interface.longDescription, listing.longDescription, path);
   }
 }
-for (const path of ['plugins/claude-directory', 'plugins/cursor-agent', 'plugins/gemini-cli']) {
+for (const path of ['plugins/claude-directory', 'plugins/cursor-agent', 'plugins/gemini-cli', 'plugins/antigravity']) {
   const markdown = read(`${path}/README.md`);
   assert(markdown.startsWith(`# ${listing.displayName}\n`), path);
   for (const prompt of listing.defaultPrompt) assert(markdown.includes(prompt), path);
@@ -32,12 +32,14 @@ for (const path of ['plugins/claude-directory', 'plugins/cursor-agent', 'plugins
   assert.deepEqual(files(bundled).map(f => relative(bundled, f)).sort(), files(canonical).map(f => relative(canonical, f)).sort());
   for (const file of files(canonical)) assert.equal(hash(file), hash(resolve(bundled, relative(canonical, file))), file);
 }
-const configs = [json('plugins/claude-directory/.mcp.json').mcpServers.uizze, json('plugins/cursor-agent/mcp.json').mcpServers.uizze, json('plugins/gemini-cli/gemini-extension.json').mcpServers.uizze];
+const configs = [json('plugins/antigravity/mcp_config.json').mcpServers.uizze, json('plugins/claude-directory/.mcp.json').mcpServers.uizze, json('plugins/cursor-agent/mcp.json').mcpServers.uizze, json('plugins/gemini-cli/gemini-extension.json').mcpServers.uizze];
 for (const config of configs) {
-  assert.equal(config.url ?? config.httpUrl, listing.mcpURL);
+  assert.equal(config.url ?? config.httpUrl ?? config.serverUrl, listing.mcpURL);
   assert.equal(config.headers, undefined, 'No embedded bearer credentials');
   assert.equal(config.command, undefined, 'Use the native remote connection');
 }
 assert.equal(hash(resolve(root, listing.logo)), hash(resolve(root, 'plugins/gemini-cli/assets/uizze-logo.png')));
 assert.equal(json('plugins/gemini-cli/gemini-extension.json').description, listing.shortDescription);
 console.log('Plugin branding, prompts, complete skill bundles, logo parity, and native MCP configurations passed.');
+
+assert.equal(hash(resolve(root, listing.logo)), hash(resolve(root, 'plugins/antigravity/assets/uizze-logo.png')));

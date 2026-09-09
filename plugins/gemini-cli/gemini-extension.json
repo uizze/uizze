@@ -1,7 +1,7 @@
 {
   "name": "uizze",
-  "version": "1.2.15",
-  "description": "Build distinctive UI",
+  "version": "1.2.16",
+  "description": "UI design that stands out",
   "mcpServers": {
     "uizze": {
       "httpUrl": "https://uizze.com/mcp"
