@@ -7,6 +7,13 @@ const root = fileURLToPath(new URL('../', import.meta.url));
 const read = p => readFileSync(resolve(root, p), 'utf8');
 const json = p => JSON.parse(read(p));
 const listing = json('plugins/listing.json');
+const copilotManifest = json('plugin.json');
+const copilotMarketplace = json('.github/plugin/marketplace.json');
+const copilotEntry = copilotMarketplace.plugins.find(plugin => plugin.name === copilotManifest.name);
+assert(copilotEntry, 'Copilot marketplace must include the installable plugin');
+assert.equal(copilotEntry.version, copilotManifest.version, 'Copilot marketplace must advertise the current plugin version');
+assert.equal(copilotMarketplace.metadata.version, copilotManifest.version, 'Copilot catalog version must match its package');
+assert.equal(json('.github/plugin/plugin.json').version, copilotManifest.version, 'Copilot manifests must agree on version');
 const hash = p => createHash('sha256').update(readFileSync(p)).digest('hex');
 function files(path) {
   return readdirSync(path, { withFileTypes: true }).flatMap(e => e.isDirectory() ? files(resolve(path, e.name)) : [resolve(path, e.name)]);
