@@ -8,6 +8,7 @@ The [ChatGPT plugin](https://chatgpt.com/plugins/plugin_asdk_app_6a844531edb8819
 - [Cursor](cursor-agent/): the same skill and service, using Cursor/Agent Plugins configuration.
 - [Gemini CLI](gemini-cli/): the same skill and service, released from [uizze/gemini-extension](https://github.com/uizze/gemini-extension).
 - [Antigravity](antigravity/): the same skill and service as a custom plugin; store placement remains unverified.
+- [VS Code, Windsurf / Cascade, and Zed setup](../integrations/mcp/): native remote connections with OAuth.
 - [OpenAI package source](openai-directory/uizze/): source packaging; updates here do not change the approved marketplace snapshot.
 
 Run `node plugins/verify.mjs` from the repository root to verify names, prompts, complete skill contents, logo bytes, and connection URLs.

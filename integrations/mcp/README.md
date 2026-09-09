@@ -1,10 +1,19 @@
-# UIZZE MCP
+# Uizze MCP
 
 The hosted MCP gives coding agents focused access to full-screen UI references
-and UIZZE-hosted design materials. It is intentionally small and may return no
+and Uizze-hosted design materials. It is intentionally small and may return no
 results when weak evidence would be worse than no evidence.
 
 ## Connect
+
+Choose your client below. The free skill works without an account; the remote
+MCP requires a Uizze account with paid access.
+
+[Claude Code](#claude-code) · [Cursor](#cursor) · [Gemini CLI](#gemini-cli) ·
+[VS Code / Copilot](#vs-code--github-copilot) · [Antigravity](#antigravity) ·
+[Windsurf / Cascade](#windsurf--cascade) · [Zed](#zed)
+
+### Codex with an agent token
 
 Create an agent token at [uizze.com](https://uizze.com), then store it in your
 client's secret or environment configuration. Never commit it.
@@ -25,7 +34,7 @@ for a concrete unresolved question, and do not retry an empty result.
 
 ## Claude Code
 
-From your project directory, add UIZZE as a remote HTTP server:
+From your project directory, add Uizze as a remote HTTP server:
 
 ```bash
 claude mcp add --transport http uizze https://uizze.com/mcp
@@ -67,25 +76,131 @@ prompted. For access across projects, Cursor also supports `~/.cursor/mcp.json`.
 Install the free skill in your project with the command below, selecting Cursor
 when the installer asks for an agent. The skill and MCP connection are separate.
 
+## Gemini CLI
+
+Install the complete Uizze extension, including the free skill and remote MCP:
+
+```bash
+gemini extensions install https://github.com/uizze/gemini-extension
+```
+
+Restart Gemini CLI, then run `/mcp auth uizze` to connect your Uizze account.
+`gemini extensions list` should show `uizze`, the `anti-ui-slop` skill, and one
+MCP server. [Package and starter prompts](../../plugins/gemini-cli/).
+
+## VS Code / GitHub Copilot
+
+Open Extensions and search `@mcp Uizze` with the MCP marketplace enabled.
+The [GitHub catalog listing](https://github.com/mcp/uizze/uizze) points to the
+same service. Review the publisher and connection before installing.
+
+For a project connection, merge this into `.vscode/mcp.json`:
+
+```json
+{
+  "servers": {
+    "uizze": {
+      "type": "http",
+      "url": "https://uizze.com/mcp"
+    }
+  }
+}
+```
+
+Run `MCP: List Servers`, select `uizze`, and start it. Complete the native
+OAuth sign-in when prompted. Use a trusted project to run tools. Install the
+[free skill](#install-the-free-skill) separately and select GitHub Copilot.
+
+## Antigravity
+
+The [Uizze custom plugin](../../plugins/antigravity/) includes the complete
+skill and native MCP configuration. Follow that package's installation steps.
+A custom installation does not require an MCP Store listing.
+
+For MCP alone, merge this into `~/.gemini/config/mcp_config.json`:
+
+```json
+{
+  "mcpServers": {
+    "uizze": {
+      "serverUrl": "https://uizze.com/mcp"
+    }
+  }
+}
+```
+
+Open Settings → Customizations, refresh Installed MCP Servers, and authenticate
+Uizze. Do not add the same server manually if you already installed the plugin.
+
+## Windsurf / Cascade
+
+In the Cascade panel, open MCP Servers and edit the raw configuration. Merge
+this into `~/.codeium/windsurf/mcp_config.json`:
+
+```json
+{
+  "mcpServers": {
+    "uizze": {
+      "serverUrl": "https://uizze.com/mcp"
+    }
+  }
+}
+```
+
+Refresh the server list and complete OAuth when prompted. Install the
+[free skill](#install-the-free-skill) separately and select your agent.
+These instructions apply to Cascade. Devin Local, the newer default agent in
+Devin Desktop, uses its own CLI configuration; do not copy this into that file.
+
+## Zed
+
+Open Settings → AI → MCP Servers → Add Server → Add Remote Server. Use the
+name `uizze` and URL `https://uizze.com/mcp`. The equivalent settings entry is:
+
+```json
+{
+  "context_servers": {
+    "uizze": {
+      "url": "https://uizze.com/mcp"
+    }
+  }
+}
+```
+
+With no Authorization header configured, Zed prompts for the MCP OAuth flow.
+Complete sign-in and check that the server is active. This connects the paid
+MCP; it does not install the free skill or establish a Zed marketplace listing.
+
 ## Try the connection
 
-Confirm your client's UIZZE entry shows the two tools listed above. Then ask:
+Confirm your client's Uizze entry shows the two tools listed above. Then ask:
 
 ```text
-Use UIZZE to find up to three web UI references for a billing settings page
+Use Uizze to find up to three web UI references for a billing settings page
 with invoice history. Explain which hierarchy and table decisions would
 help our page. Keep our components, content, and brand.
 ```
 
 The MCP requires an account with paid access. If your client shows a sign-in
 request, complete it first. If it reports an access or subscription problem,
-check your [UIZZE account](https://uizze.com/?utm_source=github&utm_medium=repository&utm_campaign=discovery&utm_content=mcp_connection).
+check your [Uizze account](https://uizze.com/?utm_source=github&utm_medium=repository&utm_campaign=discovery&utm_content=mcp_connection).
 A connected server can return no relevant references; continue from your
 project in that case.
 
 For a complete task, [try your first screen](../../examples/first-screen.md).
-Client configuration references: [Claude Code MCP](https://code.claude.com/docs/en/mcp)
-and [Cursor MCP](https://cursor.com/docs/mcp).
+Client instructions reviewed September 9, 2026 against
+[Claude Code](https://code.claude.com/docs/en/mcp),
+[Cursor](https://cursor.com/docs/mcp),
+[Gemini CLI](https://geminicli.com/docs/tools/mcp-server/),
+[VS Code](https://code.visualstudio.com/docs/agent-customization/mcp-servers),
+[Antigravity](https://antigravity.google/docs/mcp),
+[Cascade](https://docs.devin.ai/desktop/cascade/mcp), and
+[Zed](https://zed.dev/docs/ai/mcp) documentation.
+
+Gemini CLI 0.59.0 installed the public v1.2.16 release and recognized its skill
+and MCP configuration. The VS Code catalog returned Uizze by name. Those
+checks do not establish authenticated retrieval in every client. Marketplace
+availability and review status are separate from manual installation.
 
 ## Install the free skill
 
