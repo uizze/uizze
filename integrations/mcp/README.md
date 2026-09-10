@@ -11,7 +11,7 @@ MCP requires a Uizze account with paid access.
 
 [Claude Code](#claude-code) · [Cursor](#cursor) · [Gemini CLI](#gemini-cli) ·
 [VS Code / Copilot](#vs-code--github-copilot) · [Antigravity](#antigravity) ·
-[Windsurf / Cascade](#windsurf--cascade) · [Zed](#zed)
+[Windsurf / Cascade](#windsurf--cascade) · [Zed](#zed) · [v0](#v0)
 
 ### Codex with an agent token
 
@@ -170,6 +170,33 @@ name `uizze` and URL `https://uizze.com/mcp`. The equivalent settings entry is:
 With no Authorization header configured, Zed prompts for the MCP OAuth flow.
 Complete sign-in and check that the server is active. This connects the paid
 MCP; it does not install the free skill or establish a Zed marketplace listing.
+
+## v0
+
+Open [v0 Settings → Integrations](https://v0.app/settings/integrations). Under
+MCP Connections, add `Uizze` with URL `https://uizze.com/mcp`, choose OAuth,
+and complete Uizze sign-in. Reuse the existing entry if it is already connected.
+
+Before sending your request, open the chat composer's **+ → MCPs** menu and
+select **Uizze**. Confirm it appears under **Selected**. Saving the connection
+in Settings alone does not mean it is selected for your chat.
+
+Ask for the references you need, for example:
+
+```text
+Use Uizze to find two real iOS app onboarding screens. Show the screenshots
+here and briefly explain what each reference is useful for. This is reference
+research only: do not create files, build an app, or publish anything.
+```
+
+The screenshots appear as native attachments that you can expand inside the
+chat. v0 Mini may also repeat them as broken inline previews; use the loaded
+attachments above the answer. This display issue remains under investigation.
+If v0 searches the web instead of calling Uizze, check that Uizze is selected
+in the MCPs menu before sending another request.
+
+This manual OAuth connection and native image delivery were tested September
+10, 2026. They are separate from Vercel Marketplace listing availability.
 
 ## Try the connection
 
