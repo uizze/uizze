@@ -1,5 +1,5 @@
 import React, { memo, useMemo, useState } from 'react';
-import { useParameter } from 'storybook/manager-api';
+import { useParameter, useStorybookState } from 'storybook/manager-api';
 
 import { contractToMarkdown, evaluateContract, normalizeContract } from '../contract';
 import { PARAM_KEY } from '../constants';
@@ -40,7 +40,14 @@ export const Panel: React.FC<PanelProps> = memo(function UizzePanel(props: Panel
   const input = useParameter<UizzeParametersInput | undefined>(PARAM_KEY);
   const contract = useMemo(() => normalizeContract(input), [input]);
   const evaluation = useMemo(() => evaluateContract(contract), [contract]);
-  const [copied, setCopied] = useState(false);
+  const { storyId } = useStorybookState();
+  const markdown = useMemo(() => contractToMarkdown(contract), [contract]);
+  const copyKey = JSON.stringify([storyId, markdown]);
+  const [copyResult, setCopyResult] = useState<{
+    key: string;
+    status: 'copying' | 'copied' | 'failed';
+  }>();
+  const copyStatus = copyResult?.key === copyKey ? copyResult.status : undefined;
 
   if (!props.active) return null;
 
@@ -54,9 +61,14 @@ export const Panel: React.FC<PanelProps> = memo(function UizzePanel(props: Panel
   }
 
   const copyContract = async () => {
-    if (!globalThis.navigator?.clipboard) return;
-    await globalThis.navigator.clipboard.writeText(contractToMarkdown(contract));
-    setCopied(true);
+    setCopyResult({ key: copyKey, status: 'copying' });
+    try {
+      if (!globalThis.navigator?.clipboard) throw new Error('Clipboard unavailable');
+      await globalThis.navigator.clipboard.writeText(markdown);
+      setCopyResult((result) => (result?.key === copyKey ? { key: copyKey, status: 'copied' } : result));
+    } catch {
+      setCopyResult((result) => (result?.key === copyKey ? { key: copyKey, status: 'failed' } : result));
+    }
   };
 
   return (
@@ -105,13 +117,35 @@ export const Panel: React.FC<PanelProps> = memo(function UizzePanel(props: Panel
       ) : null}
 
       <div style={{ alignItems: 'center', display: 'flex', flexWrap: 'wrap', gap: 12 }}>
-        <button onClick={() => void copyContract()} style={buttonStyle} type="button">
-          {copied ? 'Copied contract' : 'Copy contract as Markdown'}
+        <button
+          disabled={copyStatus === 'copying'}
+          onClick={() => void copyContract()}
+          style={buttonStyle}
+          type="button"
+        >
+          {copyStatus === 'copied'
+            ? 'Copied contract'
+            : copyStatus === 'copying'
+              ? 'Copying contract…'
+              : 'Copy contract as Markdown'}
         </button>
         <a href="https://uizze.com" rel="noopener noreferrer" target="_blank">
           Find real web and iOS references in UIZZE
         </a>
       </div>
+      {copyStatus === 'failed' ? (
+        <div style={cardStyle}>
+          <span role="alert">Clipboard access failed. Copy the contract below or try again.</span>
+          <textarea
+            aria-label="Contract Markdown"
+            autoFocus
+            onFocus={(event) => event.currentTarget.select()}
+            readOnly
+            rows={10}
+            value={markdown}
+          />
+        </div>
+      ) : null}
     </section>
   );
 });

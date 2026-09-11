@@ -11,6 +11,7 @@ export default [
       '!.*',
       '*.tgz',
       'dist/',
+      '.artifacts/',
       'scripts/',
       'coverage/',
       'node_modules/',
