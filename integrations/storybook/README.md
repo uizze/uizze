@@ -19,10 +19,10 @@ The addon is free, accountless, and local. It does not transmit source, DOM, scr
 Install the verified GitHub release package:
 
 ```sh
-npm install --save-dev https://github.com/uizze/uizze/releases/download/v1.2.7/storybook-addon-uizze-0.1.1.tgz
+npm install --save-dev https://github.com/uizze/uizze/releases/download/storybook-v0.1.2/storybook-addon-uizze-0.1.2.tgz
 ```
 
-The package is not on npm yet. Verify the downloaded archive against the matching [SHA-256 checksum](https://github.com/uizze/uizze/releases/download/v1.2.7/storybook-addon-uizze-0.1.1.tgz.sha256) when your dependency policy requires it.
+The package is not on npm yet. Verify the downloaded archive against the matching [SHA-256 checksum](https://github.com/uizze/uizze/releases/download/storybook-v0.1.2/storybook-addon-uizze-0.1.2.tgz.sha256) when your dependency policy requires it.
 
 Add the package to `.storybook/main.ts`:
 
