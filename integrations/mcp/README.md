@@ -9,7 +9,7 @@ results when weak evidence would be worse than no evidence.
 Choose your client below. The free skill works without an account; the remote
 MCP requires a Uizze account with paid access.
 
-[Claude Code](#claude-code) · [Cursor](#cursor) · [Gemini CLI](#gemini-cli) ·
+[Claude Code](#claude-code) · [Cursor](#cursor) · [Cline](#cline) · [Gemini CLI](#gemini-cli) ·
 [VS Code / Copilot](#vs-code--github-copilot) · [Antigravity](#antigravity) ·
 [Windsurf / Cascade](#windsurf--cascade) · [Zed](#zed) · [v0](#v0)
 
@@ -75,6 +75,35 @@ prompted. For access across projects, Cursor also supports `~/.cursor/mcp.json`.
 
 Install the free skill in your project with the command below, selecting Cursor
 when the installer asks for an agent. The skill and MCP connection are separate.
+
+## Cline
+
+Cline has its own MCP settings, separate from VS Code / Copilot. A Marketplace
+listing is not required to connect Uizze manually. Set up Cline's model provider
+first; that login is separate from your paid Uizze account.
+
+In Cline CLI, run:
+
+```bash
+cline mcp add uizze --transport http https://uizze.com/mcp
+```
+
+Confirm the name `uizze`, **Remote (HTTP)** and the endpoint above. Choose
+**OAuth** and leave **OAuth client ID** empty for dynamic registration.
+Complete Uizze's browser authorization, then return to Cline. Reuse an existing
+`uizze` entry instead of adding a duplicate. The wizard stores authentication
+locally; do not paste tokens into chat or commit its settings file.
+
+For the VS Code extension, open Cline's **MCP Servers → Remote Servers**,
+enter the same name and URL, and select **Streamable HTTP**. Use Cline's
+authentication flow when prompted, not Copilot's MCP settings. See
+[Cline's MCP documentation](https://docs.cline.bot/mcp/mcp-overview).
+
+After connecting, verify that Cline discovers `find_ui_references` and
+`find_ui_materials`, then [try the connection](#try-the-connection). A saved
+entry alone does not establish authenticated retrieval. If sign-in or paid
+access is required, complete that step in Uizze; do not switch to unauthenticated
+access. Install the [free skill](#install-the-free-skill) separately if wanted.
 
 ## Gemini CLI
 
