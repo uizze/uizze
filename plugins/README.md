@@ -2,7 +2,7 @@
 
 **UI design that stands out**
 
-The [ChatGPT plugin](https://chatgpt.com/plugins/plugin_asdk_app_6a844531edb881918d6aefb456134f4b) supplies the display name, developer name, logo, and three starter prompts in [listing.json](listing.json). The subtitle “UI design that stands out” matches the user-approved OpenAI 1.0.1 draft; that OpenAI draft is not yet published.
+The [ChatGPT plugin](https://chatgpt.com/plugins/plugin_asdk_app_6a844531edb881918d6aefb456134f4b) supplies the display name, developer name, logo, and three starter prompts in [listing.json](listing.json). The subtitle “UI design that stands out” matches OpenAI 1.0.1, published September 23, 2026. Self-hosted source updates do not change that reviewed snapshot.
 
 - [Claude Code](claude-directory/): one complete anti-ui-slop skill and a native OAuth MCP connection.
 - [Cursor](cursor-agent/): the same skill and service, using Cursor/Agent Plugins configuration.
@@ -12,6 +12,10 @@ The [ChatGPT plugin](https://chatgpt.com/plugins/plugin_asdk_app_6a844531edb8819
 - [OpenAI package source](openai-directory/uizze/): source packaging; updates here do not change the approved marketplace snapshot.
 
 Run `node plugins/verify.mjs` from the repository root to verify names, prompts, complete skill contents, logo bytes, and connection URLs.
+
+## Skill workflow
+
+The 1.3.0 self-hosted packages include the complete 16-file anti-ui-slop bundle with eight playbooks, including craft and optional Overdrive. With the skill available, ask “Use Uizze Overdrive on this screen.” The router recognizes that request and requires a chosen direction before implementation. This release adds no native `/overdrive` command registration.
 
 ## Platform differences
 

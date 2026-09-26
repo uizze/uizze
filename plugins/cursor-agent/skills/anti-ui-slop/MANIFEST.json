@@ -1,9 +1,9 @@
 {
   "name": "anti-ui-slop",
-  "version": "quiet-expert-v12",
+  "version": "uizze-design-v13",
   "designStack": {
-    "version": "4.1.1",
-    "commit": "5a149f3fdb1b5793f10567233b1dcab98fc305fd",
+    "version": "4.4.0",
+    "commit": "9d715cc4f5564a990ca8345abfdd5df6dc9b41c8",
     "license": "Apache-2.0"
   },
   "designAuthority": "uizze",
@@ -14,6 +14,8 @@
     "reference/polish.md",
     "reference/distill.md",
     "reference/audit.md",
-    "reference/ios.md"
+    "reference/ios.md",
+    "reference/craft.md",
+    "reference/overdrive.md"
   ]
 }
