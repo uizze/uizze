@@ -28,4 +28,4 @@ The MCP exposes `find_ui_references` and `find_ui_materials`. The skill’s fini
 
 ## License
 
-Uizze’s entry point is MIT licensed. Included Apache-2.0 playbooks retain their LICENSE, NOTICE, and modification notices in the skill directory.
+The bundled skill declares Apache-2.0 and retains third-party notices, including the MIT notice for identified iOS material. Keep LICENSE, NOTICE, and MODIFICATIONS.md with the skill.

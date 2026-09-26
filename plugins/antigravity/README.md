@@ -32,6 +32,6 @@ The MCP exposes `find_ui_references` and `find_ui_materials`. The skill’s fini
 
 Maintained from [uizze/uizze](https://github.com/uizze/uizze/tree/main/plugins/antigravity).
 
-Uizze’s entry point is MIT licensed. Included Apache-2.0 playbooks retain their LICENSE, NOTICE, and modification notices in the skill directory.
+The bundled skill declares Apache-2.0 and retains third-party notices, including the MIT notice for identified iOS material. Keep LICENSE, NOTICE, and MODIFICATIONS.md with the skill.
 
 Packaging follows the [Antigravity plugin documentation](https://antigravity.google/docs/plugins) and [remote MCP configuration](https://antigravity.google/docs/mcp), checked September 9, 2026.
