@@ -17,10 +17,17 @@ Run `node plugins/verify.mjs` from the repository root to verify names, prompts,
 
 The 1.3.0 self-hosted packages include the complete 16-file anti-ui-slop bundle with eight playbooks, including craft and optional Overdrive. With the skill available, ask “Use Uizze Overdrive on this screen.” The router recognizes that request and requires a chosen direction before implementation. This release adds no native `/overdrive` command registration.
 
+The skill declares the narrow `Read, Glob, Grep, WebFetch` tool metadata.
+Its generated manifest supplies per-playbook immutable intermediary origins
+and license evidence, with the original ehmo iOS revision explicitly unknown.
+Keep the Apache-2.0 license and full third-party MIT notice together; see the
+[license map](../LICENSING.md). Updated source files are not a new tagged release,
+marketplace approval or proof of hosted-domain deployment parity.
+
 ## Platform differences
 
 Public display names are **Uizze**. Machine identifiers such as `uizze`, established plugin IDs, and existing environment-variable names stay stable. Platforms require different manifest keys and category identifiers. Each package uses the current complete canonical skill with its licenses and playbooks.
 
-The approved OpenAI description still mentions a retired preview and hosted review. The common description preserves the supported wording and omits those removed capabilities. The third starter prompt remains unchanged: the finish gate is performed through the skill and agent's local rendering tools, not a hosted MCP review tool.
+Repository plugin metadata is separate from the published OpenAI app and its existing draft. The source description omits the retired preview and hosted review; the optional authenticated MCP exposes only `find_ui_references` and `find_ui_materials`. The published description's retired capabilities still require the separately approved portal workflow; this repository update does not change it. The third starter prompt remains unchanged: the finish gate is performed through the skill and agent's local rendering tools, not a hosted MCP review tool.
 
 The approved logo file is reused without modification. Keep existing before/after media labeled as a Uizze demonstration unless the recording's client and run conditions are documented. A package being downloadable does not establish marketplace approval or search visibility.
