@@ -9,12 +9,14 @@ on:
       - main
     paths:
       - ".github/workflows/domain-skill-install.yml"
+      - "plugins/verify-installed-skills.mjs"
       - "skills/**"
   pull_request:
     branches:
       - main
     paths:
       - ".github/workflows/domain-skill-install.yml"
+      - "plugins/verify-installed-skills.mjs"
       - "skills/**"
 
 permissions:
@@ -30,30 +32,43 @@ jobs:
     steps:
       - name: Check out the canonical UIZZE source
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v4
+        with:
+          persist-credentials: false
 
       - name: Set up Node.js
         uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
           node-version: 24.20.0
 
-      - name: Install the public UIZZE skills
-        working-directory: ${{ runner.temp }}
-        run: >-
-          npx --yes skills@1.5.20 add https://uizze.com
-          --skill '*'
-          --agent codex
-          --yes
-          --copy
-
-      - name: Verify the installed skills
-        working-directory: ${{ runner.temp }}
+      - name: Install the current production skills
+        env:
+          HOME: ${{ runner.temp }}/uizze-domain-home
         shell: bash
         run: |
           set -euo pipefail
-          for name in anti-ui-slop ui-design ui-radar; do
-            skill_dir=".agents/skills/$name"
-            skill="$skill_dir/SKILL.md"
-            test -s "$skill"
-            grep -qx "name: $name" "$skill"
-            diff --brief --recursive "$skill_dir" "$GITHUB_WORKSPACE/skills/$name"
-          done
+          mkdir -p "$RUNNER_TEMP/uizze-domain-project" "$HOME"
+          cd "$RUNNER_TEMP/uizze-domain-project"
+          npx --yes skills@1.5.20 add https://uizze.com \
+            --skill '*' --agent codex --yes --copy
+
+      - name: Verify current production artifact integrity
+        run: >-
+          node plugins/verify-installed-skills.mjs
+          "${{ runner.temp }}/uizze-domain-project"
+          https://uizze.com/.well-known/skills/index.json
+
+      - name: Install the current checkout source packages
+        env:
+          HOME: ${{ runner.temp }}/uizze-source-home
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/uizze-source-project" "$HOME"
+          cd "$RUNNER_TEMP/uizze-source-project"
+          npx --yes skills@1.5.20 add "$GITHUB_WORKSPACE" \
+            --skill '*' --agent codex --yes --copy
+
+      - name: Verify current source package integrity
+        run: >-
+          node plugins/verify-installed-skills.mjs
+          "${{ runner.temp }}/uizze-source-project"

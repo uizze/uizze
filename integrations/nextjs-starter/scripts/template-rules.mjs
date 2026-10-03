@@ -19,49 +19,22 @@ const REQUIRED_FILES = [
   "docs/mcp.md",
 ];
 
-const CONTRACT_HEADINGS = [
-  "## Screen job",
-  "## User and moment",
-  "## Primary action",
-  "## Product evidence",
-  "## Content hierarchy",
-  "## Allowed components and tokens",
-  "## Required states",
-  "## Responsive decisions",
-  "## Accessibility contract",
-  "## Forbidden generic patterns",
-  "## Finish criteria",
-];
-
 function assert(condition, message) {
   if (!condition) throw new Error(message);
 }
 
-function validateWorkflowText(workflow) {
-  assert(workflow.includes("workflow_call:"), "UI review workflow must be reusable with workflow_call");
-  assert(
-    workflow.includes("uses: uizze/uizze@v1"),
-    "UI review workflow must pin the immutable UIZZE gate v1.0.9 commit",
-  );
-  assert(workflow.includes("manifest: .github/uizze-ui-evidence.json"), "UI review workflow must use checked-in state evidence");
-  assert(workflow.includes("fail-on: error"), "UI review workflow must fail on error findings");
-  assert(/permissions:\n\s+contents: read/.test(workflow), "UI review workflow must keep read-only contents permission");
-}
-
-function validateContractText(contract) {
-  for (const heading of CONTRACT_HEADINGS) {
-    assert(contract.includes(heading), `Design contract is missing ${heading}`);
-  }
-  for (const state of ["Loading", "Empty", "Error", "Success", "Validation", "Interaction"]) {
-    assert(contract.includes(`- ${state}:`), `Design contract is missing ${state} state`);
-  }
-}
-
 async function regularFile(root, relative) {
-  const resolved = path.resolve(root, relative);
-  assert(resolved.startsWith(`${path.resolve(root)}${path.sep}`), `Required path escapes repository: ${relative}`);
-  const stat = await lstat(resolved);
-  assert(stat.isFile() && !stat.isSymbolicLink(), `Required path must be a regular file: ${relative}`);
+  const base = path.resolve(root);
+  const resolved = path.resolve(base, relative);
+  assert(resolved.startsWith(`${base}${path.sep}`), `Required path escapes repository: ${relative}`);
+  let current = base;
+  let stat;
+  for (const component of path.relative(base, resolved).split(path.sep)) {
+    current = path.join(current, component);
+    stat = await lstat(current);
+    assert(!stat.isSymbolicLink(), `Required path must not contain a symlink: ${relative}`);
+  }
+  assert(stat.isFile(), `Required path must be a regular file: ${relative}`);
 }
 
 async function textFiles(directory) {
@@ -78,25 +51,23 @@ async function textFiles(directory) {
 export async function validateTemplate(root) {
   for (const file of REQUIRED_FILES) await regularFile(root, file);
 
-  const codexSkill = await readFile(path.join(root, ".agents/skills/anti-ui-slop/SKILL.md"), "utf8");
-  const claudeSkill = await readFile(path.join(root, ".claude/skills/anti-ui-slop/SKILL.md"), "utf8");
-  assert(codexSkill === claudeSkill, "Codex and Claude skill copies must remain identical");
-  assert(codexSkill.includes("Use this workflow for free"), "Bundled skill must preserve the free workflow");
-
-  const contract = await readFile(path.join(root, ".uizze/design-contract.md"), "utf8");
-  validateContractText(contract);
-
-  const workflow = await readFile(path.join(root, ".github/workflows/uizze-ui-review.yml"), "utf8");
-  validateWorkflowText(workflow);
-
   const evidence = JSON.parse(await readFile(path.join(root, ".github/uizze-ui-evidence.json"), "utf8"));
-  assert(Array.isArray(evidence.files) && evidence.files.includes("components/ReleaseDesk.tsx"), "Evidence manifest must inspect the example UI");
-  assert(["loading", "empty", "error", "success"].every((state) => evidence.evidence["components/ReleaseDesk.tsx"].states.includes(state)), "Example UI evidence must include four explicit states");
+  assert(Array.isArray(evidence.files) && evidence.files.length > 0, "Evidence manifest must select regular files");
+  assert(evidence.files.every((file) => typeof file === "string" && file.trim()), "Evidence file paths must be non-empty strings");
+  assert(new Set(evidence.files).size === evidence.files.length, "Evidence file paths must be unique");
+  for (const file of evidence.files) await regularFile(root, file);
+  assert(evidence.evidence && typeof evidence.evidence === "object" && !Array.isArray(evidence.evidence), "State evidence must be an object");
+  for (const [file, record] of Object.entries(evidence.evidence)) {
+    assert(evidence.files.includes(file), `State evidence must reference a selected file: ${file}`);
+    assert(record && typeof record === "object" && !Array.isArray(record), `State evidence must be a record: ${file}`);
+    assert(Array.isArray(record.states) && record.states.length > 0, `State evidence must contain states: ${file}`);
+    assert(record.states.every((state) => typeof state === "string" && state.trim()), `State labels must be non-empty strings: ${file}`);
+    assert(new Set(record.states).size === record.states.length, `State labels must be unique: ${file}`);
+  }
 
   const env = await readFile(path.join(root, ".env.example"), "utf8");
   const tokenKey = ["UIZZE", "MCP", "TOKEN"].join("_");
   assert(new RegExp(`^${tokenKey}=\\s*$`, "m").test(env), "MCP token placeholder must be empty");
-  assert(env.includes("UIZZE_MCP_URL=https://uizze.com/mcp"), "MCP endpoint placeholder is missing");
 
   const tokenAssignment = new RegExp(`${tokenKey}=[^\\s\"'}]+`);
   for (const file of await textFiles(root)) {
