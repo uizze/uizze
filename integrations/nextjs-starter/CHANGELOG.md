@@ -15,6 +15,9 @@
   release; it affects the development-only Next lint dependency chain, not a
   demonstrated starter runtime exploit. No incompatible Next downgrade or
   advisory suppression was applied.
+- Removed incidental source/file-count tests and the obsolete `test` command.
+  `validate` retains real template validation, types, lint and the production build;
+  rendered behavior is checked through actual consumer browser smoke.
 
 ## 1.0.2 — 2026-09-08
 
