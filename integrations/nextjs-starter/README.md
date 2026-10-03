@@ -68,6 +68,8 @@ npm run build
 npm run validate
 ```
 
+`npm run verify:template` checks required regular-file/path/symlink boundaries, evidence-manifest structure and state-label consistency, and embedded-token/tracking-parameter safety. It does not validate prose, source-copy equality or hosted-domain parity, and does not replace rendered UI and approval review.
+
 ## The finish-gate loop
 
 1. Define one screen job and one primary action.

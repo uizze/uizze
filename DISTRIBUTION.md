@@ -21,6 +21,16 @@ Production is the source of truth. Directory copy must match these endpoints:
   audits, and hosted critique are not current MCP surfaces and must not appear
   in listings.
 
+## Source-only 1.3.1 patch
+
+The `1.3.1` source patch aligns existing native package/catalog versions and read-only skill metadata, records per-playbook immutable provenance, and includes the complete existing MIT license in `skills/ui-radar/LICENSE`. The `anti-ui-slop` and `ui-design` packages retain their Apache-2.0 licenses, mixed third-party notices, relative playbooks and checksums. The original ehmo iOS content revision remains explicitly unknown; see the [license map and upstream provenance question](LICENSING.md).
+
+Source-only metadata and legal packaging may be ahead of hosted deployment. Production remains the authority for listing capability claims: the two current MCP tools and three website skills described above. A source tag or package release does not establish that its new bytes are live on the hosted domain.
+
+The native-consumer workflow uses independent projects for the current published skills and current checkout source packages. It checks published artifact digests and installed checksum, relative-file and license contracts without comparing production to future source bytes. Advertised standalone Markdown is reported separately from self-contained archives; it is not presented as a complete bundled-license/checksum package. Complete producer-to-consumer byte parity is separate observed installation-smoke evidence, not a permanent source-copy golden.
+
+This patch preserves the existing `1.3.0` tag, features, branding, pricing, GitHub Action pin and native MCP configuration. It does not deploy production, update the separately reviewed OpenAI published `1.0.1` or draft `1.0.2` snapshots, or establish native-client or marketplace acceptance.
+
 ## Maintained listings
 
 | Surface | URL |
