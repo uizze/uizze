@@ -5,14 +5,22 @@ import path from 'node:path';
 
 const [project, indexURL] = process.argv.slice(2);
 assert(project, 'Usage: node plugins/verify-installed-skills.mjs <project> [published-index-url]');
-const root = path.resolve(project, '.agents/skills');
+let root = path.resolve(project);
+const projectStat = await lstat(root);
+assert(projectStat.isDirectory() && !projectStat.isSymbolicLink(), 'Native consumer project must be a regular directory');
+for (const component of ['.agents', 'skills']) {
+  root = path.join(root, component);
+  const stat = await lstat(root);
+  assert(stat.isDirectory() && !stat.isSymbolicLink(), `Native consumer directory must not be a symlink: ${component}`);
+}
+const mitGrantPattern = /Copyright[^\r\n]+[\s\S]*Permission is hereby granted[\s\S]*The above copyright notice and this permission notice[\s\S]*THE SOFTWARE IS PROVIDED[\s\S]*AS IS[\s\S]*WITHOUT WARRANTY OF ANY KIND[\s\S]*IN NO EVENT/;
 const expected = ['anti-ui-slop', 'ui-design', 'ui-radar'];
 const selected = (await readdir(root)).sort();
 assert.deepEqual(selected, expected, 'The native consumer must install exactly the three registered skills');
 
 const published = new Map();
 if (indexURL) {
-  const response = await fetch(indexURL);
+  const response = await fetch(indexURL, { redirect: 'error', signal: AbortSignal.timeout(30_000) });
   assert(response.ok, `Published discovery index returned HTTP ${response.status}`);
   const index = await response.json();
   assert(Array.isArray(index.skills), 'Published discovery index must contain skills');
@@ -23,7 +31,7 @@ if (indexURL) {
     const url = new URL(skill.url, indexURL);
     assert.equal(url.protocol, 'https:', 'Published artifacts must use HTTPS');
     assert.equal(url.origin, new URL(indexURL).origin, 'Published artifacts must stay on the publisher origin');
-    const artifact = await fetch(url);
+    const artifact = await fetch(url, { redirect: 'error', signal: AbortSignal.timeout(30_000) });
     assert(artifact.ok, `Published artifact returned HTTP ${artifact.status}: ${skill.name}`);
     const bytes = Buffer.from(await artifact.arrayBuffer());
     assert.equal(`sha256:${createHash('sha256').update(bytes).digest('hex')}`, skill.digest, `Published artifact digest mismatch: ${skill.name}`);
@@ -56,6 +64,8 @@ function inside(directory, relative) {
 const results = [];
 for (const name of expected) {
   const directory = path.join(root, name);
+  const directoryStat = await lstat(directory);
+  assert(directoryStat.isDirectory() && !directoryStat.isSymbolicLink(), `Selected skill must be a regular directory: ${name}`);
   const files = await filesWithin(directory);
   assert(files.includes('SKILL.md'), `Missing installed entry point: ${name}`);
   const skill = await readFile(path.join(directory, 'SKILL.md'), 'utf8');
@@ -64,6 +74,7 @@ for (const name of expected) {
   const field = (key) => frontmatter.match(new RegExp(`^${key}:\\s*(.*?)\\s*$`, 'm'))?.[1].replace(/^(["'])(.*)\1$/, '$2');
   assert.equal(field('name'), name, 'Installed skill name must match native selection');
   const license = field('license') ?? null;
+  const inlineMITGrant = license === 'MIT' && mitGrantPattern.test(skill);
   const kind = published.get(name)?.type ?? 'source-package';
   const needsPackageLicense = kind !== 'skill-md';
   if (needsPackageLicense) assert(files.includes('LICENSE'), `Missing installed package license: ${name}`);
@@ -74,7 +85,7 @@ for (const name of expected) {
       assert(/Apache License[\s\S]*Version 2\.0/.test(licenseText), `Declared Apache-2.0 license must accompany the installed package: ${name}`);
     }
     if (license === 'MIT') {
-      assert(/MIT License[\s\S]*Permission is hereby granted/.test(licenseText), `Declared MIT grant must accompany the installed package: ${name}`);
+      assert(mitGrantPattern.test(licenseText), `Declared MIT grant must accompany the installed package: ${name}`);
     }
   }
   if (needsPackageLicense && license === 'Apache-2.0') {
@@ -113,7 +124,8 @@ for (const name of expected) {
   if (kind === 'skill-md') {
     const digest = `sha256:${createHash('sha256').update(Buffer.from(skill)).digest('hex')}`;
     assert.equal(digest, published.get(name).digest, `Installed standalone Markdown must match its published integrity digest: ${name}`);
+    if (license === 'MIT') assert(inlineMITGrant, `Declared standalone MIT skill must carry its copyright and permission grant inline: ${name}`);
   }
-  results.push({ name, artifactType: kind, files: files.length, checksums: checksumCount, relativeLinks, declaredLicense: license, bundledLicense: files.includes('LICENSE'), bundledNotice: files.includes('NOTICE'), legalFormat: kind === 'skill-md' ? 'advertised-standalone-markdown; no complete bundled-license claim' : 'self-contained-package' });
+  results.push({ name, artifactType: kind, files: files.length, checksums: checksumCount, relativeLinks, declaredLicense: license, bundledLicense: files.includes('LICENSE'), bundledNotice: files.includes('NOTICE'), inlineMITGrant, legalFormat: kind === 'skill-md' ? 'advertised-standalone-markdown; no complete bundled-license/checksum package claim' : 'self-contained-package' });
 }
 console.log(JSON.stringify({ source: indexURL ?? 'current-checkout', packages: results }, null, 2));

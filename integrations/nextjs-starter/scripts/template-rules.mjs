@@ -8,13 +8,13 @@ const REQUIRED_FILES = [
   ".github/copilot-instructions.md",
   ".github/uizze-ui-evidence.json",
   ".github/workflows/uizze-ui-review.yml",
+  ".env.example",
   ".uizze/design-contract.md",
   "AGENTS.md",
   "CLAUDE.md",
   "app/error.tsx",
   "app/loading.tsx",
   "app/not-found.tsx",
-  "components/ReleaseDesk.tsx",
   "docs/finish-gate.md",
   "docs/mcp.md",
 ];
@@ -57,6 +57,7 @@ export async function validateTemplate(root) {
   assert(new Set(evidence.files).size === evidence.files.length, "Evidence file paths must be unique");
   for (const file of evidence.files) await regularFile(root, file);
   assert(evidence.evidence && typeof evidence.evidence === "object" && !Array.isArray(evidence.evidence), "State evidence must be an object");
+  assert(Object.keys(evidence.evidence).length > 0, "State evidence must contain at least one selected-file record");
   for (const [file, record] of Object.entries(evidence.evidence)) {
     assert(evidence.files.includes(file), `State evidence must reference a selected file: ${file}`);
     assert(record && typeof record === "object" && !Array.isArray(record), `State evidence must be a record: ${file}`);
@@ -69,11 +70,14 @@ export async function validateTemplate(root) {
   const tokenKey = ["UIZZE", "MCP", "TOKEN"].join("_");
   assert(new RegExp(`^${tokenKey}=\\s*$`, "m").test(env), "MCP token placeholder must be empty");
 
-  const tokenAssignment = new RegExp(`${tokenKey}=[^\\s\"'}]+`);
+  const tokenAssignment = new RegExp(`${tokenKey}[\\t ]*=[\\t ]*(?:"([^"\\r\\n]*)"|'([^'\\r\\n]*)'|([^\\s"'\\x60{}]+))`, "g");
   for (const file of await textFiles(root)) {
     const contents = await readFile(file, "utf8");
     assert(!/[?&](?:utm_[a-z]+|ref)=/i.test(contents), `Tracking parameter found in ${path.relative(root, file)}`);
-    assert(!tokenAssignment.test(contents), `Non-empty MCP token found in ${path.relative(root, file)}`);
+    for (const match of contents.matchAll(tokenAssignment)) {
+      const value = match[1] ?? match[2] ?? match[3] ?? "";
+      assert(!value.trim(), `Non-empty MCP token found in ${path.relative(root, file)}`);
+    }
   }
 
   return { requiredFiles: REQUIRED_FILES.length, evidenceFiles: evidence.files.length };
