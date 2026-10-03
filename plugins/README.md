@@ -15,14 +15,15 @@ Run `node plugins/verify.mjs` from the repository root to check Copilot catalog/
 
 ## Skill workflow
 
-The 1.3.0 self-hosted packages include the complete 16-file anti-ui-slop bundle with eight playbooks, including craft and optional Overdrive. With the skill available, ask “Use Uizze Overdrive on this screen.” The router recognizes that request and requires a chosen direction before implementation. This release adds no native `/overdrive` command registration.
+The current self-hosted source packages include the complete 16-file anti-ui-slop bundle with eight playbooks, including craft and optional Overdrive. With the skill available, ask “Use Uizze Overdrive on this screen.” The router recognizes that request and requires a chosen direction before implementation. No native `/overdrive` command registration is added.
 
 Current source declares the narrow `Read, Glob, Grep, WebFetch` tool metadata; this metadata is not a change to the existing `1.3.0` tag.
 Its generated manifest supplies per-playbook immutable intermediary origins
 and license evidence, with the original ehmo iOS revision explicitly unknown.
 Keep the Apache-2.0 license and full third-party MIT notice together; see the
-[license map](../LICENSING.md). Updated source files are not a new tagged release,
-marketplace approval or proof of hosted-domain deployment parity.
+[license map](../LICENSING.md).
+
+The `1.3.1` source-only patch aligns native package/catalog versions, read-only skill metadata and per-playbook provenance, and includes the complete existing MIT license in `ui-radar`. It preserves the existing `1.3.0` tag, features, branding, pricing and native MCP configuration. Publishing a source release does not deploy hosted-domain artifacts, approve a marketplace package or update the separately reviewed OpenAI portal snapshot.
 
 ## Platform differences
 

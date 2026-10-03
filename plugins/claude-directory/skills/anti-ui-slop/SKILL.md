@@ -4,7 +4,7 @@ description: Stop coding agents from shipping generic UI. Use UIZZE's 800,000+ r
 license: Apache-2.0; see LICENSE and NOTICE for attribution
 allowed-tools: Read, Glob, Grep, WebFetch
 metadata:
-  version: "1.3.0"
+  version: "1.3.1"
   author: "UIZZE <business@uizze.com>"
   compatibility: "Designed for Claude Code, Codex, Cursor, and GitHub Copilot; works in any agent that can read project files and fetch a URL."
   tags: "ui-design, design-system, design-review, frontend, web-ui, ios-ui"
