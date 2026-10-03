@@ -9,6 +9,12 @@
   Dependabot excludes those incompatible majors until the lint stack supports them.
 - Verified the full starter validation and production browser interactions:
   review-note validation, error/retry, approval/reopen and narrow-screen empty state.
+- Patched sharp to 0.35.4 and brace-expansion to 1.1.21/5.0.12 through scoped
+  overrides for GHSA-rgj7-g3m4-5g8c and GHSA-q2hr-2g5m-vwhr.
+- The remaining braces advisory GHSA-vfj7-8cjw-p6xm has no published patched
+  release; it affects the development-only Next lint dependency chain, not a
+  demonstrated starter runtime exploit. No incompatible Next downgrade or
+  advisory suppression was applied.
 
 ## 1.0.2 — 2026-09-08
 
