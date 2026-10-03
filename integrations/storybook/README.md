@@ -105,6 +105,16 @@ Inputs are bounded before rendering or Markdown export: at most 12 items per lis
 
 Report vulnerabilities privately through [GitHub security advisories](https://github.com/uizze/uizze/security/advisories/new). See [SECURITY.md](./SECURITY.md).
 
+### Development dependency maintenance — October 3, 2026
+
+The development lockfile overrides brace-expansion to patched 1.1.21 and
+5.0.12 for [GHSA-q2hr-2g5m-vwhr](https://github.com/advisories/GHSA-q2hr-2g5m-vwhr).
+Full validation and fresh packed-addon browser smoke passed on Storybook
+9.1.20 and 10.6.0, including clipboard failure/recovery, unsafe-link exclusion,
+story-switch isolation and late-result handling. `pnpm audit` reports no
+advisories for this lockfile. This updates source/tooling only; it neither
+replaces the published 0.1.2 archive nor claims a new npm publication.
+
 ## Why UIZZE
 
 The panel is useful on its own. When the team needs stronger reference evidence, [UIZZE](https://uizze.com) provides 800,000+ real web and iOS screens plus an optional full MCP workflow for coding agents.

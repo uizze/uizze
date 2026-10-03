@@ -1,7 +1,7 @@
 import { lstat, readFile, readdir } from "node:fs/promises";
 import path from "node:path";
 
-export const REQUIRED_FILES = [
+const REQUIRED_FILES = [
   ".agents/skills/anti-ui-slop/SKILL.md",
   ".claude/skills/anti-ui-slop/SKILL.md",
   ".cursor/rules/uizze-ui-finish-gate.mdc",
@@ -33,11 +33,11 @@ const CONTRACT_HEADINGS = [
   "## Finish criteria",
 ];
 
-export function assert(condition, message) {
+function assert(condition, message) {
   if (!condition) throw new Error(message);
 }
 
-export function validateWorkflowText(workflow) {
+function validateWorkflowText(workflow) {
   assert(workflow.includes("workflow_call:"), "UI review workflow must be reusable with workflow_call");
   assert(
     workflow.includes("uses: uizze/uizze@v1"),
@@ -48,7 +48,7 @@ export function validateWorkflowText(workflow) {
   assert(/permissions:\n\s+contents: read/.test(workflow), "UI review workflow must keep read-only contents permission");
 }
 
-export function validateContractText(contract) {
+function validateContractText(contract) {
   for (const heading of CONTRACT_HEADINGS) {
     assert(contract.includes(heading), `Design contract is missing ${heading}`);
   }

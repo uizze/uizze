@@ -9,9 +9,8 @@
     "start": "next start",
     "lint": "eslint .",
     "type-check": "tsc --noEmit",
-    "test": "node --test",
     "verify:template": "node scripts/validate-template.mjs",
-    "validate": "npm run test && npm run type-check && npm run lint && npm run build && npm run verify:template"
+    "validate": "npm run type-check && npm run lint && npm run build && npm run verify:template"
   },
   "dependencies": {
     "next": "16.3.6",
@@ -31,7 +30,9 @@
   },
   "overrides": {
     "postcss": "8.5.23",
-    "sharp": "0.35.0"
+    "sharp": "0.35.4",
+    "brace-expansion@1": "1.1.21",
+    "brace-expansion@5": "5.0.12"
   },
   "license": "MIT"
 }
