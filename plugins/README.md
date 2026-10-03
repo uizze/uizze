@@ -11,13 +11,13 @@ The [ChatGPT plugin](https://chatgpt.com/plugins/plugin_asdk_app_6a844531edb8819
 - [VS Code, Windsurf / Cascade, and Zed setup](../integrations/mcp/): native remote connections with OAuth.
 - [OpenAI package source](openai-directory/uizze/): source packaging; updates here do not change the approved marketplace snapshot.
 
-Run `node plugins/verify.mjs` from the repository root to verify names, prompts, complete skill contents, logo bytes, and connection URLs.
+Run `node plugins/verify.mjs` from the repository root to check Copilot catalog/version consistency and native MCP credential/header and command constraints. Complete-bundle parity and licensing are checked separately by generated-export and actual-installation smoke tests.
 
 ## Skill workflow
 
 The 1.3.0 self-hosted packages include the complete 16-file anti-ui-slop bundle with eight playbooks, including craft and optional Overdrive. With the skill available, ask “Use Uizze Overdrive on this screen.” The router recognizes that request and requires a chosen direction before implementation. This release adds no native `/overdrive` command registration.
 
-The skill declares the narrow `Read, Glob, Grep, WebFetch` tool metadata.
+Current source declares the narrow `Read, Glob, Grep, WebFetch` tool metadata; this metadata is not a change to the existing `1.3.0` tag.
 Its generated manifest supplies per-playbook immutable intermediary origins
 and license evidence, with the original ehmo iOS revision explicitly unknown.
 Keep the Apache-2.0 license and full third-party MIT notice together; see the
