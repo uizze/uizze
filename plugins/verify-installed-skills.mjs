@@ -103,6 +103,7 @@ for (const name of expected) {
   const inlineMITGrant = license === 'MIT' && mitGrantPattern.test(skill);
   const kind = published.get(name)?.type ?? 'source-package';
   const needsPackageLicense = kind !== 'skill-md';
+  if (needsPackageLicense) assert(['Apache-2.0', 'MIT'].includes(license), `Installed package must declare a supported license identity: ${name}`);
   if (needsPackageLicense) assert(files.includes('LICENSE'), `Missing installed package license: ${name}`);
   if (files.includes('LICENSE')) {
     const licenseText = await readFile(path.join(directory, 'LICENSE'), 'utf8');
@@ -115,6 +116,8 @@ for (const name of expected) {
   }
   if (needsPackageLicense && license === 'Apache-2.0') {
     assert(files.includes('NOTICE'), `Missing installed Apache package notice: ${name}`);
+    const notice = await readFile(path.join(directory, 'NOTICE'), 'utf8');
+    assert(mitGrantPattern.test(notice), `Registered Apache design package must retain its third-party MIT copyright and permission notice: ${name}`);
   }
   let checksumCount = 0;
   if (kind === 'archive' || files.includes('MANIFEST.json')) assert(files.includes('CHECKSUMS.sha256'), `Missing installed package checksums: ${name}`);
