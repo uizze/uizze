@@ -1,5 +1,15 @@
 # Changelog
 
+## Unreleased — 2026-10-03
+
+- Updated Next.js and its lint configuration to 16.3.6, addressing
+  GHSA-vcvr-r3jv-pc5j, while retaining the intended React 19.3 and type updates.
+- Retained TypeScript 6.0.3 and ESLint 9.39.5: the current TypeScript parser
+  rejects TypeScript 7, and the React lint plugin does not support ESLint 10.
+  Dependabot excludes those incompatible majors until the lint stack supports them.
+- Verified the full starter validation and production browser interactions:
+  review-note validation, error/retry, approval/reopen and narrow-screen empty state.
+
 ## 1.0.2 — 2026-09-08
 
 - Fixed fresh-install validation by pinning TypeScript 6.0.3 and ESLint 9.39.5,
