@@ -1,0 +1,66 @@
+name: Uizze native Nix v1.3.0 upgrade verification
+on:
+  push:
+    branches: [codex/nix-verification-upgrade-20261003]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: cachix/install-nix-action@13d8dd58da0234aa297dedd986986ccb8e7f3e24 # resolved, verified v31
+        with:
+          enable_kvm: false
+          set_as_trusted_user: false
+          extra_nix_config: |
+            access-tokens =
+      - name: Prefetch and build accepted Uizze skill packages
+        shell: bash
+        run: |
+          set -euo pipefail
+          upstream=48e9ca6eb456802dbff7137e9daec0f2cff2c996
+          git init "$RUNNER_TEMP/agents-nix"
+          git -C "$RUNNER_TEMP/agents-nix" remote add origin https://github.com/sudosubin/agents.nix.git
+          git -C "$RUNNER_TEMP/agents-nix" fetch --depth=1 origin "$upstream"
+          git -C "$RUNNER_TEMP/agents-nix" checkout --detach FETCH_HEAD
+          cd "$RUNNER_TEMP/agents-nix"
+          recipe=data/agent-skills/github.com/uizze/uizze.json
+          revision=56f965dbd377dd73af256e0d3ded757d8747ed9d
+          nix store prefetch-file --unpack --json "https://github.com/uizze/uizze/archive/$revision.tar.gz" > "$RUNNER_TEMP/prefetch.json"
+          native_hash=$(jq -r .hash "$RUNNER_TEMP/prefetch.json")
+          jq --arg revision "$revision" --arg hash "${native_hash#sha256-}" \
+            '.rev = $revision | .version = "1.3.0" | .hash = $hash' "$recipe" > "$RUNNER_TEMP/candidate.json"
+          cp "$RUNNER_TEMP/candidate.json" "$recipe"
+          root='path:.#agent-skills.x86_64-linux.github.uizze.uizze'
+          for skill in anti-ui-slop ui-design ui-radar; do
+            nix build --no-link --print-build-logs --json "$root.\"$skill\"" > "$RUNNER_TEMP/$skill-build.json"
+            output=$(jq -r '.[0].outputs.out' "$RUNNER_TEMP/$skill-build.json")
+            test -s "$output/SKILL.md"
+            test "$(find "$output" -name SKILL.md -type f | wc -l)" -eq 1
+            test "$(find "$output" -type l | wc -l)" -eq 0
+            if [ "$skill" != ui-radar ]; then
+              test -s "$output/NOTICE"
+              test -s "$output/LICENSE"
+              test -s "$output/MANIFEST.json"
+              test -s "$output/MODIFICATIONS.md"
+              test -s "$output/agents/openai.yaml"
+              test -s "$output/references/uizze-reference-policy.md"
+              test "$(find "$output/reference" -type f | wc -l)" -eq 8
+              test "$(find "$output" -type f | wc -l)" -eq 16
+              (cd "$output" && sha256sum --check CHECKSUMS.sha256)
+            fi
+            jq -n --arg name "$skill" --arg output "$output" \
+              --arg digest "$(sha256sum "$output/SKILL.md" | cut -d ' ' -f 1)" \
+              --argjson files "$(find "$output" -type f | wc -l)" \
+              '{name:$name,output:$output,skillSHA256:$digest,installedFiles:$files,symlinks:0}' > "$RUNNER_TEMP/$skill-installed.json"
+          done
+          jq -n --arg upstream "$upstream" --arg nixVersion "$(nix --version)" \
+            --slurpfile recipe "$recipe" --slurpfile prefetch "$RUNNER_TEMP/prefetch.json" \
+            --slurpfile anti "$RUNNER_TEMP/anti-ui-slop-installed.json" \
+            --slurpfile design "$RUNNER_TEMP/ui-design-installed.json" \
+            --slurpfile radar "$RUNNER_TEMP/ui-radar-installed.json" \
+            '{upstream:$upstream,nixVersion:$nixVersion,recipe:$recipe[0],prefetch:$prefetch[0],installed:[$anti[0],$design[0],$radar[0]]}' > "$RUNNER_TEMP/uizze-native-nix-receipt.json"
+          echo UIZZE_NATIVE_NIX_UPGRADE_RECEIPT_BEGIN
+          cat "$RUNNER_TEMP/uizze-native-nix-receipt.json"
+          echo UIZZE_NATIVE_NIX_UPGRADE_RECEIPT_END
