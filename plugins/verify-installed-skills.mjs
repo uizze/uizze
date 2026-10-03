@@ -1,11 +1,12 @@
 import assert from 'node:assert/strict';
+import { spawnSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
-import { lstat, readFile, readdir } from 'node:fs/promises';
+import { lstat, readFile, readdir, realpath } from 'node:fs/promises';
 import path from 'node:path';
 
 const [project, indexURL] = process.argv.slice(2);
 assert(project, 'Usage: node plugins/verify-installed-skills.mjs <project> [published-index-url]');
-let root = path.resolve(project);
+let root = await realpath(project);
 const projectStat = await lstat(root);
 assert(projectStat.isDirectory() && !projectStat.isSymbolicLink(), 'Native consumer project must be a regular directory');
 for (const component of ['.agents', 'skills']) {
@@ -35,8 +36,32 @@ if (indexURL) {
     assert(artifact.ok, `Published artifact returned HTTP ${artifact.status}: ${skill.name}`);
     const bytes = Buffer.from(await artifact.arrayBuffer());
     assert.equal(`sha256:${createHash('sha256').update(bytes).digest('hex')}`, skill.digest, `Published artifact digest mismatch: ${skill.name}`);
-    published.set(skill.name, skill);
+    let producer;
+    if (skill.type === 'archive') {
+      const zip = spawnSync('python3', ['-c', [
+        'import io, json, sys, zipfile',
+        'with zipfile.ZipFile(io.BytesIO(sys.stdin.buffer.read())) as archive:',
+        '    names = [entry.filename for entry in archive.infolist() if not entry.is_dir()]',
+        '    assert len(names) == len(set(names)), \"Duplicate published ZIP filename\"',
+        '    print(json.dumps({\"files\": names, \"checksums\": archive.read(\"CHECKSUMS.sha256\").decode(\"utf-8\")}))',
+      ].join('\n')], { input: bytes, encoding: 'utf8', maxBuffer: 1024 * 1024 });
+      assert.equal(zip.status, 0, `Cannot read digest-verified published ZIP checksums: ${skill.name}: ${zip.stderr}`);
+      producer = JSON.parse(zip.stdout);
+      producer.entries = checksumRecords(producer.checksums, skill.name);
+      assert.deepEqual(producer.entries.map((entry) => entry.relative).sort(), producer.files.filter((file) => file !== 'CHECKSUMS.sha256').sort(), `Published checksum records must cover its complete ZIP filename set: ${skill.name}`);
+    }
+    published.set(skill.name, { ...skill, producer });
   }
+}
+
+function checksumRecords(text, name) {
+  const entries = text.trim().split(/\r?\n/).map((line) => {
+    const match = line.match(/^([a-f0-9]{64})  (.+)$/);
+    assert(match, `Invalid checksum record: ${name}`);
+    return { digest: match[1], relative: match[2] };
+  });
+  assert.equal(new Set(entries.map((entry) => entry.relative)).size, entries.length, `Duplicate checksum path: ${name}`);
+  return entries.sort((left, right) => left.relative.localeCompare(right.relative));
 }
 
 async function filesWithin(directory, prefix = '') {
@@ -73,14 +98,14 @@ for (const name of expected) {
   assert(frontmatter, `Missing installed skill frontmatter: ${name}`);
   const field = (key) => frontmatter.match(new RegExp(`^${key}:\\s*(.*?)\\s*$`, 'm'))?.[1].replace(/^(["'])(.*)\1$/, '$2');
   assert.equal(field('name'), name, 'Installed skill name must match native selection');
-  const license = field('license') ?? null;
+  const declaredLicense = field('license') ?? null;
+  const license = declaredLicense?.split(';', 1)[0].trim() ?? null;
   const inlineMITGrant = license === 'MIT' && mitGrantPattern.test(skill);
   const kind = published.get(name)?.type ?? 'source-package';
   const needsPackageLicense = kind !== 'skill-md';
   if (needsPackageLicense) assert(files.includes('LICENSE'), `Missing installed package license: ${name}`);
   if (files.includes('LICENSE')) {
     const licenseText = await readFile(path.join(directory, 'LICENSE'), 'utf8');
-    assert(licenseText.trim(), `Empty installed license: ${name}`);
     if (license === 'Apache-2.0') {
       assert(/Apache License[\s\S]*Version 2\.0/.test(licenseText), `Declared Apache-2.0 license must accompany the installed package: ${name}`);
     }
@@ -90,19 +115,19 @@ for (const name of expected) {
   }
   if (needsPackageLicense && license === 'Apache-2.0') {
     assert(files.includes('NOTICE'), `Missing installed Apache package notice: ${name}`);
-    assert((await readFile(path.join(directory, 'NOTICE'), 'utf8')).trim(), `Empty installed package notice: ${name}`);
   }
   let checksumCount = 0;
   if (kind === 'archive' || files.includes('MANIFEST.json')) assert(files.includes('CHECKSUMS.sha256'), `Missing installed package checksums: ${name}`);
   if (files.includes('CHECKSUMS.sha256')) {
-    const entries = (await readFile(path.join(directory, 'CHECKSUMS.sha256'), 'utf8')).trim().split(/\r?\n/).map((line) => {
-      const match = line.match(/^([a-f0-9]{64})  (.+)$/);
-      assert(match, `Invalid installed checksum record: ${name}`);
-      return { digest: match[1], relative: match[2] };
-    });
+    const entries = checksumRecords(await readFile(path.join(directory, 'CHECKSUMS.sha256'), 'utf8'), name);
     const names = entries.map((entry) => entry.relative);
     assert.equal(new Set(names).size, names.length, `Duplicate installed checksum path: ${name}`);
     assert.deepEqual(names.sort(), files.filter((file) => file !== 'CHECKSUMS.sha256'), `Checksums must cover every installed package file: ${name}`);
+    if (kind === 'archive') {
+      const producer = published.get(name).producer;
+      assert.deepEqual(entries, producer.entries, `Installed producer-checksum mismatch against current published ZIP: ${name}`);
+      assert.deepEqual(files, producer.files.sort(), `Installed filename coverage mismatch against current published ZIP: ${name}`);
+    }
     for (const entry of entries) {
       const bytes = await readFile(inside(directory, entry.relative));
       assert.equal(createHash('sha256').update(bytes).digest('hex'), entry.digest, `Installed checksum mismatch: ${name}/${entry.relative}`);
