@@ -15,9 +15,11 @@ for (const component of ['.agents', 'skills']) {
   assert(stat.isDirectory() && !stat.isSymbolicLink(), `Native consumer directory must not be a symlink: ${component}`);
 }
 const mitGrantPattern = /Copyright[^\r\n]+[\s\S]*Permission is hereby granted[\s\S]*The above copyright notice and this permission notice[\s\S]*THE SOFTWARE IS PROVIDED[\s\S]*AS IS[\s\S]*WITHOUT WARRANTY OF ANY KIND[\s\S]*IN NO EVENT/;
-const expected = ['anti-ui-slop', 'ui-design', 'ui-radar'];
+const expected = indexURL
+  ? ['anti-ui-slop', 'ui-design', 'ui-radar']
+  : ['anti-ui-slop', 'image-to-ui', 'ui-design', 'ui-radar'];
 const selected = (await readdir(root)).sort();
-assert.deepEqual(selected, expected, 'The native consumer must install exactly the three registered skills');
+assert.deepEqual(selected, expected, 'The native consumer must install exactly the skills registered for its source');
 
 const published = new Map();
 if (indexURL) {
@@ -25,7 +27,7 @@ if (indexURL) {
   assert(response.ok, `Published discovery index returned HTTP ${response.status}`);
   const index = await response.json();
   assert(Array.isArray(index.skills), 'Published discovery index must contain skills');
-  assert.deepEqual(index.skills.map((skill) => skill.name).sort(), expected, 'Published selection must contain exactly the three registered skills');
+  assert.deepEqual(index.skills.map((skill) => skill.name).sort(), expected, 'Published selection must match the registered domain skills');
   for (const skill of index.skills) {
     assert(['archive', 'skill-md'].includes(skill.type), `Unsupported published artifact type for ${skill.name}`);
     assert.match(skill.digest, /^sha256:[a-f0-9]{64}$/, `Missing published artifact digest for ${skill.name}`);

@@ -9,6 +9,7 @@ This repository contains material under more than one license. A skill's metadat
 | Design-stack playbooks bundled with `anti-ui-slop` | [Apache License 2.0](skills/anti-ui-slop/LICENSE), plus MIT-derived iOS material identified in [NOTICE](skills/anti-ui-slop/NOTICE); see each file's immutable origin and license evidence in [MANIFEST.json](skills/anti-ui-slop/MANIFEST.json) |
 | `ui-design` skill and bundled design-stack playbooks | [Apache License 2.0](skills/ui-design/LICENSE), as declared in [SKILL.md](skills/ui-design/SKILL.md) |
 | `ui-radar` workflow | [MIT](skills/ui-radar/LICENSE); the complete existing root MIT copyright and permission notice is retained both in the package license and inline in [SKILL.md](skills/ui-radar/SKILL.md), preserving the self-contained standalone-Markdown format |
+| GitHub-native `image-to-ui` instructions | [MIT](skills/image-to-ui/LICENSE); original Uizze-authored instructions with the complete copyright and permission notice bundled in the package |
 | Third-party material identified inside the packages | Retains its original notices, including the [package NOTICE](skills/anti-ui-slop/NOTICE) |
 | GitHub Action | [MIT](integrations/github-action/LICENSE) |
 
