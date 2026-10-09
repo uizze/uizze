@@ -19,7 +19,7 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       - name: Scan UIZZE plugin
-        uses: hashgraph-online/ai-plugin-scanner-action@2d86c226ed36a19a78668ef6c14a01b1c7751ae2
+        uses: hashgraph-online/ai-plugin-scanner-action@89815d8bc8d0f7f4110b7cc7442fefbe5643fa0d
         with:
           plugin_dir: "plugins/openai-directory/uizze"
           mode: scan
