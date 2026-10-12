@@ -109,6 +109,7 @@ This patch preserves the existing `1.3.0` tag, features, branding, pricing, GitH
 | Surface | URL |
 | --- | --- |
 | GitHub | https://github.com/uizze/uizze |
+| Cursor Directory community plugin | https://cursor.directory/plugins/uizze |
 | GitHub MCP Registry | https://github.com/mcp/uizze/uizze |
 | GitHub Awesome Copilot | https://github.com/github/awesome-copilot/tree/main/plugins/uizze |
 | Agentic Awesome Skills | https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/anti-ui-slop |
