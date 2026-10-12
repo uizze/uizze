@@ -3,19 +3,20 @@
 Hosted production is the source of truth for the domain packages and MCP. Directory copy for those surfaces must match these endpoints:
 
 - Skills: https://uizze.com/.well-known/agent-skills/index.json
+- UI Taste and iOS Design: https://uizze.sh/.well-known/agent-skills/index.json
 - MCP manifest: https://uizze.com/.well-known/mcp.json
 - MCP server card: https://uizze.com/.well-known/mcp/server-card.json
 - Documentation: https://uizze.com/docs
 
 ## Current product facts
 
-- Production publishes exactly three free skills: `anti-ui-slop`, `ui-design`,
-  and `ui-radar`.
+- `uizze.com` publishes exactly three free skills: `anti-ui-slop`, `ui-design`,
+  and `ui-radar`; `uizze.sh` publishes `ui-taste` and `ios-design`.
 - The skills work without an account or MCP connection.
-- GitHub mirrors those three packages under `skills/`; production remains the
-  canonical source.
+- GitHub mirrors all five domain skills under `skills/`; the domain sources
+  and their existing installation URLs remain available.
 - `image-to-ui` is a separate GitHub-native skill maintained in this repository,
-  not a fourth skill advertised by the hosted production discovery index.
+  not another skill advertised by either hosted discovery index.
 - The hosted MCP is authenticated at `https://uizze.com/mcp`.
 - The MCP exposes `find_ui_references` and `find_ui_materials` only.
 - Empty retrieval is an intentional no-op.
@@ -38,13 +39,33 @@ The expected directory route is
 detail-page rendering are external states; a published GitHub package does
 not establish that its directory page is already available.
 
+## GitHub-backed UI Taste and iOS Design
+
+Install the existing workflows directly from this repository:
+
+```bash
+npx skills add uizze/uizze --skill ui-taste
+npx skills add uizze/uizze --skill ios-design
+```
+
+The packages retain their existing names, banners, human-written instructions,
+relative references, Apache-2.0 licenses, and third-party notices. They use the
+canonical Uizze skill-package generator's current provenance metadata; no
+executable, dependency, or bundled banner image is added.
+
+These GitHub install paths do not depend on skills.sh rendering a detail page.
+The domain URLs, ZIP downloads, historical hashes, and native plugin snapshots
+are unchanged. New skills.sh records have their own indexing state and install
+counts; publishing these packages does not transfer the domain listings' counts
+or prove their expected GitHub-backed directory pages are available.
+
 ## Source-only 1.3.1 patch
 
 The `1.3.1` source patch aligns existing native package/catalog versions and read-only skill metadata, records per-playbook immutable provenance, and includes the complete existing MIT license in `skills/ui-radar/LICENSE`. The `anti-ui-slop` and `ui-design` packages retain their Apache-2.0 licenses, mixed third-party notices, relative playbooks and checksums. The original ehmo iOS content revision remains explicitly unknown; see the [license map and upstream provenance question](LICENSING.md).
 
 Source-only metadata and legal packaging may be ahead of hosted deployment. Production remains the authority for listing capability claims: the two current MCP tools and three website skills described above. A source tag or package release does not establish that its new bytes are live on the hosted domain.
 
-The native-consumer workflow uses independent projects for the current published skills and current checkout source packages. It checks published artifact digests and installed checksum, relative-file and license contracts without comparing production to future source bytes. Advertised standalone Markdown is reported separately from self-contained archives; it is not presented as a complete bundled-license/checksum package. Complete producer-to-consumer byte parity is separate observed installation-smoke evidence, not a permanent source-copy golden.
+The native-consumer workflow uses independent projects for the current published skills and current checkout source packages. It checks the legacy manifests' complete file inventories, producer checksums where present, installed byte parity, relative files, and license contracts without comparing production to future source bytes. Advertised standalone Markdown is reported separately from self-contained packages; it is not presented as a complete bundled-license/checksum package. Complete producer-to-consumer byte parity is separate observed installation-smoke evidence, not a permanent source-copy golden.
 
 This patch preserves the existing `1.3.0` tag, features, branding, pricing, GitHub Action pin and native MCP configuration. It does not deploy production, update the separately reviewed OpenAI published `1.0.1` or draft `1.0.2` snapshots, or establish native-client or marketplace acceptance.
 
