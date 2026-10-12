@@ -8,14 +8,12 @@ This repository contains material under more than one license. A skill's metadat
 | Current `anti-ui-slop` entry-point instructions | Apache-2.0, as declared in [SKILL.md](skills/anti-ui-slop/SKILL.md); retain [LICENSE](skills/anti-ui-slop/LICENSE) and [NOTICE](skills/anti-ui-slop/NOTICE) |
 | Design-stack playbooks bundled with `anti-ui-slop` | [Apache License 2.0](skills/anti-ui-slop/LICENSE), plus MIT-derived iOS material identified in [NOTICE](skills/anti-ui-slop/NOTICE); see each file's immutable origin and license evidence in [MANIFEST.json](skills/anti-ui-slop/MANIFEST.json) |
 | `ui-design` skill and bundled design-stack playbooks | [Apache License 2.0](skills/ui-design/LICENSE), as declared in [SKILL.md](skills/ui-design/SKILL.md) |
-| `ui-taste` skill and bundled web/iOS playbooks | [Apache License 2.0](skills/ui-taste/LICENSE), with the complete third-party [NOTICE](skills/ui-taste/NOTICE) and immutable provenance in [MANIFEST.json](skills/ui-taste/MANIFEST.json) |
-| `ios-design` skill and its craft/Overdrive playbooks | [Apache License 2.0](skills/ios-design/LICENSE), with the complete third-party [NOTICE](skills/ios-design/NOTICE) and immutable provenance in [MANIFEST.json](skills/ios-design/MANIFEST.json) |
 | `ui-radar` workflow | [MIT](skills/ui-radar/LICENSE); the complete existing root MIT copyright and permission notice is retained both in the package license and inline in [SKILL.md](skills/ui-radar/SKILL.md), preserving the self-contained standalone-Markdown format |
 | GitHub-native `image-to-ui` instructions | [MIT](skills/image-to-ui/LICENSE); original Uizze-authored instructions with the complete copyright and permission notice bundled in the package |
 | Third-party material identified inside the packages | Retains its original notices, including the [package NOTICE](skills/anti-ui-slop/NOTICE) |
 | GitHub Action | [MIT](integrations/github-action/LICENSE) |
 
-The current `anti-ui-slop`, `ui-design`, and `ui-taste` packages declare Apache-2.0 and retain the MIT notice for identified third-party iOS material. Earlier releases have their own bundled declarations; this map does not change those releases. Describing every file in the repository as exclusively MIT or Apache-2.0 omits these distinctions. Plugin copies preserve the same package files and notices.
+The current `anti-ui-slop` and `ui-design` packages declare Apache-2.0 and retain the MIT notice for identified third-party iOS material. Earlier releases have their own bundled declarations; this map does not change those releases. Describing every file in the repository as exclusively MIT or Apache-2.0 omits these distinctions. Plugin copies preserve the same package files and notices.
 
 The generated manifests identify each included playbook's immutable Impeccable
 revision, source path, Git blob and license evidence. The retained iOS reference
