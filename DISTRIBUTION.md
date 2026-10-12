@@ -17,12 +17,28 @@ Hosted production is the source of truth for the domain packages and MCP. Direct
   packages under `skills/`. UI Taste and iOS Design are domain-only.
 - `image-to-ui` is a separate GitHub-native skill maintained in this repository,
   not another skill advertised by either hosted discovery index.
+- `uizze-ui` (The Uizze UI Pack) is GitHub-native and maintained under
+  `skills/uizze-ui` in this repository, not either hosted discovery index.
 - The hosted MCP is authenticated at `https://uizze.com/mcp`.
 - The MCP exposes `find_ui_references` and `find_ui_materials` only.
 - Empty retrieval is an intentional no-op.
 - The retired preview, older MCP-only source check, contracts, manifests,
   audits, and hosted critique are not current MCP surfaces and must not appear
   in listings.
+
+## GitHub-native Uizze UI Pack
+
+The canonical source is [`skills/uizze-ui`](skills/uizze-ui) in `uizze/uizze`.
+Install it with `npx skills add uizze/uizze --skill uizze-ui`.
+
+The package includes `SKILL.md`, its relative reference instructions,
+`README.md`, and the complete MIT license. The detail copy retains the existing
+Uizze banner and full toolkit description. Local UI/UX work does not require a
+Uizze account; connected Uizze resources require paid access.
+
+The directory route is `https://skills.sh/uizze/uizze/uizze-ui`. Indexing,
+audits, and detail-page rendering are external states. The public-source
+installation check runs every Monday at 09:17 UTC and when the package changes.
 
 ## GitHub-native Image to UI
 

@@ -1,0 +1,30 @@
+name: Verify Uizze UI Pack installation
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - skills/uizze-ui/**
+      - .github/workflows/uizze-ui-install.yml
+  schedule:
+    - cron: '17 9 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: uizze-ui-install
+  cancel-in-progress: true
+
+jobs:
+  install:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Set up Node.js
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: 24.20.0
+      - name: Install the published skill for Codex
+        run: npx --yes skills@1.7.2 add uizze/uizze --skill uizze-ui --agent codex --global --yes
