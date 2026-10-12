@@ -1,4 +1,0 @@
-interface:
-  display_name: "iOS Design by Uizze"
-  short_description: "Native iOS design, craft checks and Overdrive"
-  default_prompt: "Use $ios-design to improve this iPhone interface and verify its layout, states, and native interactions."

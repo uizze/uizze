@@ -13,8 +13,8 @@ Hosted production is the source of truth for the domain packages and MCP. Direct
 - `uizze.com` publishes exactly three free skills: `anti-ui-slop`, `ui-design`,
   and `ui-radar`; `uizze.sh` publishes `ui-taste` and `ios-design`.
 - The skills work without an account or MCP connection.
-- GitHub mirrors all five domain skills under `skills/`; the domain sources
-  and their existing installation URLs remain available.
+- GitHub retains the existing `anti-ui-slop`, `ui-design`, and `ui-radar`
+  packages under `skills/`. UI Taste and iOS Design are domain-only.
 - `image-to-ui` is a separate GitHub-native skill maintained in this repository,
   not another skill advertised by either hosted discovery index.
 - The hosted MCP is authenticated at `https://uizze.com/mcp`.
@@ -39,25 +39,22 @@ The expected directory route is
 detail-page rendering are external states; a published GitHub package does
 not establish that its directory page is already available.
 
-## GitHub-backed UI Taste and iOS Design
+## Domain-only UI Taste and iOS Design
 
-Install the existing workflows directly from this repository:
+Install these workflows from their established domain source:
 
 ```bash
-npx skills add uizze/uizze --skill ui-taste
-npx skills add uizze/uizze --skill ios-design
+npx skills add https://uizze.sh --skill ui-taste
+npx skills add https://uizze.sh --skill ios-design
 ```
 
-The packages retain their existing names, banners, human-written instructions,
-relative references, Apache-2.0 licenses, and third-party notices. They use the
-canonical Uizze skill-package generator's current provenance metadata; no
-executable, dependency, or bundled banner image is added.
+The newly added GitHub mirrors were removed on October 12, 2026. Their domain
+names, banners, human-written instructions, references, licenses, notices, ZIP
+downloads, and historical hashed paths are unchanged. This repository does not
+publish either package through GitHub skill discovery.
 
-These GitHub install paths do not depend on skills.sh rendering a detail page.
-The domain URLs, ZIP downloads, historical hashes, and native plugin snapshots
-are unchanged. New skills.sh records have their own indexing state and install
-counts; publishing these packages does not transfer the domain listings' counts
-or prove their expected GitHub-backed directory pages are available.
+Skills.sh indexing and detail-page rendering remain external states. Removing
+the mirrors does not establish that the existing domain detail pages render.
 
 ## Source-only 1.3.1 patch
 

@@ -25,7 +25,7 @@ https://github.com/user-attachments/assets/d7ee2275-8e7f-474c-a2e4-b45759b86996
 Install the free UI design skill:
 
 ```bash
-npx skills add uizze/uizze --skill ui-design
+npx skills add https://uizze.com --skill ui-design
 ```
 
 Then give your agent a real task:
@@ -45,16 +45,14 @@ The skills work without an account or MCP connection. Start in an existing proje
 | Fix a generic first draft | [`anti-ui-slop`](skills/anti-ui-slop) | Product-specific content, deliberate layouts, and a finish review |
 | Investigate a UI decision | [`ui-radar`](skills/ui-radar) | A focused reference workflow; connect the paid MCP for live retrieval |
 | Recreate an image or screenshot | [`image-to-ui`](skills/image-to-ui) | A 1:1 implementation, checked against the reference at the same viewport |
-| Improve an interface's visual direction | [`ui-taste`](skills/ui-taste) | Relevant web and iOS playbooks, product-specific choices, and a visual finish pass |
-| Build or review an iPhone interface | [`ios-design`](skills/ios-design) | Native navigation, adaptive layouts, keyboard behavior, and accessibility |
 
 For a focused review, install `anti-ui-slop` instead:
 
 ```bash
-npx skills add uizze/uizze --skill anti-ui-slop
+npx skills add https://uizze.com --skill anti-ui-slop
 ```
 
-GitHub installations do not require a skills.sh detail page. The existing domain install commands remain available: `https://uizze.com` for `anti-ui-slop`, `ui-design`, and `ui-radar`; `https://uizze.sh` for `ui-taste` and `ios-design`. This repository carries complete mirrors of those five packages and the GitHub-native `image-to-ui` skill.
+UI Taste and iOS Design are distributed only from `https://uizze.sh`, not mirrored in this repository. The existing `uizze.com` installation source remains available for `anti-ui-slop`, `ui-design`, and `ui-radar`; Image to UI is GitHub-native.
 
 ### Recreate an image
 
@@ -80,13 +78,13 @@ without an account or MCP connection and includes the MIT license.
 For a web or iOS interface that needs a clearer direction and a finish pass:
 
 ```bash
-npx skills add uizze/uizze --skill ui-taste
+npx skills add https://uizze.sh --skill ui-taste
 ```
 
 For native iPhone screens, navigation, forms, and accessibility:
 
 ```bash
-npx skills add uizze/uizze --skill ios-design
+npx skills add https://uizze.sh --skill ios-design
 ```
 
 Both skills include their referenced playbooks, licenses, and notices. Their
