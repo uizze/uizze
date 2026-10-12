@@ -42,8 +42,10 @@ jobs:
             (cd "$package" && sha256sum --check CHECKSUMS.sha256)
             diff --brief --recursive skills/anti-ui-slop "$package"
           done
-          (cd skills/ui-design && sha256sum --check CHECKSUMS.sha256)
-          for skill in anti-ui-slop image-to-ui ui-design ui-radar; do
+          for package in skills/ui-design skills/ui-taste skills/ios-design; do
+            (cd "$package" && sha256sum --check CHECKSUMS.sha256)
+          done
+          for skill in anti-ui-slop image-to-ui ios-design ui-design ui-radar ui-taste; do
             test -s "skills/$skill/SKILL.md"
             grep -qx "name: $skill" "skills/$skill/SKILL.md"
           done

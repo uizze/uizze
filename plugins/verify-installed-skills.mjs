@@ -1,5 +1,4 @@
 import assert from 'node:assert/strict';
-import { spawnSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
 import { lstat, readFile, readdir, realpath } from 'node:fs/promises';
 import path from 'node:path';
@@ -17,7 +16,7 @@ for (const component of ['.agents', 'skills']) {
 const mitGrantPattern = /Copyright[^\r\n]+[\s\S]*Permission is hereby granted[\s\S]*The above copyright notice and this permission notice[\s\S]*THE SOFTWARE IS PROVIDED[\s\S]*AS IS[\s\S]*WITHOUT WARRANTY OF ANY KIND[\s\S]*IN NO EVENT/;
 const expected = indexURL
   ? ['anti-ui-slop', 'ui-design', 'ui-radar']
-  : ['anti-ui-slop', 'image-to-ui', 'ui-design', 'ui-radar'];
+  : ['anti-ui-slop', 'image-to-ui', 'ios-design', 'ui-design', 'ui-radar', 'ui-taste'];
 const selected = (await readdir(root)).sort();
 assert.deepEqual(selected, expected, 'The native consumer must install exactly the skills registered for its source');
 
@@ -29,30 +28,37 @@ if (indexURL) {
   assert(Array.isArray(index.skills), 'Published discovery index must contain skills');
   assert.deepEqual(index.skills.map((skill) => skill.name).sort(), expected, 'Published selection must match the registered domain skills');
   for (const skill of index.skills) {
-    assert(['archive', 'skill-md'].includes(skill.type), `Unsupported published artifact type for ${skill.name}`);
-    assert.match(skill.digest, /^sha256:[a-f0-9]{64}$/, `Missing published artifact digest for ${skill.name}`);
-    const url = new URL(skill.url, indexURL);
-    assert.equal(url.protocol, 'https:', 'Published artifacts must use HTTPS');
-    assert.equal(url.origin, new URL(indexURL).origin, 'Published artifacts must stay on the publisher origin');
-    const artifact = await fetch(url, { redirect: 'error', signal: AbortSignal.timeout(30_000) });
-    assert(artifact.ok, `Published artifact returned HTTP ${artifact.status}: ${skill.name}`);
-    const bytes = Buffer.from(await artifact.arrayBuffer());
-    assert.equal(`sha256:${createHash('sha256').update(bytes).digest('hex')}`, skill.digest, `Published artifact digest mismatch: ${skill.name}`);
-    let producer;
-    if (skill.type === 'archive') {
-      const zip = spawnSync('python3', ['-c', [
-        'import io, json, sys, zipfile',
-        'with zipfile.ZipFile(io.BytesIO(sys.stdin.buffer.read())) as archive:',
-        '    names = [entry.filename for entry in archive.infolist() if not entry.is_dir()]',
-        '    assert len(names) == len(set(names)), \"Duplicate published ZIP filename\"',
-        '    print(json.dumps({\"files\": names, \"checksums\": archive.read(\"CHECKSUMS.sha256\").decode(\"utf-8\")}))',
-      ].join('\n')], { input: bytes, encoding: 'utf8', maxBuffer: 1024 * 1024 });
-      assert.equal(zip.status, 0, `Cannot read digest-verified published ZIP checksums: ${skill.name}: ${zip.stderr}`);
-      producer = JSON.parse(zip.stdout);
-      producer.entries = checksumRecords(producer.checksums, skill.name);
-      assert.deepEqual(producer.entries.map((entry) => entry.relative).sort(), producer.files.filter((file) => file !== 'CHECKSUMS.sha256').sort(), `Published checksum records must cover its complete ZIP filename set: ${skill.name}`);
+    assert(Array.isArray(skill.files) && skill.files.includes('SKILL.md'), `Missing published file inventory for ${skill.name}`);
+    assert.equal(new Set(skill.files).size, skill.files.length, `Duplicate published filename: ${skill.name}`);
+    const bytesByFile = new Map();
+    for (const file of skill.files) {
+      assert(typeof file === 'string' && /^[A-Za-z0-9][A-Za-z0-9._/-]*$/.test(file)
+        && file.split('/').every((part) => part && part !== '.' && part !== '..'), `Invalid published relative path: ${skill.name}`);
+      const url = new URL(`${skill.name}/${file}`, indexURL);
+      assert.equal(url.protocol, 'https:', 'Published files must use HTTPS');
+      assert.equal(url.origin, new URL(indexURL).origin, 'Published files must stay on the publisher origin');
+      const response = await fetch(url, { redirect: 'error', signal: AbortSignal.timeout(30_000) });
+      assert(response.ok, `Published file returned HTTP ${response.status}: ${skill.name}/${file}`);
+      bytesByFile.set(file, Buffer.from(await response.arrayBuffer()));
     }
-    published.set(skill.name, { ...skill, producer });
+    const type = skill.files.length === 1 ? 'skill-md' : 'file-package';
+    let producer;
+    if (type === 'file-package') {
+      assert(bytesByFile.has('CHECKSUMS.sha256'), `Missing published package checksums: ${skill.name}`);
+      producer = {
+        files: [...skill.files].sort(),
+        entries: checksumRecords(bytesByFile.get('CHECKSUMS.sha256').toString('utf8'), skill.name),
+      };
+      assert.deepEqual(producer.entries.map((entry) => entry.relative).sort(), producer.files.filter((file) => file !== 'CHECKSUMS.sha256'), `Published checksums must cover the complete file inventory: ${skill.name}`);
+      for (const entry of producer.entries) {
+        assert.equal(createHash('sha256').update(bytesByFile.get(entry.relative)).digest('hex'), entry.digest, `Published checksum mismatch: ${skill.name}/${entry.relative}`);
+      }
+    }
+    published.set(skill.name, {
+      type,
+      digest: `sha256:${createHash('sha256').update(bytesByFile.get('SKILL.md')).digest('hex')}`,
+      producer,
+    });
   }
 }
 
@@ -122,16 +128,16 @@ for (const name of expected) {
     assert(mitGrantPattern.test(notice), `Registered Apache design package must retain its third-party MIT copyright and permission notice: ${name}`);
   }
   let checksumCount = 0;
-  if (kind === 'archive' || files.includes('MANIFEST.json')) assert(files.includes('CHECKSUMS.sha256'), `Missing installed package checksums: ${name}`);
+  if (kind === 'file-package' || files.includes('MANIFEST.json')) assert(files.includes('CHECKSUMS.sha256'), `Missing installed package checksums: ${name}`);
   if (files.includes('CHECKSUMS.sha256')) {
     const entries = checksumRecords(await readFile(path.join(directory, 'CHECKSUMS.sha256'), 'utf8'), name);
     const names = entries.map((entry) => entry.relative);
     assert.equal(new Set(names).size, names.length, `Duplicate installed checksum path: ${name}`);
     assert.deepEqual(names.sort(), files.filter((file) => file !== 'CHECKSUMS.sha256'), `Checksums must cover every installed package file: ${name}`);
-    if (kind === 'archive') {
+    if (kind === 'file-package') {
       const producer = published.get(name).producer;
-      assert.deepEqual(entries, producer.entries, `Installed producer-checksum mismatch against current published ZIP: ${name}`);
-      assert.deepEqual(files, producer.files.sort(), `Installed filename coverage mismatch against current published ZIP: ${name}`);
+      assert.deepEqual(entries, producer.entries, `Installed producer-checksum mismatch against current published files: ${name}`);
+      assert.deepEqual(files, producer.files, `Installed filename coverage mismatch against current published files: ${name}`);
     }
     for (const entry of entries) {
       const bytes = await readFile(inside(directory, entry.relative));
