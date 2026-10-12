@@ -16,7 +16,7 @@ for (const component of ['.agents', 'skills']) {
 const mitGrantPattern = /Copyright[^\r\n]+[\s\S]*Permission is hereby granted[\s\S]*The above copyright notice and this permission notice[\s\S]*THE SOFTWARE IS PROVIDED[\s\S]*AS IS[\s\S]*WITHOUT WARRANTY OF ANY KIND[\s\S]*IN NO EVENT/;
 const expected = indexURL
   ? ['anti-ui-slop', 'ui-design', 'ui-radar']
-  : ['anti-ui-slop', 'image-to-ui', 'ui-design', 'ui-radar'];
+  : ['anti-ui-slop', 'image-to-ui', 'ui-design', 'ui-radar', 'uizze-ui'];
 const selected = (await readdir(root)).sort();
 assert.deepEqual(selected, expected, 'The native consumer must install exactly the skills registered for its source');
 
