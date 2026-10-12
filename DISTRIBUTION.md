@@ -72,6 +72,28 @@ publish either package through GitHub skill discovery.
 Skills.sh indexing and detail-page rendering remain external states. Removing
 the mirrors does not establish that the existing domain detail pages render.
 
+## Grok chat
+
+Connect the existing hosted Uizze service through Grok's Custom MCP connector:
+
+1. Open [Grok Connectors](https://grok.com/connectors), choose **New Connector**,
+   then **Custom**.
+2. Use **Uizze** as the name and `https://uizze.com/mcp` as the server URL.
+3. Complete OAuth with your Uizze account and any provider confirmation prompts.
+   Hosted reference and material retrieval requires existing paid Uizze access.
+4. In a new Grok conversation, select or mention **@Uizze** and ask for focused
+   UI references or design materials.
+
+The connection exposes the same `find_ui_references` and `find_ui_materials`
+used by the other Uizze clients. Grok supports MCP Apps and can display the Uizze
+reference gallery directly in chat. Native OAuth, both tools, useful reference
+and font results, and the rendered reference gallery were verified on October 12,
+2026; this is not a claim that every host-specific gallery control behaves identically.
+
+This setup creates a personal Custom connector. It does not claim a public Grok
+catalog listing or install the separate free skill packages. Their existing
+GitHub and domain installation routes above remain unchanged.
+
 ## Source-only 1.3.1 patch
 
 The `1.3.1` source patch aligns existing native package/catalog versions and read-only skill metadata, records per-playbook immutable provenance, and includes the complete existing MIT license in `skills/ui-radar/LICENSE`. The `anti-ui-slop` and `ui-design` packages retain their Apache-2.0 licenses, mixed third-party notices, relative playbooks and checksums. The original ehmo iOS content revision remains explicitly unknown; see the [license map and upstream provenance question](LICENSING.md).
