@@ -10,7 +10,7 @@
   For Claude Code, Cursor, Codex and GitHub Copilot.
 </p>
 <p align="center">
-  <a href="https://skills.sh/uizze/uizze"><img src="https://skills.sh/b/uizze/uizze" alt="skills.sh installs"></a>
+  <a href="https://www.skills.sh/site/uizze.sh"><img src="https://img.shields.io/badge/skills.sh_installs-1.3M-181717?logo=vercel&amp;logoColor=white" alt="skills.sh: 1.3M total installs across uizze.sh skills"></a>
   <a href="https://uizze.com"><img src="https://img.shields.io/badge/Uizze-official-1a1a1a" alt="Uizze official"></a>
   <a href="LICENSING.md"><img src="https://img.shields.io/badge/license-MIT_%2F_Apache--2.0-blue" alt="Licenses: MIT and Apache-2.0"></a>
 </p>
