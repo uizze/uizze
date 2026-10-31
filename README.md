@@ -1,14 +1,5 @@
 <p align="center">
-  <a href="https://uizze.com/?utm_source=github&utm_medium=repository&utm_campaign=discovery&utm_content=readme_logo">
-    <img src="https://uizze.com/brand/icons/uizze-web-app-icon-192x192.png" alt="" width="72" align="middle">
-  </a>
-  &nbsp;
-  <a href="https://uizze.com/?utm_source=github&amp;utm_medium=repository&amp;utm_campaign=discovery&amp;utm_content=readme_logo">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="assets/brand/uizze-wordmark-dark.svg">
-      <img src="assets/brand/uizze-wordmark-light.svg" alt="UIZZE" width="250" align="middle">
-    </picture>
-  </a>
+  <a href="https://uizze.com/?utm_source=github&amp;utm_medium=repository&amp;utm_campaign=discovery&amp;utm_content=readme_logo"><img src="https://uizze.com/brand/icons/uizze-web-app-icon-192x192.png" alt="" width="72" align="middle"></a>&nbsp;&nbsp;<a href="https://uizze.com/?utm_source=github&amp;utm_medium=repository&amp;utm_campaign=discovery&amp;utm_content=readme_logo"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/brand/uizze-wordmark-dark.svg"><img src="assets/brand/uizze-wordmark-light.svg" alt="UIZZE" width="250" align="middle"></picture></a>
 </p>
 
 <h3 align="center">Build better UI with coding agents.</h3>
